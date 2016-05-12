@@ -1,0 +1,5 @@
+<div class="groups-list default-box visible half-height">
+    <div ng-repeat="group in userGroups | groupSearchFilter:searchPeopleAndGroups | orderBy: 'name'"
+         ng-controller="groupController" ng-include="hooks.groupItem">
+    </div>
+</div>

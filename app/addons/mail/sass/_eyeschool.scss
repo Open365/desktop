@@ -1,0 +1,34 @@
+
+// * / 1. $mail button
+// * -----------------------
+// * /
+
+.mail-btn{
+	@include addon-btn(
+		$icon-people-groups-char,
+		$c-people-groups,
+		$c-dockicon,
+		$c-people-groups-hover,
+		$c-people-groups-active,
+		$c-people-groups-tooltip,
+		$itemPadding,
+		$dockWidth, 
+		$btn-height: $dockWidth,
+		$icon-size: 30,
+		$icon-lh: 1.62em
+	);
+
+	cursor: pointer;
+
+	&::before{
+		transition: all .3s ease-out;
+	}
+
+	
+	&:hover{
+		&::before{
+			padding-left: .1em;
+		}
+	}
+}
+

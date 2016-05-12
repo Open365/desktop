@@ -1,0 +1,112 @@
+$grandpa-bear: 1440px;
+$papa-bear: 1024px;
+$mama-bear: 768px;
+$baby-bear: 480px;
+
+
+
+// */ 1. $Colors 
+// * ---------------------------
+// */
+// 
+ $c-dark: #363643;
+
+$iconboard-bg: '';
+$iconboard-link: #fff;
+
+
+// */ 2. $Layout
+// * ---------------------------
+// */
+
+$z: 1;
+$iconboard-width: 80%;
+$iconboard-maxWidth: 970px;
+
+$iconboard-height: '';
+$iconboard-maxHeight: '';
+
+$iconboard-posTop: 50%;
+$iconboard-posBottom: '';
+$iconboard-posLeft: 50%;
+$iconboard-posRight: '';
+
+$iconboard-translateX: -50%;
+$iconboard-translateY: -50%;
+
+$iconboard-view: '';
+$iconboard-viewDirection: row;
+$iconboard-appMargin: 1em;
+
+// */ 3. $Decoration
+// * ---------------------------
+// */
+
+$iconboard-shadow: '';
+
+
+// */ 4. $Type
+// * ---------------------------
+// */
+
+$iconboard-tSize: 18;
+$iconboard-tWeight: 600;
+$iconboard-tTransform: uppercase;
+$iconboard-tShadow: 0 1px 0 rgba(0,0,0,.2);
+$iconboard-tAlign: center;
+
+
+
+// $MIXINS
+
+
+
+// */ 1. $App wrapper width 
+// * ---------------------------
+// * Apply to .app-wrapper
+// */
+
+@mixin apps-view{
+		display: inline-block;
+
+		@include mobile{
+			width: 100%;
+		}
+
+		@include tablet{
+			width: 50%;
+		}
+
+		@include desktop{
+			width: 33%;
+		}
+		@include hd-desktop{
+			width: 25%;
+		}
+		@if $iconboard-appMargin != ''{
+			padding: $iconboard-appMargin;
+		}
+}
+
+
+// */ 2. $App item styles 
+// * ---------------------------
+// * Apply to .app-item
+// */
+
+@mixin app-view{
+	background:rgba(255,255,255,.6);
+
+	@if $iconboard-appMargin != ''{
+		padding: $iconboard-appMargin;
+	}
+}
+
+
+// */ 3. $App before element styles 
+// * ---------------------------
+// * Apply to .app-item
+// */
+
+@mixin app-before{
+}

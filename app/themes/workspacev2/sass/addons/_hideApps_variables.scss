@@ -1,0 +1,88 @@
+// */
+// * Delete when mixins load before
+// * ------------------
+// */
+
+@mixin hide-but-accesible{
+	position: absolute !important; 
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ 
+	clip: rect(1px, 1px, 1px, 1px); 
+}
+
+
+
+$is-dock : false;
+// */ 1. $Size
+//* -----------------------------
+// */
+
+$switcherHeight: 3.5em;
+$lineHeight: $switcherHeight;
+$switcherSpace: 4em;
+
+
+// */ 2. $Colors
+//* -----------------------------
+// */
+
+$c-switcher-bg: ''; // background for user Info addon
+$c-switcher-color: #fff; // Color for text in  user Info addon
+$c-switcher-shape: #9b9b9b ;
+$c-switcher-shape-active: $c-maincolor;
+$c-switcher-rail: rgba(0,0,0,.4);
+
+// */ 3. $Type
+//* -----------------------------
+// */
+
+$t-switcher-weight: 300;
+$t-switcher-size: 18;
+
+
+// */ 3. $Switcher shape/controller
+//* -----------------------------
+// */
+
+$shapeTop: 50%;
+$shapeLateral: -.7em;
+$shapeLateralActive: -2.2em;
+@if $is-dock == true{
+	$shapeTransform: translate( -100%, -50%);
+	$shapeLateral: -1.5em;
+	$shapeLateralActive: -.5em;
+
+
+}@else{
+	$shapeTransform: translate( 100%, -50%);
+	$shapeLateral: -.7em;
+	$shapeLateralActive: -2.2em;
+
+
+}
+$shapeWidth: .8em;
+$shapeHeight: 1.5em;
+$shapeRadius: 10px;
+$shapeShadow: inset 0 2px 0 rgba(255,255,255,.3),  0 1px 2px rgba(0,0,0,.4);
+
+// */ 4. $Switcher rail
+//* -----------------------------
+// */
+
+$railTop: 50%;
+@if $is-dock == true{
+	$railLateral: -.6em;
+	$railTransform: translate( -100%, -50%);
+}@else{
+	$railLateral: -1em;
+	$railTransform: translate( 100%, -50%);
+}
+$railWidth: 1.7em;
+$railHeight: .8em;
+$railRadius: 1em;
+
+
+// */ 5. $Movement settings
+//* -----------------------------
+// */
+
+$movValues: all .3s cubic-bezier(0.215, 0.610, 0.355, 1.000);

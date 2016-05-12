@@ -1,0 +1,35 @@
+
+// * / 1. $mail properties
+// * -----------------------
+// * /
+
+
+	// Colors
+
+	$c-dockicon: #fff;
+	$c-mail-tooltip: #FC6547 !important;
+	$c-mail-active: #fff;
+
+
+	// Typo
+
+	$icon-mail-char: '\00F9';
+	$icon-mail-size: 40;
+	$icon-mail-lh: 1.2;
+
+	// Layout
+
+	$dockWidth: 1em;
+
+
+
+
+
+// * / 2. $Mixin for extra styles in every theme
+// * -----------------------
+// * /
+// 
+
+@mixin mail-btn-extra{
+	@include dock-button-decorator(bottom);
+}

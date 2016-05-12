@@ -1,0 +1,44 @@
+{
+  "name": "eye-desktop",
+  "version": "0.0.0",
+  "dependencies": {
+    "spice-web-client": "*",
+    "uri.js": "1.14.1",
+    "angular": "1.2.16",
+    "json3": "3.3.1",
+    "es5-shim": "3.1.0",
+    "jquery": "2.1.1",
+    "bootstrap-sass-official": "3.1.1",
+    "angular-resource": "1.2.16",
+    "angular-cookies": "1.2.16",
+    "angular-sanitize": "1.2.16",
+    "angular-route": "1.2.16",
+    "ventus": "https://github.com/eyeos2/Ventus.git#0.2.x",
+    "angular-bootstrap": "0.11.0",
+    "postal.js": "v0.10.1",
+    "eyeos-modal-window": "*",
+    "eyeos-auth-client": "*",
+    "eyeosBusClient": "*",
+    "requirejs": "2.1.14",
+    "angular-translate": "2.5.2",
+    "angular-translate-handler-log": "2.5.2",
+    "eyeos-theme": "*",
+    "angular-blocks": "0.1.9",
+    "requirejs-text": "2.0.13",
+    "eyeos-schemes": "*",
+    "angular-translate-loader-url": "~2.6.0",
+    "lodash": "3.3.0",
+    "almond": "0.3.1"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.16",
+    "angular-scenario": "1.2.16"
+  },
+  "appPath": "app",
+  "resolutions": {
+    "angular": "1.2.16",
+    "angular-translate": "2.5.2",
+    "lodash": "3.3.0"
+  },
+  "license": "AGPL-3.0"
+}

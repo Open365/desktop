@@ -1,0 +1,37 @@
+// $VARIABLES  (needed for general mixins)
+
+// * / 1. $Font base
+// * -----------------------
+// * For @fz mixin. If value is changed all type elements will be modified.
+// * /
+
+$font-size: 16;
+$t-text : Helvetica, Arial, sans-serif;
+$t-icon: 'eyeos-symbols';
+
+
+// * / 2. $RWD variables
+// * -----------------------
+// * General Variables for RWD breakpoints. These can be overwritten in single themes.
+// * /
+
+$grandpa-bear: 1440px;
+$papa-bear: 1024px;
+$mama-bear: 768px;
+$baby-bear: 480px;
+
+
+
+// * / 3. $transition
+// * -----------------------
+// * /
+
+$transition-links: all .3s ease-out;
+
+
+// * / 4. $Colors
+// * -----------------------
+// * /
+
+$c-white: #fff;
+$c-black: #333;

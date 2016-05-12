@@ -1,0 +1,14 @@
+{
+  "name": "userInfo",
+  "templates": {
+    "button": ["addons/userInfo/templates/userInfo.tpl.html"]
+  },
+  "modules": [],
+  "sass": [
+  	"_variables.scss", 
+  	"_user-info.scss"
+  ],
+  "hooks": {
+    "userInfo": "userInfoContent.tpl.html"
+  }
+}

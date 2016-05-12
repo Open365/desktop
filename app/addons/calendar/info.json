@@ -1,0 +1,17 @@
+{
+  "name": "calendar",
+  "templates": {
+    "button": [
+      "addons/calendar/templates/buttons/calendar.tpl.html"
+    ],
+    "content": [
+      "addons/calendar/templates/content/calendar.tpl.html"
+    ]
+  },
+  "modules": [],
+  "sass": [
+    "_variables.scss",
+    "_calendar.scss"
+  ],
+  "hooks": {}
+}

@@ -1,0 +1,344 @@
+
+
+.dockbar{
+	background: $topbar-bg;
+	min-width: $dockWidth;
+	width: $dockWidth;
+	display: inline-block;
+	box-shadow: $dockShadow;
+	@include fz(18);
+	font-weight: 600;
+	transition: width .3s ease-out;
+	position: relative;
+
+		.launcher-btn{
+			position: relative;
+			padding: $itemPadding;
+			display: block;
+
+
+			@include iconizev2(
+				$char: '\0069', 
+				$t-size: 41, 
+				$lh: 1.18em, 
+				$color: $c-dockicon, 
+				$has-text: true, 
+				$width: $dockWidth, 
+				$height: $dockWidth, 
+				$posWidth: 0
+			);
+
+			&::before{
+				z-index: 31;
+				transition: all .3s ease-out;
+			}
+		
+
+			&:hover{
+				&::before{
+					z-index: 32;
+					padding-left: .1em;
+				}
+			}
+	}
+
+	.dropdown.open{
+		.launcher-btn{
+			background:#25252f;
+			&::before{
+				z-index: 32;
+				padding-left: .1em;
+			}
+
+		}
+		.tooltip-flag	{
+			display: none;
+		}
+
+
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 1px;
+			top: 0;
+			width: .3em;
+			background:$c-maincolor;
+			z-index: 32; 
+		}
+	}
+
+
+
+	.tooltip-flag{
+		background:$c-tooltip-bg;
+		position: absolute;
+		padding: $tooltipPadding;
+		top: 0;
+		z-index: 30;
+		left: 0;
+		height: 100%;
+		box-shadow: 0px 0 2px rgba(0,0,0,.2);
+		color: $c-tooltip;
+		transform: translateX(-105%);
+		transition: all .3s ease-out;
+		line-height: 2.1;
+		opacity: 0;
+		white-space: nowrap;
+
+		.dock-item:hover &{
+			transform: translateX(0);
+			opacity: 1;
+		}
+
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: .3em;
+				background:$app-decorator;
+				height: 100%;
+				z-index: 32;
+			}
+	}
+
+	.dock-item:hover .tooltip-flag{
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+}
+
+
+	
+
+.app-item{
+	// To delete this when workspace accepted
+	background: none;
+	text-align: left;
+	text-transform: none;
+	//  End delete this 
+	position: relative;
+	padding: $itemPadding;
+	padding-left: 0;
+	height: 60px;
+	&.eyeos-icon{
+		@include iconizev2(
+			$char: ' ', 
+			$t-size: 38, 
+			$lh: 1.3em, 
+			$color: $c-dockicon,
+			$has-text: true, 
+			$width: 100%, 
+			$height: $dockWidth, 
+			$posWidth: 0
+		);
+
+		&::before{
+			z-index: 32;
+			transition: all .3s ease-out;
+		}
+
+		&.files{
+			&::before{
+				content: '\0046';
+			}
+
+			&:hover{
+				@include dock-hover(#2C9ECE);
+			}
+		}
+		&.word{
+			&::before{
+				content: '\00A5';
+			}
+
+			&:hover{
+				@include dock-hover(#3742DF);
+			}
+		}
+		&.powerpoint{
+			&::before{
+				content: '\0035';
+			}
+
+			&:hover{
+				@include dock-hover(#E3273E);
+			}
+		}
+		&.outlook{
+			&::before{
+				content: '\00f7';
+			}
+
+			&:hover{
+				@include dock-hover(#fba400);
+			}
+		}
+		&.excel{
+			&::before{
+				content: '\007E';
+			}
+
+			&:hover{
+				@include dock-hover(#7ADE86);
+			}
+		}
+
+		&.mail, &.filesync, &.writer, &.calc, &.impress, &.draw {
+
+			&::after {
+				position: absolute;
+				left: .36em;
+				z-index: 33;
+			}
+		}
+		&.mail{
+			&::before{
+				content: '\00F9';
+				@include fz(47);
+				line-height: 1;
+			}
+		}
+		&.filesync{
+			&::before{
+				content: '\00F1';
+				@include fz(47);
+				line-height: 1;
+			}
+		}
+		&.writer{
+			&::before{
+				content: '\0076';
+				@include fz(47);
+				line-height: 1;
+			}
+
+			&::after{
+				@include icon(\0155, $size: 47, $color: #209BE7, $lh: 1);
+			}
+
+			&:hover{
+				@include dock-hover(#209BE7);
+			}
+		}
+		&.calc{
+			&::before{
+				content: '\0077';
+				@include fz(47);
+				line-height: 1;
+			}
+
+			&::after{
+				@include icon(\0155, $size: 47, $color: #7BC96F, $lh: 1);
+			}
+
+			&:hover{
+				@include dock-hover(#7BC96F);
+			}
+		}
+		&.impress{
+			&::before{
+				content: '\0155\0078';
+				@include fz(47);
+				line-height: 1;
+			}
+
+			&::after{
+				@include icon(\0155, $size: 47, $color: #EB5D21, $lh: 1);
+			}
+
+			&:hover{
+				@include dock-hover(#EB5D21);
+			}
+		}
+		&.draw{
+			&::before{
+				content: '\0155\0079';
+				@include fz(47);
+				line-height: 1;
+			}
+
+			&::after{
+				@include icon(\0155, $size: 47, $color: #FBD059, $lh: 1);
+			}
+
+			&:hover{
+				@include dock-hover(#FBD059);
+			}
+		}
+		&.chrome{
+			&::before{
+				content: '\00c8';
+				@include fz(47);
+				line-height: 1;
+			}
+
+			&:hover{
+				@include dock-hover(#fbcb00);
+			}
+		}
+		&.firefox{
+			&::before{
+				content: '\00d2';
+				@include fz(47);
+				line-height: 1;
+			}
+
+			&:hover{
+				@include dock-hover(#e17300);
+			}
+		}
+		&.internet.explorer{
+			&::before{
+				content: '\00c7';
+				@include fz(47);
+				line-height: 1;
+			}
+
+			&:hover{
+				@include dock-hover(#2ebaec);
+			}
+		}
+
+		&.adminpanel{
+			&::before{
+				content: '\004F'; 
+				color: $c-dockicon;
+			}
+
+			&:hover{
+				@include dock-hover(#C5C5C5);
+			}
+		}
+	}
+}
+
+.app-item, .launcher-btn, .show-groups, .show-users{
+	@include dock-button-decorator(bottom);
+}
+
+.adminpanel{
+	background-color: rgba(0,0,0,.43);
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	margin-bottom: 0; // because bootstrap conflict
+	border-radius: 0; //because bootstrap conflict
+	border: 0; //because bootstrap conflict
+	@include dock-button-decorator (top);
+}
+
+.extern-icon{
+	img	{
+		height: auto;
+		max-width: 80%;
+		z-index: 33;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+}
+

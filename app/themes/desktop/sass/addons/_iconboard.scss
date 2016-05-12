@@ -1,0 +1,25 @@
+.iconBoard {
+	z-index: 1;
+	position: absolute;
+	width: 90%;
+	max-width: 970px;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -65%);
+	-moz-transform: translate(-50%, -65%);
+	-ms-transform: translate(-50%, -65%);
+	-o-transform: translate(-50%, -65%);
+	transform: translate(-50%, -65%);
+}
+.iconBoard ul li {
+	float: left;
+	list-style: none;
+	padding: 20px 40px 0;
+}
+	.iconBoard ul li span {
+	color: #FFF;
+	font-weight: 700;
+}
+.iconBoard ul li img {
+	cursor: pointer;
+}

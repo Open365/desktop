@@ -1,0 +1,123 @@
+// $VARIABLES
+
+// */ 1. $Colors 
+// * ---------------------------
+// */
+// 
+
+$c-people-groups: transparent;
+$c-people-groups-hover: #ACB1BF;
+$c-people-groups-active: #ffffff;
+$c-people-groups-tooltip: #0EC5E5;
+
+$c-groups-background: #EAEBF1;
+$c-dark: 	#18224c; // Dark blue
+$c-actions: #85a4af; // blue grey
+
+$c-group: #44D1D2; // Turquoise
+$c-group-remove-hover:#EC3333;
+$c-mainlight: 		#7fcdee; // Turquoise light
+$c-light: #f4f8f9; // Almost white
+$c-icons: #9A9EB1;
+$c-warning: #ea3d4e;
+
+$c-actions: #525266;
+
+$c-text: #514E50;
+
+$c-placeholder: #514E72;
+$c-people-groups-search-background: #dadbe2;
+$c-people-groups-border: #eaebf1;
+$c-people-groups-button-reset: #aaaaaa;
+$c-people-groups-msg: #fff;
+$c-people-groups-msg-background: #333;
+$c-people-groups-button-cancel: #fff;
+$c-people-groups-button-save: #fff;
+
+// */ 2. $Shadows
+// * ---------------------------
+// */
+
+$shadow-container: 2px 0 4px rgba(0,0,0,.2);
+$shadow-group-item:0 1px 2px rgba(0,0,0,.13);
+
+
+// */ 3. $Fonts
+// * ---------------------------
+// */
+
+$t-people-groups-name-size: 18;
+$t-people-groups-msg-size:1.14em;
+
+// */ 4. $Images
+// * ---------------------------
+// */
+
+$icon-people-groups-char: '\0033';
+$icon-people-groups-list-char: '\00E4';
+$icon-people-groups-folder-char: '\0048';
+$icon-people-groups-edit-char: '\00E8';
+$icon-people-groups-remove-char: '\0030';
+$icon-people-groups-add-char: '\0061';
+$icon-people-groups-delete-char: '\0062';
+$icon-people-groups-close-char: '\0062';
+$icon-people-groups-warning-char: '\004E';
+
+
+// * / 5. $Layout
+// * -----------------------
+// * /
+// 
+$addonsHeight: 3.5rem;
+
+$t-size :16;
+$btn-lh: $addonsHeight - 1;
+
+$addonsWidth: 100%;
+
+
+$container-padding: 2em;
+
+$rightSpace: $addonsWidth / 4;
+
+$container-width: 33%;
+$container-minwidth: 37em;
+
+$search-trigger-width: 2.7em;
+$search-trigger-height: 2.5em;
+
+$group-item-padding: 1em 1.3em .7em;
+$new-group-padding:.6em .8em .6em 2.5em;
+$group-form-height:35em;
+$group-form-margin:.5em 0 0.7em;
+$group-members-margin: 2em 0.5em 1em;
+$group-members-width: 40%;
+$group-name-margin: .3em 0 .2em;
+
+$button-delete-width:2em;
+$button-delete-height:2em;
+$button-close-width:2em;
+$button-close-height:2em;
+$button-cancel-padding:.5em;
+$people-groups-msg-box-padding:1.4em 2em 1.3em 4em;
+
+
+// $MIXINS
+
+
+// * / 1. $people&group icon
+// * -----------------------
+// * /
+
+
+@mixin pg-icon{
+	content: '';
+	width: .6em;
+	height: .6em;
+	margin-left: -.7em;
+	display: inline-block;
+	background-color: transparent;
+	border-radius: 50%;
+	box-shadow: .8em 0 0 rgba(144,19,254, .73), 1.6em 0 0 rgba(80, 227, 194, .73), 1.15em 0 0 rgba(74, 144, 226, .73);
+	margin-right: 1.9em;
+}

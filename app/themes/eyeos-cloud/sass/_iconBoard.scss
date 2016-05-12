@@ -1,0 +1,128 @@
+.bar-item-iconboard{
+	flex: 1;
+}
+
+.featured-apps{
+	color: #fff;
+	text-transform: none;
+}
+
+.iconboard{
+	// To delete this when workspace accepted
+	position: static;
+	transform: none;
+	width: 100%;
+	max-width: none;
+	//  End delete this 
+}
+
+	.iconboard-apps_wrapper{
+		display: flex;
+
+		.app-wrapper:first-child{
+			width: auto;
+		}
+	}
+
+	.app-wrapper{
+		// To delete this when workspace accepted
+		// all:unset;
+		 width: 100%;
+		padding: 0;
+		display: block;
+		//  End delete this 
+	}
+
+	.admin.panel{
+		background: none;
+	}
+
+	.app-item:not(.home){
+		color: $iconboard-link;
+		@include fz($iconboard-tSize);
+		border-bottom: none;
+		line-height: 2.5 !important;
+		position: relative;
+		z-index: 1;
+		transition: all .3s ease-out;
+		overflow: hidden;
+		padding: 0 .6em;
+	
+
+		@if $iconboard-tTransform != ''{
+			text-transform: $iconboard-tTransform;
+		}
+		@if $iconboard-tShadow != ''{
+			text-shadow: $iconboard-tShadow;
+		}
+		@if $iconboard-tWeight != ''{
+			font-weight: $iconboard-tWeight;
+		}
+		@if $iconboard-tAlign != ''{
+			text-align: $iconboard-tAlign;
+		}
+
+		@include app-view; // Settings for a single app item
+
+		@include app-before;
+
+		&::before, &::after, &:hover .tooltip-flag::after{
+			content:none !important;
+		}
+
+		&::before{
+			content: ' ' !important;
+			background: #3F414C !important;
+			transition: all .3s cubic-bezier(0.275, 0.365, 0.435, 0.990) !important;
+			width: 100% !important;
+			height: 100% !important;
+			z-index: -1 !important;
+			top: 0 !important;
+			left: 0 !important;
+			transform: translateY(-100%) !important;
+		}
+
+		
+
+		&:hover{
+
+			&::before{
+				transform: translate(0) !important;
+			} 
+		}
+
+		&.active{
+			background:#3F414C;
+		}
+	}
+
+
+	.app-item.home{
+	  	border-right: 1px solid rgba(23, 24, 29, 0.52);
+	  	box-shadow: 1px 0 0 rgba(255, 255, 255, 0.06);
+
+		@include iconizev2($char: '\004a', $t-size: 32, $lh: 1.1, $color: #7AE2FC, $has-text: false, $width: 50px, $height: 45px, $pos: left, $posWidth: 1em);
+		
+		&::before{
+			content: '\004a' !important;
+		}
+	}
+
+	.app-item.application-menu {
+		border-left: 1px solid rgba(255, 255, 255, .06);
+		box-shadow: -1px 0 0 rgba(23, 24, 29, .52), 1px 0 0 rgba(255, 255, 255, .06);
+		overflow: visible;
+		width: 100px;
+		height: 45px;
+
+
+	  .tooltip-flag {
+		  color: #fff;
+		  margin-left: 25px;
+		  border: none;
+	  }
+	}
+
+#applications-btn {
+	border-bottom: none;
+}

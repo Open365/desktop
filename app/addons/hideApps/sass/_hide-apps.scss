@@ -1,0 +1,84 @@
+.visible-apps-switcher{
+	//@include fz($t-switcher-size);
+	color: $c-switcher-color;
+	height: $switcherHeight;
+	line-height: $lineHeight;
+	@if $is-dock == true{
+		padding-left: $switcherSpace;
+		margin-left: $gap;
+	}@else{
+		padding-right: $switcherSpace;
+		margin-right: 1em;
+	}
+}
+	.apps-switcher-trigger{
+		@include hide-but-accesible;
+
+		&:checked{
+			+ .app-switcher-label{
+				&::after{
+					background:$c-switcher-shape-active;
+
+					@if $is-dock == true{
+						left: $shapeLateralActive;
+					}@else{
+						right: $shapeLateralActive;
+					}
+
+				}
+			}
+		}
+	}
+
+	.app-switcher-label{
+	position: relative;
+	font-weight: $t-switcher-weight;
+	cursor: pointer;
+
+
+	&::before, &::after{
+		content: '';
+		position: absolute;
+		
+		top: $shapeTop;
+
+		@if $is-dock == true{
+			transform: $railTransform;
+			left: $railLateral;
+		}@else{
+			transform: $railTransform;
+			right: $railLateral;
+		}
+	}
+
+	&::before{
+		background:$c-switcher-rail;
+		width: $railWidth;
+		height: $railHeight;
+		border-radius: $railRadius;
+	}
+
+	&::after{
+		height: $shapeHeight;
+		width: $shapeWidth;
+		background:$c-switcher-shape;
+		border-radius: $shapeRadius;
+		box-shadow: $shapeShadow;
+		transform-origin: 0 0 ;
+		-webkit-transition: $movValues; 
+		   -moz-transition: $movValues; 
+		     -o-transition: $movValues; 
+		        transition: $movValues; /* easeOutCubic */
+
+		        @if $is-dock == true{
+					left: $shapeLateral;
+				}
+			}
+
+
+		@if $is-dock == true{
+			left: $shapeLateral;
+		}@else{
+			right: $shapeLateral;
+		}
+}

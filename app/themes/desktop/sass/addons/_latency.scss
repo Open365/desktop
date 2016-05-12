@@ -1,0 +1,68 @@
+.latency-meter{
+	width: $topbarHeight;
+	height: $topbarHeight;
+	//background:$c-right-1;
+	position: relative;
+	margin-right:  .7em;
+
+	&:hover{
+		// .tooltip-item{
+		// 	opacity: 1;
+		// 	margin-top: .5em;
+		// 	right: -.5em;
+		// }
+	}
+}
+
+	.latency-status{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		
+	}
+
+		.latency-symbol{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			   -moz-transform: translate(-50%, -50%);
+			    -ms-transform: translate(-50%, -50%);
+			     -o-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);
+			        width: 90%;
+		}
+
+		.latency-1, .latency-2, .latency-3, .latency-4, .latency-5{
+			opacity: .2;
+		}
+
+		.status-1{
+			.latency-1{
+				opacity: 1;
+			}
+		}
+		.status-2{
+			.latency-1, .latency-2{
+				opacity: 1;
+			}
+		}
+		.status-3{
+			.latency-1, .latency-2, .latency-3{
+				opacity: 1;
+			}
+		}
+		.status-4{
+			.latency-1, .latency-2, .latency-3, .latency-4{
+				opacity: 1;
+			}
+		}
+		.status-5{
+			.latency-1, .latency-2, .latency-3, .latency-4, .latency-5{
+				opacity: 1;
+			}
+		}
+
+	.current-status{
+		display: none;
+	}

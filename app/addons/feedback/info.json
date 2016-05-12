@@ -1,0 +1,11 @@
+{
+  "name": "feedback",
+  "extend": "base",
+  "templates": {
+    "button": [],
+    "content": ["addons/feedback/templates/feedback.tpl.html"]
+  },
+  "modules": ["jobsFeedback"],
+  "sass": ["_jobs-feedback.scss"],
+  "hooks": {}
+}

@@ -1,0 +1,26 @@
+.workspace-container {
+  @include desktop-mixin;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+
+  .content-wrapper{
+      display: flex;
+      height: calc(100% - #{$topbarHeight});
+      align-content: stretch;
+
+  }
+  .workspace-content {
+      position: relative;
+      @include desktop-size;
+      overflow: hidden;
+  }
+

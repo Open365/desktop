@@ -1,0 +1,151 @@
+
+$gridWidth: 3;
+
+
+// * / 1. $Apps wrapper properties
+// * -----------------------
+// * /
+
+
+$apps-bg : $apps-bg;
+$apps-border:1px solid rgba(255,255,255,.22);
+$apps-shadow: 0 2px 4px rgba(0,0,0,.25);
+$posLeft: $dockWidth + 6px;
+$posTop: 0;
+$appsRadius: 0;
+$appsWidth: ' ';
+
+
+// * / 2. $Apps title properties
+// * -----------------------
+// * /
+
+$title-color: #ACB1BF;
+$title-size: 19;
+$title-align: center;
+
+$app-width: 8rem;
+$app-height: 8rem;
+$app-bg: ' ';
+$app-hover: $app-hover;
+$apps-decorator: $apps-decorator;
+
+// Uncomment this line to affect apps width
+
+$appsWidth: $gridWidth * $app-width;
+
+
+// * / 3. $App icons
+// * -----------------------
+// * /
+$icon-char: '\0054';
+$icon-size: 60;
+$icon-lh: 1.1;
+$icon-color: #63E5CE;
+$icon-bg:  ' ';
+$icon-shadow: 0 1px 2px rgba(0,0,0,.5);
+	
+	// Apps colors
+	$icon-word-color: #3EB1DD;
+	$icon-powerpoint-color: #F64C60;
+	$icon-excel-color: #92CF6D;
+	$icon-admin-color: #C5C5C5;
+	$icon-files-color: #44D6DC;
+	$icon-outlook-color: #F6A400;
+
+	// Apps chars
+	$icon-word-char: '\00a5';
+	$icon-powerpoint-char: '\2248';
+	$icon-excel-char: '\007e';
+	$icon-files-char: '\0048';
+	$icon-adminPanel-char: '\004f';
+	$icon-outlook-char: '\00f7';
+
+
+// * / 2. $Mixin for extra styles in every theme
+// * -----------------------
+// * /
+
+	@mixin appsWrapper-extraStyles{
+		margin: 0;
+		padding: 0;
+		z-index: 30;
+
+		&::before{
+			content: ' ';
+			position: absolute;
+			width: .5em;
+			height: calc(100% + 2px);
+			background: $apps-decorator;
+			z-index: 2;
+			top: -1px;
+			transform: translateX(-100%);
+		}
+
+		&::after{
+			@include triangle(left, .7em, $apps-decorator, top 1.4em left -1.7em);
+		}
+	}
+
+	@mixin apps-extraStyles{
+		display: inline-block;
+		margin-left: -1px;
+		position: relative;
+		border-bottom: 1px solid #1A1A1E;
+		box-shadow: 0 1px 0 rgba(219,219,219,.14), 1px 0 0 rgba(219,219,219,.14);
+
+		border-right: 1px solid  #1A1A1E;
+		vertical-align: middle;
+
+		transition: all .3s ease-out;
+
+
+		&:hover{
+			background:$app-hover;
+		}
+
+		img{
+			display: none;
+		}
+	}
+
+	@mixin app-extraStyles{
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		white-space: nowrap;
+		cursor: pointer;
+		width: 100%;
+		height: 100%;
+		padding-top: 1.3em;
+
+	}
+
+	// Change just if you  want to modify app-icon behavior
+
+	@mixin app-icon($char, $size, $lh, $color, $bg, $shadow){
+
+		@if $char != ' '{
+
+			&::before{
+				@include icon($char, $size, $color, $lh: $lh);
+
+				@if $bg != ' '{
+					background-color: $bg;
+				}
+
+				@if $shadow != ' '{
+					text-shadow: $shadow;
+				}
+
+				// Extra styles
+				
+				display: block;
+				text-align: center;
+				margin-top: -.3em;
+			}
+
+		}
+	}
+

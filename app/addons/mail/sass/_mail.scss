@@ -1,0 +1,35 @@
+
+// * / 1. $mail button
+// * -----------------------
+// * /
+
+.mail-btn{
+	@include addon-btn(
+			$char-icon: $icon-mail-char, 
+			$c-background: ' ', 
+			$c-icon: $c-dockicon, 
+			$c-hover: ' ' , 
+			$c-active: $c-mail-active, 
+			$c-tooltip: $c-mail-tooltip, 
+			$padding: ' ', 
+			$btn-width: $dockWidth,  
+			$btn-height: $dockWidth, 
+			$icon-size: $icon-mail-size, 
+			$icon-lh: $icon-mail-lh);
+
+	cursor: pointer;
+
+	&::before{
+		transition: all .3s ease-out;
+	}
+
+	
+	&:hover{
+		&::before{
+			padding-left: .1em;
+		}
+	}
+
+	@include mail-btn-extra;
+}
+

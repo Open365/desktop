@@ -1,0 +1,28 @@
+  $t-size: 16;
+
+$c-white:           #fff;
+$c-maincolor: 		#29abe2; // Turquoise
+
+//* Logo colors *//
+$outer-circle:  $c-maincolor;
+$inner-circle:  $c-white;
+$text-logo: $c-white;
+
+
+//** Topbar settings **//
+
+$topbarHeight: 32px;
+$addonsHeight: $topbarHeight;
+$topbar-bg: rgba(47, 49, 58, .9); 
+
+$t-icon: 'eyeos-symbols';
+
+
+@mixin topbar-mixin() {
+	background-image: url(../images/topbar/topbar.png);
+	box-shadow: 0px 2px 7px #201B1B;
+}
+
+@mixin desktop-mixin() {
+	background: #4a5a75 url(/themes/desktop/images/wp-desktop.jpg) no-repeat top center;
+}

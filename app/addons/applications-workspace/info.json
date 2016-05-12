@@ -1,0 +1,15 @@
+{
+  "name": "applications-workspace",
+  "templates": {
+    "button": ["addons/applications/templates/applications.tpl.html"]
+  },
+  "modules": ["eyeApplications"],
+  "sass": [
+  	"_variables.scss", 
+  	"_appsLauncher.scss"
+  ],
+  "hooks": {
+    "applications": "appList.tpl.html",
+    "applicationsMenu": "applications.tpl.html"
+  }
+}

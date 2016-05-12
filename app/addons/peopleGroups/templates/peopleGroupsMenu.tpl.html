@@ -1,0 +1,28 @@
+<div class="people_groups-container panel-content" id="groups-container" ng-controller="peopleGroupsController">
+    <h2 class="title title__group">{{"Groups" | translate}}</h2>
+    <div ng-controller="groupCreateController">
+        <button class="btn-new" ng-click="createGroup()" ng-disabled="groupToCreate.enableCreateEditGroupWindow">{{"Create new group" | translate}}</button>
+        <div class="new-group active" ng-show="groupToCreate.enableCreateEditGroupWindow" ng-controller="groupCreateUpdateController">
+            <div class="form-group" ng-include="hooks.groupForm"></div>
+        </div>
+            <div class="empty-state" ng-show="!groupToCreate.enableCreateEditGroupWindow && userGroups.length === 0">
+                <div class="icon"></div>
+                <div class="title">{{"You have no groups" | translate}}</div>
+                <div class="description">{{"Create a new group and start sharing" | translate}}<br>{{"content with your colleagues." | translate}}</div>
+                <div class="action">
+                    <button id="qa-create-new-group-empty-btn" ng-click="createGroup()"
+                            ng-disabled="groupToCreate.enableCreateEditGroupWindow">{{"Create new group" | translate}}</button>
+                </div>
+            </div>
+    </div>
+
+    <div class="searcher searcher-position">
+        <input ng-model="searchPeopleAndGroups" type="text" class="search-term"
+               placeholder="{{'Search People or Groups' | translate }}" >
+        <button class="search-trigger">Search</button>
+    </div>
+
+    <div class="default-view" ng-include="hooks.groupsList">
+
+    </div>
+</div>

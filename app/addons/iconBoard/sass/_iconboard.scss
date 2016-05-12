@@ -1,0 +1,82 @@
+
+
+.iconboard{
+	position: absolute;
+	z-index: $z;
+	
+	
+	@if $iconboard-bg != ''{
+		background:$iconboard-bg;
+	}
+	@if $iconboard-shadow != ''{
+		box-shadow:$iconboard-shadow;
+	}
+	@if $iconboard-width != ''{
+		width: $iconboard-width;
+	}
+	@if $iconboard-maxWidth != ''{
+		max-width: $iconboard-maxWidth;
+	}
+	@if $iconboard-height != ''{
+		height: $iconboard-height;
+	}
+	@if $iconboard-maxHeight != ''{
+		max-height: $iconboard-maxHeight;
+	}
+	@if $iconboard-posTop != ''{
+		top: $iconboard-posTop;
+	}
+	@if $iconboard-posBottom != ''{
+		top: $iconboard-posBottom;
+	}
+	@if $iconboard-posLeft != ''{
+		left: $iconboard-posLeft;
+	}
+	@if $iconboard-posRight != ''{
+		right: $iconboard-posRight;
+	}
+	@if $iconboard-translateX != ''{
+		transform: translate($iconboard-translateX, $iconboard-translateY);
+	}
+}
+
+	.iconboard-apps_wrapper{
+		@if $iconboard-view == 'flex'{
+			@include displayflex;
+			flex-direction: $iconboard-viewDirection;
+			min-height: 100%;
+		}@else if $iconboard-view != ''{
+			display: $iconboard-view;
+		}
+	}
+
+	.app-wrapper{
+		cursor: pointer;
+		@include apps-view;   // Setting in variables the width for the elements in different resolutions and the display view
+
+	}
+
+	.app-item{
+		color: $iconboard-link;
+		@include fz($iconboard-tSize);
+
+	
+
+		@if $iconboard-tTransform != ''{
+			text-transform: $iconboard-tTransform;
+		}
+		@if $iconboard-tShadow != ''{
+			text-shadow: $iconboard-tShadow;
+		}
+		@if $iconboard-tWeight != ''{
+			font-weight: $iconboard-tWeight;
+		}
+		@if $iconboard-tAlign != ''{
+			text-align: $iconboard-tAlign;
+		}
+
+		@include app-view; // Settings for a single app item
+
+		@include app-before;
+	}
+

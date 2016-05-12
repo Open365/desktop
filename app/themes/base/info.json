@@ -1,0 +1,12 @@
+{
+  "name": "base",
+  "extends": "common",
+  "hooks": {},
+  "sass": [
+    "_fonts.scss",
+    "_animations.scss",
+    "_mixins.scss", 
+    "_placeholders.scss",
+    "_fallbacks.scss"
+  ]
+}

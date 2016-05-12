@@ -1,0 +1,163 @@
+
+.topbar {
+	$defaultLinkColor: #E5E5E5;
+
+	@include topbar-mixin;
+	display: flex;
+	flex-direction: row;
+	flex-wrap:wrap;
+	height: $topbarHeight;
+
+	.topbar-menu {
+		height: 100%;
+	}
+
+	.topbar-controller-wrapper {
+		height: 100%;
+	}
+
+	.topbar-dropdown {
+		padding: 0;
+		height: 100%;
+		list-style: none;
+
+		> li {
+			height: 100%;
+		}
+	}
+
+	.start-menu{
+		flex: 0 0 33px;
+	}
+	.bar-options_wrapper{
+		flex: 1 1 8%;
+	}
+
+		.bar-options{
+			flex: 1 1 auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			-webkit-justify-content: flex-end;
+   			justify-content: flex-end;
+			align-items: stretch;
+
+		}
+
+		.bar-item{
+			flex: 0 0 auto;
+
+			&:first-child{
+				flex-grow: 1;
+			}
+		}
+
+	#applications-btn {
+		display: block;
+		height: 100%;
+	}
+
+	a {
+		color: $defaultLinkColor;
+		font: {
+			weight: bold;
+			family: Arial, Tahoma, Verdana, 'Bitstream Vera Sans', 'Liberation Sans';
+			size: 13px;
+		}
+		text-decoration: none;
+		cursor: default;
+	}
+
+	.item {
+		padding: 0 10px;
+		line-height: $topbarHeight;
+	}
+
+	.separator {
+		background-image: url(../images/topbar/separator.png);
+		width: 1px;
+		height: 100%;
+	}
+
+	.start-menu {
+		.button {
+			text-align: center;
+			height: 100%;
+			.eyeos-icon {
+				background-image: url(../images/topbar/eyeosMenu.png);
+				background-repeat: no-repeat;
+				display: inline-block;
+				vertical-align: middle;
+				width: 13px;
+				height: 13px;
+			}
+		}
+	}
+
+	.dropdown-menu {
+		z-index: 100002;
+		margin-top: 0;
+		max-width: 250px;
+
+		li {
+			.app {
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				text-align: left;
+				span {
+                    cursor: default;
+					color: #555555;
+					font: {
+						weight: normal;
+					}
+					margin: 0 2%;
+					width: calc(86% - 16px);
+					text-overflow: ellipsis;
+					overflow: hidden;
+					display: inline-block;
+					white-space: nowrap;
+
+				}
+				img {
+					margin: -22px 0 0 5%;
+					width: 16px;
+					height: 16px;
+				}
+				&:hover {
+					a {
+						color: $defaultLinkColor;
+					}
+					background-color: #6E819E;
+				}
+			}
+			button {
+				&.scroll-down {
+					position: relative;
+					float: left;
+				}
+				&.scroll-up {
+					position: relative;
+					float: right;
+				}
+			}
+		}
+	}
+}
+
+.tooltip-inner{
+	max-width: 300px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.inner-circle{
+	fill: $inner-circle;
+}
+.outer-circle{
+	fill: $outer-circle;
+}
+.text-logo{
+	fill: $text-logo;
+}

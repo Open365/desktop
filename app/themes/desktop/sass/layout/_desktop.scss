@@ -1,0 +1,16 @@
+#desktop {
+  @include desktop-mixin;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+
+  #desktop-content {
+    position: relative;
+    width: 100%;
+    height: calc(100% - #{$topbarHeight});
+    overflow: hidden;
+  }
+}
+

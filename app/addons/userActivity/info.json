@@ -1,0 +1,14 @@
+{
+  "name": "userActivity",
+  "templates": {
+
+  },
+  "modules": ["userActivity"],
+  "sass": [
+  "_variables.scss", 
+  "_userActivity.scss"
+  ],
+  "hooks": {
+    "userActivity": "userActivity.tpl.html"
+  }
+}

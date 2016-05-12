@@ -1,0 +1,12 @@
+{
+  "name": "hideApps",
+  "templates": {
+    "button": ["addons/hideApps/templates/hideApps.tpl.html"]
+  },
+  "modules": [],
+  "sass": [
+  	"_hide-apps.scss",
+  	"_variables.scss"
+  ],
+  "hooks": {}
+}

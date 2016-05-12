@@ -1,0 +1,224 @@
+.loading{
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+
+}
+.logo{
+  max-width: 26em;
+  opacity: .8;
+}
+
+.message-item{
+  margin-top: 0;
+  font-weight: 600;
+  text-shadow: 0 1px 0 #fff;
+}
+
+#right{
+  animation: rotation linear 4s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+#right path{
+  animation: scale linear 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 50% 50%;
+}
+#top-right{
+  animation: rotation1 linear 1.3s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  transform-origin: 50% 50%;
+}
+#top-right path{
+  animation: scale linear 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /*animation-delay: -2s;*/
+  transform-origin: 50% 50%;
+}
+#left{
+  animation: rotation2 linear 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+
+}
+#left path{
+  animation: scale linear 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /*animation-delay: -2s;*/
+  transform-origin: 50% 50%;
+}
+#top-left{
+  animation: rotation3 linear 4s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  animation-direction: reverse;
+
+}
+#top-left path{
+  animation: scale linear 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /*animation-delay: -2s;*/
+  transform-origin: 50% 50%;
+}
+#top{
+  animation: rotation4 linear 2s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  animation-direction: reverse;
+
+}
+#top path{
+  animation: scale linear 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /*animation-delay: -2s;*/
+  transform-origin: 50% 50%;
+}
+#bottom-left{
+  animation: rotation5 linear 4s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+
+}
+#bottom-left path{
+  animation: scale linear 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /*animation-delay: -2s;*/
+  transform-origin: 50% 50%;
+}
+#bottom-right{
+  animation: rotation6 linear 4s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+#bottom-right path{
+  animation: scale linear 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transform-origin: 50% 50%;
+}
+
+.loading-message{
+  font-size: 1.4rem;
+  color: #666C81;
+}
+
+svg g{
+  transform-origin: 50% 50%;
+}
+
+@keyframes rotation{
+  0% {
+    transform:  rotate(0deg) translate(0, 0);
+  }
+  50%{
+    transform: rotate(180deg)  translate(1.5em, 1.5em) ;
+  }
+  75%{
+    transform: rotate(270deg)  translate(0.9em, -0.6em) ;
+  }
+
+  100% {
+    transform:  rotate(359deg) translate(0, 0) ;
+  }
+}
+
+@keyframes rotation1{
+  0% {
+    transform:  rotate(0deg) translate(.8em, -.6em);
+  }
+  50%{
+    transform: rotate(160deg)  translate(.8em, -.6em) ;
+  }
+  75%{
+    transform: rotate(270deg)  translate(1em, -.8em) ;
+  }
+  100% {
+    transform:  rotate(359deg) translate(.9em, -.7em) ;
+  }
+}
+
+@keyframes rotation2{
+  0% {
+    transform:  rotate(0deg) translate(-.6em, -.6em);
+  }
+  50%{
+    transform: rotate(160deg)   translate(-.6em, -.6em);
+  }
+  75%{
+    transform: rotate(270deg)   translate(-1.2em, -1.2em);
+  }
+  100% {
+    transform:  rotate(359deg)   translate(-.6em, -.6em);
+  }
+}
+
+@keyframes rotation3{
+  0% {
+    transform:  rotate(0deg) translate(0em, 0em);
+  }
+  50%{
+    transform: rotate(160deg)  translate(0.2em, 0.5em);
+  }
+  100% {
+    transform:  rotate(359deg) translate(0em, 0em);
+  }
+}
+
+@keyframes rotation4{
+  0% {
+    transform:  rotate(0deg) translate(0.3em, -0.8em);
+  }
+  50%{
+    transform: rotate(160deg) translate(.7em, .3em);
+  }
+  75%{
+    transform: rotate(270deg) translate(.9em, .6em);
+  }
+  100% {
+    transform:  rotate(359deg) translate(0.2em, -0.7em);
+  }
+}
+
+@keyframes rotation5{
+  0% {
+    transform:  rotate(0deg) translate(0,0);
+  }
+  50%{
+    transform: rotate(160deg)  translate(1em, 1em);
+  }
+  100% {
+    transform:  rotate(359deg) translate(0,0);
+  }
+}
+
+@keyframes rotation6{
+  0% {
+    transform:  rotate(359deg) translate(1.8em, 0.7em);
+  }
+  100% {
+    transform:  rotate(0deg) translate(1em, 0.4em);
+  }
+}
+
+
+@keyframes scale{
+  0% {
+    transform:  scale(.8);
+  }
+  50% {
+    transform:  scale(1.2);
+  }
+  100% {
+    transform:  scale(.9)  ;
+  }
+}

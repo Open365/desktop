@@ -1,0 +1,117 @@
+//****************************\	
+//		$VARIABLES
+//****************************\
+
+
+//****************************\	
+//		$COLORS
+//****************************\	
+
+//* Base colors  *//
+$c-mainlight: 		#7fcdee; // Turquoise light
+$c-dark: 	#18224c; // Dark blue
+$c-text: #4d4d4d; // grey text
+$c-icons: 	#1d292d; // dark grey
+$c-light: #f4f8f9; // Almost white
+$c-actions: #85a4af; // blue grey
+
+
+
+//* Greyscale *//
+$c-black : 			#231f20;
+$superdark: 		lighten($c-black, 10%);
+$darkergrey: 		lighten($c-black, 15%);
+$darkgrey: 			lighten($c-black, 25%);
+$grey: 				lighten($c-black, 50%);
+$lightgrey: 			lighten($c-black, 75%);
+$lightergrey  : 		lighten($c-black, 90%);
+$c-white: 			#fff;
+
+ 
+$c-background: rgba(255,255,255,.9);
+$textcolor:$darkergrey;
+$textcolor-strong:  $c-black;
+
+//* Links * //
+$linkcolor: $c-maincolor;
+$linkcolorhover   : darken($linkcolor, 10);
+$linkcolorvisited   : $c-maincolor;
+$linkcolorfocus   : darken($linkcolorvisited, 10);
+
+//* States *//
+
+$c-warning: 	#ea3d4e;
+
+//* Social colors *//
+$fb :#547bbc;
+$tw : #78cbef;
+$googleplus :rgb(221, 75, 57);
+$pinterest :rgb(203, 32, 39);
+$skype :rgb(18,165,244);
+$spotify :rgb(129,183,26);
+$instagram:#4E433C;
+$tumblr: #2B4964;
+$vimeo: #86B32D;
+$soundcloud: #f76600;
+$youtube: #FF3333;
+$linkedin: #4875B4;
+$flickr: #FE0883;
+$foursquare: #8FD400;
+
+//* People&Groups color *//
+$c-background: rgba(255,255,255,.97);
+$c-groupscolor: 		lighten(#275dc0, 15%); // Turquoise
+$c-dark: 	#18224c; // Dark blue
+$c-mainlight: 		lighten($c-groupscolor, 5%); // Turquoise light
+$c-text: #4d4d4d; // grey text
+$c-icons: 	#1d292d; // dark grey
+$c-light: #f4f8f9; // Almost white
+$c-actions: #85a4af; // blue grey
+
+$c-black : 			#231f20;
+$c-white: 			#fff;
+
+
+//****************************\	
+//		$FONT VALUES
+//****************************\	
+
+$t-alt : Georgia, Times, "Georgia";
+$t-code : "Courier New", monospace;
+$t-title : "Rokkitt", Georgia, sans-serif;
+
+$t-italic: "SourceSansIt";
+$t-bold: "SourceSansBld";
+$t-bold-italic: "SourceSansBldIt";
+$t-semi: "SourceSansSB";
+$t-title-bold: "rokkittbold";
+
+$t-size :16;
+$t-base :1.3125;
+
+
+//****************************\	
+//		$LAYOUT
+//****************************\	
+
+$pagemaxwitdh :68.75em;
+
+
+$gutterwidth :24px;
+$radius :2px;
+$transitiontime :    .3s;
+$animationtime :.8s;
+
+
+
+
+//****************************\	
+//		$BREAKPOINTS
+//****************************\	
+
+$bp1 : 30em;
+$bp2 : 37.5em;
+$bp3 : 48em;
+$bp4 : 56.25em;
+$bp5 : 68.75em;
+

@@ -1,0 +1,18 @@
+{
+  "name": "mail",
+  "templates": {
+    "button": [
+      "addons/mail/templates/buttons/mail.tpl.html"
+    ],
+    "content": [
+      "addons/mail/templates/content/mail.tpl.html"
+    ]
+  },
+  "modules": [],
+  "sass": [
+    "_variables.scss",
+    "_mail.scss"
+
+  ],
+  "hooks": {}
+}

@@ -1,0 +1,7 @@
+	<div ng-include="hooks.startMenu" class="start-menu topbar-menu brand-container">
+	</div>
+	<div class="toolbar-container">
+		<div class="toolbar-group"> 
+			<div data-block="addonButtons" ng-repeat="contentData in addons.button | filter: '!applications' | filter: '!support' " ng-include="contentData" class="bar-item bar-item-{{contentData | extractNameFromLink}}"></div>
+	    </div>
+    </div>

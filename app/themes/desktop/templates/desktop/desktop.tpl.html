@@ -1,0 +1,35 @@
+<div id="desktop">
+    <div ng-include="hooks.topbar"></div>
+	<div id="desktop-content" on-resize="onDesktopResize" on-unload="unloadDesktop">
+        <div ng-include="hooks.peopleGroups"></div>
+		<div ng-repeat="appWindow in windows">
+			<eye-window
+					on-remove="closeApp(appWindow)"
+					url="{{appWindow.url}}"
+					title="{{appWindow.name}}"
+					img-url="{{appWindow.smallIcon}}"
+					settings="appWindow.settings"
+					app-data="appWindow"
+					type="{{appWindow.type}}">
+			</eye-window>
+		</div>
+
+        <div data-block="addonContent" ng-repeat="contentData in addons.content" ng-include="contentData"></div>
+
+		<div class="loading-apps-space" ng-repeat="loadingApp in loadingApps track by $index">
+			<div class="loading-app">
+				<div class="text"><span>{{"Loading app" | translate}}</span></div>
+			</div>
+		</div>
+
+		</div><div ng-repeat="alert in alerts track by $index">
+			<eye-alert
+                    title="{{alert.title}}"
+					msg="{{alert.msg}}"
+                    icon="images/icons/alert.png"
+					yes="alert.ok()">
+			</eye-alert>
+		</div>
+	</div>
+</div>
+<div id="invisibleItems" style="display: none;"></div>

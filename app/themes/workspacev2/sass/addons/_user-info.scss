@@ -1,0 +1,25 @@
+
+.user-info li, .user-avatar, .user-name{
+	display: inline-block;
+}
+
+
+
+
+.topbar-popup{
+	.user-info, .user-info li a{
+		height: $popupTopbarHeight;
+		line-height: $popupTopbarHeight;
+		color: $popupTopbarColor;
+	}
+
+	.user-avatar{
+		width: $popup-img-width;
+		height: $popup-img-height;
+		box-shadow: $popup-img-decorator;
+	}
+	.user-name{
+		line-height: $popupTopbarHeight;
+		height: $popupTopbarHeight;
+	}
+}

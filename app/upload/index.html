@@ -1,0 +1,114 @@
+<HTML>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="css/dropzone.css">
+    <script src="../../vendor/jquery-2.1.1.min.js"></script>
+    <script src="../../i18n/lang.js"></script>
+    <script src="../vendor/tr.js"></script>
+    <script src="./dropzone.js"></script>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        #closeUpload {
+            background-image: url("./images/close.png");
+            position: fixed;
+            top: 3px;
+            right: 3px;
+            width: 22px;
+            height: 22px;
+            z-index: 9999999999999;
+            cursor: pointer;
+        }
+
+        #closeUpload:hover {
+            background-image: url("./images/close_hover.png");
+        }
+    </style>
+
+    <!-- Fonts -->
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <div id="closeUpload"></div>
+    <form class="dropzone" id="my-awesome-dropzone">
+    </form>
+
+    <script>
+        var userInfo = JSON.parse(localStorage.getItem('userInfo')) || {};
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var displayText = "<span class=\"click-text upload-btn\">"
+                        + tr("Click to upload")
+                        + "</span> <span class=\"separator-text\">"
+                        + tr("or")
+                        + "</span> <span class=\"drag-text\">"
+                        + tr("drop files here")
+                        + "</span>";
+
+        console.log(displayText);
+
+        Dropzone.options.myAwesomeDropzone = {
+            url: getUrlVars()['path'],
+            addRemoveLinks: true,
+            paramName: "file", // The name that will be used to transfer the file
+            maxFilesize: 200, // MB
+            // Translations
+            dictDefaultMessage: displayText,
+            dictFileTooBig: tr("File is too big ({{filesize}}MiB). Max filesize: {{maxFilesize}}MiB."),
+            dictResponseError: tr("Server responded with {{statusCode}} code."),
+            dictCancelUpload: tr("Cancel upload"),
+            dictCancelUploadConfirmation: tr("Are you sure you want to cancel this upload?"),
+            dictRemoveFile: tr("Remove file"),
+            dictMaxFilesExceeded: tr("You can not upload any more files."),
+            accept: function (file, done) {
+                var invalidCharsRegex = /[\\/:*?"<>|\0]/;
+
+                if (!file.name.trim().length) {
+                    done(tr("File name must be at least of one character"));
+                } else if (file.name.length > 200) {
+                    done(tr("File name too long"));
+                } else if (file.name.match(invalidCharsRegex)) {
+                    done(tr("Invalid characters in the file name"));
+                } else {
+                    done();
+                }
+            },
+            success: function (file) {
+                var self = this;
+                window.setTimeout(function () {
+                    self.removeFile(file);
+                },1500);
+            },
+            error: function (file, message, xhr) {
+                if (file.accepted) {
+                    message = tr("Error while uploading");
+                }
+
+                var node, _i, _len, _ref, _results;
+                file.previewElement.classList.add("dz-error");
+                _ref = file.previewElement.querySelectorAll("[data-dz-errormessage]");
+                _results = [];
+                for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+                    node = _ref[_i];
+                    _results.push(node.textContent = message);
+                }
+                return _results;
+            }
+        };
+
+        $('#closeUpload').click(function () {
+            window.parent.document.eyeosUploader.close();
+        });
+
+    </script>
+</body>
+</HTML>

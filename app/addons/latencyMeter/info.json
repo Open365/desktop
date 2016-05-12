@@ -1,0 +1,12 @@
+{
+  "name": "latencyMeter",
+  "templates": {
+    "button": ["addons/latencyMeter/templates/latencyMeter.tpl.html"]
+  },
+  "modules": ["netMeasure"],
+  "sass": [
+  "_variables.scss", 
+  "_latency.scss"
+  ],
+  "hooks": {}
+}

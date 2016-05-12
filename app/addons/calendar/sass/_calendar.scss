@@ -1,0 +1,36 @@
+
+// * / 1. $calendar button
+// * -----------------------
+// * /
+
+.calendar-btn{
+	@include addon-btn(
+			$char-icon: $icon-calendar-char, 
+			$c-background: ' ', 
+			$c-icon: $c-dockicon, 
+			$c-hover: ' ' , 
+			$c-active: $c-calendar-active,
+			$c-tooltip: $c-calendar-tooltip, 
+			$padding: ' ', 
+			$btn-width: $dockWidth,  
+			$btn-height: $dockWidth, 
+			$icon-size: $icon-calendar-size, 
+			$icon-lh: $icon-calendar-lh
+			);
+
+	cursor: pointer;
+
+	&::before{
+		transition: all .3s ease-out;
+	}
+
+	
+	&:hover{
+		&::before{
+			padding-left: .1em;
+		}
+	}
+
+	@include calendar-btn-extra;
+}
+

@@ -1,0 +1,665 @@
+
+// * / 1. $Button show groups
+// * -----------------------
+// * /
+
+.show-groups{
+	@include addon-btn(
+		$icon-people-groups-char,
+		$c-people-groups,
+		$c-dockicon,
+		$c-people-groups-hover,
+		$c-people-groups-active,
+		$c-people-groups-tooltip,
+		$itemPadding,
+		$dockWidth, 
+		$btn-height: $dockWidth,
+		$icon-size: 30,
+		$icon-lh: 1.62em
+	);
+
+	cursor: pointer;
+
+	&::before{
+		transition: all .3s ease-out;
+	}
+
+	
+	&:hover{
+		&::before{
+			padding-left: .1em;
+		}
+	}
+}
+
+
+
+// * / 2. $Groups container
+// * -----------------------
+// * /
+
+.people_groups-container{
+	position: absolute;
+	width: $container-width;
+	// max-width: 33em;
+	min-width: $container-minwidth;
+	top: 0;
+	bottom: 0;
+	overflow: auto;
+	background:$c-groups-background;
+	box-shadow: $shadow-container;
+	border: 1px solid $c-white;
+	transition: all .3s ease-in-out;
+	padding: $container-padding;
+	color: $c-text;
+	transform: translateX(-120%);
+	transition: all .3s ease-out;
+	height: 100%;
+	z-index: 20;
+	-webkit-backface-visibility: hidden;
+
+	&.visible{
+		transform: translateX(0);
+	}
+}
+
+.title__group{
+	margin: 0 0 3.9em;
+	@include fz(24);
+	font-weight: 600;
+
+	&::before{
+		@include pg-icon;
+	}
+}
+
+.btn-new{
+	background:$c-group;
+	border: none;
+	color: $c-white;
+	text-align: center;
+	box-shadow: inset 0 1px 0 rgba(255,255,255, .6);
+	font-weight: 600;
+	padding: .3em .7em;
+	border-radius: 2px;
+	position: absolute;
+	right: $container-padding;
+	top: $container-padding;
+
+	&:focus{
+		box-shadow: none;
+		outline: none;
+        }
+
+    &:disabled{
+    	opacity: .4;
+    	cursor: default;
+    }
+
+        @include hoverize(
+        	$t-color: #fff, 
+        	$bg-color: darken($c-group, 6%), 
+        	$transition: 
+        	$linkTransitions
+        );
+
+}
+
+.searcher{
+	position: relative;
+	margin-bottom: 2em;
+}
+
+.searcher-position{
+	position: absolute;
+	top: 5.5em;
+	left: 2em;
+	right: 2em;
+  	z-index: 10;
+}
+
+	.search-term{
+		border: none;
+		background:$c-people-groups-search-background;
+		padding: .5em .9em .5em 2.7em;
+		width: 100%;
+
+		&::-webkit-input-placeholder {
+			color: $c-placeholder;
+		}
+		&::-moz-placeholder { /* Firefox 19+ */
+			color: $c-placeholder;
+		}
+		&:-ms-input-placeholder {
+			color: $c-placeholder;
+		}
+		&:-moz-placeholder { /* Firefox 18- */
+			color: $c-placeholder;
+		}
+
+	}
+
+	.search-trigger{
+		background: none;
+		border: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+		@include iconize(
+			'\0042', 
+			34, 
+			$lh: 1, 
+			$color: inherit, 
+			$has-text: false, 
+			$width: $search-trigger-width, 
+			$height: $search-trigger-height);
+
+		&::before{
+			color: $c-placeholder;
+		}
+	}
+
+
+.group-item, .new-group{
+	background:$c-white;
+	box-shadow: $shadow-group-item;
+	padding: $group-item-padding;
+	margin-bottom: 1em;
+	position: relative;
+}
+
+	.form-group{
+		transition: all .3s ease-out;
+		height: $group-form-height;
+		overflow: hidden;
+	}
+
+
+		.create-actions{
+			position: absolute;
+			bottom: 0;
+			z-index: 2;
+			padding: 1.3em;
+			background:$c-white;
+			border-top: 1px solid $c-people-groups-border;
+			width: 100%;
+			left: 0;
+		}
+
+	.group-name{
+		margin: $group-name-margin;
+		@include fz($t-people-groups-name-size);
+		font-weight: bold;
+		color: lighten($c-text, 8%);
+		display: inline-block;
+		position: relative;
+		@include ellipsis(calc(100% - 4.5em));
+
+		&::before{
+			// content: '';
+			// position: absolute;
+			// top: -1em;
+			// left: 0;
+			// width: 100%;
+			// height: .2em;
+			// background:lighten($c-text, 15%);
+
+		}
+	}
+	.group-description{
+		font-style: italic;
+	}
+
+	.group-members{
+		position: relative;
+		margin: $group-members-margin;
+
+		&::before{
+			content: '';
+			position: absolute;
+			width: $group-members-width;
+			height: 2px;
+			background: $c-group;
+			top: -1em;
+		}
+	}
+
+	.group-actions{
+		padding-top: 1em;
+		display: flex;
+		width: calc(100% + 2.6em);
+		margin-left: -1.3em;
+
+		&::before{
+			content: '';
+			width: calc(100% + 1em);
+			left: -1em;
+			height: 1px;
+			background: $c-groups-background;
+			position: absolute;
+			bottom: 2.8em;
+		}
+	}
+
+		.action-item{
+			//@include iconize(' ', 24, $lh: 1, $color: inherit, $has-text: true, $width: 2em, $height: 2em);
+			position: relative;
+			background: none;
+			border: none;
+			color: darken($c-icons, 10%);
+			flex: 1;
+			padding: 0;
+			@include hoverize($t-color: $c-maincolor, $bg-color: false, $transition: $linkTransitions);
+
+		}
+
+			.action_list{
+				&::before{
+				 @include icon($icon-people-groups-list-char,24, inherit, $lh: 1);
+				 padding-right: .15em;
+				}
+			}
+
+			.action_folder{
+				&::before{
+				 @include icon($icon-people-groups-folder-char,24, inherit, $lh: 1);
+				 padding-right: .15em;
+
+				}
+			}
+
+			.action_edit{
+				&::before{
+				 @include icon($icon-people-groups-edit-char,24, inherit, $lh: 1);
+				 padding-right: .15em;
+				}
+			}
+
+			.action_delete{
+				@include iconize(' ', 28, $lh: 1, $color: inherit, $has-text: false, $width: $button-delete-width, $height: $button-delete-height);
+				position: absolute;
+				right: 1em;
+				top: 1em;
+
+				&::before{
+					color: lighten($c-icons, 10%);
+
+					content: $icon-people-groups-delete-char;
+				}
+
+				@include close-element;
+			}
+
+
+.btn-close{
+	@include iconize($icon-people-groups-close-char, 28, $lh: 1, $color: inherit, $has-text: false, $width: $button-close-width, $height: $button-delete-height);
+	@include reset-btn(none);
+	position: absolute;
+	right: 1em;
+
+	@include close-element;
+}
+
+	.form-group{
+		label{
+			margin: $group-form-margin;
+		}
+	}
+	.set-group-name, .set-group-description, .new-group .search-term{
+		width: 100%;
+		background:$c-groups-background;
+		border: none;
+		padding: .4em .8em;
+		margin-bottom: .8em;
+	}
+
+	.new-group .searcher{
+		margin-bottom: 1em;
+	}
+
+	.new-group .search-term{
+		padding:$new-group-padding;
+	}
+
+.group-users{
+	position: relative;
+}
+
+.members-list{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+	.list-members{
+		@include reset-btn(none);
+		//@include iconize('\00E4', 23, $lh: 1.3, $color: inherit, $has-text: false, $width: 2em, $height: 2em);
+		color: $c-icons;
+		position: relative;
+
+		&::before{
+			text-align: right;
+			@include icon($char:$icon-people-groups-list-char, $size: 23, $color: inherit, $lh: 1.3);
+			position: relative;
+			z-index: 2;
+		}
+
+		&.active{
+			transition: $linkTransitions;
+			color: #fff;
+
+			&::after{
+				content: '';
+				width: 1.7em;
+				height: 1.7em;
+				background: $c-group;
+				border-radius: 50% 50% 0;
+				position: absolute;
+				z-index: 0;
+				left: 4px;
+				top: 4px;
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+		.tooltip-msg{
+			position: absolute;
+			right: 0;
+			top: calc(100% + .1em);
+			background:rgba(0,0,0,.8);
+			color:#EAEBF1;
+			white-space: nowrap;
+			padding: .3em 1em;
+			transition: $linkTransitions;
+			transform: translateY(-50%);
+			opacity: 0;
+			z-index: 0;
+	
+
+			&::before{
+				@include triangle($direction: top, $size: .5em , $color: rgba(0,0,0,.8), $position: right .65em top -1em);
+			}
+
+			*:hover> &{
+				transform: translateY(0);
+				opacity: 1;
+				z-index: 2;				
+			}
+
+		}
+
+
+.list2add{
+	  margin-bottom: 3em;
+	  overflow: auto;
+	  position: absolute;
+	  bottom: 3em;
+	  top: 21em;
+	  width: calc(100% - 3em);
+}
+
+.list2add-long{
+	top: 19em;
+}
+
+	.people-item{
+		position: relative;
+		margin:1em 0 .3em 2em;
+		font-weight: 600;
+		z-index: 2;
+
+		&::before{
+			content: '';
+			position: absolute;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background:lighten($c-maincolor, 15%);
+			left: -1.25em;
+			top: .45em;
+		}
+
+
+
+		&:hover{
+			&::after{
+				content: '';
+				width: calc(100% + 2em);
+				background:lighten($c-groups-background, 2%);
+				height: 100%;
+				z-index: -1;
+				transition: $linkTransitions;
+				left: -2em;
+				top: 50%;
+				transform: translateY(-50%);
+				position: absolute;
+				padding: 1em;
+			}
+		}
+	}
+
+	.people-item__online
+	{
+		&::before{
+			background: #75f09a;
+		}
+	}
+
+	.people-item__offline
+	{
+		&::before{
+			background: #CDD1D4;
+		}
+	}
+
+		.add2group, .remove2group{
+			@include reset-btn(none);
+			position: absolute;
+			right: 0;
+			@include iconize($icon-people-groups-add-char, 30, $lh: .6, $color: inherit, $has-text: false, $width: 100%, $height: 2em);
+
+			&::before{
+				width: 1em;
+				left: calc(100% - 1em);
+			}
+
+			&:hover{
+				&::before{
+					color: $c-maincolor;
+				}
+			}
+		}
+		.remove2group{
+			&::before{
+				content: $icon-people-groups-delete-char;
+					color: $c-group-remove-hover;
+			}
+
+			&:hover{
+				&::before{
+					color: $c-group-remove-hover;
+				}
+			}
+		}
+
+.btn-cancel, .btn-save{
+	@include reset-btn($c-people-groups-button-reset);
+	width: calc(50% - .7em);
+	color: $c-white;
+	padding: $button-cancel-padding;
+	font-weight: 600;
+	@include hoverize ($t-color: $c-people-groups-button-cancel, $bg-color: darken($c-people-groups-button-reset, 8%), $transition: $linkTransitions);
+
+
+}
+.btn-save{
+	@include reset-btn($c-group);
+	margin-left: 1em;
+
+	@include  hoverize($t-color: $c-people-groups-button-save, $bg-color: darken($c-group, 8%), $transition: $linkTransitions);
+
+}
+
+.btn-cancel{
+
+}
+
+.msg-box{
+	  position: absolute;
+	  background: transparentize($c-people-groups-msg-background, 0.1);
+	  padding: $people-groups-msg-box-padding;
+	  color: $c-people-groups-msg;
+	  transition: all .3s ease-in-out;
+	  font-size: $t-people-groups-msg-size;
+	  top: 3.2em;
+	  z-index: 2;
+	  right:0;
+	  font-weight: 600;
+
+	 &:before {
+	    @include triangle(
+	    	$size: .5em,
+	      $direction : top, 
+	      $position  : top -1em right 1.3em, 
+	      $color: transparentize($c-people-groups-msg-background, 0.1)
+	    );
+	  }
+}
+
+	.msg__warning{
+		&::after{
+			@include icon($icon-people-groups-warning-char, 37px, $c-white, $lh: .9);
+			position: absolute;
+			left: .7em;
+			width: 1em;
+			height: 1em;
+			background: $c-warning;
+			border-radius: 50%;
+			text-align: center;
+			margin-top: -.4em;
+			top: 1em;
+		}
+	}
+
+	.action-btns{
+		margin: 1em 0 0 -.3em;
+		text-align: right;
+	}
+
+	.confirm_delete{
+		@include reset-btn($c-warning);
+		color: $c-white;
+		padding: .5em .8em;
+		@include fz(15px);
+		text-transform: uppercase;
+		font-weight: 600;
+
+		@include hoverize($t-color: inherit, $bg-color: darken($c-warning, 10%), $transition: $linkTransitions);
+	}
+
+	.cancel_delete{
+		@include reset-btn(none);
+		color: $c-white;
+		
+		&:hover{
+			color: $c-warning;
+		}
+	}
+
+@keyframes start {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    51% {opacity: 1;}
+}
+
+@-webkit-keyframes start {
+    0% {opacity: 0;}
+    50% {opacity: 0;}
+    51% {opacity: 1;}
+}
+
+.empty-state
+{
+	-webkit-animation: start 0.3s linear;
+	-webkit-animation-iteration-count: 1;
+	animation: start 0.3s linear;
+	animation-iteration-count: 1;
+	position: absolute;
+	top: 190px;
+	left: 0%;
+	width: 100%;
+	.icon
+	{
+		border: 4px solid #cbd2de;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		height: 95px;
+		margin: 0 auto;
+		text-align: center;
+		width: 95px;
+		&::after
+		{
+			font-family: 'eyeos-symbols';
+			content: '\00eb';
+			color: #cbd2de;
+			font-size: 56px;
+			line-height: 1.3;
+			transform: translate(-50%,-50%);
+		}
+	}
+	.title
+	{
+		color: #858fa9;
+		font-size: 21px;
+		font-weight: 600;
+		margin-top: 15px;
+		text-align: center;
+	}
+	.description
+	{
+		color: #858fa9;
+		font-size: 18px;
+		margin-top: 5px;
+		line-height: 1.3;
+		text-align: center;
+	}
+	.action
+	{
+		text-align: center;
+		button
+		{
+			border: 2px solid #cbd2de;
+			color: #858fa9;
+			font-size: 18px;
+			background-color: #EAEBF1;
+			line-height: 32px;
+			margin-top: 25px;
+			padding: 0 25px;
+		}
+	}
+}
+
+
+.people-bar-item {
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+	font-smooth: always;
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	font-family: 'eyeos-symbols';
+	font-weight: normal;
+	content: '\00cf';
+	font-size: 40px;
+	font-size: 2.5rem;
+	color: #acb1be;
+	line-height: 1.32em;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	text-align: center;
+	width: 45px;
+	height: 45px;
+}

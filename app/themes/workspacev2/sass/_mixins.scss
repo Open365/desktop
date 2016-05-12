@@ -1,0 +1,39 @@
+//  $MIXINS FOR  STYLE COMMONS 
+
+
+// * / 1. $dock-bar hover
+// * -----------------------
+// * /
+// 
+// 
+
+@mixin dock-hover($bg:$c-maincolor){
+
+	&::before{
+		padding-left: .1em;
+	}
+	.tooltip-flag{
+		&::after{
+			content: ' ';
+			width: .3em;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			background:$bg;
+		}
+	}
+}
+
+
+// * / 2. $hover element
+// * -----------------------
+// * /
+// 
+@mixin close-element{
+	transition: all .2s ease-out;
+
+	&:hover{
+		transform: rotate(90deg);
+	}
+}

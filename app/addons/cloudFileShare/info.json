@@ -1,0 +1,9 @@
+{
+  "name": "cloudFileShare",
+  "templates": {},
+  "modules": [
+    "fileShare"
+  ],
+  "sass": [],
+  "hooks": {}
+}

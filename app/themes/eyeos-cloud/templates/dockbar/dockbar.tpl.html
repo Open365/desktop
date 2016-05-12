@@ -1,0 +1,12 @@
+<div ng-include="hooks.applications" class="dock-item"></div>
+<div ng-include="hooks.support" class="support-position dock-item"></div>
+<div data-block="addonContent" ng-repeat="contentData in addons.content | filter : 'iconBoard'"  ng-include="contentData" class="featured-apps bar-item-{{contentData | extractNameFromLink}}"></div>
+<div data-block="addonContent" ng-repeat="contentData in addons.button | filter : 'mail'"  ng-include="contentData" class="mail-app bar-item-{{contentData | extractNameFromLink}}"></div>
+<div data-block="addonContent" ng-repeat="contentData in addons.button | filter : 'calendar'"  ng-include="contentData" class="mail-app bar-item-{{contentData | extractNameFromLink}}"></div>
+<div ng-if="peopleGroupsEnabled" class=" panel-button show-groups dock-item" ng-click="initPeopleGroups('groups-container', $event)">
+     <span class="tooltip-flag">{{"Groups" | translate}}</span>
+</div>
+<div ng-if="peopleGroupsEnabled" class=" panel-button show-users dock-item" ng-click="initPeopleGroups('users-container', $event)">
+     <span class="tooltip-flag">{{"Users" | translate}}</span>
+</div>
+

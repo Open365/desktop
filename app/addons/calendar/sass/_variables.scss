@@ -1,0 +1,32 @@
+
+// * / 1. $calendar properties
+// * -----------------------
+// * /
+
+	// Colors
+
+	$c-dockicon: #fff;
+	$c-calendar-tooltip: #42F4CA !important;
+	$c-calendar-active: #fff;
+
+
+	// Typo
+
+	$icon-calendar-char: '\00f2';
+	$icon-calendar-size: 45;
+	$icon-calendar-lh: 1;
+
+	// Layout
+
+	$dockWidth: 1em;
+
+
+
+// * / 2. $Mixin for extra styles in every theme
+// * -----------------------
+// * /
+// 
+
+@mixin calendar-btn-extra{
+	@include dock-button-decorator(bottom);
+}

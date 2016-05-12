@@ -1,0 +1,18 @@
+{
+  "name": "peopleGroups",
+  "templates": {
+    "button": ["addons/peopleGroups/templates/peopleGroups.tpl.html"]
+  },
+  "modules": [],
+  "sass": [
+  	"_people-groups.scss",
+  	"_variables.scss"
+  ],
+  "hooks": {
+    "peopleGroups": "peopleGroupsMenu.tpl.html",
+    "groupsList": "groupsList.tpl.html",
+    "groupItem": "groupItem.tpl.html",
+    "groupForm":"groupForm.tpl.html",
+    "peopleButton": "peopleButton.tpl.html"
+  }
+}

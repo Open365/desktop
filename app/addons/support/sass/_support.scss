@@ -1,0 +1,48 @@
+// * / 1. $Button support
+// * -----------------------
+// * /
+
+.support-btn{
+	@include addon-btn(
+		$icon-support-char,
+		$c-support, 
+		$c-dockicon,
+		$c-dockicon,
+		$c-support-active,
+		$c-support-tooltip !important,
+		$itemPadding,
+		$dockWidth, 
+		$dockWidth
+	);
+	display: block;
+	@include dock-button-decorator (top);
+
+	&::before{
+		line-height: $icon-support-lh;
+	}
+
+}
+
+.support-position{
+	position: absolute;
+	bottom: $dockWidth;
+}
+
+// * / 2. $Form support
+// * -----------------------
+// * /
+
+#ticketSubmissionForm{
+	right: auto !important;
+	left: 75px !important;
+	bottom: 2.5em !important;
+
+}
+
+#launcher{
+	right: auto !important;
+	left: 90px !important;
+	bottom: 4em !important;
+	z-index: 27 !important;
+	display: none !important;
+}

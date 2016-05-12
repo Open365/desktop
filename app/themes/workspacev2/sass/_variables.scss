@@ -1,0 +1,392 @@
+//  $VARIABLES FOR WORKSPACEV2
+
+// * Expand parent styles.
+
+$full-styles: true;
+
+// * 1. $Colors 
+// * 2. $Background settings
+// * 3. $Topbar settings
+// * 4. $Desktop content settings
+// * 5. $Logo settings
+// * 6. $Topbar button colors
+// * 7. $Fonts settings
+
+
+
+// */ 1. $Colors 
+// * ---------------------------
+// */
+
+$c-light: #EFEFF4; // Light grey
+$c-dark: #363643;  // Dark grey
+$c-blue-grey: #858fa9; // Blue grey
+$c-light-grey: #cbd2de; // Light grey
+$c-medium-grey: #515668; // Medium grey
+$c-green:  #63E5CE;
+
+
+$c-right-1: #525266; // First color button from the right of the toolbar -> Grey
+$c-right-2: #494958; // Second color button from the right of the toolbar -> Grey
+$c-right-3: #515162; // Third color button from the right of the toolbar -> Grey
+
+$c-white:           #fff;
+$c-grey:           #36373C;
+
+$blue: #639aea;
+$medium-blue: #597bd2;
+$dark-blue: #3863E3;
+
+$c-maincolor: 	  $blue; // Blue tone
+
+$c-warning-msg: #F5A623;
+$c-warning-dark: #dc9500;
+$c-warning-light: #dfab6e;
+
+$c-tooltip-bg: rgba(35,35,45, .86);
+$c-tooltip: #ACB1BF;
+
+$c-darkTrans: rgba(40,40,48,.86);
+$app-hover: ' ';
+$apps-decorator:$c-maincolor;
+$icon-color: $c-maincolor;
+$app-decorator: $c-maincolor;
+$c-icon-hover: $c-maincolor;
+$c-user-tooltip: $c-maincolor;
+$c-people-groups-tooltip: $c-maincolor;
+$c-icon-active: $c-maincolor;
+
+
+$c-topbar-items: $c-light;
+
+$c-user-color: $c-white;
+
+$c-text: $c-grey;
+
+$apps-bg: $c-dark;
+
+$c-welc-title: $c-blue-grey;
+$c-welc-text: $c-medium-grey;
+$c-welc-btns: $medium-blue;
+
+
+
+// */ 2. $Background settings
+// * -----------------------------
+// * Custom background variables for desktop-mixin
+// * $bg-color:  Background-color
+// * $bg-image:  Background-image
+// */
+
+$desktop-bgc: #000;
+
+// HD desktops wallpaper
+$desktop-bgi-grandpa: '/themes/workspacev1/images/wp-desktop-desktop-hd.jpg';
+// Desktops wallpaper
+$desktop-bgi-papa: '/themes/workspacev1/images/wp-desktop-desktop.jpg';
+// Tablets wallpaper
+$desktop-bgi-mama: '/themes/workspacev1/images/wp-desktop-tablet.jpg';
+//Mobiles wallpaper
+$desktop-bgi-baby: '/themes/workspacev1/images/wp-desktop-mobile.jpg';
+
+$desktop-bgpos: 'top center';
+
+
+// */ 3. $Topbar settings
+//* -----------------------------
+// * Custom topbar variables for topbar-mixin
+// * $topbarHeight: Height for the topbar
+// * $topbar-bg:  Color for topbar
+// * $shadow:  Values for shadows
+// */
+
+$is-dock: false;
+
+$topbarHeight: 40px;
+$topbarWidth: 100%;
+$topbar-bg: #373c49;
+$shadow:0 1px 0 rgba(255,255,255,.2);
+
+$gap: .5; //apply to the children elements
+
+$img-width: 25px;
+$img-height: 25px;
+
+
+// If is flex-direction row will be the width, and for flex-direction column will be the height
+$logo-max: 130px;
+
+	//* Toolbar settings
+
+	$align-content: flex-end;
+	$buttonHeight: $topbarHeight;
+	$addonsHeight: $topbarHeight;
+
+
+
+// */ 4. $popupTopbar settings
+//* -----------------------------
+// */
+
+$popupTopbarColor: $c-topbar-items;
+$popupTopbarColorDark: #acb1be;
+$popupTopbarHeight: 30px;
+$popupTopbarBackground: #373c49;
+$popupToarbarShadow: 0 1px 2px rgba(0,0,0,.5);
+
+// logo
+$popup-logo-background: rgba(0,0,0,.17);
+$popup-logo-max: 45px;
+$popup-logo-height: 21px;
+$popup-logo-width: 21px;
+
+//user
+$userAvatarSize: 20px;
+
+//latency meter
+$popupTopbarLatencyMeterSize: 22px;
+
+
+
+// * / 5. $Dock
+// * -----------------------
+// * /
+
+$dockWidth: 60px;
+
+$topbar-bg: #363643;
+$c-dockicon: #acb1be;
+
+$dockShadow:  inset -2px 0 3px rgba(0, 0, 0, .3), 1px 0 0 rgba(255, 255, 255, 0.2);
+
+$itemPadding: 0;
+$tooltipPadding: 12px 18px 0 $dockWidth + 10px;
+
+$apps-bg: $c-darkTrans;
+$app-hover: rgba(40, 40, 48, 0.5);
+$apps-decorator: $c-green;
+
+// */ 6. $Desktop content settings
+// */ 6. $Desktop content settings
+//* -----------------------------
+// * Custom desktop content variables for desktop-size mixin
+// * $contentHeight: Height for desktop content
+// * $contentWidth-bg:  Width for desktop content
+// */
+
+$contentHeight: calc(100% - #{$topbarHeight});
+$contentWidth: 100%;
+
+
+
+// */ 7. $Logo settings
+//* -----------------------------
+// * Custom topbar variables for topbar-mixin
+// * $topbarHeight: Height for the topbar
+// * $topbar-bg:  Color for topbar
+// * $shadow:  Values for shadows
+// */
+
+$logo-width: 115px;
+$logo-height: $topbarHeight - 9px;
+$logo-margin: .25em 0 0 0;
+
+$outer-circle:  $c-maincolor;
+$inner-circle:  $c-white;
+$text-logo: $c-white;
+
+
+
+
+// */ 8. $Topbar button colors
+//* -----------------------------
+// * Colors for buttons in topbar
+// */
+
+$c-conectivity: $c-right-2;
+$c-user-profile: $c-right-3;
+
+
+// */ 7. $Fonts settings
+//* -----------------------------
+// */
+
+$t-text: 'source-sans', sans-serif;
+$t-size: 16;
+
+$t-icon: 'eyeos-symbols';
+
+// */ 9. $Media queries 
+//* -----------------------------
+// */
+$grandpa-bear: 1440px;
+$papa-bear: 1024px;
+$mama-bear: 768px;
+$baby-bear: 480px;
+
+
+
+// * / 10. $Transitions
+// * -----------------------
+// * /
+
+$linkTransitions: all .3s ease-out;
+
+
+//=====================================================================
+
+// $MIXINS
+
+// * 1. $Desktop background. 
+// * 2. $Desktop size. 
+// * 3. $Topbar settings
+
+
+// */ 1. $Desktop background
+//* -----------------------------
+// * Element affected: #desktop
+// * Modify values at 2. $Background settings
+// */
+
+@mixin desktop-mixin($bg-color: $desktop-bgc) {
+	background-color: $bg-color;
+	background-position:  #{$desktop-bgpos};
+
+	@include mobile{
+		background-image: url($desktop-bgi-baby) ;
+	}
+	@include tablet{
+		background-image: url($desktop-bgi-mama);
+	}
+	@include desktop{
+		background-image: url($desktop-bgi-papa) ;
+	}
+	@include hd-desktop{
+		background-image: url($desktop-bgi-grandpa);
+	}	
+
+	@if $is-dock == true{
+		display: flex;
+	}
+
+}
+
+// */ 2. $Desktop size  
+//* -----------------------------
+// * Element affected:  #desktop-content 
+// * Modify values at  4. $Desktop content settings
+// */
+
+@mixin desktop-size($width:$contentWidth, $height: $contentHeight) {
+	width: $width;
+}
+
+
+// */ 3. $Topbar settings
+//* -----------------------------
+// * Element affected:  .topbar
+// * Modify values at  3. $Topbar settings
+// */
+
+@mixin topbar-mixin($bg:  $topbar-bg, $shadow: $shadow, $size:$topbarHeight) {
+	
+	background: $bg;
+	box-shadow:$shadow;
+	height: $size;
+	display: flex;
+	flex-wrap:wrap;
+	
+	@if $is-dock == true{
+		width: $topbarWidth;
+		flex-direction: column;
+	}
+}
+
+
+
+// */ 4. $Logo settings
+//* -----------------------------
+// * Element affected:  .brand-container
+// * Modify values at  3. $Topbar settings
+// */
+
+@mixin brand-size($size: $logo-max) {
+	flex: 0 0 $logo-max;
+
+}
+
+@mixin popup-brand-size($size: $logo-max) {
+	flex: 0 0 $popup-logo-max;
+
+}
+
+@mixin popup-brand-extra($bg: $popup-logo-background ){
+	background: $bg;
+	border-right: 1px solid rgba(17,18,19,.19);
+	position: relative;
+	text-align: center;
+	&:before{
+		content: " ";
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		left: $popup-logo-max;
+		bottom: 0;
+		border-right: 1px solid rgba(255,255,255,.31);
+		opacity: .19;
+	}
+}
+
+// */ 5. $Toolbar group settings
+//* -----------------------------
+// * Element affected:  .toolbar-group
+// * Modify values at  3. $Topbar settings
+// */
+
+@mixin toolbar-flex($content-dir: $align-content) {
+
+	@if $is-dock == true{
+		flex-direction: column;
+	}@else{
+		flex-direction: row;
+	}
+
+	-webkit-justify-content: $align-content;
+	justify-content:$align-content;
+}
+
+
+// * / 6. $Buttons separator
+// * -----------------------
+// * /
+
+@mixin dock-button-decorator($direction){
+	border-#{$direction}: 1px solid rgba(17,18,19,.69);
+	@if $direction == 'bottom'{
+		box-shadow: 0px 1px 0px 0px rgba(255,255,255,.1);
+	}@else{
+		box-shadow: inset 0 1px 0 0 rgba(255,255,255,.1);
+	}
+}
+
+
+// * / 7. $Ventus icon
+// * -----------------------
+// * /
+
+
+@mixin ventus-icon($bg, $width, $height, $margin, $aligment, $char, $icon-size, $color, $lh){
+	@include reset-btn($bg);
+	width: $width;
+	height: $height;
+	margin: $margin;
+	text-align: $aligment;
+
+	&::before{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		@include icon($char, $icon-size, $color, $lh);
+	}
+}

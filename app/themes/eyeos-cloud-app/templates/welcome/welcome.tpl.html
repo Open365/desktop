@@ -1,0 +1,30 @@
+<div class="home-container" id="home-container" ng-controller="cloudController">
+
+    <div id="loading-logo" ng-controller="cloudAppController" ng-include="hooks.loading" ng-show="showLoading"></div>
+    <div id="userActivityContainer" ng-include="hooks.userActivity"></div>
+
+    <div class="lostActivity-overlay" ng-show="showErrorMessage">
+        <div class="lostActivity-mainForm">
+            <div class="lostActivity-mainFormIn title">
+                <img src="themes/eyeos-cloud-app/images/connectivity-cloud.svg" width="157" height="95" title="{{'You are experiencing unsteady internet connectivity.' | translate}}" />
+                <h1>{{"You are experiencing unsteady internet connectivity." | translate}}</h1>
+                <h2>{{"Please check your network access." | translate}}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div id="lostActivityMessage" class="lostActivity-overlay lost-activity" ng-show="showLostActivity">
+        <div class="lostActivity-mainForm">
+            <div class="lostActivity-mainFormIn">
+                <img src="themes/eyeos-cloud-app/images/sleepy-cloud.svg" width="157" height="95" title="{{'You have been idle for too long.' | translate}}" />        
+                <h1>{{"You have been idle for too long." | translate}}</h1>
+                <h2>{{"Your application has been suspended." | translate}}</h2>
+                <h2>{{"(Unsaved changes may have been lost)" | translate}}</h2>
+                <div class="lostActivity-submit">
+                    <button class="btn-change btn-change-active ng-binding" ng-click="recoverWorkSession()">{{"I'm back, resume!" | translate}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

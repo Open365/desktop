@@ -1,0 +1,58 @@
+<ul class="topbar-dropdown user-info" ng-controller="peopleGroupsController">
+	<li class="dropdown dropdown-toggle" on-toggle="toggled(open)" ng-click="onClicked($event)">
+		<a href class="item" data-block="link" id="userInfo">
+			<span class="user-avatar"><img src="/images/avatar2.png" alt=""></span>
+			<span class="user-name">{{getDisplayName(currentUser)}}</span>
+		</a>
+		<ul class="dropdown-menu menu-wrapper principal-wrapper" ng-controller="StartMenuController">
+			<ul class="support-menu" ng-if="feedbackActive || faqActive || forumActive">
+				<li>
+					<div class="component-list support">
+						<span>{{'Support' | translate}}</span>
+					</div>
+
+					<ul class="menu-wrapper submenu-wrapper">
+						<li ng-if="feedbackActive">
+							<div class="component-list feedback" ng-click="feedback()">
+								<span>{{'Feedback' | translate}}</span>
+							</div>
+						</li>
+						<li ng-if="faqActive">
+							<div class="component-list faq" ng-click="faq()">
+								<span>{{'FAQ' | translate}}</span>
+							</div>
+						</li>
+						<li ng-if="forumActive">
+							<div class="component-list forum" ng-click="forum()">
+								<span>{{'Forum' | translate}}</span>
+							</div>
+						</li>
+						<li ng-if="blogActive">
+							<div class="component-list blog" ng-click="blog()">
+								<span>{{'Blog' | translate}}</span>
+							</div>
+						</li>
+
+					</ul>
+				</li>
+				<li ng-if="changePasswordActive">
+					<div class="component-list changepassword" ng-click="openChangePasswordDialog()">
+						<span>{{'Password' | translate}}</span>
+					</div>
+				</li>
+
+				<li>
+					<div class="component-list about" ng-click="about()">
+						<span>{{'About' | translate}}</span>
+					</div>
+				</li>
+
+				<li>
+					<div class="component-list logout" id="logout_button" ng-click="logout()">
+						<span>{{'Log out' | translate}}</span>
+					</div>
+				</li>
+			</ul>
+		</ul>
+	</li>
+</ul>

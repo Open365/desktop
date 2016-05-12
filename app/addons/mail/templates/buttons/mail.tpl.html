@@ -1,0 +1,27 @@
+<div class="mail-btn panel-button dock-item" ng-click="togglePanel('mail-content', $event)">
+    <span class="tooltip-flag">{{"E-mail" | translate}}</span>
+    <span class="notification-msg notification-msg__mail">1</span>
+</div>
+
+<script>
+	$(document).ready(function() {
+		var mailCount = 1;
+
+		setInterval(function(){ 
+	  		mailCount++;
+
+			if(mailCount < 100){
+				$('.notification-msg__mail').html(mailCount);
+		  		$('.notification-msg__mail').addClass('updating').delay(2000).queue(function(){
+		  				$(this).removeClass('updating');
+		  				console.log('now');
+		  				$(this).dequeue();
+	  		});
+			}
+	  		
+		}, 21000);
+
+	});
+
+
+</script>

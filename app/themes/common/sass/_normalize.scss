@@ -1,0 +1,80 @@
+html{
+	height: 100%;
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+	// text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+	font-smooth: always;
+
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	//-webkit-font-smoothing: subpixel-antialiased;
+
+  	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html, body{
+	font-size: 100%;
+	margin: 0;
+  	font-family: $t-text;
+	
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+ a{
+ 	text-decoration: none;
+ }
+
+a:active,
+a:hover, 
+button:active,
+button:focus, 
+button:hover  {
+  outline: 0;
+  text-decoration: none;
+}
+
+ul{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+textarea{
+    resize: none;
+}

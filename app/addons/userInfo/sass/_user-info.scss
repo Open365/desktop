@@ -1,0 +1,72 @@
+
+.user-info li a{
+	display: flex;
+	color: $c-user-color;
+	line-height: $userInfo-height;
+	height: $userInfo-height;
+
+	&:hover{
+		text-decoration: none !important;
+	}
+}
+
+.user-info{
+	@include displayflex;
+	height: $userInfo-height;
+	color: $c-user-color;
+	line-height: $userInfo-height;
+	@if $c-user-bg != ''{
+		background:$c-user-bg;
+	}
+	@if $t-userSize != ''{
+		font-size: $t-userSize;
+	}
+	@if $t-userWeight != ''{
+		font-weight: $t-userWeight;
+	}
+	@if $userPadding !=''{
+		padding: $userPadding;
+	}
+	@if $userMargin !=''{
+		margin: $userMargin;
+	}
+
+}
+	.user-avatar{
+		@if $img-order != ''{
+			order: $img-order;
+		} 
+		width:$img-width;
+		height: $img-height;
+		overflow: hidden;
+		@if $img-radius != ''{
+			border-radius: $img-radius;
+		}
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+
+		@if $img-margin != ''{
+			margin: $img-margin;
+		}
+		@include avatar-decorator;
+
+		img{
+			width: 105%;
+			margin-left: -5%;
+			vertical-align: top;
+		}
+	}
+
+	.user-name{
+		line-height: $addonsHeight;
+		$nameMax-width: 14rem !default;
+
+		@include ellipsis(calc(#{$nameMax-width} - #{$img-width} ));
+
+		&::after{
+			content: '\00EE';
+			font-family: $t-icon;
+			padding-left: .3em;
+		}
+	}

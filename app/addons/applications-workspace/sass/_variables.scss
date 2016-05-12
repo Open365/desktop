@@ -1,0 +1,149 @@
+
+$gridWidth: ' ';
+
+
+// * / 1. $Apps wrapper properties
+// * -----------------------
+// * /
+
+
+$apps-bg : ' ';
+$apps-border: ' ';
+$apps-shadow: ' ';
+$posLeft: ' ';
+$posTop: ' ';
+$appsRadius: ' ';
+$appsWidth: ' ';
+
+
+// * / 2. $Apps  properties
+// * -----------------------
+// * /
+
+
+$title-color: ' ';
+$title-size: ' ';
+$title-align: ' ';
+
+$app-width: ' ';
+$app-height: ' ';
+$app-bg: ' ';
+
+// Uncomment this line to affect apps width
+
+//$appsWidth: $gridWidth * $app-width;
+
+// * / 3. $App icons
+// * -----------------------
+// * /
+$icon-char: ' ';
+$icon-size: 32;
+$icon-lh: ' ';
+$icon-color: #63E5CE;
+$icon-bg:  ' ';
+$icon-shadow: ' ';
+
+	// Apps colors
+	$icon-word-color: ' ' ;
+	$icon-powerpoint-color: ' ';
+	$icon-excel-color: ' ';
+	$icon-admin-color: ' ';
+	$icon-files-color: ' ';
+	$icon-outlook-color: ' ';
+	$icon-writer-color: #209BE7;
+	$icon-calc-color: #7BC96F;
+	$icon-draw-color: #FBD059;
+	$icon-impress-color: #EB5D21;
+	$icon-birds-office-color: #FFF;
+	$icon-chrome-color: #fbcb00;
+	$icon-firefox-color: #e17300;
+	$icon-explorer-color: #2ebaec;
+
+	// Apps chars
+	$icon-word-char: '\00a5';
+	$icon-powerpoint-char: '\2248';
+	$icon-excel-char: '\007e';
+	$icon-files-char: '\0048';
+	$icon-adminPanel-char: '\004f';
+	$icon-outlook-char: '\00f7';
+	$icon-outlook-char: '\00f7';
+	$icon-outlook-char: '\00f7';
+	$icon-birds-office-char: '\0155';
+	$icon-writer-char: '\0076';
+	$icon-calc-char: '\0077';
+	$icon-impress-char: '\0078';
+	$icon-draw-char: '\0079';
+	$icon-mail-char: '\00F9';
+	$icon-filesync-char: '\00F1';
+	$icon-chrome-char: '\00c8';
+	$icon-firefox-char: '\00d2';
+	$icon-explorer-char: '\00c7';
+
+
+// * / 2. $Mixin for extra styles in every theme
+// * -----------------------
+// * /
+// 
+	//2.1 Styles for apps wrapper 	
+
+	@mixin appsWrapper-extraStyles{
+
+	}
+
+	// X.2 Styles for apps text 
+
+	@mixin apps-extraStyles{
+
+	}
+
+	@mixin app-extraStyles{
+		
+	}
+
+
+	// X.3 Styles for icons app
+	@mixin app-icon($char, $size, $lh, $color, $bg, $shadow){
+
+		@if $char != ' '{
+
+			&::before{
+				@include icon($char, $size, $color, $lh: $lh);
+
+				@if $bg != ' '{
+					background-color: $bg;
+				}
+
+				@if $shadow != ' '{
+					text-shadow: $shadow;
+				}
+
+				// Extra styles
+				
+				display: block;
+				text-align: center;
+				margin-top: -.3em;
+			}
+
+		}
+	}
+
+
+// * / 4. $ Multiicon position
+// * -----------------------
+// * /
+
+
+@mixin multicon($m-top, $m-left){
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	@if $m-left != null{
+		margin-left: $m-left;
+	}
+
+	@if $m-top != null{
+		margin-top: $m-top;
+	}
+}

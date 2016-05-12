@@ -1,0 +1,635 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: desktop\n"
+"Language: en\n"
+
+#: 
+msgid "Applications"
+msgstr "Applications"
+
+#: 
+msgid "Log out"
+msgstr "Log out"
+
+#: 
+msgid "Are you sure you want to logout?"
+msgstr "Are you sure you want to logout?"
+
+#: 
+msgid "Yes"
+msgstr "Yes"
+
+#: 
+msgid "No"
+msgstr "No"
+
+#: 
+msgid "VDI connection definitely lost. You may have lost some files changes"
+msgstr "VDI connection definitely lost. You may have lost some files changes"
+
+#: 
+msgid "Connection lost. Now trying to reconnect"
+msgstr "Connection lost. Now trying to reconnect"
+
+#: 
+msgid "Loading app"
+msgstr "Loading app"
+
+#: 
+msgid "Are you sure you want to delete this group?"
+msgstr "Are you sure you want to delete this group?"
+
+#: 
+msgid "You have no groups at this moment. Use the button at the bottom to create a new one"
+msgstr "You have no groups at this moment. Use the button at the bottom to create a new one"
+
+#: 
+msgid "Ver miembros"
+msgstr "Member's list"
+
+#: 
+msgid "Ver carpeta"
+msgstr "Shared Folder"
+
+#: 
+msgid "Editar grupo"
+msgstr "Manage group"
+
+#: 
+msgid "Borrar grupo"
+msgstr "Delete group"
+
+#: 
+msgid "Delete"
+msgstr "Delete"
+
+#: 
+msgid "Cancel"
+msgstr "Cancel"
+
+#: 
+msgid "People"
+msgstr "People"
+
+#: 
+msgid "Create new group"
+msgstr "Create new group"
+
+#: 
+msgid "Save group"
+msgstr "Save group"
+
+#: 
+msgid "You can add people using the search box or the list at the bottom"
+msgstr "You can add people using the search box or the list at the bottom"
+
+#: 
+msgid "Show group members"
+msgstr "Show group members"
+
+#: 
+msgid "Search users"
+msgstr "Search users"
+
+#: 
+msgid "Add user"
+msgstr "Add user"
+
+#: 
+msgid "Remove user"
+msgstr "Remove user"
+
+#: 
+msgid "Search People or Groups"
+msgstr "Search Groups"
+
+#: 
+msgid "Name for the group"
+msgstr "Name for the group"
+
+#: 
+msgid "Group description"
+msgstr "Group description"
+
+#: 
+msgid "Search users to add them to the group..."
+msgstr "Search users to add them to the group..."
+
+#: 
+msgid "Users"
+msgstr "Users"
+
+#: 
+msgid "User"
+msgstr "User"
+
+#: 
+msgid "Groups"
+msgstr "Groups"
+
+#: 
+msgctxt "INVALID"
+msgid "ERR_WORKGROUP_NAME"
+msgstr "The group name '{{workgroup}}' contains invalid characters"
+
+#: 
+msgctxt "EXISTS"
+msgid "ERR_WORKGROUP"
+msgstr "The workgroup '{{workgroup}}' already exists"
+
+#: 
+msgid "Error: An element with name {{fileName}} already exists"
+msgstr "Warning: An element with name {{fileName}} already exists"
+
+#: 
+msgid "Error copying {{source}} to {{target}}: {{errorCode}}"
+msgstr "Error copying {{source}} to {{target}}: {{errorCode}}"
+
+#: 
+msgid "Copying {{source}} to {{target}}."
+msgstr "Copying {{source}} to {{target}}."
+
+#: 
+msgid "Starting copy {{source}} to {{target}}."
+msgstr "Starting copy {{source}} to {{target}}."
+
+#: 
+msgid "Finished copying {{source}} to {{target}}."
+msgstr "Finished copying {{source}} to {{target}}."
+
+#: 
+msgid "Moving {{source}} to {{target}}."
+msgstr "Moving {{source}} to {{target}}."
+
+#: 
+msgid "Error moving {{source}} to {{target}}: {{errorCode}}"
+msgstr "Error moving {{source}} to {{target}}: {{errorCode}}"
+
+#: 
+msgid "Starting move {{source}} to {{target}}."
+msgstr "Starting move {{source}} to {{target}}."
+
+#: 
+msgid "Finished moving {{source}} to {{target}}."
+msgstr "Finished moving {{source}} to {{target}}."
+
+#: 
+msgid "Download ready for {{path}}."
+msgstr "Download ready for {{path}}."
+
+#: 
+msgid "Preparing to download {{path}}."
+msgstr "Preparing to download {{path}}."
+
+#: 
+msgid "Error while preparing to download {{path}}: {{errorCode}}"
+msgstr "Error while preparing to download {{path}}: {{errorCode}}"
+
+#: 
+msgid "Ok"
+msgstr "Ok"
+
+#: 
+msgid "Overwrite"
+msgstr "Overwrite"
+
+#: 
+msgid "Group members"
+msgstr "Group members"
+
+#: 
+msgid "Error launching application"
+msgstr "Error launching application"
+
+#: 
+msgid "Subjects"
+msgstr "Subjects"
+
+#: 
+msgid "Assignments"
+msgstr "Assignments"
+
+#: 
+msgid "Calendar"
+msgstr "Calendar"
+
+#: 
+msgid "Create a new group and start sharing"
+msgstr "Create a new group and start sharing"
+
+#: 
+msgid "content with your colleagues."
+msgstr "content with your colleagues."
+
+#: 
+msgid "You have no groups"
+msgstr "You have no groups"
+
+#: 
+msgid "Support"
+msgstr "Support"
+
+#: 
+msgid "Send a message"
+msgstr "Send a message"
+
+#: 
+msgid "Send"
+msgstr "Send"
+
+#: 
+msgid "The current user has gone offline"
+msgstr "The current user has gone offline"
+
+#: 
+msgid "Chat with"
+msgstr "Chat with"
+
+#:
+msgid "Just one last thing!"
+msgstr "Just one last thing!"
+
+#:
+msgid "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
+msgstr "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
+
+#:
+msgid "Old password"
+msgstr "Old password"
+
+#:
+msgid "New password"
+msgstr "New password"
+
+#:
+msgid "Repeat password"
+msgstr "Repeat password"
+
+#:
+msgid "Password must"
+msgstr "Password must"
+
+#:
+msgid "have one uppercase letter"
+msgstr "have one uppercase letter"
+
+#:
+msgid "have one lowercase letter"
+msgstr "have one lowercase letter"
+
+#:
+msgid "have a number or a symbol"
+msgstr "have a number or a symbol"
+
+#:
+msgid "be 8 characters minimum"
+msgstr "be 8 characters minimum"
+
+#:
+msgid "Current password doesn't match"
+msgstr "Current password doesn't match"
+
+#:
+msgid "Sorry, we have some issues changing your password"
+msgstr "Sorry, we have some issues changing your password"
+
+#:
+msgid "Passwords must match"
+msgstr "Passwords must match"
+
+#:
+msgid "CHANGE PASSWORD"
+msgstr "CHANGE PASSWORD"
+
+#:
+msgid "This action could make you lose unfinished work"
+msgstr "This action could make you lose unfinished work"
+
+#:
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+#:
+msgid "be different from the username"
+msgstr "be different from the username"
+
+#:
+msgid "Files"
+msgstr "Files"
+
+#:
+msgid "Word"
+msgstr "Word"
+
+#:
+msgid "Powerpoint"
+msgstr "Powerpoint"
+
+#:
+msgid "Excel"
+msgstr "Excel"
+
+#:
+msgid "Google Chrome"
+msgstr "Google Chrome"
+
+#:
+msgid "Upload error"
+msgstr "Upload error"
+
+#:
+msgid "An error has occurred with the upload"
+msgstr "An error has occurred with the upload"
+
+#:
+msgid "Download Error"
+msgstr "Download Error"
+
+#:
+msgid "You are experiencing unsteady internet connectivity. Please check your network access."
+msgstr "You are experiencing unsteady internet connectivity. Please check your network access."
+
+#:
+msgid "Feedback"
+msgstr "Feedback"
+
+#:
+msgid "FAQ"
+msgstr "FAQ"
+
+#:
+msgid "Forum"
+msgstr "Forum"
+
+#:
+msgid "Support"
+msgstr "Support"
+
+#:
+msgid "Welcome"
+msgstr "Welcome"
+
+#:
+msgid "All in the cloud"
+msgstr "All in the cloud"
+
+#:
+msgid "Check your emails, create documents, manage your tasks, organize your files, chat with your colleagues, run spreedsheets, amaze with your presentations"
+msgstr "Check your emails, create documents, manage your tasks, organize your files, chat with your colleagues, run spreedsheets, amaze with your presentations"
+
+#:
+msgid "Where do you want to start?"
+msgstr "Where do you want to start?"
+
+#:
+msgid "Mail"
+msgstr "Mail"
+
+#:
+msgid "Contacts"
+msgstr "Contacts"
+
+#:
+msgid "Calendar"
+msgstr "Calendar"
+
+#:
+msgid "Writer"
+msgstr "Writer"
+
+#:
+msgid "Spreadsheet"
+msgstr "Calc"
+
+#:
+msgid "Presentation"
+msgstr "Impress"
+
+#:
+msgid "Loading eyeOS Cloud, Please wait..."
+msgstr "Loading eyeOS Cloud, Please wait..."
+
+#:
+msgid "this is your virtual office"
+msgstr "this is your virtual office"
+
+#:
+msgid "Password"
+msgstr "Password"
+
+#:
+msgid "Change password"
+msgstr "Change password"
+
+#:
+msgid "Control Panel"
+msgstr "Control Panel"
+
+#:
+msgid "The link will open in a new window"
+msgstr "The link will open in a new window"
+
+#:
+msgid "Hello? Are you there?"
+msgstr "Hello? Are you there?"
+
+#:
+msgid "Password changed successfully"
+msgstr "Password changed successfully"
+
+#:
+msgid "Old password"
+msgstr "Old password"
+
+#:
+msgid "New password"
+msgstr "New password"
+
+#:
+msgid "Repeat password"
+msgstr "Repeat password"
+
+#:
+msgid "Cloud"
+msgstr "Cloud"
+
+#:
+msgid "Hub"
+msgstr "Hub"
+
+#:
+msgid "You have been idle for too long."
+msgstr "You have been idle for too long."
+
+#:
+msgid "Your application has been suspended."
+msgstr "Your application has been suspended."
+
+#:
+msgid "I'm back, resume!"
+msgstr "I'm back, resume!"
+
+#:
+msgid "YES"
+msgstr "YES"
+
+#:
+msgid "File sync"
+msgstr "File sync"
+
+#:
+msgid "Hmmm! Are you awake?"
+msgstr "Hmmm! Are you awake?"
+
+#:
+msgid "Maybe we should close this to protect your privacy."
+msgstr "Maybe we should close this to protect your privacy."
+
+#:
+msgid "I'm here"
+msgstr "I'm here"
+
+#:
+msgid "You are experiencing unsteady internet connectivity."
+msgstr "You are experiencing unsteady internet connectivity."
+
+#:
+msgid "Please check your network access."
+msgstr "Please check your network access."
+
+#:
+msgid "(Unsaved changes may have been lost)"
+msgstr "(Unsaved changes may have been lost)"
+
+#:
+msgid "You have no contacts yet. Search to find people and start a chat."
+msgstr "You have no contacts yet. Search to find people and start a chat."
+
+#:
+msgid "Find people..."
+msgstr "Find people..."
+
+#:
+msgid "Locating the required gigapixels to render..."
+msgstr "Locating the required gigapixels to render..."
+
+#:
+msgid "The bits are breeding."
+msgstr "The bits are breeding."
+
+#:
+msgid "We're building the buildings as fast as we can."
+msgstr "We're building the buildings as fast as we can."
+
+#:
+msgid "Pay no attention to the man behind the curtain."
+msgstr "Pay no attention to the man behind the curtain."
+
+#:
+msgid "Enjoy the elevator music."
+msgstr "Enjoy the elevator music."
+
+#:
+msgid "The little elves are drawing your map."
+msgstr "The little elves are drawing your map."
+
+#:
+msgid "A few bits tried to escape, but we caught them."
+msgstr "A few bits tried to escape, but we caught them."
+
+#:
+msgid "Please wait, and dream of faster computers."
+msgstr "Please wait, and dream of faster computers."
+
+#:
+msgid "Checking the gravitational constant in your locale."
+msgstr "Checking the gravitational constant in your locale."
+
+#:
+msgid "Hum something loud while others stare."
+msgstr "Hum something loud while others stare."
+
+#:
+msgid "The server is powered by a lemon and two electrodes."
+msgstr "The server is powered by a lemon and two electrodes."
+
+#:
+msgid "Please wait, we love you just the way you are."
+msgstr "Please wait, we love you just the way you are."
+
+#:
+msgid "We're testing your patience."
+msgstr "We're testing your patience."
+
+#:
+msgid "Wait, as if you had any other choice."
+msgstr "Wait, as if you had any other choice."
+
+#:
+msgid "Take a moment to sign up for our lovely prizes."
+msgstr "Take a moment to sign up for our lovely prizes."
+
+#:
+msgid "Don't think of purple hippos."
+msgstr "Don't think of purple hippos."
+
+#:
+msgid "Following the white rabbit."
+msgstr "Following the white rabbit."
+
+#:
+msgid "Patience, why don't you order a sandwich?"
+msgstr "Patience, why don't you order a sandwich?"
+
+#:
+msgid "Moving the satellite into position."
+msgstr "Moving the satellite into position."
+
+#:
+msgid "The bits are flowing slowly today."
+msgstr "The bits are flowing slowly today."
+
+#:
+msgid "Dig on the 'X' for buried treasure... ARRR!"
+msgstr "Dig on the 'X' for buried treasure... ARRR!"
+
+#:
+msgid "It's still faster than you could draw it."
+msgstr "It's still faster than you could draw it."
+
+#:
+msgid "Please wait. We're loading your application."
+msgstr "Please wait. We're loading your application."
+
+#:
+msgid "Start Videoconference"
+msgstr "Start Videoconference"
+
+#:
+msgid "The current user has gone offline"
+msgstr "The current user has gone offline"
+
+#:
+msgid "Send a message"
+msgstr "Send a message"
+
+#:
+msgid "Home"
+msgstr "Home"
+
+#:
+msgid "Groups"
+msgstr "Groups"
+
+#:
+msgid "Blog"
+msgstr "Blog"
+
+#:
+msgid "About"
+msgstr "About"
+

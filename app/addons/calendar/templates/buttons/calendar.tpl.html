@@ -1,0 +1,27 @@
+<div class="calendar-btn panel-button dock-item" ng-click="togglePanel('calendar-content', $event)">
+    <span class="tooltip-flag">{{"Calendar" | translate}}</span>
+    <span class="notification-msg notification-msg__calendar">3</span>
+</div>
+
+<script>
+	$(document).ready(function() {
+		var calendarCount = 3;
+
+		setInterval(function(){ 
+			calendarCount++;
+
+			if(calendarCount < 199){
+		  		$('.notification-msg__calendar').html(calendarCount);
+		  		$('.notification-msg__calendar').addClass('updating').delay(2000).queue(function(){
+		  				$(this).removeClass('updating');
+		  				console.log('now');
+		  				$(this).dequeue();
+		  		});
+			}
+	  		
+		}, 32000);
+
+	});
+
+
+</script>

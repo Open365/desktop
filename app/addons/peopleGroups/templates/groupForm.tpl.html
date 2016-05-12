@@ -1,0 +1,50 @@
+<button class="btn-close" ng-click="cancelEdition(group)"></button>
+<div class="group-name-description">
+    <label for="group-name">{{'Name for the group' | translate }}</label>
+    <input ng-disabled="disableGroupEdition && disableGroupNameEdition" type="text" ng-model="group.name" class="set-group-name" id="group-name" value="{{group.name}}">
+    <label for="group-description">{{'Group description' | translate}}</label>
+    <textarea ng-disabled="disableGroupEdition && disableGroupDescriptionEdition" ng-model="group.description" name="" id="" cols="30" rows="2" class="set-group-description" id="group-description"></textarea>
+</div>
+
+<div class="group-users">
+    <label for="">{{'Group members' | translate }}</label>
+    <p class="members-list">
+        <span class="member-count"> {{getMembersCount()}}<!--Este es el número de usuarios que tiene o se han añadido al grupo--></span>
+        <span ng-show="getMembersCount() === 1" members="getMembersCount()">
+             {{"User" | translate}}
+        </span>
+        <span ng-show="getMembersCount() > 1">
+             {{"Users" | translate}}
+        </span>
+
+        <button class="list-members" ng-class="{active:showOnlyMembers}"
+                ng-click="showOnlyMembers = !showOnlyMembers"
+                ><span class="tooltip-msg">{{"Show group members" | translate}}</span></button>
+    </p>
+    <p class="empty-state__group" ng-show="getMembersCount() === 1">
+        {{"You can add people using the search box or the list at the bottom" | translate}}
+    </p>
+</div>
+
+<div class="searcher">
+    <input type="text"
+           ng-model="searchPeople"
+           class="search-term" placeholder="{{'Search users to add them to the group...' | translate}}">
+    <button class="search-trigger">{{"Search users" | translate}}</button>
+</div>
+
+<div class="list2add" ng-class={'list2add-long':showLongMembersList()}>
+    <ul ng-repeat="eyeosUser in eyeosUsers  | removeMeFromEyeosUsersList:currentUserName | peopleSearchFilter:searchPeople">
+        <li ng-hide="isMember(eyeosUser) || showOnlyMembers" class="people-item">{{getDisplayName(eyeosUser)}}
+            <button class="add2group" ng-click="addMember(eyeosUser)">{{"Add user" | translate}}</button>
+        </li>
+        <li ng-show="isMember(eyeosUser)" class="people-item item__added">{{getDisplayName(eyeosUser)}}
+            <button class="remove2group" ng-click="removeMember(eyeosUser)">{{"Remove user" | translate}}</button>
+        </li>
+    </ul>
+</div>
+
+<div class="create-actions">
+    <button class="btn-cancel" ng-click="cancelEdition(group)">{{"Cancel" | translate}}</button>
+    <button class="btn-save" ng-click="saveGroupWithUsers(group)">{{"Save group" | translate}}</button>
+</div>

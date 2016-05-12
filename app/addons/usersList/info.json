@@ -1,0 +1,12 @@
+{
+  "name": "usersList",
+  "templates": {},
+  "modules": [
+    "chat"
+  ],
+  "sass": [
+  	"_users-list.scss",
+  	"_variables.scss"
+  ],
+  "hooks": {"usersList": "usersList.tpl.html"}
+}

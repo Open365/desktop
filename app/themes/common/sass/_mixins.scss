@@ -1,0 +1,367 @@
+// $MIXINS
+
+	// $INDEX
+	// 1. $Rem mixin
+	// 2. $Strip unit from value
+	// 3. $Text ellipsis
+	// 4. $Reset button
+	// 5. $Hide elements 
+	// 6. $Hide text 
+	// 7. $Display flex
+	// 8. $RWD mixins
+	// 9. $Iconize button
+	// 10. $Hoverize element
+	// -----------------------------------------------------------------
+	
+
+// * / 1. $Rem mixin
+// * -----------------------
+// * Apply font-size in rem with fallback in px
+// * /
+// 
+
+@mixin fz($font-size: 16){
+
+	$value: strip-unit($font-size);
+
+	font-size:($value)*1px;
+	font-size:($value / $t-size)*1rem;
+}
+
+	
+// * / 2. $Strip unit from value
+// * -----------------------
+// * Remove the unit of a length
+// * @param {Number} $number - Number to remove unit from
+// * @return {Number} - Unitless number
+// * /
+
+
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+	 }
+
+ 	@return $number;
+}
+
+
+// * / 3. $Text ellipsis
+// * -----------------------
+// * Apply ellipsis to text when it's larger than his container
+// * /
+
+@mixin ellipsis($width: 100%){
+	max-width: $width;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+// * / 4. $Reset button
+// * -----------------------
+// * Reset styles for button tags
+// * /
+
+@mixin reset-btn($bg, $border: none, $color: inherit){
+	@if $bg == ''{
+		background: none;
+	}@else{
+		background:$bg;
+	}
+	border: $border;
+
+	@if $color != inherit{
+		color: $color;
+	}
+}
+
+
+// * / 5. $Hide elements 
+// * -----------------------
+// * Hide elements but keed them availables for screen readers and accesibility
+// * /
+
+@mixin hide-but-accesible{
+	position: absolute !important; 
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ 
+	clip: rect(1px, 1px, 1px, 1px); 
+}
+
+// * / 6. $Hide text 
+// * -----------------------
+// * Hide text for buttons 
+// * /
+
+@mixin hide-text{
+	padding: 0;
+	text-indent: 150%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+// * / 7. $Display flex
+// * -----------------------
+// * Extend display flex with vendros compatibility
+// * /
+
+@mixin displayflex {
+	display : -webkit-box;
+	display : -moz-box;
+	display : -ms-flexbox;
+	display : -webkit-flex;
+	display : flex;
+}
+
+
+// * / 8. $RWD mixins
+// * -----------------------
+// * Four breakpoints apply for general RWD
+// * /
+
+@mixin hd-desktop {
+	@media (min-width: #{$papa-bear}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$mama-bear}) and (max-width: #{$papa-bear - 1px}){
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$baby-bear}) and (max-width: #{$mama-bear - 1px}){
+		@content;
+	}
+}
+@mixin mobile {
+	@media (max-width: #{$baby-bear}) {
+		@content;
+	}
+}
+
+
+// * / 9. $Iconize button
+// * -----------------------
+// * Add an icon for any kind of button: labeled or just icon
+// * /
+
+
+@mixin icon($char, $size, $color, $lh: 1){
+	text-rendering: optimizeLegibility;
+	text-rendering: geometricPrecision;
+	font-smooth: always;
+
+	font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
+	font-family: $t-icon;
+	font-weight: normal;
+	content: "'" + $char + "'";
+	@include fz($size);
+	@if $color != 'inherit'{
+		color: $color;
+	}
+	line-height: $lh;
+}
+
+
+@mixin iconize($char, $t-size, $lh: 1, $color: inherit, $has-text: true, $width: 1em, $height: 1em){
+
+	@if $has-text == false{ // If button hasn't text -> hide text and set width & height
+		@include hide-text;
+		width: $width;
+		height: $height;
+		display: inline-block;
+	}@else{ // Else we show the text but apply a padding-left space for the icon
+		padding-left: strip-unit($t-size)+px;
+	}
+
+	&::before{
+		@include icon($char, $t-size, $color, $lh);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		text-align: center;
+	@if $has-text == false{
+		text-indent: 0;
+		width: 100%;
+		height: 100%;
+	}@else{
+		width: 1em;
+		height: 1em;
+	}
+	}
+}
+
+
+@mixin iconizev2($char, $t-size, $lh: 1, $color: inherit, $has-text: true, $width: 1em, $height: 1em, $pos: left, $posWidth: $width){
+
+	@if $has-text == true{ //  If button has text -> we show the text but apply a padding-left space for the icon
+		padding-#{$pos}: $posWidth;
+		height: $height;
+	}@else{ // Else  -> hide text and set width & height
+		@include hide-text;
+		width: $width;
+		height: $height;
+		display: inline-block;
+	}
+
+	&::before{
+		@include icon($char, $t-size, $color, $lh);
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0;
+		text-align: center;
+	@if $has-text == false{
+		text-indent: 0;
+		width: 100%;
+		height: 100%;
+	}@else{
+		width: $width;
+		height:  $height;
+	}
+	}
+}
+
+
+// * / 10. $Hoverize element
+// * -----------------------
+// * Custom hover styles for a given element.
+// * /
+
+@mixin hoverize($t-color: inherit, $bg-color: false, $transition: false){
+	
+	@if $transition != false{
+		transition: $transition-links;
+	}
+	&:hover{
+		color: $t-color;
+
+		@if $bg-color != false{
+			background:$bg-color;
+		}
+
+	}
+}
+
+
+// * / 11. $triangle
+// * -----------------------
+// * /
+
+
+
+/// Returns the opposite direction of each direction in a list
+/// @author Hugo Giraudel
+/// @param {List} $directions - List of initial directions
+/// @return {List} - List of opposite directions
+@function opposite-direction($directions) {
+  $opposite-directions: ();
+  $direction-map: (
+    'top':    'bottom',
+    'right':  'left',
+    'bottom': 'top',
+    'left':   'right',
+    'center': 'center',
+    'ltr':    'rtl',
+    'rtl':    'ltr'
+  );
+ 
+  @each $direction in $directions {
+    $direction: to-lower-case($direction);
+    
+    @if map-has-key($direction-map, $direction) { 
+      $opposite-directions: append($opposite-directions, unquote(map-get($direction-map, $direction)));
+    } @else {
+      @warn "No opposite direction can be found for `#{$direction}`. Direction omitted.";
+    }
+  }
+ 
+  @return $opposite-directions;
+}
+
+
+// [Private] 
+// Position helper mixin
+// Article about it: http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
+// ---
+// @param [string] $position: position type
+// @param [list] $args: list of offsets and values
+// ---
+@mixin _position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i
+    and $i + 1 <= length($args)
+    and type-of( nth($args, $i + 1) ) == number {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+// Absolute positioning helper mixin
+// Article about it: http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
+// ---
+// @param [list] $args: list of offsets and values
+// ---
+@mixin absolute($args) {
+  @include _position(absolute, $args);
+}
+
+
+@mixin triangle($direction, $size, $color, $position){
+	content: '';
+	border: $size solid transparent;
+	border-#{opposite-direction($direction)}-color: $color;
+	@include absolute($position);
+}
+
+
+
+// * / 12. $Style button
+// * -----------------------
+// * /
+
+@mixin buttonize($bg, $border, $t-size,  $radius, $padding, $pos, $t-color: inherit){
+	@include reset-btn($bg, $border, $t-color);
+	
+	@if $t-size != ' ' {
+		@include fz($t-size);
+	}
+	
+	@if $radius != ' '{
+		border-radius: $radius;
+	}
+
+	@if $padding != ' '{
+		padding: $padding;
+	}
+
+	#{nth($pos, 1)}: nth($pos, 2);
+	// @if length($pos) < 3{
+		
+	// }@else{
+	// 	@each $elem in $pos{
+	// 	#{nth($elem, 1)}: nth($elem, 2);
+	// }
+	// }
+
+	
+
+}
+
+
+
+
+
+
+
+

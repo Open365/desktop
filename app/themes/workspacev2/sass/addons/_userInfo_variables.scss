@@ -1,0 +1,61 @@
+// $Variables for User Info addon
+
+$is-dock: false;
+$addonsHeight: 2.5em;
+
+
+// * / 1. $Layout
+// * -----------------------
+// * /
+
+$userInfo-height: $addonsHeight;
+$userPadding: 0 1em 0 1.5em;
+$userMargin: '';
+
+
+// */ 1. $Colors
+//* -----------------------------
+// */
+// 
+$c-user-bg: ' ';
+$c-user-color: $c-topbar-items; // Color for text in  user Info addon
+
+// */ 2. $Type
+//* -----------------------------
+// */
+// 
+$t-userWeight: 600;
+$t-userSize: '';
+
+
+// */ 3. $Avatar Image 
+//* -----------------------------
+// */
+// 
+$img-order: '';
+$img-width: 26px;
+$img-height: 26px;
+$popup-img-width: 20px;
+$popup-img-height: 20px;
+$img-radius: 50%;
+$img-decorator:  0 0 0 4px rgba(255,255,255,.1), 0 0 0 1px rgba(0,0,0,.1);
+$popup-img-decorator: 0 0 0 1px rgba(255, 255, 255, 0.24);
+$img-margin: 0 1rem 0 0;
+
+// */ 4. $Name user 
+//* -----------------------------
+// */
+
+@if $is-dock == true{
+ $nameMax-width: 100%;
+}@else{
+ $nameMax-width: 14rem;
+}
+
+
+
+// Mixins for User Info addon
+
+@mixin avatar-decorator{
+	box-shadow:$img-decorator;
+}

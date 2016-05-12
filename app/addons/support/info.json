@@ -1,0 +1,14 @@
+{
+  "name": "support",
+  "templates": {
+    "button": ["addons/support/templates/support.tpl.html"]
+  },
+  "modules": ["support"],
+  "sass": [
+  "_support.scss",
+  "_variables.scss"
+  ],
+  "hooks": {
+    "support": "support.tpl.html"
+  }
+}

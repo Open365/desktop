@@ -1,0 +1,37 @@
+
+// */ 1. $Button components style
+// * -----------------------------
+// */ 
+// */ Importants because bootstraps styles
+
+
+.btn-txt{
+	margin-bottom: 1em !important;
+	background: none !important;
+	border: 1px solid $c-light-grey !important;
+	color: $c-blue-grey !important;
+	border-radius: 0 !important;
+	font-weight: 400 !important;
+	transition: all .2s ease-in-out;
+	margin-right: .3em;
+
+	&:hover{
+		background:darken($c-light-grey, 10%) !important;
+		color: $c-white !important;
+	}
+
+	&:last-of-type{
+		margin-right: 0;
+	}
+
+	&.btn-ok{
+		color: $c-warning-dark !important;
+		border-color: $c-warning-light !important;
+		font-weight: 600 !important;
+
+		&:hover{
+			background:$c-warning-dark !important;
+			color: $c-white !important;
+		}
+	}
+}

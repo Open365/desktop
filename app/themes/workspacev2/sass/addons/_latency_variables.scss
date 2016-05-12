@@ -1,0 +1,26 @@
+// */ 1.  $Colors
+// * -----------------------------
+// * $c-latency-bg -> Background color of the element /* 1 */
+// * $base-signal -> Opacity for the base element /* 2 */
+// * $status-signal -> Opacity for the current status elements /* 3 */
+// * $c-symbol -> Color for the svg symbol /* 4 */
+// */
+
+$c-latency-bg: rgba(0,0,0,.15); /* 1 */
+
+$base-signal: .2; /* 2 */
+$status-signal: 1; /* 3 */
+
+$c-symbol: $c-topbar-items; /* 4 */
+
+// */ 2. $Layout
+// * -----------------------------
+// * $latency-width -> Width for the latency container /* 1 */
+// * $latency-height -> Height for the latency container /* 2 */
+// * $symbol-width -> Width in order to adjust good visibility of the symbol /* 3 */
+// */
+
+$latency-width: $topbarHeight; /* 1 */
+$latency-height: $topbarHeight; /* 2 */
+
+$symbol-width: 57.5%; /* 3 */

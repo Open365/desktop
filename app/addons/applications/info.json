@@ -1,0 +1,13 @@
+{
+  "name": "applications",
+  "templates": {
+    "button": ["addons/applications/templates/applications.tpl.html"]
+  },
+  "modules": ["eyeApplications"],
+  "sass": [
+  	
+  ],
+  "hooks": {
+    "applications": "appList.tpl.html"
+  }
+}

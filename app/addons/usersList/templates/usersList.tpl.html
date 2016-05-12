@@ -1,0 +1,26 @@
+<div class="users-list-container panel-content" id="users-container" ng-controller="peopleGroupsController">
+    <h2 class="title title__users" >{{"People" | translate}}</h2>
+    <input type="text" placeholder="{{'Find people...' | translate}}" ng-change="searchUsers(offlineUsers)" ng-model="userSearch"
+           ng-show="enableUserSearch" id="peopleSearch">
+    <div class="users-list default-box visible " ng-controller="chatController">
+        <ul class="user-online" ng-hide="searchingUsers">
+            <li class="user-item"
+                ng-repeat="eyeosUser in contacts | removeMeFromEyeosUsersList:currentUserName | orderBy: 'firstName'"
+                ng-class="{'user-item__offline':!eyeosUser.online, 'user-item__online':eyeosUser.online}"
+                ng-click="openChat($event.target, eyeosUser)"
+                data-principalId="{{eyeosUser.principalId}}" data-displayName="{{getDisplayName(eyeosUser)}}">
+                {{getDisplayName(eyeosUser)}}
+            </li>
+        </ul>
+        <ul class="user-online" ng-show="searchingUsers">
+            <li class="user-item"
+                ng-repeat="eyeosUser in users | removeMeFromEyeosUsersList:currentUserName | orderBy: 'firstName'"
+                ng-class="{'user-item__offline':!eyeosUser.online, 'user-item__online':eyeosUser.online}"
+                ng-click="addContact(eyeosUser);openChat($event.target, eyeosUser)"
+                data-principalId="{{eyeosUser.principalId}}" data-displayName="{{getDisplayName(eyeosUser)}}">
+                {{getDisplayName(eyeosUser)}}
+            </li>
+        </ul>
+        <div ng-hide="contacts.length || searchingUsers" class="empty_people_placeholder">{{"You have no contacts yet. Search to find people and start a chat." | translate}}</div>
+    </div>
+</div>

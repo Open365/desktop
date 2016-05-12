@@ -1,0 +1,123 @@
+//*------------------------------------*\
+//    $PLACEHOLDERS
+//*------------------------------------*/
+
+%dib{
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1;
+	*display: inline;
+}
+
+
+%icon-btn{
+	background: none;
+	border: none;
+	@extend %hide-text;
+
+	&::before{
+		content: '';
+		display: block;
+		text-indent: 0;
+		width: 100%;
+		height: 100%;
+		@extend %icon-font;
+	}
+
+	&:focus{
+		outline: 0;
+	}
+}
+
+
+%icon-font{
+		font-family: 'icons';
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+
+		/* Better Font Rendering =========== */
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+}
+
+%visuallyhidden{
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+%reset-btn{
+	background: none;
+	border: none;
+	font-family: $t-text;
+	&:focus{
+		outline: 0;
+	}
+}
+
+
+
+//------ Not used ------//
+
+%text-overflow {
+	overflow : hidden;
+	text-overflow : ellipsis;
+	white-space : nowrap;
+}
+
+
+%vcenter {
+	&:before {
+		content: '';
+		display: inline-block;
+		height: 100%;
+		vertical-align: middle;
+	}
+}
+
+
+%hide-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+%hidden {
+	display : none !important;
+	visibility : hidden;
+}
+
+
+%invisible {
+	visibility : hidden;
+}
+
+
+
+%visuallyhidden.focusable:active,
+%visuallyhidden.focusable:focus {
+	position : static;
+	clip : auto;
+	height : auto;
+	width : auto;
+	margin : 0;
+	overflow: visible;
+}
+
+
+
+%clearfix {
+	&:after{
+				content:"";
+				display:table;
+				clear:both;
+		}
+}
+
+
+

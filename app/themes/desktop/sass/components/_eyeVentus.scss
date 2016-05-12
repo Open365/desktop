@@ -1,0 +1,144 @@
+.wm-space {
+	z-index: 1;
+	cursor: default;
+
+	.wm-window {
+		opacity: 1;
+		box-shadow: 0 1px 7px -1px rgba(0, 0, 0, 0.4);
+		border-radius: 4px;
+		border: 1px solid #e4e8ef;
+
+
+		.wm-window-box {
+			header.wm-window-title {
+				@extend %window-title !optional;
+				border-bottom: 1px solid #cbcccc;
+				text-align: center;
+				border-radius: 4px 4px 0 0;
+				padding-left: 2em;
+
+				button.wm-close {
+					//background: url(../images/window/closeInactive.png) no-repeat 1px 1px;
+					opacity: 1 !important;
+					width: 20px;
+					height: 20px;
+					margin-right: .2rem;
+					&::before{
+						content: '\0062';
+						color: #e9474f;
+						font-family: 'eyeos-symbols';
+						font-size: 1.8em;
+						line-height: .6;
+					}
+					&:hover::before {
+						opacity: .7;
+					}
+				}
+
+				button.wm-maximize {
+					opacity: 1 !important;
+					width: 20px;
+					height: 20px;
+					margin-right: .35rem;
+
+
+					&::before{
+						content: '\0061';
+						color: #6570b4;
+						font-family: 'eyeos-symbols';
+						font-size: 2em;
+						line-height: .5;
+					}
+
+					&:hover::before {
+						opacity: .7;
+					}
+					
+				}
+				button.wm-minimize {
+					background: url(../images/window/minimizeInactive.png) no-repeat 1px 1px;
+					&.hover {
+						background: url(../images/window/minimizeActive.png) no-repeat 1px 1px;
+					}
+				}
+
+				h1{
+					font-family: 'source-sans', sans-serif !important;
+					font-weight: 600 !important;
+					font-size: 1.1em !important;
+				}
+
+				img{
+					display: none;
+				}
+			}
+
+			.wm-window-title-text{
+				display: block;
+				width: 100%;
+				color: #4b4c5c;
+				margin-top: .35rem;
+			}
+			section.wm-content {
+				overflow: hidden;
+				display: flex;
+				
+				.msg-area {
+					position: absolute;
+					top: 36px;
+
+					background: rgba(0, 0, 0, .8);
+					width: 100%;
+					height: calc(100% - 36px);
+
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					z-index: 1;
+
+					.msg-text {
+						color: #C7C7C7;
+						font-size: 18px;
+						line-height: 1.4;
+						word-wrap: break-word;
+					}
+
+					.loading-spinner {
+						background: url(../images/icons/loader.gif) no-repeat;
+						height: 150px;
+						width: 150px;
+					}
+
+				}
+			}
+		}
+	}
+	
+	.wm-window.inactive {
+
+		header.wm-window-title {
+			h1 {
+				color: #6f6f6f;
+				font-weight: normal;
+			}
+		}
+	}
+
+	// Deleting border by div's
+
+	.wm-window-border.top,  .wm-window-border.bottom, .wm-window-border.right, .wm-window-border.left {
+		display: none;
+	}
+
+	// Changing style for view when moving ventus window
+
+	.mover-container{
+		border: none;
+		background:rgba(255,255,255,.5);
+		border-radius: 4px;
+		box-shadow: 0 1px 7px -1px rgba(0, 0, 0, 0.4);
+
+	}
+}
+

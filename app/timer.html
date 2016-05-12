@@ -1,0 +1,28 @@
+<html>
+<head>
+    <script>
+        var worker = new Worker('worker/timer.js');
+
+        worker.onmessage = function (e) {
+            console.log("BBBBBBBBBBBB", Date.now()-e.data);
+        };
+    </script>
+</head>
+<body>
+    <script >
+        function doAfter(time, startTime) {
+            worker.postMessage({
+                id: startTime,
+                time: time
+            });
+        }
+        window.setInterval(function () {
+            doAfter(0, Date.now());
+            doAfter(1000, Date.now());
+        }, 2000)
+    </script>
+    <div id="results">
+
+    </div>
+</body>
+</html>

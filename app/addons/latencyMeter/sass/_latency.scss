@@ -1,0 +1,66 @@
+.latency-meter{
+	width: $latency-width;
+	height: $latency-height;
+	background:$c-latency-bg;
+	position: relative;
+
+}
+
+	.latency-status{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+		.latency-symbol{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			   -moz-transform: translate(-50%, -50%);
+			    -ms-transform: translate(-50%, -50%);
+			     -o-transform: translate(-50%, -50%);
+			        transform: translate(-50%, -50%);
+			        width: $symbol-width;
+
+			        polygon{
+			        	fill: $c-symbol;
+			        }
+		}
+
+			.latency-popup{
+				display: none;
+			}
+
+		.latency-1, .latency-2, .latency-3, .latency-4, .latency-5{
+			opacity: $base-signal;
+		}
+
+		.status-1{
+			.latency-1{
+				opacity: $status-signal;
+			}
+		}
+		.status-2{
+			.latency-1, .latency-2{
+				opacity: $status-signal;
+			}
+		}
+		.status-3{
+			.latency-1, .latency-2, .latency-3{
+				opacity: $status-signal;
+			}
+		}
+		.status-4{
+			.latency-1, .latency-2, .latency-3, .latency-4{
+				opacity: $status-signal;
+			}
+		}
+		.status-5{
+			.latency-1, .latency-2, .latency-3, .latency-4, .latency-5{
+				opacity: $status-signal;
+			}
+		}
+
+	.current-status{
+		display: none;
+	}

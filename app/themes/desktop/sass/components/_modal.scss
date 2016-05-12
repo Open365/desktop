@@ -1,0 +1,49 @@
+//@import "desktopVars.scss";
+.modal-dialog {
+	width: 500px;
+	margin: 34px auto;
+
+	.modal-content {
+		background: #EDEDED;
+
+		.modal-header {
+			@extend %window-title !optional;
+			padding: 10px;
+			h1 {
+				font-weight: normal;
+				margin: 0px;
+			}
+		}
+
+		.modal-body {
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			.img {
+				flex-shrink: 0;
+
+				> img {
+					height: 48px;
+					width: 48px;
+
+				}
+			}
+			.text {
+				font-size: 18px;
+				line-height: 1.4;
+				text-align: left;
+				width: 66%;
+				word-wrap: break-word;
+			}
+		}
+
+		.modal-footer {
+			padding: 10px;
+			button {
+				&:hover {
+					border: 1px #6f6f6f solid;
+				}
+			}
+		}
+	}
+}

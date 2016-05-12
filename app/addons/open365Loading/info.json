@@ -1,0 +1,9 @@
+{
+  "name": "open365Loading",
+  "templates": {},
+  "modules": ["open365Loading"],
+  "sass": [],
+  "hooks": {
+    "loading": "open365Loading.tpl.html"
+  }
+}

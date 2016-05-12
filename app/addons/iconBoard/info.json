@@ -1,0 +1,14 @@
+{
+  "name": "iconBoard",
+  "templates": {
+    "content": ["addons/iconBoard/templates/iconboard.tpl.html"]
+  },
+  "modules": ["eyeApplications"],
+  "sass": [
+  	"_iconboard.scss", 
+      "_variables.scss"
+  ],
+  "hooks": {
+    "iconBoard": "appList.tpl.html"
+  }
+}

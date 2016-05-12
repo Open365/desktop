@@ -1,0 +1,14 @@
+{
+  "name": "changePassword",
+  "templates": {
+
+  },
+  "modules": ["changePassword"],
+  "sass": [
+  "_variables.scss", 
+  "_changePassword.scss"
+  ],
+  "hooks": {
+    "changePassword": "changePassword.tpl.html"
+  }
+}

@@ -1,0 +1,168 @@
+.main-brand{
+	@include main-brand(); // Width and height for logo
+}
+
+.topbar-desktop{
+	@include topbar-mixin;
+	.brand-container{
+		@include brand-size;
+	}
+}
+
+
+	.toolbar-container{
+		flex: 1 1 8%;
+	}
+
+		.toolbar-group{ 
+			flex: 1 1 auto;
+			display: flex;
+			@include toolbar-flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+
+		}
+
+
+	// Change when addons have their own classes
+	
+	.bar-item{
+
+		&.bar-item-applications
+		{
+			order: 1;
+			flex-grow: 1;
+		}
+		
+		&.bar-item-userinfo
+		{
+			order: 3;
+		}
+
+		&.bar-item-latencymeter
+		{
+			order: 4;
+		}
+
+		&.bar-item-attach
+		{
+			order: 5;
+		}
+	}
+
+
+
+.tooltip-inner{
+	max-width: 300px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+
+.inner-circle{
+	fill: $inner-circle;
+}
+.outer-circle{
+	fill: $outer-circle;
+}
+.text-logo{
+	fill: $text-logo;
+}
+
+.modal-logout
+{
+	bottom: auto !important;
+	left: auto !important;
+	position: absolute !important;
+	right: 40px !important;
+	top: 43px !important;
+	transform: none !important;
+	&::before
+	{
+		display: none;
+	}
+	&::after
+	{
+		content: '';
+		border: 0.5em solid transparent;
+		border-bottom-color: #fff;
+		top: -1em;
+		right: 24px;
+		position: absolute;
+	}
+}
+
+
+@media screen and (max-width:29em)
+{
+	.topbar-desktop .bar-item-userinfo .user-name
+	{
+		width: 0px;
+		text-indent: -9999px;
+		padding-right: 0;
+	}
+
+	.topbar-desktop .user-info
+	{
+		  padding: 0 .5em 0 .5em;
+	}
+
+	.topbar-desktop .logout-wrapper
+	{
+		right: -1.3em;
+	}
+
+	.topbar-desktop .user-avatar
+	{
+		margin: 0;
+	}
+
+	.dockbar .applications
+	{
+		width: 10rem;
+	}
+
+	.dockbar .application-item
+	{
+		font-size: 1.0625rem;
+		width: 100%;
+		display: block;
+		height: 2rem;
+		margin-left: 0;
+		.app
+		{
+			padding-top: 0;
+			padding-left: 40px;
+			text-align: left;
+			&::before
+			{
+				@include fz(29);
+				position: absolute;
+				top: 3px;
+				left: 0px;
+				width: 2.3rem;
+				text-align: center;
+			}
+		}
+	}
+
+	.dockbar .excel::before {
+		left: 3px !important;
+	}
+	.dockbar .word::before {
+		left: 3px !important;
+	}
+	.dockbar .powerpoint::before {
+		left: 5px !important;
+	}
+}
+
+@media screen and (max-width:13em)
+{
+	.topbar-desktop .bar-item-userinfo
+	{
+		display: none;
+	}
+}

@@ -1,0 +1,10 @@
+{
+  "name": "common",
+  "hooks": {},
+  "modules": ["presence"],
+  "sass": [
+    "_variables.scss",
+    "_normalize.scss",
+    "_mixins.scss"
+  ]
+}

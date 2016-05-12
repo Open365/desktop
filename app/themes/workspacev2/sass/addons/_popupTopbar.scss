@@ -1,0 +1,323 @@
+.topbar-popup {
+	overflow: visible !important;
+	@include topbar-mixin($bg:  $popupTopbarBackground, $shadow: $popupToarbarShadow, $size: $popupTopbarHeight);
+
+	.brand-container{
+		@include popup-brand-size;
+		@include popup-brand-extra;
+	}
+	.launcher-btn{
+		height: $popupTopbarHeight;
+		display: inline-block;
+		text-decoration: none;
+		padding: 0 1em 0 2.3em !important;
+		line-height: 1.8;
+		color: $popupTopbarColor !important;
+		font-weight: 600;
+
+		@include iconizev2(
+			$char: '\0069', 
+			$t-size: 26, 
+			$lh: .89, 
+			$color: $popupTopbarColor, 
+			$has-text: true, 
+			$width: $popupTopbarHeight, 
+			$height: $popupTopbarHeight, 
+			$posWidth: 0
+		);
+
+		&::before{
+			margin-left: .2em;
+		}
+	}
+
+	.adminpanel{
+		border-top: none;
+	}
+
+	.applications{
+		left: -.4em;
+		top: 100%;
+		width: 21rem;
+		margin-top: .3em;
+
+		&::before{
+			height: .2em;
+			width: calc(100% + 2px);
+			left: -1px;
+			transform: translateY(-100%);
+			top: 0;
+		}
+
+		&::after{
+			@include triangle(top, .7em, #63E5CE, top -1.4em left 1.2em);
+		}
+
+	}
+
+		.application-item{
+			@include fz(17);
+			width: 7rem;
+			height: 7rem;
+		}
+
+		.app{
+
+			&::before{
+				@include fz(45);
+			}
+		}
+
+	//Latency symbol
+
+		.latency-meter{
+			background: rgba(0,0,0,.11);
+			height: $popupTopbarHeight;
+			width: $popupTopbarHeight;
+		}
+			.topbar-popup .latency-status{
+				height:  $popupTopbarHeight;
+				width:  $popupTopbarHeight;
+			}
+		
+		.latency-desktop{
+			display: none;
+		}
+
+		.latency-popup{
+			width: 22px;
+			display: block;
+		}
+
+}
+
+
+
+// Reatach symbol
+
+.topbar-popup .reattach-btn{
+	@include ventus-icon($bg: rgba(0,0,0,.26), $width: $popupTopbarHeight, $height: $popupTopbarHeight, $margin: 0, $aligment: center, $char: \00cb, $icon-size: 28, $color: $c-topbar-items, $lh: .65);
+	&:hover::before {
+		opacity: .7;
+	}
+}
+
+
+//Applications
+	
+	
+	// Open apps launcher
+	
+	.dropdown.open{
+
+		&::after{
+			content: none !important;
+		}
+
+		// .tooltip-flag{
+		// 	display: block !important;
+		// }
+	}
+
+
+
+	// Fixing in small sizes
+	
+	@media screen and (max-width:29em){
+		.topbar-popup{
+			.user-info{
+		 		padding: 0 .5em 0 .5em;
+			}
+			.user-name{
+				display: none;
+			}
+
+			.user-avatar{
+				margin: 0;
+			}			
+		}
+	}
+
+	@media screen and (max-width:24em){
+		.topbar-popup {
+			.tooltip-flag	{
+				display: none !important;
+			}
+
+			.launcher-btn{
+				&::before{
+					line-height: .66;
+				}
+			}
+
+			 .applications{
+				left: -0.5em;
+				top: 2.2em;
+				width: 10rem;
+			}
+
+			.application-item{
+				font-size: 1.0625rem;
+				width: 100%;
+				display: block;
+				height: 2rem;
+				margin-left: 0;
+				.app{
+					padding-top: 0;
+					padding-left: 40px;
+					text-align: left;
+					&::before{
+						@include fz(29);
+						position: absolute;
+						top: 3px;
+						left: 0px;
+						width: 2.3rem;
+						text-align: center;
+						transform: none;
+					}
+				}
+			}
+
+			.app-name{
+				padding-top: .2em;
+
+			}
+
+		}
+
+		.topbar-popup .excel::before {
+			left: 3px !important;
+		}
+		.topbar-popup .word::before {
+			left: 3px !important;
+		}
+		.topbar-popup .powerpoint::before {
+			left: 5px !important;
+		}
+	}
+
+	@media screen and (max-width:8.75em ){
+			.topbar-popup{
+				.launcher-btn{
+					padding-left: .5em !important;
+				}
+			}
+
+	}
+
+@media screen and (max-width:6.88em){
+			.topbar-popup{
+				.launcher-btn{
+					padding-left: .5em !important;
+				}
+
+				.bar-item-userinfo, .bar-item-attach{
+					display: none;
+				}
+			}
+
+	}
+
+
+
+
+// */ 2. $Popup messages 
+// * ---------------------------
+// */
+
+.msg-overlay{
+	background:rgba(81,86,104,.49);
+	position: absolute;
+	z-index: 3;
+	width: 100%;
+	height: 100%;
+	animation: overlayIn .2s 1 forwards cubic-bezier(.24,.78,.84,.99);
+
+}
+
+
+.msg-text{
+	z-index: 4;
+	-webkit-perspective: 800;
+	perspective: 800;
+	text-shadow: none;
+
+
+	&__connection{
+		animation: msgIn .35s .2s 1 forwards cubic-bezier(.24,.78,.84,.99);
+		background:#fff;
+		box-shadow: 0 2px 3px rgba(0,0,0,.3);
+		color: #36373c;
+		padding: 1em 2em 2em;
+		position: relative;
+		@include fz(18);
+		border-top: 8px solid #f5a623;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		transform-origin: 50% 50%;
+		opacity: 0;
+
+
+		&::after{
+			content: '';
+			position: absolute;
+			width: 3em;
+			height: 3em;
+			border-radius: 50%;
+			border: 3px solid #f5a623;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -101%);
+		}
+
+		&::before{
+
+			@include icon(
+				$char: '\00e7',
+				$size: 48, 
+				$color: #f5a623, 
+				$lh: 1
+			);
+
+			text-align: center;
+			text-shadow: none;
+			display: block;
+			margin-bottom: .5em;
+		}
+	}
+}
+
+@-webkit-keyframes overlayIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@-o-keyframes overlayIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@-moz-keyframes overlayIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes overlayIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+
+@-webkit-keyframes msgIn {
+	from { opacity: 0; transform: rotatex(-90deg);  }
+	to { opacity: 1; transform: rotatex(0deg) }
+}
+@-o-keyframes msgIn {
+	from { opacity: 0; transform: rotatex(-90deg);  }
+	to { opacity: 1; transform: rotatex(0deg) }
+}
+@-moz-keyframes msgIn {
+	from { opacity: 0; transform: rotatex(-90deg);  }
+	to { opacity: 1; transform: rotatex(0deg) }
+}
+@keyframes msgIn {
+	from { opacity: 0; transform: rotatex(-90deg);  }
+	to { opacity: 1; transform: rotatex(0deg) }
+}

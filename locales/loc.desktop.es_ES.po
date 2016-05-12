@@ -1,0 +1,315 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: desktop\n"
+"Language: es\n"
+
+#: 
+msgid "Log out"
+msgstr "Desconectar"
+
+#: 
+msgid "Are you sure you want to logout?"
+msgstr "¿Estás seguro de que deseas salir?"
+
+#: 
+msgid "Yes"
+msgstr "Sí"
+
+#: 
+msgid "No"
+msgstr "No"
+
+#: 
+msgid "Connection lost. Now trying to reconnect"
+msgstr "Se ha interrumpido la conexión. Intentando reconectar"
+
+#: 
+msgid "Error launching application"
+msgstr "Error lanzando aplicación"
+
+#: 
+msgid "Support"
+msgstr "Soporte"
+
+#: 
+msgid "Send a message"
+msgstr "Enviar un mensaje"
+
+#: 
+msgid "Send"
+msgstr "Enviar"
+
+#: 
+msgid "The current user has gone offline"
+msgstr "El usuario ya no está en linea"
+
+#: 
+msgid "Chat with"
+msgstr "Conversar con"
+
+#:
+msgid "Just one last thing!"
+msgstr "¡Sólo una última cosa!"
+
+#:
+msgid "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
+msgstr "Por razones de seguridad necesitas cambiar tu contraseña antes de utilizar eyeOS. ¡Úsalo al entrar la próxima vez!"
+
+#:
+msgid "Old password"
+msgstr "Contraseña actual"
+
+#:
+msgid "New password"
+msgstr "Nueva contraseña"
+
+#:
+msgid "Repeat password"
+msgstr "Confirmar contraseña"
+
+#:
+msgid "Password must"
+msgstr "La contraseña debe"
+
+#:
+msgid "be 8 characters minimum"
+msgstr "tener 8 caracteres como mínimo"
+
+#:
+msgid "Current password doesn't match"
+msgstr "La contraseña actual no coincide"
+
+#:
+msgid "Sorry, we have some issues changing your password"
+msgstr "Lo sentimos, tenemos algún problema cambiando tu contraseña"
+
+#:
+msgid "Passwords must match"
+msgstr "Las contraseñas deben coincidir"
+
+#:
+msgid "CHANGE PASSWORD"
+msgstr "CAMBIAR CONTRASEÑA"
+
+#:
+msgid "This action could make you lose unfinished work"
+msgstr "Esta acción podría hacer que perdieras cambios no guardados"
+
+#:
+msgid "be different from the username"
+msgstr "ser diferente del nombre de usuario"
+
+#:
+msgid "Feedback"
+msgstr "Feedback"
+
+#:
+msgid "FAQ"
+msgstr "FAQ"
+
+#:
+msgid "Forum"
+msgstr "Foro"
+
+#:
+msgid "Support"
+msgstr "Soporte"
+
+#:
+msgid "Loading eyeOS Cloud, Please wait..."
+msgstr "Cargando Open365, Por favor espera..."
+
+#:
+msgid "The link will open in a new window"
+msgstr "El enlace se abrirá en una nueva ventana"
+
+#:
+msgid "Hello? Are you there?"
+msgstr "¿Hola? ¿Todavía estás ahí?"
+
+#:
+msgid "Password changed successfully"
+msgstr "Contraseña cambiada correctamente"
+
+#:
+msgid "Old password"
+msgstr "Contraseña anterior"
+
+#:
+msgid "New password"
+msgstr "Nueva contraseña"
+
+#:
+msgid "Repeat password"
+msgstr "Repetir contraseña"
+
+#:
+msgid "Cloud"
+msgstr "Cloud"
+
+#:
+msgid "Hub"
+msgstr "Hub"
+
+#:
+msgid "You have been idle for too long."
+msgstr "Has estado ausente demasiado tiempo"
+
+#:
+msgid "Your application has been suspended."
+msgstr "Tu aplicación ha sido suspendida"
+
+#:
+msgid "I'm back, resume!"
+msgstr "Ya he vuelto ¡Continuar!"
+
+#:
+msgid "YES"
+msgstr "SÍ"
+
+#:
+msgid "Hmmm! Are you awake?"
+msgstr "Hmmm... ¿Todavía despierto?"
+
+#:
+msgid "Maybe we should close this to protect your privacy."
+msgstr "Quizás deberíamos cerrar esto para proteger tu privacidad"
+
+#:
+msgid "I'm here"
+msgstr "Estoy aquí"
+
+#:
+msgid "You are experiencing unsteady internet connectivity."
+msgstr "Ooooops! Estamos experimentando problemas de comunicación"
+
+#:
+msgid "Please check your network access."
+msgstr "Por favor, comprueba tu conexión de red"
+
+#:
+msgid "(Unsaved changes may have been lost)"
+msgstr "Los cambios que no guardaste se pueden haber perdido"
+
+#:
+msgid "You have no contacts yet. Search to find people and start a chat."
+msgstr "Todavía no tienes contactos. Utiliza la búsqueda para encontrar personas y empezar a hablar"
+
+#:
+msgid "Find people..."
+msgstr "Buscar personas..."
+
+#:
+msgid "Locating the required gigapixels to render..."
+msgstr "Agrupando los gigapíxeles requeridos para renderizar..."
+
+#:
+msgid "The bits are breeding."
+msgstr "Los bits se están reproduciendo"
+
+#:
+msgid "We're building the buildings as fast as we can."
+msgstr "Estamos construyendo las construcciones tan rápido como podemos"
+
+#:
+msgid "Pay no attention to the man behind the curtain."
+msgstr "No le prestes atención al hombre tras la cortina"
+
+#:
+msgid "Enjoy the elevator music."
+msgstr "Disfruta del hilo musical."
+
+#:
+msgid "The little elves are drawing your map."
+msgstr "Los pequeños duendes están dibujando tu mapa"
+
+#:
+msgid "A few bits tried to escape, but we caught them."
+msgstr "Algunos bits intentaron escapar, pero los pillamos."
+
+#:
+msgid "Please wait, and dream of faster computers."
+msgstr "Por favor espera, y sueña con ordenadores más rápidos."
+
+#:
+msgid "Checking the gravitational constant in your locale."
+msgstr "Calculando la constante gravitacional en tu ciudad."
+
+#:
+msgid "Hum something loud while others stare."
+msgstr "Tararea algo en voz alta, mientras los demás miran"
+
+#:
+msgid "The server is powered by a lemon and two electrodes."
+msgstr "El servidor está alimentado por un limón y dos electrodos."
+
+#:
+msgid "Please wait, we love you just the way you are."
+msgstr "Por favor espera, te queremos tal como eres."
+
+#:
+msgid "We're testing your patience."
+msgstr "Estamos poniendo a prueba tu paciencia"
+
+#:
+msgid "Wait, as if you had any other choice."
+msgstr "¡Espera! (como si tuvieras otra opción)"
+
+#:
+msgid "Take a moment to sign up for our lovely prizes."
+msgstr "Tómate un momento y regístrate para ganar increíbles premios."
+
+#:
+msgid "Don't think of purple hippos."
+msgstr "No pienses en hipopótamos "
+
+#:
+msgid "Following the white rabbit."
+msgstr "Siguiendo al conejo blanco."
+
+#:
+msgid "Patience, why don't you order a sandwich?"
+msgstr "Paciencia, ¿Por qué no encargas un sandwich?"
+
+#:
+msgid "Moving the satellite into position."
+msgstr "Reposicionando los satélites."
+
+#:
+msgid "The bits are flowing slowly today."
+msgstr "Los bits fluyen lentamente hoy."
+
+#:
+msgid "Dig on the 'X' for buried treasure... ARRR!"
+msgstr "Cava en la X para encontrar el tesoro enterrado... ¡ARRR!"
+
+msgid "It's still faster than you could draw it."
+msgstr "Todavía es más rápido que si lo dibujaras."
+
+#:
+msgid "Please wait. We're loading your application."
+msgstr "Por favor, espera un momento. Estamos preparando tu aplicación."
+
+#:
+msgid "Home"
+msgstr "Home"
+
+#:
+msgid "Groups"
+msgstr "Grupos"
+
+#:
+msgid "Writer"
+msgstr "Writer"
+
+#:
+msgid "Spreadsheet"
+msgstr "Calc"
+
+#:
+msgid "Presentation"
+msgstr "Impress"

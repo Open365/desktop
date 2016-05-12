@@ -1,0 +1,12 @@
+<div id="userActivity" class="userActivity-overlay" ng-show="showDialog" ng-controller="userActivityController">
+    <div class="userActivity-mainForm">
+        <div class="userActivity-mainFormIn">
+            <img src="addons/userActivity/images/wakeup-cloud.svg" width="157" height="95" title="{{ titleMessage | translate}}" />        
+            <h1>{{ titleMessage | translate}}</h1>
+            <h2>{{ subTitleMessage | translate}}</h2>
+            <div class="userActivity-submit">
+                <button class="btn-change btn-change-active ng-binding" ng-click="submit()">{{"I'm here" | translate}}</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,9 @@
+{
+  "name": "seahub",
+  "templates": {},
+  "modules": [
+    "seahub"
+  ],
+  "sass": [],
+  "hooks": {}
+}

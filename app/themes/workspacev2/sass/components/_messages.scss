@@ -1,0 +1,75 @@
+.eyeos-msg{
+	width: 100%;
+	@include fz(20);
+	color: #36373C;
+	position: relative;
+
+	.popup &{
+		height: 100%;
+		position: absolute;
+	}
+}
+	.msg__error{
+		text-align: center;
+
+		&::after{
+			position: absolute;
+			content: '';
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: .2em;
+			background:#EBA127;
+			animation: bar-error-in .3s backward;
+		}
+
+
+	}
+
+	.msg-text{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		padding-left: 2em;
+		white-space: nowrap;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+
+		.msg__error &{
+			&::before, &::after{
+				@include icon(\006a, 38, #EBA127, $lh: 1);
+				position: absolute;
+				top: 50%;
+				left: -.1em;
+				text-shadow: none;
+			}
+
+			&::before{
+				transform: translate(0, -67%);
+			}
+
+			&::after{
+				content: '\00e0';
+				@include fz(80);
+				transform: translate(-17%, -64%);
+			}
+		}
+	}
+
+
+	@-webkit-keyframes bar-error-in {
+		from { transform: translateY(-100%) }
+		to { transform: translateY(0) }
+	}
+	@-o-keyframes bar-error-in {
+		from { transform: translateY(-100%) }
+		to { transform: translateY(0) }
+	}
+	@-moz-keyframes bar-error-in {
+		from { transform: translateY(-100%) }
+		to { transform: translateY(0) }
+	}
+	@keyframes bar-error-in {
+		from { transform: translateY(-100%) }
+		to { transform: translateY(0) }
+	}

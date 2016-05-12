@@ -1,0 +1,72 @@
+
+// * / 1. $Button show users
+// * -----------------------
+// * /
+
+.show-users{
+	@include addon-btn(
+		$icon-users-char,
+		$c-btn-bg,
+		$c-dockicon,
+		$c-user-hover,
+		$c-user-active,
+		$c-user-tooltip,
+		$itemPadding,
+		$dockWidth,
+		$btn-height: $dockWidth,
+		$icon-size: 40,
+		$icon-lh: 1.32em
+	);
+	cursor:pointer;
+
+	&::before{
+		transition: all .3s ease-out;
+	}
+
+	&:hover{
+		&::before{
+			padding-left: .1em;
+		}
+	}
+}
+
+.title__users{
+	margin: 0;
+	@include fz(24);
+	font-weight: 600;
+
+	&::before{
+		@include pg-icon;
+	}
+}
+
+
+// * / 2. $Container
+// * -----------------------
+// * /
+
+
+.users-list-container{
+	min-width: 18em !important;
+	width: 25% !important;
+	max-width: 22rem;
+}
+
+	.people-list{
+	}
+
+	.people-item__online{
+		cursor: pointer;
+	}
+
+.empty_people_placeholder {
+	font-size: 1.3em;
+	font-weight: bold;
+	text-align: center;
+	color: #cacbd1;
+	padding-top: 110px;
+}
+
+#peopleSearch {
+	padding-left: 5px;
+}

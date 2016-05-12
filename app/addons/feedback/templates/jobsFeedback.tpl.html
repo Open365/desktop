@@ -1,0 +1,20 @@
+<div ng-controller="filesFeedbackController" class="feedback-wrapper">
+    <div class="msg msg-infobox {{data.class}}" ng-repeat="data in feedbackData track by data.id">
+        <svg class="spinner spinner1" width="26px" height="26px" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="4" stroke-linecap="round" cx="13" cy="13" r="10"></circle>
+        </svg>
+        <svg class="spinner spinner2" width="26px" height="26px" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="4" stroke-linecap="round" cx="13" cy="13" r="10"></circle>
+        </svg>
+        <svg class="spinner spinner3" width="26px" height="26px" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+            <circle class="path" fill="none" stroke-width="4" stroke-linecap="round" cx="13" cy="13" r="10"></circle>
+        </svg>
+        <span >{{data.message}}</span>
+        <div class="feedback-buttons" ng-if="data.buttons.length" >
+            <button ng-repeat="button in data.buttons" class="{{button.classname}}" ng-click="actions[button.action](data)">{{button.label | translate}}</button>
+            <a ng-repeat="link in data.links" href="{{link.url}}" download="{{link.download}}" class="{{link.classname}}" ng-click="actions[link.action](data)">
+                {{link.label | translate}}
+            </a>
+        </div>
+    </div>
+</div>

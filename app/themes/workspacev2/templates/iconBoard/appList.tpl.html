@@ -1,0 +1,38 @@
+<div class="iconboard" data-block="appList">
+    <div ng-controller="ApplicationsController" class="iconboard-apps_wrapper">
+        <!-- view with grouping -->
+        <div ng-if="shouldGroupDesktopIcons == true" ng-repeat="appGroup in appGroups"
+             ng-controller="ApplicationController"
+             class="app-container">
+            <div ng-show="app.showInTab"
+                 ng-controller="ApplicationInTabController"
+                 class="button app-item {{app.appID | lowercase}}  dock-item" ng-click="openApp(app);" ng-repeat="app in appGroup" ng-class="app.bigIcon=='false' ? 'eyeos-icon' : 'extern-icon'">
+                <img ng-if="app.bigIcon!= 'false'" ng-src="{{app.bigIcon}}"/>
+
+                <div class="app-link tooltip-flag">{{app.name | translate}}</div>
+            </div>
+            <div ng-hide="app.showInTab"
+                 class="button app-item {{app.appID | lowercase}}  dock-item" ng-click="openApp(app);" ng-repeat="app in appGroup" ng-class="app.bigIcon=='false' ? 'eyeos-icon' : 'extern-icon'">
+                <img ng-if="app.bigIcon!= 'false'" ng-src="{{app.bigIcon}}"/>
+
+                <div class="app-link tooltip-flag">{{app.name | translate}}</div>
+            </div>
+        </div>
+        <!-- view without grouping -->
+        <div ng-if="shouldGroupDesktopIcons == false" ng-repeat="app in apps | filter:{showInDesktop:true}" class="app-wrapper">
+            <div ng-show="app.showInTab"
+                 ng-controller="ApplicationInTabController"
+                 class="button app-item {{app.appID | lowercase}}  dock-item" ng-click="openApp(app);" ng-class="app.bigIcon=='false' ? 'eyeos-icon' : 'extern-icon'">
+                <img ng-if="app.bigIcon!= 'false'" ng-src="{{app.bigIcon}}"/>
+
+                <div class="app-link tooltip-flag">{{app.name | translate}}</div>
+            </div>
+            <div ng-hide="app.showInTab" class="button app-item {{app.appID | lowercase}}  dock-item" ng-click="openApp(app);"
+                 ng-controller="ApplicationController" ng-class="app.bigIcon=='false' ? 'eyeos-icon' : 'extern-icon'">
+                <img ng-if="app.bigIcon!= 'false'" ng-src="{{app.bigIcon}}"/>
+
+                <div class="app-link tooltip-flag">{{app.name | translate}}</div>
+            </div>
+        </div>
+    </div>
+</div>

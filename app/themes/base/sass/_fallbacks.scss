@@ -1,0 +1,17 @@
+
+// * / 1. $Styles for ventus title bar
+// * -----------------------
+// * /
+
+
+.wm-window .wm-window-box header.wm-window-title{
+	background:#fff;
+}
+
+.wm-window .wm-window-box header.wm-window-title button.wm-maximize{
+	background: none;
+}
+
+.wm-window .wm-window-box header.wm-window-title button.wm-close{
+	background: none;
+}

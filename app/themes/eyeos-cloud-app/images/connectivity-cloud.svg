@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="150px" height="132px" viewBox="0 0 150 132" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>connectivity-cloud</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="message" transform="translate(-648.000000, -345.000000)" stroke="#404455" stroke-width="3">
+            <g id="connectivity-cloud" transform="translate(649.000000, 347.000000)">
+                <path d="M95.8243376,76.6571316 C108.61507,78.0083158 118.583971,88.8829211 118.583971,102.096342 C118.583971,116.223974 107.189427,127.677658 93.1321099,127.677658 L23.6172584,127.677658" id="coud3" stroke-linejoin="round"></path>
+                <path d="M80.3066198,79.9964868 C84.072204,77.7831974 88.4551743,76.5160921 93.132699,76.5160921 C94.0422832,76.5160921 94.9400851,76.5634605 95.8237485,76.6570132" id="cloud2" stroke-linejoin="round"></path>
+                <path d="M23.5933406,127.677303 C11.0017267,127.677303 0.794825743,117.418487 0.794825743,104.762829 C0.794825743,92.1071711 11.0017267,81.8483553 23.5933406,81.8483553 C27.2517069,81.8483553 30.708598,82.7140132 33.7719644,84.2534868 L33.6824198,83.8094079 C33.6824198,66.3411184 47.7727267,52.1791447 65.153796,52.1791447 C79.9451426,52.1791447 92.3529545,62.4355921 95.7226574,76.2588816" id="cloud1" stroke-linejoin="round"></path>
+                <path d="M59.1983142,111.058211 C59.1983142,109.009376 60.8513841,107.347898 62.8898505,107.347898 C64.9283169,107.347898 66.5813868,109.009376 66.5813868,111.058211 C66.5813868,113.107045 64.9283169,114.768523 62.8898505,114.768523 C60.8513841,114.768523 59.1983142,113.107045 59.1983142,111.058211 L59.1983142,111.058211 Z" id="mouth" stroke-linejoin="round"></path>
+                <g id="eye-right" transform="translate(78.000000, 89.000000)">
+                    <path d="M0.5,7.5 L7.57106781,0.42893219" id="Line"></path>
+                    <path d="M0.5,7.5 L12.5415945,7.5" id="Line"></path>
+                </g>
+                <g id="eye-left" transform="translate(40.500000, 93.500000) scale(-1, 1) translate(-40.500000, -93.500000) translate(34.000000, 89.000000)">
+                    <path d="M0.5,7.5 L7.57106781,0.42893219" id="Line"></path>
+                    <path d="M0.5,7.5 L12.5415945,7.5" id="Line"></path>
+                </g>
+                <path d="M73,38 C90.8284156,38 105.783891,50.3623773 109.845487,67.0239671" id="signal1" stroke-linejoin="round"></path>
+                <path d="M75,20 C100.682478,20 122.226381,37.8084516 128.077257,61.8100744" id="signal2" stroke-linejoin="round" opacity="0.441814366"></path>
+                <path d="M75,0 C109.86387,0 139.109641,24.1749082 147.052183,56.7570238" id="signal3" stroke-linejoin="round" opacity="0.17473181"></path>
+            </g>
+        </g>
+    </g>
+</svg>

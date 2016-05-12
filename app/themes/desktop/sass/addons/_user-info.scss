@@ -1,0 +1,29 @@
+
+.user-info{
+	//background:$c-user-profile;
+	height: $topbarHeight;
+	color: #fff;
+	font-weight: 600;
+	padding: 0 1.7em 0 1.5em;
+	@include displayflex;
+}
+
+	.user-avatar{
+		width: $topbarHeight;
+		height: $topbarHeight;
+		overflow: hidden;
+		border-radius: 50%;
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0 1rem 0 0;
+		box-shadow: 0 0 0 4px rgba(255,255,255,.1), 0 0 0 1px rgba(0,0,0,.1);
+
+		img{
+			width: 100%;
+		}
+	}
+
+	.user-name{
+		line-height: $addonsHeight;
+	}

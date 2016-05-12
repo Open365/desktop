@@ -1,0 +1,38 @@
+<div class="group-item" ng-class="{'group-edit':group.enableCreateEditGroupWindow}">
+    <div ng-hide="group.enableCreateEditGroupWindow">
+        <h3 class="group-name">{{group.name}}</h3>
+
+        <p class="group-description">{{group.description}}</p>
+
+        <div ng-show="toggleMembers" class="group-members">
+            <div class="member-item" ng-repeat="user in group.members | orderBy: 'firstName'">
+                {{getDisplayName(user)}}
+            </div>
+        </div>
+        <div class="group-actions">
+            <button class="action-item action_list" ng-click="toggleMembers = !toggleMembers">
+                <span class="tooltip-action">{{"Ver miembros" | translate}}</span>
+            </button>
+            <button class="action-item action_folder" ng-click="openFiles()">
+                <span class="tooltip-action">{{"Ver carpeta" | translate}}</span></button>
+            <button class="action-item action_edit" ng-click="editGroupInGroup(group)" ng-if="group.admin">
+                <span class="tooltip-action">{{"Editar grupo" | translate}}</span></button>
+            <button class="action-item action_delete" ng-click="deleteGroup()" ng-if="group.admin">
+                <span class="tooltip-action">{{"Borrar grupo" | translate}}</span></button>
+        </div>
+    </div>
+    <div class="form-group" ng-show="group.enableCreateEditGroupWindow" >
+        <div ng-include="hooks.groupForm" ng-controller="groupCreateUpdateController"></div>
+    </div>
+    <div ng-show="showConfirmDelete"
+         ng-controller="deleteGroupDialogController"
+         class="msg-box msg__warning visible">
+        {{"Are you sure you want to delete this group?" | translate}}
+        <div class="action-btns">
+            <button class="link-btn cancel_delete" ng-click="cancelDeleteGroup()">{{"Cancel" | translate}}
+            </button>
+            <button class="text-btn confirm_delete" ng-click="confirmDeleteGroup()">{{"Delete" | translate}}
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="latency-meter" ng-controller="netMeasureController">
+   <div class="latency-status status-{{latency | lowercase}}">
+   <svg xmlns="http://www.w3.org/2000/svg" width="35px" height="35px" viewBox="0 0 35 35" class="latency-symbol latency-desktop">
+		<polygon points="8.3,29.5 1,29.5 8.3,24 " class="latency-1"/>
+		<polygon points="14.4,19.4 14.4,29.5 10.6,29.5 10.6,22.3 "  class="latency-2"/>
+		<polygon points="20.5,14.8 20.5,29.5 16.7,29.5 16.7,17.6 "  class="latency-3"/>
+		<polygon points="26.6,10.1 26.6,29.5 22.8,29.5 22.8,13.1 "  class="latency-4"/>
+		<polygon points="32.8,5.5 32.8,29.5 28.9,29.5 28.9,8.5 "  class="latency-5"/>
+	</svg>
+
+	<svg viewBox="13 0 22 22" enable-background="new 13 0 22 22" xml:space="preserve" class="latency-symbol latency-popup">
+		<polygon points="18.008,18 14.009,18 18.008,15.186 " class="latency-1"/>
+		<polygon points="21.992,12.382 21.992,18 19.977,18 19.977,13.8 " class="latency-2"/>
+		<polygon points="26.008,9.556 26.008,18 24.033,18 24.033,10.969 " class="latency-3"/>
+		<polygon points="30.031,6.724 30.031,18 28.016,18 28.016,8.143 " class="latency-4"/>
+		<polygon points="34.008,3.926 34.008,18 32.023,18 32.023,5.322 " class="latency-5"/>
+	</svg>
+   </div>
+   <!--<div class="tooltip-item">Conectivity <span class="current-status ">{{latency}}</span></div>-->
+</div>
