@@ -320,44 +320,44 @@ msgstr "Impress"
 
 #:
 msgid "Mail"
-msgstr ""
+msgstr "Correo"
 
 #:
 msgid "File sync"
-msgstr ""
+msgstr "Sinc. de ficheros"
 
 #:
 msgid "Password"
-msgstr ""
+msgstr "Contraseña"
 
 #:
 msgid "About"
-msgstr ""
+msgstr "Sobre"
 
 #:
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #:
 msgid "People"
-msgstr ""
+msgstr "Gente"
 
 #:
 msgid "Start Videoconference"
-msgstr ""
+msgstr "Empezar videoconferencia"
 
 #:
 msgid "Send a message"
-msgstr ""
+msgstr "Enviar un mensaje"
 
 #:
 msgid "Send"
-msgstr ""
+msgstr "Enviar"
 
 #:
 msgid "The current user has gone offline"
-msgstr ""
+msgstr "Este usuario"
 
 #:
 msgid "Videoconference with"
-msgstr ""
+msgstr "Videconferencia con"
