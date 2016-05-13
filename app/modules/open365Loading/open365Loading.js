@@ -20,7 +20,7 @@
 'use strict';
 define(['settings', 'modules/open365Loading/open365Loading'], function (settings, open365LoadingController) {
 	angular.module('open365Loading', [])
-		.controller('open365LoadingController', ['$scope', '$translate', '$interval', function ($scope, $translate, $interval) {
+		.controller('open365LoadingController', ['$scope', '$interval', function ($scope, $interval) {
 
 			var messages = [
 				'Please wait. We\'re loading your application.',

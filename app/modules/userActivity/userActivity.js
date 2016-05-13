@@ -22,9 +22,8 @@ define(['vdi/eyeosVdiReconnectionService'], function () {
     angular.module('userActivity', [])
     .controller('userActivityController', [
         '$scope',
-        '$translate',
         'eyeosVdiReconnectionService',
-        function ($scope, $translate, eyeosVdiReconnectionService) {
+        function ($scope, eyeosVdiReconnectionService) {
             $scope.showDialog = false;
             $scope.titleMessage = 'Hmmm! Are you awake?';
             $scope.subTitleMessage = 'Maybe we should close this to protect your privacy.';
