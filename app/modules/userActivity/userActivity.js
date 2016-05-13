@@ -26,8 +26,8 @@ define(['vdi/eyeosVdiReconnectionService'], function () {
         'eyeosVdiReconnectionService',
         function ($scope, $translate, eyeosVdiReconnectionService) {
             $scope.showDialog = false;
-            $scope.titleMessage = $translate.instant('Hmmm! Are you awake?');
-            $scope.subTitleMessage = $translate.instant('Maybe we should close this to protect your privacy.');
+            $scope.titleMessage = 'Hmmm! Are you awake?';
+            $scope.subTitleMessage = 'Maybe we should close this to protect your privacy.';
 
             DesktopBus.subscribe('vdiActivityLost', function () {
                 $scope.messageTimeout = setTimeout(function(){
