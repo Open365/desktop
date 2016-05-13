@@ -96,6 +96,10 @@ msgid "CHANGE PASSWORD"
 msgstr "CAMBIAR CONTRASEÑA"
 
 #:
+msgid "Change password"
+msgstr "Xxxxxx xxxxxxxx"
+
+#:
 msgid "This action could make you lose unfinished work"
 msgstr "Esta acción podría hacer que perdieras cambios no guardados"
 
@@ -352,4 +356,8 @@ msgstr ""
 
 #:
 msgid "The current user has gone offline"
+msgstr ""
+
+#:
+msgid "Videoconference with"
 msgstr ""

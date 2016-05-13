@@ -9,7 +9,6 @@
   	"_variables.scss"
   ],
   "hooks": {
-    "peopleGroups": "peopleGroupsMenu.tpl.html",
     "groupsList": "groupsList.tpl.html",
     "groupItem": "groupItem.tpl.html",
     "groupForm":"groupForm.tpl.html",

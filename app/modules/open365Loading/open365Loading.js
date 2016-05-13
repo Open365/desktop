@@ -58,7 +58,7 @@ define(['settings', 'modules/open365Loading/open365Loading'], function (settings
 			        current = random(2, (messages.length));
 			    }
 			    previous = current;
-		    	var translated = $translate.instant(messages[current - 1]);		    	
+		    	var translated = messages[current - 1];
 			    $("#message-item").fadeOut(500, function() {
 			 		$scope.$apply(function(){
 						$scope.loadingMessage = translated;
