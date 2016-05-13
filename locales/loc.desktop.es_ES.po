@@ -313,3 +313,43 @@ msgstr "Calc"
 #:
 msgid "Presentation"
 msgstr "Impress"
+
+#:
+msgid "Mail"
+msgstr ""
+
+#:
+msgid "File sync"
+msgstr ""
+
+#:
+msgid "Password"
+msgstr ""
+
+#:
+msgid "About"
+msgstr ""
+
+#:
+msgid "Blog"
+msgstr ""
+
+#:
+msgid "People"
+msgstr ""
+
+#:
+msgid "Start Videoconference"
+msgstr ""
+
+#:
+msgid "Send a message"
+msgstr ""
+
+#:
+msgid "Send"
+msgstr ""
+
+#:
+msgid "The current user has gone offline"
+msgstr ""
