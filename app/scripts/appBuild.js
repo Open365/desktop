@@ -26,7 +26,7 @@ require([
 	domReady(function () {
 		//theme logic here
 		var themeName = themeSettings.theme;
-        $.getJSON("themes/" + themeName + "/compiled-info.json?_v=" + Date.now(), null, function(data) {
+        $.getJSON("themes/" + themeName + "/compiled-info.json", null, function(data) {
 			var head = document.head;
 			var cssElement = document.createElement("link");
 			cssElement.setAttribute("rel", "stylesheet");

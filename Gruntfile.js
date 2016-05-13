@@ -341,7 +341,7 @@ module.exports = function (grunt) {
 			html: ['<%= yeoman.dist %>/**/*.html'],
 			css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
 			json: [
-				'<%= yeoman.dist %>/themes/**/compiled-info.json',
+				'<%= yeoman.dist %>/themes/**/compiled-info*.json',
 				'<%= yeoman.dist %>/modules/**/moduleFiles.json'
 			],
 			options: {
@@ -662,6 +662,7 @@ module.exports = function (grunt) {
 			'ngmin',
 			'copy:dist',
 			'hashTranslationFiles',
+			'hashCompiledInfo',
 			'cssmin',
 			'filerev:dist',
 			'usemin',
@@ -752,6 +753,17 @@ module.exports = function (grunt) {
 
 		hashAndReplaceFiles.call(this, grunt, files);
 	});
+
+
+	grunt.registerTask('hashCompiledInfo', 'Hashes compiled info folder and renames usages', function () {
+		var hashAndReplaceFiles = require('./grunt_tasks/hashAndReplaceFiles');
+
+		var dist = grunt.config('yeoman').dist + "/" ;
+		var filesToReplace = [dist + "themes/**/compiled-info.json"];
+
+		hashAndReplaceFiles.call(this, grunt, filesToReplace);
+	});
+
 
 	grunt.registerTask('wire-modules', 'Generates a file to link the name of the modules to the new path that results after filerev ', function () {
 		var dist = grunt.config('yeoman').dist + "/" ;
