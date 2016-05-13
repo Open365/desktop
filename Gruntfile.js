@@ -744,8 +744,13 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('hashTranslationFiles', 'Hashes translation folder and renames all build translation files with this hash', function () {
-		var hashTranslationFiles = require('./grunt_tasks/hashTranslationFiles');
-		hashTranslationFiles.call(this, grunt);
+		var hashAndReplaceFiles = require('./grunt_tasks/hashAndReplaceFiles');
+
+		var dist = grunt.config('yeoman').dist + "/" ;
+		var translationsPath = dist + "scripts/translations/";
+		var files = [translationsPath+'literals/**/*.json'];
+
+		hashAndReplaceFiles.call(this, grunt, files);
 	});
 
 	grunt.registerTask('wire-modules', 'Generates a file to link the name of the modules to the new path that results after filerev ', function () {
