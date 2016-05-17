@@ -26,13 +26,20 @@ define(['settings', 'modules/netMeasure/netMeasureService'], function (settings,
 			netMeasurer.start();
 			return netMeasurer;
 		}])
-		.controller('netMeasureController', ['$scope', 'netMesasureService', function ($scope, netMesasureService) {
+		.controller('netMeasureController', ['$scope', 'netMesasureService', '$interval', function ($scope, netMesasureService, $interval) {
+			var interval;
 			netMesasureService.subscribe(function (latency) {
+				$interval.cancel(interval);
 				$scope.latency = latency;
 				setTimeout(function(){
 					$scope.$apply();
 				}, 0);
 			});
-			$scope.latency = 5;
+			var aux = 0;
+			interval = $interval(function () {
+				aux++;
+				$scope.latency = aux % 6;
+			}, 100);
+			$scope.latency = 0;
 		}]);
 });
