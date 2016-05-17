@@ -30,7 +30,7 @@ define([
 		var sut;
 		var clock;
 		var settings;
-		var workerPing, workerPingStub;
+		var workerPing, addcallbackStub, startPingStub;
 		var netAnalyzer, analyzeStub;
 
 		setup(function () {
@@ -41,11 +41,12 @@ define([
 				'LATENCY_SCALE': [160, 80, 40, 20], //worst to best in ms
 				'LATENCY_PING_INTERVAL': 1000, // in ms
 				'LATENCY_HISTORY_SIZE': 10, // Pings to keep to do the average
-				'LATENCY_PINGS_TO_TRUNCATE': 1,
+				'LATENCY_PINGS_TO_TRUNCATE': 1
 			};
 
 			workerPing = new WorkerPing();
-			workerPingStub = sinon.stub(workerPing, 'setPingInterval');
+			addcallbackStub = sinon.stub(workerPing, 'addCallback');
+			startPingStub = sinon.stub(workerPing, 'startPing');
 
 			netAnalyzer = new NetAnalyzer(settings);
 			analyzeStub = sinon.stub(netAnalyzer, 'analyze');
@@ -58,25 +59,36 @@ define([
 		});
 
 		suite("#start", function () {
-			test('calls workerPing.setPingInterval with callback, time and options', function () {
-				sut.start();
-				var options = {
-					timeout: settings.LATENCY_TIMEOUT
-				};
-				sinon.assert.calledWithExactly(workerPingStub, sinon.match.func, settings.LATENCY_PING_INTERVAL, options);
+			test('adds callback to workerPing', function () {
+				var target = "fakeTarget";
+				sut.start(target);
+
+				sinon.assert.calledWithExactly(addcallbackStub, sinon.match.func);
 			});
 
-			test('workerPing.setPingInterval callback calls netAnalyzer with the data', function () {
+			test('calls workerPing.startPing with options', function () {
+				var target = "fakeTarget";
+				sut.start(target);
+
+				var options = {
+					target: target,
+					time: settings.LATENCY_PING_INTERVAL,
+					timeout: settings.LATENCY_TIMEOUT
+				};
+				sinon.assert.calledWithExactly(startPingStub, options);
+			});
+
+			test('workerPing.startPing callback calls netAnalyzer with the data', function () {
 				var fakeLatencyResult = {};
-				workerPingStub.callsArgWith(0, fakeLatencyResult);
+				addcallbackStub.callsArgWith(0, fakeLatencyResult);
 				sut.start();
 				sinon.assert.calledWithExactly(analyzeStub, fakeLatencyResult);
 			});
 
-			test('workerPing.setPingInterval callback calls the subscription callbacks with the analyze result', function () {
+			test('workerPing.startPing callback calls the subscription callbacks with the analyze result', function () {
 				var latencyResult = 4;
 				var fakeLatencyResult = {};
-				workerPingStub.callsArgWith(0, fakeLatencyResult);
+				addcallbackStub.callsArgWith(0, fakeLatencyResult);
 				analyzeStub.returns(latencyResult);
 
 				var cb = sinon.stub();

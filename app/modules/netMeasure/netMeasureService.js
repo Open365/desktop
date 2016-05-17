@@ -36,17 +36,21 @@ define([
 		this.callbacks.push(cb);
 	};
 
-	NetMeasurer.prototype.start = function () {
+	NetMeasurer.prototype.start = function (target) {
 		var self = this,
 			latencyResult;
 
-		this.workerPing.setPingInterval(function (data) {
+		this.workerPing.addCallback(function (data) {
 			latencyResult = self.netAnalyzer.analyze(data);
 			self.latencyValue = latencyResult;
 			self.callbacks.forEach(function (cb) {
 				cb(latencyResult);
 			});
-		}, this.settings.LATENCY_PING_INTERVAL, {
+		});
+
+		this.workerPing.startPing({
+			target: target || document.domain,
+			time: this.settings.LATENCY_PING_INTERVAL,
 			timeout: this.settings.LATENCY_TIMEOUT
 		});
 	};

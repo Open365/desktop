@@ -23,9 +23,16 @@ define([], function () {
 		this.callbacks = [];
 	}
 
+	WorkerPing.prototype.getNewWorker = function () {
+		return new Worker('worker/pinger.js');
+	};
+
 	WorkerPing.prototype.startWorker = function () {
 		var self = this;
-		this.worker = this.worker || new Worker('worker/pinger.js');
+		if (this.worker) {
+			this.worker.terminate()
+		}
+		this.worker = this.getNewWorker();
 		this.worker.onmessage = function (e) {
 			self.callbacks.forEach(function (cb) {
 				cb(e.data);
@@ -33,16 +40,20 @@ define([], function () {
 		};
 	};
 
-	WorkerPing.prototype.setPingInterval = function (cb, time, options) {
+	WorkerPing.prototype.startPing = function (options) {
 		this.startWorker();
 		if (!options) {
 			options = {};
 		}
-		this.callbacks.push(cb);
 		this.worker.postMessage({
-			time: time,
+			target: options.target,
+			time: options.time,
 			timeout: options.timeout || 5000
 		});
+	};
+
+	WorkerPing.prototype.addCallback = function (cb) {
+		this.callbacks.push(cb);
 	};
 
 	return WorkerPing;
