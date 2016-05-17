@@ -129,6 +129,9 @@ define([
 	SpiceConnector.prototype.runVdiApp = function (data) {
 		console.log('VDI connection data', data);
 
+		var wsHost = data.wsHost || document.domain;
+		window.DesktopBus.dispatch('netMesure.newPingTarget', wsHost);
+
 		var spiceCallback = new SpiceCallback(this.spiceClient, this.resizer);
 		spiceCallback.subscribe();
 
@@ -136,7 +139,7 @@ define([
 			layer: document.getElementById(this.vdiContainerName),
 			'callback': spiceCallback.callback,
 			'context': spiceCallback,
-			'host': data.wsHost || document.domain,
+			'host': wsHost,
 			'port': 443,
 			'protocol': data.protocol,
 			'token': data.token,

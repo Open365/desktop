@@ -23,7 +23,11 @@ define(['settings', 'modules/netMeasure/netMeasureService'], function (settings,
 		.service('netMesasureService', [function () {
 			var netMeasurer = new NetMeasureService(settings);
 			window.netMeasurer = netMeasurer;
-			netMeasurer.start();
+
+			window.DesktopBus.subscribe('netMesure.newPingTarget', function (target) {
+				netMeasurer.start(target);
+			});
+
 			return netMeasurer;
 		}])
 		.controller('netMeasureController', ['$scope', 'netMesasureService', '$interval', function ($scope, netMesasureService, $interval) {
