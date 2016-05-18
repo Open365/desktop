@@ -5,107 +5,107 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: POEditor.com\n"
 "Project-Id-Version: desktop\n"
-"Language: es\n"
+"Language: it\n"
 
-#: 
+#:
 msgid "Log out"
-msgstr "Desconectar"
+msgstr "Disconnetti"
 
-#: 
+#:
 msgid "Are you sure you want to logout?"
-msgstr "¿Estás seguro de que deseas salir?"
+msgstr "Sei sicuro di volere uscire?"
 
-#: 
+#:
 msgid "Yes"
-msgstr "Sí"
+msgstr "Si"
 
-#: 
+#:
 msgid "No"
 msgstr "No"
 
-#: 
+#:
 msgid "Connection lost. Now trying to reconnect"
-msgstr "Se ha interrumpido la conexión. Intentando reconectar"
+msgstr "Connessione persa, riconnessione in corso"
 
-#: 
+#:
 msgid "Error launching application"
-msgstr "Error lanzando aplicación"
+msgstr "Errore nell'avvio dell'applicazione"
 
-#: 
+#:
 msgid "Support"
-msgstr "Soporte"
+msgstr "Supporto"
 
-#: 
+#:
 msgid "Send a message"
-msgstr "Enviar un mensaje"
+msgstr "Invia un messaggio"
 
-#: 
+#:
 msgid "Send"
-msgstr "Enviar"
+msgstr "invia"
 
-#: 
+#:
 msgid "The current user has gone offline"
-msgstr "El usuario ya no está en linea"
+msgstr "L'utente Ë andato offline"
 
-#: 
+#:
 msgid "Chat with"
-msgstr "Conversar con"
+msgstr "Chatta con"
 
 #:
 msgid "Just one last thing!"
-msgstr "¡Sólo una última cosa!"
+msgstr "Solo un'ultima cosa!"
 
 #:
 msgid "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
-msgstr "Por razones de seguridad necesitas cambiar tu contraseña antes de utilizar eyeOS. ¡Úsalo al entrar la próxima vez!"
+msgstr "Per ragioni di sicurezza devi cambiare la tua password prima di usare eyeOS, poi utilizzala al prossimo login!"
 
 #:
 msgid "Old password"
-msgstr "Contraseña actual"
+msgstr "Vecchia password"
 
 #:
 msgid "New password"
-msgstr "Nueva contraseña"
+msgstr "Nuova password"
 
 #:
 msgid "Repeat password"
-msgstr "Confirmar contraseña"
+msgstr "Ripeti password"
 
 #:
 msgid "Password must"
-msgstr "La contraseña debe"
+msgstr "La password deve"
 
 #:
 msgid "be 8 characters minimum"
-msgstr "tener 8 caracteres como mínimo"
+msgstr "avere almeno 8 caratteri"
 
 #:
 msgid "Current password doesn't match"
-msgstr "La contraseña actual no coincide"
+msgstr "La password non corrisponde"
 
 #:
 msgid "Sorry, we have some issues changing your password"
-msgstr "Lo sentimos, tenemos algún problema cambiando tu contraseña"
+msgstr "Scusa, stiamo avendo dei problemi nel cambiare la tua password"
 
 #:
 msgid "Passwords must match"
-msgstr "Las contraseñas deben coincidir"
+msgstr "Le password devono corrispondere"
 
 #:
 msgid "CHANGE PASSWORD"
-msgstr "CAMBIAR CONTRASEÑA"
+msgstr "CAMBIA PASSWORD"
 
 #:
 msgid "Change password"
-msgstr ""
+msgstr "Cambia pasword"
 
 #:
 msgid "This action could make you lose unfinished work"
-msgstr "Esta acción podría hacer que perdieras cambios no guardados"
+msgstr "Questa azione potrebbe farti perdere i lavori non salvati"
 
 #:
 msgid "be different from the username"
-msgstr "ser diferente del nombre de usuario"
+msgstr "essere diversa del nome dell'utente"
 
 #:
 msgid "Feedback"
@@ -113,43 +113,43 @@ msgstr "Feedback"
 
 #:
 msgid "FAQ"
-msgstr "FAQ"
+msgstr "Domande frequenti"
 
 #:
 msgid "Forum"
-msgstr "Foro"
+msgstr "Forum"
 
 #:
 msgid "Support"
-msgstr "Soporte"
+msgstr "Supporto"
 
 #:
 msgid "Loading eyeOS Cloud, Please wait..."
-msgstr "Cargando Open365, Por favor espera..."
+msgstr "Carico eyeOS Cloud. Attendi prego..."
 
 #:
 msgid "The link will open in a new window"
-msgstr "El enlace se abrirá en una nueva ventana"
+msgstr "Il link sar‡ aperto in una nuova finestra"
 
 #:
 msgid "Hello? Are you there?"
-msgstr "¿Hola? ¿Todavía estás ahí?"
+msgstr "Hey! Ci sei?"
 
 #:
 msgid "Password changed successfully"
-msgstr "Contraseña cambiada correctamente"
+msgstr "La password Ë stata cambiata"
 
 #:
 msgid "Old password"
-msgstr "Contraseña anterior"
+msgstr "Vecchia password"
 
 #:
 msgid "New password"
-msgstr "Nueva contraseña"
+msgstr "Nuova password"
 
 #:
 msgid "Repeat password"
-msgstr "Repetir contraseña"
+msgstr "Ripetere password"
 
 #:
 msgid "Cloud"
@@ -157,146 +157,146 @@ msgstr "Cloud"
 
 #:
 msgid "Hub"
-msgstr "Hub"
+msgstr "File e cartelle"
 
 #:
 msgid "You have been idle for too long."
-msgstr "Has estado ausente demasiado tiempo"
+msgstr "Sei stato inattivo per troppo tempo"
 
 #:
 msgid "Your application has been suspended."
-msgstr "Tu aplicación ha sido suspendida"
+msgstr "L'applicazione Ë stata sospesa"
 
 #:
 msgid "I'm back, resume!"
-msgstr "Ya he vuelto ¡Continuar!"
+msgstr "Sono tornato, riprendiamo!."
 
 #:
 msgid "YES"
-msgstr "SÍ"
+msgstr "SI"
 
 #:
 msgid "Hmmm! Are you awake?"
-msgstr "Hmmm... ¿Todavía despierto?"
+msgstr "Hey! Sei sveglio?"
 
 #:
 msgid "Maybe we should close this to protect your privacy."
-msgstr "Quizás deberíamos cerrar esto para proteger tu privacidad"
+msgstr "Forse dovremmo chiudere questo per proteggere la tua privacy"
 
 #:
 msgid "I'm here"
-msgstr "Estoy aquí"
+msgstr "Sono qui"
 
 #:
 msgid "You are experiencing unsteady internet connectivity."
-msgstr "Ooooops! Estamos experimentando problemas de comunicación"
+msgstr "Ci sono problemi di instabilit‡ nella connessione"
 
 #:
 msgid "Please check your network access."
-msgstr "Por favor, comprueba tu conexión de red"
+msgstr "Per favore verifica la tua connessione"
 
 #:
 msgid "(Unsaved changes may have been lost)"
-msgstr "Los cambios que no guardaste se pueden haber perdido"
+msgstr "(Le modifiche non salvate potrebbero essere state perse"
 
 #:
 msgid "You have no contacts yet. Search to find people and start a chat."
-msgstr "Todavía no tienes contactos. Utiliza la búsqueda para encontrar personas y empezar a hablar"
+msgstr "Non hai ancora contatti. Cerca dei contatti e inizia a chattare"
 
 #:
 msgid "Find people..."
-msgstr "Buscar personas..."
+msgstr "Cerca persone..."
 
 #:
 msgid "Locating the required gigapixels to render..."
-msgstr "Agrupando los gigapíxeles requeridos para renderizar..."
+msgstr "Sto cercando i gigapixel per il render..."
 
 #:
 msgid "The bits are breeding."
-msgstr "Los bits se están reproduciendo"
+msgstr "Sto allevando i bit."
 
 #:
 msgid "We're building the buildings as fast as we can."
-msgstr "Estamos construyendo las construcciones tan rápido como podemos"
+msgstr "Stiamo costruendo gli edifici il pi˘ veloce che possiamo"
 
 #:
 msgid "Pay no attention to the man behind the curtain."
-msgstr "No le prestes atención al hombre tras la cortina"
+msgstr "Non badare all'uomo dietro la tenda."
 
 #:
 msgid "Enjoy the elevator music."
-msgstr "Disfruta del hilo musical."
+msgstr "Goditi la musica dell'ascensore."
 
 #:
 msgid "The little elves are drawing your map."
-msgstr "Los pequeños duendes están dibujando tu mapa"
+msgstr "I piccoli elfi stanno disegnando la tua mappa."
 
 #:
 msgid "A few bits tried to escape, but we caught them."
-msgstr "Algunos bits intentaron escapar, pero los pillamos."
+msgstr "Alcuni bit stanno scappando, ma li catturiamo."
 
 #:
 msgid "Please wait, and dream of faster computers."
-msgstr "Por favor espera, y sueña con ordenadores más rápidos."
+msgstr "Attendi prego, e sogna un computer pi˘ veloce"
 
 #:
 msgid "Checking the gravitational constant in your locale."
-msgstr "Calculando la constante gravitacional en tu ciudad."
+msgstr "Sto verificando l'indice di gravit‡ nel tuo locale"
 
 #:
 msgid "Hum something loud while others stare."
-msgstr "Tararea algo en voz alta, mientras los demás miran"
+msgstr "...qualcosa suona, e altri guardano"
 
 #:
 msgid "The server is powered by a lemon and two electrodes."
-msgstr "El servidor está alimentado por un limón y dos electrodos."
+msgstr "Il server Ë alimentato da un limone e due elettrodi."
 
 #:
 msgid "Please wait, we love you just the way you are."
-msgstr "Por favor espera, te queremos tal como eres."
+msgstr "Attendi prego, ti vogliamo bene cosÏ come sei."
 
 #:
 msgid "We're testing your patience."
-msgstr "Estamos poniendo a prueba tu paciencia"
+msgstr "Stiamo testando la tua pazienza"
 
 #:
 msgid "Wait, as if you had any other choice."
-msgstr "¡Espera! (como si tuvieras otra opción)"
+msgstr "Attendi prego, visto che non hai altre alternative"
 
 #:
 msgid "Take a moment to sign up for our lovely prizes."
-msgstr "Tómate un momento y regístrate para ganar increíbles premios."
+msgstr "Prenditi un attimo per guardare quanto siamo belli "
 
 #:
 msgid "Don't think of purple hippos."
-msgstr "No pienses en hipopótamos "
+msgstr "Non pensare ai maiali rossi."
 
 #:
 msgid "Following the white rabbit."
-msgstr "Siguiendo al conejo blanco."
+msgstr "Sto inseguendo il coniglio bianco"
 
 #:
 msgid "Patience, why don't you order a sandwich?"
-msgstr "Paciencia, ¿Por qué no encargas un sandwich?"
+msgstr "Pazienza, non ti va un panino?"
 
 #:
 msgid "Moving the satellite into position."
-msgstr "Reposicionando los satélites."
+msgstr "Sto posizionando il satellite."
 
 #:
 msgid "The bits are flowing slowly today."
-msgstr "Los bits fluyen lentamente hoy."
+msgstr "I bit sono lenti oggi."
 
 #:
 msgid "Dig on the 'X' for buried treasure... ARRR!"
-msgstr "Cava en la X para encontrar el tesoro enterrado... ¡ARRR!"
+msgstr "La 'X' indica il punto..."
 
 msgid "It's still faster than you could draw it."
-msgstr "Todavía es más rápido que si lo dibujaras."
+msgstr "E' sempre pi˘ veloce di quanto si potrebbe disegnare."
 
 #:
 msgid "Please wait. We're loading your application."
-msgstr "Por favor, espera un momento. Estamos preparando tu aplicación."
+msgstr "Attendi prego, stiamo caricando la tua applicazione."
 
 #:
 msgid "Home"
@@ -304,35 +304,35 @@ msgstr "Home"
 
 #:
 msgid "Groups"
-msgstr "Grupos"
+msgstr "Gruppi"
 
 #:
 msgid "Writer"
-msgstr "Writer"
+msgstr "Editor di testo"
 
 #:
 msgid "Spreadsheet"
-msgstr "Calc"
+msgstr "Foglio elettronico"
 
 #:
 msgid "Presentation"
-msgstr "Impress"
+msgstr "Presentazione"
 
 #:
 msgid "Mail"
-msgstr "Correo"
+msgstr "Mail"
 
 #:
 msgid "File sync"
-msgstr "Sinc. de ficheros"
+msgstr "File sync"
 
 #:
 msgid "Password"
-msgstr "Contraseña"
+msgstr "Password"
 
 #:
 msgid "About"
-msgstr "Sobre"
+msgstr "A proposito"
 
 #:
 msgid "Blog"
@@ -340,24 +340,24 @@ msgstr "Blog"
 
 #:
 msgid "People"
-msgstr "Gente"
+msgstr "Persone"
 
 #:
 msgid "Start Videoconference"
-msgstr "Empezar videoconferencia"
+msgstr "Iniziare videoconferenza"
 
 #:
 msgid "Send a message"
-msgstr "Enviar un mensaje"
+msgstr "Invia un messaggio"
 
 #:
 msgid "Send"
-msgstr "Enviar"
+msgstr "Invia"
 
 #:
 msgid "The current user has gone offline"
-msgstr "Este usuario"
+msgstr "L'utente Ë andato offline"
 
 #:
 msgid "Videoconference with"
-msgstr "Videconferencia con"
+msgstr "Videoconferenza con"

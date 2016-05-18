@@ -17,11 +17,10 @@
     along with this program. If not, see <http://www.gnu.org/licenses/>.
 */
 
-var connection, prePings = [], onPongs = [], timeouts= [], timeout, connectionReady;
+var connection, prePings = [], onPongs = [], timeouts= [], timeout, connectionReady, WSdomain;
 
 function initWebSocket() {
-
-	connection = new WebSocket('wss://' + location.hostname + '/netMeasure');
+	connection = new WebSocket('wss://' + WSdomain + '/netMeasure');
 
 	connection.onopen = function () {
 		console.log("Ping websocket ready!");
@@ -110,9 +109,10 @@ function doPing (prePing, onPong) {
 	}
 }
 
-initWebSocket();
 self.addEventListener('message', function (e) {
 	timeout = e.data.timeout;
+	WSdomain = e.data.target;
+	initWebSocket();
 
 	setInterval(function () {
 		var startTime;

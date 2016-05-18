@@ -25,29 +25,36 @@ define([
 
 		setup(function () {
 			worker = {
-				postMessage: sinon.stub()
+				postMessage: sinon.stub(),
+				terminate: sinon.stub()
 			};
 			sut = new WorkerPing(worker);
+
+			sinon.stub(sut, "getNewWorker").returns(worker);
 		});
 
 		teardown(function () {
 
 		});
 
-		suite("#setPingInterval", function () {
+		suite("#startPing", function () {
 			test("calls worker.postMessage with the time and options", function () {
 				var timeout = 2000;
 				var time = 1000;
+				var target = "fakeTarget";
 
 				var expected = {
+					target: target,
 					time: time,
 					timeout: timeout
 				};
 				var options = {
+					target: target,
+					time:  time,
 					timeout: timeout
 				};
-				var cb = function () {};
-	            sut.setPingInterval(cb, time, options);
+
+				sut.startPing(options);
 
 				sinon.assert.calledWithExactly(worker.postMessage, expected);
 

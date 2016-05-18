@@ -9,16 +9,13 @@
   "hooks": {
     "main": "desktop/desktop.tpl.html",
     "startMenu": "topbar/startMenu.tpl.html",
-    "topbar": "topbar/topbar.tpl.html",
-    "peopleGroups": "peopleGroups/peopleGroupsMenu.tpl.html"
+    "topbar": "topbar/topbar.tpl.html"
   },
   "extends": "base",
   "sass": [
     "_variables.scss",
-    "addons/_people-groups-variables.scss",
     "addons/_latency.scss",
     "addons/_iconboard.scss",
-    "addons/_people-groups.scss",
     "addons/_topbar.scss",
     "addons/_user-info.scss",
     "components/_loading.scss",
