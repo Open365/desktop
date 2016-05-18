@@ -9,99 +9,99 @@ msgstr ""
 
 #:
 msgid "Log out"
-msgstr ""
+msgstr "Disconnetti"
 
 #:
 msgid "Are you sure you want to logout?"
-msgstr ""
+msgstr "Sei sicuro di volere uscire?"
 
 #:
 msgid "Yes"
-msgstr ""
+msgstr "Si"
 
 #:
 msgid "No"
-msgstr ""
+msgstr "No"
 
 #:
 msgid "Connection lost. Now trying to reconnect"
-msgstr ""
+msgstr "Connessione persa, riconnessione in corso"
 
 #:
 msgid "Error launching application"
-msgstr ""
+msgstr "Errore nell'avvio dell'applicazione"
 
 #:
 msgid "Support"
-msgstr ""
+msgstr "Supporto"
 
 #:
 msgid "Send a message"
-msgstr ""
+msgstr "Invia un messaggio"
 
 #:
 msgid "Send"
-msgstr ""
+msgstr "invia"
 
 #:
 msgid "The current user has gone offline"
-msgstr ""
+msgstr "L'utente Ë andato offline"
 
 #:
 msgid "Chat with"
-msgstr ""
+msgstr "Chatta con"
 
 #:
 msgid "Just one last thing!"
-msgstr ""
+msgstr "Solo un'ultima cosa!"
 
 #:
 msgid "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
-msgstr ""
+msgstr "Per ragioni di sicurezza devi cambiare la tua password prima di usare eyeOS, poi utilizzala al prossimo login!"
 
 #:
 msgid "Old password"
-msgstr ""
+msgstr "Vecchia password"
 
 #:
 msgid "New password"
-msgstr ""
+msgstr "Nuova password"
 
 #:
 msgid "Repeat password"
-msgstr ""
+msgstr "Ripeti password"
 
 #:
 msgid "Password must"
-msgstr ""
+msgstr "La password deve"
 
 #:
 msgid "be 8 characters minimum"
-msgstr ""
+msgstr "avere almeno 8 caratteri"
 
 #:
 msgid "Current password doesn't match"
-msgstr ""
+msgstr "La password non corrisponde"
 
 #:
 msgid "Sorry, we have some issues changing your password"
-msgstr ""
+msgstr "Scusa, stiamo avendo dei problemi nel cambiare la tua password"
 
 #:
 msgid "Passwords must match"
-msgstr ""
+msgstr "Le password devono corrispondere"
 
 #:
 msgid "CHANGE PASSWORD"
-msgstr ""
+msgstr "CAMBIA PASSWORD"
 
 #:
 msgid "Change password"
-msgstr ""
+msgstr "Cambia pasword"
 
 #:
 msgid "This action could make you lose unfinished work"
-msgstr ""
+msgstr "Questa azione potrebbe farti perdere i lavori non salvati"
 
 #:
 msgid "be different from the username"
@@ -109,255 +109,255 @@ msgstr ""
 
 #:
 msgid "Feedback"
-msgstr ""
+msgstr "Feedback"
 
 #:
 msgid "FAQ"
-msgstr ""
+msgstr "Domande frequenti"
 
 #:
 msgid "Forum"
-msgstr ""
+msgstr "Forum"
 
 #:
 msgid "Support"
-msgstr ""
+msgstr "Supporto"
 
 #:
 msgid "Loading eyeOS Cloud, Please wait..."
-msgstr ""
+msgstr "Carico eyeOS Cloud. Attendi prego..."
 
 #:
 msgid "The link will open in a new window"
-msgstr ""
+msgstr "Il link sar‡ aperto in una nuova finestra"
 
 #:
 msgid "Hello? Are you there?"
-msgstr ""
+msgstr "Hey! Ci sei?"
 
 #:
 msgid "Password changed successfully"
-msgstr ""
+msgstr "La password Ë stata cambiata"
 
 #:
 msgid "Old password"
-msgstr ""
+msgstr "Vecchia password"
 
 #:
 msgid "New password"
-msgstr ""
+msgstr "Nuova password"
 
 #:
 msgid "Repeat password"
-msgstr ""
+msgstr "Ripetere password"
 
 #:
 msgid "Cloud"
-msgstr ""
+msgstr "Cloud"
 
 #:
 msgid "Hub"
-msgstr ""
+msgstr "File e cartelle"
 
 #:
 msgid "You have been idle for too long."
-msgstr ""
+msgstr "Sei stato inattivo per troppo tempo"
 
 #:
 msgid "Your application has been suspended."
-msgstr ""
+msgstr "L'applicazione Ë stata sospesa"
 
 #:
 msgid "I'm back, resume!"
-msgstr ""
+msgstr "Sono tornato, riprendiamo!."
 
 #:
 msgid "YES"
-msgstr ""
+msgstr "SI"
 
 #:
 msgid "Hmmm! Are you awake?"
-msgstr ""
+msgstr "Hey! Sei sveglio?"
 
 #:
 msgid "Maybe we should close this to protect your privacy."
-msgstr ""
+msgstr "Forse dovremmo chiudere questo per proteggere la tua privacy"
 
 #:
 msgid "I'm here"
-msgstr ""
+msgstr "Sono qui"
 
 #:
 msgid "You are experiencing unsteady internet connectivity."
-msgstr ""
+msgstr "Ci sono problemi di instabilit‡ nella connessione"
 
 #:
 msgid "Please check your network access."
-msgstr ""
+msgstr "Per favore verifica la tua connessione"
 
 #:
 msgid "(Unsaved changes may have been lost)"
-msgstr ""
+msgstr "(Le modifiche non salvate potrebbero essere state perse"
 
 #:
 msgid "You have no contacts yet. Search to find people and start a chat."
-msgstr ""
+msgstr "Non hai ancora contatti. Cerca dei contatti e inizia a chattare"
 
 #:
 msgid "Find people..."
-msgstr ""
+msgstr "Cerca persone..."
 
 #:
 msgid "Locating the required gigapixels to render..."
-msgstr ""
+msgstr "Sto cercando i gigapixel per il render..."
 
 #:
 msgid "The bits are breeding."
-msgstr ""
+msgstr "Sto allevando i bit."
 
 #:
 msgid "We're building the buildings as fast as we can."
-msgstr ""
+msgstr "Stiamo costruendo gli edifici il pi˘ veloce che possiamo"
 
 #:
 msgid "Pay no attention to the man behind the curtain."
-msgstr ""
+msgstr "Non badare all'uomo dietro la tenda."
 
 #:
 msgid "Enjoy the elevator music."
-msgstr ""
+msgstr "Goditi la musica dell'ascensore."
 
 #:
 msgid "The little elves are drawing your map."
-msgstr ""
+msgstr "I piccoli elfi stanno disegnando la tua mappa."
 
 #:
 msgid "A few bits tried to escape, but we caught them."
-msgstr ""
+msgstr "Alcuni bit stanno scappando, ma li catturiamo."
 
 #:
 msgid "Please wait, and dream of faster computers."
-msgstr ""
+msgstr "Attendi prego, e sogna un computer pi˘ veloce"
 
 #:
 msgid "Checking the gravitational constant in your locale."
-msgstr ""
+msgstr "Sto verificando l'indice di gravit‡ nel tuo locale"
 
 #:
 msgid "Hum something loud while others stare."
-msgstr ""
+msgstr "...qualcosa suona, e altri guardano"
 
 #:
 msgid "The server is powered by a lemon and two electrodes."
-msgstr ""
+msgstr "Il server Ë alimentato da un limone e due elettrodi."
 
 #:
 msgid "Please wait, we love you just the way you are."
-msgstr ""
+msgstr "Attendi prego, ti vogliamo bene cosÏ come sei."
 
 #:
 msgid "We're testing your patience."
-msgstr ""
+msgstr "Stiamo testando la tua pazienza"
 
 #:
 msgid "Wait, as if you had any other choice."
-msgstr ""
+msgstr "Attendi prego, visto che non hai altre alternative"
 
 #:
 msgid "Take a moment to sign up for our lovely prizes."
-msgstr ""
+msgstr "Prenditi un attimo per guardare quanto siamo belli "
 
 #:
 msgid "Don't think of purple hippos."
-msgstr ""
+msgstr "Non pensare ai maiali rossi."
 
 #:
 msgid "Following the white rabbit."
-msgstr ""
+msgstr "Sto inseguendo il coniglio bianco"
 
 #:
 msgid "Patience, why don't you order a sandwich?"
-msgstr ""
+msgstr "Pazienza, non ti va un panino?"
 
 #:
 msgid "Moving the satellite into position."
-msgstr ""
+msgstr "Sto posizionando il satellite."
 
 #:
 msgid "The bits are flowing slowly today."
-msgstr ""
+msgstr "I bit sono lenti oggi."
 
 #:
 msgid "Dig on the 'X' for buried treasure... ARRR!"
-msgstr ""
+msgstr "La 'X' indica il punto..."
 
 msgid "It's still faster than you could draw it."
-msgstr ""
+msgstr "E' sempre pi˘ veloce di quanto si potrebbe disegnare."
 
 #:
 msgid "Please wait. We're loading your application."
-msgstr ""
+msgstr "Attendi prego, stiamo caricando la tua applicazione."
 
 #:
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #:
 msgid "Groups"
-msgstr ""
+msgstr "Gruppi"
 
 #:
 msgid "Writer"
-msgstr ""
+msgstr "Editor di testo"
 
 #:
 msgid "Spreadsheet"
-msgstr ""
+msgstr "Foglio elettronico"
 
 #:
 msgid "Presentation"
-msgstr ""
+msgstr "Presentazione"
 
 #:
 msgid "Mail"
-msgstr ""
+msgstr "Mail"
 
 #:
 msgid "File sync"
-msgstr ""
+msgstr "File sync"
 
 #:
 msgid "Password"
-msgstr ""
+msgstr "Password"
 
 #:
 msgid "About"
-msgstr ""
+msgstr "A proposito"
 
 #:
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #:
 msgid "People"
-msgstr ""
+msgstr "Persone"
 
 #:
 msgid "Start Videoconference"
-msgstr ""
+msgstr "Iniziare videoconferenza"
 
 #:
 msgid "Send a message"
-msgstr ""
+msgstr "Invia un messaggio"
 
 #:
 msgid "Send"
-msgstr ""
+msgstr "Invia"
 
 #:
 msgid "The current user has gone offline"
-msgstr ""
+msgstr "L'utente Ë andato offline"
 
 #:
 msgid "Videoconference with"
-msgstr ""
+msgstr "Videoconferenza con"
