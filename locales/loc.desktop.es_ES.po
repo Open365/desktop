@@ -332,7 +332,7 @@ msgstr "Contraseña"
 
 #:
 msgid "About"
-msgstr "Sobre"
+msgstr "Acerca de"
 
 #:
 msgid "Blog"
