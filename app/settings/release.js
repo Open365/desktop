@@ -92,8 +92,8 @@ define(['./urlConfig'], function (urlConfig) {
 		'CHECK_SUSPENDED_INTERVAL': 5000, //milliseconds
 		'CHECK_ACTIVITY_INTERVAL': 600000, //milliseconds
 		'EYEOS_DISABLE_ANALYTICS': false,
-		'URL_FAQ': "http://support.open365.io/index.php/en/",
-		'URL_FORUM': "http://support.open365.io/index.php/en/forum",
+		'URL_SUPPORT': "http://support.open365.io/index.php/",
+		'URL_FORUM': "/forum",
 		'URL_ABOUT': "http://open365.io",
 		'URL_BLOG': "http://blog.open365.io"
 	});

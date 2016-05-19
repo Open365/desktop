@@ -21,6 +21,7 @@
 define(['startMenu/startMenuController', 'startMenu/logoutHandler', 'settings'], function(StartMenuController, LogoutHandler) {
 	angular.module('eyeStartMenu', [
 		'pascalprecht.translate',
+		'eyeosTranslationModule',
 		'settings'
 	])
 
@@ -30,6 +31,7 @@ define(['startMenu/startMenuController', 'startMenu/logoutHandler', 'settings'],
 			'LogoutHandler',
 			'SETTINGS',
 			'$window',
+			'eyeosTranslation',
 			StartMenuController
 		])
 
