@@ -57,7 +57,7 @@ msgstr "¡Sólo una última cosa!"
 
 #:
 msgid "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
-msgstr "Por razones de seguridad necesitas cambiar tu contraseña antes de utilizar eyeOS. ¡Úsalo al entrar la próxima vez!"
+msgstr "Por razones de seguridad necesitas cambiar tu contraseña antes de utilizar Open365. ¡Úsalo al entrar la próxima vez!"
 
 #:
 msgid "Old password"
