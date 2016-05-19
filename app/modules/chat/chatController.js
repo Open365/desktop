@@ -50,8 +50,7 @@ define([], function () {
             var from = msg.getAttribute('from');
             var type = msg.getAttribute('type');
             var elems = msg.getElementsByTagName('body');
-            var displayName = msg.getElementsByTagName('eyeosName')[0];
-            var chatID = Strophe.getText(msg.getElementsByTagName('chatID')[0]);
+            var eyeosName = msg.getElementsByTagName('eyeosName')[0];
 
             if (type === "chat" && elems.length > 0) {
                 var body = elems[0];
@@ -61,13 +60,12 @@ define([], function () {
                 }
                 from = from.split("#")[0];
 
-                // carbon copy
+                // if carbon copy
                 if (from === self.username) {
-                    return cb(chatID, Strophe.getText(displayName), Strophe.getText(body), true);
+                    var carbonCopy = getCarbonCopyData(msg);
                 }
-                else {
-                    return cb(from, Strophe.getText(displayName), Strophe.getText(body));
-                }
+
+                return cb(from, Strophe.getText(eyeosName), Strophe.getText(body), carbonCopy);
 
             }
 
@@ -110,18 +108,19 @@ define([], function () {
         this.connection = connection;
     };
 
-    ChatController.prototype.sendMessage = function (to, displayName,textToSend) {
-        var chatID = to;
-        to += '#'+this.domain +'@'+this.host;
+    ChatController.prototype.sendMessage = function (to, toName, textToSend, fromName) {
+        var toJid = to + '#'+this.domain +'@'+this.host;
 
-        var message = $msg({to: to, type: 'chat'})
+        var message = $msg({to: toJid, type: 'chat'})
             .cnode(Strophe.xmlElement('body', textToSend))
             .up()
             .c('active', {xmlns: "http://jabber.org/protocol/chatstates"})
             .up()
-            .cnode(Strophe.xmlElement('eyeosName', displayName))
-            .up()
-            .cnode(Strophe.xmlElement('chatID', chatID));
+            .cnode(Strophe.xmlElement('eyeosName', fromName))
+            .up();
+
+        // create carbon copy data
+        createCarbonCopyData(message, to, toName);
         this.connection.send(message);
     };
     ChatController.prototype.sendInitialPresence = function () {
@@ -139,6 +138,21 @@ define([], function () {
 
         this.connection.sendIQ(iq);
     };
+
+    // Belongs in carbon copy class
+    function createCarbonCopyData (message, id, name) {
+        message.cnode(Strophe.xmlElement('carbonCopy'))
+            .cnode(Strophe.xmlElement('id', id))
+            .up()
+            .cnode(Strophe.xmlElement('name', name));
+    }
+
+    function getCarbonCopyData (message) {
+        return {
+            id: Strophe.getText(message.getElementsByTagName('id')[0]),
+            name: Strophe.getText(message.getElementsByTagName('name')[0])
+        };
+    }
 
     return ChatController;
 });
