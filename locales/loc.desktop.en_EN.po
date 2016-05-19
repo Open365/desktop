@@ -255,7 +255,7 @@ msgstr "Just one last thing!"
 
 #:
 msgid "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
-msgstr "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
+msgstr "For security reasons you need to change your password before you start using Open365. Use it in your next login!"
 
 #:
 msgid "Old password"
