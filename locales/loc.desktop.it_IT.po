@@ -361,3 +361,31 @@ msgstr "L'utente Ë andato offline"
 #:
 msgid "Videoconference with"
 msgstr "Videoconferenza con"
+
+#:
+msgid "Start videoconference?"
+msgstr ""
+
+#:
+msgid "User accepts!"
+msgstr ""
+
+#:
+msgid "User declines!"
+msgstr ""
+
+#:
+msgid "Videoconference accepted."
+msgstr ""
+
+#:
+msgid "Videoconference declined."
+msgstr ""
+
+#:
+msgid "Accept"
+msgstr ""
+
+#:
+msgid "Decline"
+msgstr ""

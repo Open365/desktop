@@ -127,17 +127,17 @@ define([
 					switch (text) {
 						case videoChatMessages.REQUEST:
 							msgInfo.videoChatRequest = true;
-							msgInfo.text = "Start videoconference?";
+							msgInfo.text = $translate.instant("Start videoconference?");
 							msgInfo.showButtons = true;
 							break;
 						case videoChatMessages.ACCEPT:
 							msgInfo.videoChatRequest = true;
-							msgInfo.text = "User accepts!";
+							msgInfo.text = $translate.instant("User accepts!");
 							msgInfo.showButtons = false;
 							break;
 						case videoChatMessages.DECLINE:
 							msgInfo.videoChatRequest = true;
-							msgInfo.text = "User declines!";
+							msgInfo.text = $translate.instant("User declines!");
 							msgInfo.showButtons = false;
 							break;
 					}

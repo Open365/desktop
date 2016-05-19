@@ -633,3 +633,31 @@ msgstr "Blog"
 msgid "About"
 msgstr "About"
 
+#:
+msgid "Start videoconference?"
+msgstr "Start videoconference?"
+
+#:
+msgid "User accepts!"
+msgstr "User accepts!"
+
+#:
+msgid "User declines!"
+msgstr "User declines!"
+
+#:
+msgid "Videoconference accepted."
+msgstr "Videoconference accepted."
+
+#:
+msgid "Videoconference declined."
+msgstr "Videoconference declined."
+
+#:
+msgid "Accept"
+msgstr "Accept"
+
+#:
+msgid "Decline"
+msgstr "Decline"
+
