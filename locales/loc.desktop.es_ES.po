@@ -356,7 +356,7 @@ msgstr "Enviar"
 
 #:
 msgid "The current user has gone offline"
-msgstr "Este usuario"
+msgstr "Este usuario se ha desconectado"
 
 #:
 msgid "Videoconference with"
