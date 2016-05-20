@@ -21,7 +21,7 @@
 define([
 	'settings'
 ], function(settings) {
-	return function StartMenuController($scope, logoutHandler, SETTINGS, $window) {
+	return function StartMenuController($scope, logoutHandler, SETTINGS, $window, eyeosTranslation) {
 
 		$scope.feedbackActive = settings.FEEDBACK_ACTIVE;
 		$scope.faqActive = settings.FAQ_ACTIVE;
@@ -48,11 +48,11 @@ define([
 		};
 
 		$scope.faq = function() {
-			$window.open(settings.URL_FAQ, '_blank');
+			$window.open($scope.getUrlSupport(), '_blank');
 		};
 
 		$scope.forum = function() {
-			$window.open(settings.URL_FORUM, '_blank');
+			$window.open($scope.getUrlSupport('forum'), '_blank');
 		};
 		$scope.openChangePasswordDialog = function() {
 			DesktopBus.dispatch('openChangePasswordDialog', { allowClose: true, titleMessage : "Change password", mainMessage: ""});
@@ -66,5 +66,21 @@ define([
 			$window.open(settings.URL_BLOG, '_blank');
 		};
 
+		$scope.getUrlSupport = function(type) {
+			var userLanguage = eyeosTranslation.getUserLanguage();
+			if (userLanguage !== 'es' && userLanguage !== 'en') {
+				userLanguage = 'en';
+			}
+			var url = settings.URL_SUPPORT + userLanguage;
+			var map = {
+				"forum": url + settings.URL_FORUM,
+				"default": url
+			};
+			var result = map[type];
+			if (!result) {
+				result = map['default'];
+			}
+			return result;
+		}
 	};
 });

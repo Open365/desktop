@@ -61,8 +61,7 @@ define([
 
 				}, 1000);
 
-				chat.start(function (from, displayName, text, isCarbonCopy) {
-
+				chat.start(function (from, displayName, text, carbonCopy) {
 					if (!window_focus && Notification.permission === "granted") {
 						var notification = new Notification(displayName, {
 							icon: '/themes/eyeos-cloud/images/open365-158x158.png',
@@ -87,8 +86,10 @@ define([
 
 					var msgInfo;
 
-					if (isCarbonCopy) {
+					if (carbonCopy) {
 						msgInfo = getOutgoingMessageInfo(displayName, text);
+						from = carbonCopy.id;
+						displayName = carbonCopy.name;
 					}
 					else {
 						msgInfo = getIncomingMessageInfo(displayName, text);
@@ -107,7 +108,6 @@ define([
 					// else if new conversation
 					else {
 						requestChat(from, displayName, msgInfo);
-						chatWindowManager.showMessage(chatScopes[from]);
 					}
 
 					if (text === videoChatMessages.REQUEST) {
@@ -127,17 +127,17 @@ define([
 					switch (text) {
 						case videoChatMessages.REQUEST:
 							msgInfo.videoChatRequest = true;
-							msgInfo.text = "Start videoconference?";
+							msgInfo.text = $translate.instant("Start videoconference?");
 							msgInfo.showButtons = true;
 							break;
 						case videoChatMessages.ACCEPT:
 							msgInfo.videoChatRequest = true;
-							msgInfo.text = "User accepts!";
+							msgInfo.text = $translate.instant("User accepts!");
 							msgInfo.showButtons = false;
 							break;
 						case videoChatMessages.DECLINE:
 							msgInfo.videoChatRequest = true;
-							msgInfo.text = "User declines!";
+							msgInfo.text = $translate.instant("User declines!");
 							msgInfo.showButtons = false;
 							break;
 					}
@@ -212,10 +212,9 @@ define([
 
 					windowScope.sendVideoChatRequest = function () {
 						var to = windowScope.chatInformation.to;
-						var from = window.currentUser.displayName;
 						var textToSend = videoChatMessages.REQUEST;
 
-						chat.sendMessage(to, from, textToSend);
+						chat.sendMessage(to, displayName, textToSend, window.currentUser.displayName);
 
 						windowScope.startVideoChat();
 					};
@@ -285,7 +284,7 @@ define([
 					windowScope.sendMessage = function(textToSend) {
 						var to = windowScope.chatInformation.to;
 						var from = window.currentUser.displayName;
-						chat.sendMessage(to, from, textToSend);
+						chat.sendMessage(to, displayName, textToSend, window.currentUser.displayName);
 					};
 
 					// send message to peer
@@ -297,7 +296,7 @@ define([
 						if (textToSend === "") {
 							return;
 						}
-						chat.sendMessage(to, from, textToSend);
+						chat.sendMessage(to, displayName, textToSend, window.currentUser.displayName);
 						windowScope.chatInformation.text = '';
 
 						windowScope.messages.push(getOutgoingMessageInfo(from, textToSend));
@@ -359,6 +358,7 @@ define([
 
 				$scope.openChat = function (target, userInfo) {
 					var principalId = userInfo.principalId;
+
 					if (!principalId || !userInfo.online) {
 						return;
 					}

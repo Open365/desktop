@@ -7,13 +7,13 @@
         <div class="chat-videochat-container">
             <div class="chat-container">
                 <div class="chat-messages {{message.cssClass}}" ng-repeat="message in messages">
-                    <div class="chat-from"><strong>{{message.from}}</strong></div>
-                    <div ng-show="!message.videoChatRequest" class="chat-text">{{message.text}}</div>
+                    <div class="chat-from"><strong>{{message.from | translate}}</strong></div>
+                    <div ng-show="!message.videoChatRequest" class="chat-text">{{message.text | translate}}</div>
                     <div ng-show="message.videoChatRequest" class="chat-text">
-                        {{message.text}}
+                        {{message.text | translate}}
                         <div ng-show="message.showButtons">
-                            <button title="Accpet" ng-click="acceptVideoChatRequest(message);">Accept</button> |
-                            <button title="Decline" ng-click="declineVideoChatRequest(message);">Decline</button>
+                            <button title="Accpet" ng-click="acceptVideoChatRequest(message);">"{{'Accept' | translate}}"</button> |
+                            <button title="Decline" ng-click="declineVideoChatRequest(message);">"{{'Decline' | translate}}"</button>
                         </div>
                     </div>
                 </div>
@@ -27,7 +27,7 @@
         <div class="chat-inputarea">
             <input type="submit" name="chat-send" value="{{'Send' | translate}}" ng-click="sendToChat()" class="chat-send"/>
             <div class="chat-input-container">
-                <textarea maxlength="500" ng-keyup="!$event.shiftKey && $event.keyCode == 13 && sendToChat()" name="chat-text" ng-model="chatInformation.text" class="chat-input" placeholder="{{'Send a message' | translate }}">
+                <textarea maxlength="500" ng-keyup="!$event.shiftKey && $event.keyCode == 13 && sendToChat()" name="chat-text" ng-model="chatInformation.text" class="chat-input" placeholder="{{'Send a message' | translate}}">
 
                 </textarea>
             </div>

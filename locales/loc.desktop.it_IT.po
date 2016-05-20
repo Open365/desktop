@@ -57,7 +57,7 @@ msgstr "Solo un'ultima cosa!"
 
 #:
 msgid "For security reasons you need to change your password before you start using eyeOS. Use it in your next login!"
-msgstr "Per ragioni di sicurezza devi cambiare la tua password prima di usare eyeOS, poi utilizzala al prossimo login!"
+msgstr "Per ragioni di sicurezza devi cambiare la tua password prima di usare Open365, poi utilizzala al prossimo login!"
 
 #:
 msgid "Old password"
@@ -361,3 +361,31 @@ msgstr "L'utente Ë andato offline"
 #:
 msgid "Videoconference with"
 msgstr "Videoconferenza con"
+
+#:
+msgid "Start videoconference?"
+msgstr ""
+
+#:
+msgid "User accepts!"
+msgstr ""
+
+#:
+msgid "User declines!"
+msgstr ""
+
+#:
+msgid "Videoconference accepted."
+msgstr ""
+
+#:
+msgid "Videoconference declined."
+msgstr ""
+
+#:
+msgid "Accept"
+msgstr ""
+
+#:
+msgid "Decline"
+msgstr ""

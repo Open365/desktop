@@ -524,6 +524,25 @@ module.exports = function (grunt) {
 				src: '{,*/}*.css'
 			}
 		},
+
+		hash_replace_files: {
+			options: {
+				whereToReplace: [
+					"<%= yeoman.dist %>/scripts/scripts.js"
+				]
+			},
+			translations: {
+				options: {
+					files: ["<%= yeoman.dist %>/scripts/translations/literals/**/*.json"]
+				}
+			},
+			compiledInfo: {
+				options: {
+					files: ["<%= yeoman.dist %>/themes/**/compiled-info.json"]
+				}
+			}
+		},
+
 		// Run some tasks in parallel to speed up the build process
 		concurrent: {
 			server: [
@@ -745,23 +764,12 @@ module.exports = function (grunt) {
 	});
 
 	grunt.registerTask('hashTranslationFiles', 'Hashes translation folder and renames all build translation files with this hash', function () {
-		var hashAndReplaceFiles = require('./grunt_tasks/hashAndReplaceFiles');
-
-		var dist = grunt.config('yeoman').dist + "/" ;
-		var translationsPath = dist + "scripts/translations/";
-		var files = [translationsPath+'literals/**/*.json'];
-
-		hashAndReplaceFiles.call(this, grunt, files);
+		grunt.task.run('hash_replace_files:translations');
 	});
 
 
 	grunt.registerTask('hashCompiledInfo', 'Hashes compiled info folder and renames usages', function () {
-		var hashAndReplaceFiles = require('./grunt_tasks/hashAndReplaceFiles');
-
-		var dist = grunt.config('yeoman').dist + "/" ;
-		var filesToReplace = [dist + "themes/**/compiled-info.json"];
-
-		hashAndReplaceFiles.call(this, grunt, filesToReplace);
+		grunt.task.run('hash_replace_files:compiledInfo');
 	});
 
 

@@ -361,3 +361,31 @@ msgstr "Xxx xxxxxxx xxxx xxx xxxx xxxxxxx"
 #:
 msgid "Videoconference with"
 msgstr "Xxxxxxxxxxxxxxx xxxx"
+
+#:
+msgid "Start videoconference?"
+msgstr "Xxxxx xxxxxxxxxxxxxxxx?"
+
+#:
+msgid "User accepts!"
+msgstr "Xxxx xxxxxxx!"
+
+#:
+msgid "User declines!"
+msgstr "Xxxx xxxxxxxx!"
+
+#:
+msgid "Videoconference accepted."
+msgstr "Xxxxxxxxxxxxxxx xxxxxxxx."
+
+#:
+msgid "Videoconference declined."
+msgstr "Xxxxxxxxxxxxxxx xxxxxxxx."
+
+#:
+msgid "Accept"
+msgstr "Xxxxxx"
+
+#:
+msgid "Decline"
+msgstr "Xxxxxxx"
