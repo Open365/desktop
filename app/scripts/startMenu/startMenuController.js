@@ -48,7 +48,6 @@ define([
 		};
 
 		$scope.faq = function() {
-			debugger;
 			$window.open(getUrlSupport(), '_blank');
 		};
 
