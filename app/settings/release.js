@@ -52,6 +52,7 @@ define(['./urlConfig'], function (urlConfig) {
 		'VDI_MAX_RESOLUTION_HEIGHT': 1080,
 		'VDI_FULL_DESKTOP_EXECUTION': '<<EXECUTION_SCRIPT_ROUTE>>', // Not needed with windows. It cannot be empty.
 		'SPICE_CLIENT_PATH': '/bower_components/spice-web-client/',
+		'SUPPORT_HIGH_DPI': false,
 		'CONNECT_TO_BUS': true,
 		'CONNECT_TO_CHAT': true,
 		'CHAT_HOST': 'localhost',

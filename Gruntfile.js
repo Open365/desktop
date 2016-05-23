@@ -680,8 +680,7 @@ module.exports = function (grunt) {
 			'concat',
 			'ngmin',
 			'copy:dist',
-			'hashTranslationFiles',
-			'hashCompiledInfo',
+			'hash_replace_files',
 			'cssmin',
 			'filerev:dist',
 			'usemin',
@@ -761,15 +760,6 @@ module.exports = function (grunt) {
 				grunt.file.write(module, moduleContent.replace("moduleFiles.json", moduleFilesVersionedPath));
 			}
 		});
-	});
-
-	grunt.registerTask('hashTranslationFiles', 'Hashes translation folder and renames all build translation files with this hash', function () {
-		grunt.task.run('hash_replace_files:translations');
-	});
-
-
-	grunt.registerTask('hashCompiledInfo', 'Hashes compiled info folder and renames usages', function () {
-		grunt.task.run('hash_replace_files:compiledInfo');
 	});
 
 

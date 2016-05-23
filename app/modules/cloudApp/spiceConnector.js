@@ -79,6 +79,7 @@ define([
 
 	SpiceConnector.prototype.initSpiceClient = function () {
 		this.spiceClient = new window.Application({
+			supportHighDPI: !!settings.SUPPORT_HIGH_DPI,
 			spiceClientPath: settings.SPICE_CLIENT_PATH
 		});
 	};
@@ -112,8 +113,13 @@ define([
 
 	SpiceConnector.prototype.launchRemoteApp = function (callback) {
 		var container = $('#' + this.vdiContainerName);
-		var width = container.width();
-		var height = container.height();
+		var resolution = this.spiceClient.toSpiceResolution({
+			width: container.width(),
+			height: container.height()
+		});
+		var resolutionParam = "?width=" + resolution.width + "&height=" + resolution.height + "&scaleFactor=" + resolution.scaleFactor;
+		var noCacheParam = "&no_cache=" + Date.now();
+
 		$.ajax({
 			headers: {
 				card: localStorage.card,
@@ -121,7 +127,7 @@ define([
 				signature: localStorage.signature,
 				minisignature: localStorage.minisignature
 			},
-			url: "/appservice/v1/" + this.appName + "/token/" + this.token + "?width=" + width + "&height=" + height + "&no_cache=" + Date.now()
+			url: "/appservice/v1/" + this.appName + "/token/" + this.token + resolutionParam + noCacheParam
 
 		}).done(callback);
 	};

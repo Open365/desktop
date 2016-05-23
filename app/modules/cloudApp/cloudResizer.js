@@ -34,15 +34,21 @@ define(['settings'], function (settings) {
 		});
 	};
 
+	CloudResizer.prototype.getContainer = function () {
+		return $('#' + self.vdiContainerName);
+	};
+
 	CloudResizer.prototype.resize = function () {
 		var self = this;
 
 		window.setTimeout(function () {
-			var container = $('#' + self.vdiContainerName);
-			var width = container.width();
-			var height = container.height();
+			var container = self.getContainer();
+			var resolution = self.app.toSpiceResolution({
+				width: container.width(),
+				height: container.height()
+			});
 
-			var cmd = "setcustomresolution " + width + " " + height + " 59.90";
+			var cmd = "setcustomresolution " + resolution.width + " " + resolution.height + " 59.90";
 			self.app.sendCommand('run', {"cmd": cmd});
 		}, 100)
 	};
