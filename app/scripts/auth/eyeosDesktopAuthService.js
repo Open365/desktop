@@ -53,11 +53,17 @@ define([
 						eyeosAuthClient.doRenew();
 					}));
 
+					var promise, deferred;
 					return {
 						checkCard: function (successCb, errorCb) {
 							successCb = successCb || function () {};
 							errorCb = errorCb || function () {};
-							var deferred = $q.defer();
+
+							if (promise) {
+								promise.then(successCb, errorCb);
+								return promise;
+							}
+							deferred = $q.defer();
 							if (typeof(eyeosAuthClient) !== "undefined") {
 								eyeosAuthClient.checkCard(function () {
 									authResultHandlerService.setNewHeaders();
@@ -79,7 +85,8 @@ define([
 								return deferred.reject('eyeosDesktopAuthService: eyeosAuthClient lib not loaded');
 							}
 
-							return deferred.promise;
+							promise = deferred.promise;
+							return promise;
 						},
 
 						getUsername: function () {
