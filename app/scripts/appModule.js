@@ -88,8 +88,8 @@ define([
 					templateUrl: mainTpl,
 					controller: 'DesktopController',
 					resolve: {
-						authResultHandlerService: ['authResultHandlerService', function (authResultHandlerService) {
-							return authResultHandlerService.setNewHeaders();
+						eyeosDesktopAuthService: ['eyeosDesktopAuthService', function (eyeosDesktopAuthService) {
+							return eyeosDesktopAuthService.checkCard();
 						}]
 					}
 				})
