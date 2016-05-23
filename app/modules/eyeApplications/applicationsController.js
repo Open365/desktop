@@ -19,8 +19,9 @@
 
 "use strict";
 define(['settings'], function(settings) {
-	return function ApplicationsController($scope, $interval, Apps, MAX_APPS_DISPLAYED) {
+	return function ApplicationsController($scope, $interval, Apps, MAX_APPS_DISPLAYED, eyeosTranslation) {
 		var scrollApps;
+
 		$scope.appsList = [];
 		$scope.shouldGroupDesktopIcons = settings.SHOULD_GROUP_DESKTOP_ICONS;
 
@@ -58,6 +59,12 @@ define(['settings'], function(settings) {
 						index++;
 					}
 				}
+
+				if (settings.LOCALIZATION_DOWNLOAD_CLIENT_ACTIVE) {
+					if (result[i].url === settings.URL_DOWNLOAD_CLIENT) {
+						result[i].url = $scope.getUrlDownloadClient();
+					}
+				}
 			}
 		});
 
@@ -89,6 +96,18 @@ define(['settings'], function(settings) {
 				$scope.apps = $scope.appsList.slice($scope.fistDisplayedApp, $scope.lastDisplayedApp);
 			}
 		};
+
+		$scope.getUrlDownloadClient = function () {
+			var url = settings.URL_DOWNLOAD_CLIENT;
+			var userLanguage = eyeosTranslation.getUserLanguage();
+			if (userLanguage === 'es') {
+				var slashLast = url.lastIndexOf('/');
+				var pathname = url.substr(slashLast);
+				var host = url.substr(0, slashLast + 1);
+				url = host + userLanguage + pathname;
+			}
+			return url;
+		}
 	};
 });
 

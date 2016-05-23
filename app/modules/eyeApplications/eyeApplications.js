@@ -24,11 +24,13 @@ define(['modules/eyeApplications/applicationServiceFactory',
 	'modules/eyeApplications/applicationInTabController'
 ],function(ApplicationServiceFactory, ApplicationController, ApplicationsController, ApplicationInTabController) {
 	angular.module('eyeApplications', [
+		'eyeosTranslationModule',
 		'utils'
 	])
 		.constant('MAX_APPS_DISPLAYED', 20)
 		.service('ApplicationsService', ['$http', ApplicationServiceFactory])
-		.controller('ApplicationsController', ['$scope', '$interval', 'ApplicationsService', 'MAX_APPS_DISPLAYED', ApplicationsController])
+		.controller('ApplicationsController', ['$scope', '$interval', 'ApplicationsService', 'MAX_APPS_DISPLAYED', 'eyeosTranslation',
+			ApplicationsController])
 		.controller('ApplicationController', ['$scope', '$rootScope', ApplicationController])
 		.controller('ApplicationInTabController', ['$scope', ApplicationInTabController]);
 });
