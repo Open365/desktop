@@ -18,12 +18,13 @@
 */
 
 'use strict';
-define(['appModule'], function() {
+define(['appModule', 'settings'], function(AppModule, settings) {
 	suite('Controller: ApplicationsController', function(){
 		var MainCtrl,
 			scope, FAKE_MAX_APPS_DISPLAYED,
 			originalLocalStorage,
-			expectation, fakeApplicationList;
+			expectation, fakeApplicationList,
+		 	eyeosTranslationService;
 		setup(function() {
 			originalLocalStorage = window.localStorage;
 			window.localStorage = {};
@@ -32,6 +33,7 @@ define(['appModule'], function() {
 			module('eyeApplications');
 			var injector = angular.injector(['eyeDesktopApp']);
 			FAKE_MAX_APPS_DISPLAYED = 3;
+			eyeosTranslationService = injector.get('eyeosTranslation');
 			var ApplicationsService = injector.get('ApplicationsService');
 			var ApplicationsServiceMock = sinon.mock(ApplicationsService);
 			fakeApplicationList = [
@@ -83,7 +85,8 @@ define(['appModule'], function() {
 					$scope: scope,
 					$interval: $interval,
 					ApplicationsService: ApplicationsService,
-					MAX_APPS_DISPLAYED: FAKE_MAX_APPS_DISPLAYED
+					MAX_APPS_DISPLAYED: FAKE_MAX_APPS_DISPLAYED,
+					eyeosTranslation: eyeosTranslationService
 				});
 			});
 		});
@@ -130,6 +133,24 @@ define(['appModule'], function() {
 
 		test('should add the file extensions to the localStorage', function () {
 			assert.equal('["custom","extension"]', window.localStorage.vdiFileExtensions);
+		});
+
+		test('when called should return default download client url', function () {
+			sinon.stub(eyeosTranslationService, 'getUserLanguage').returns('it');
+			var expected = settings.URL_DOWNLOAD_CLIENT;
+			var actual = scope.getUrlDownloadClient();
+			assert.equal(expected, actual);
+		});
+
+		test('when called with spanish language should return spanish download client url', function () {
+			sinon.stub(eyeosTranslationService, 'getUserLanguage').returns('es');
+			var url = settings.URL_DOWNLOAD_CLIENT;
+			var slashLast = url.lastIndexOf('/');
+			var host = url.substr(0, slashLast + 1);
+			var pathname = url.substr(slashLast);
+			var expected = host + 'es' + pathname;
+			var actual = scope.getUrlDownloadClient();
+			assert.equal(expected, actual);
 		});
 
 	});
