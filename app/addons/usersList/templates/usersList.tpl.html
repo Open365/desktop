@@ -1,7 +1,8 @@
 <div class="users-list-container panel-content" id="users-container" ng-controller="peopleGroupsController">
-    <h2 class="title title__users" >{{"People" | translate}}</h2>
-    <input type="text" placeholder="{{'Find people...' | translate}}" ng-change="searchUsers(offlineUsers)" ng-model="userSearch"
-           ng-show="enableUserSearch" id="peopleSearch">
+    <div class="user-list-title-wrapper">
+        <h2 class="title title__users" >{{"People" | translate}}</h2>
+        <input type="text" placeholder="{{'Find people...' | translate}}" ng-change="searchUsers(offlineUsers)" ng-model="userSearch" ng-show="enableUserSearch" id="peopleSearch">
+    </div>
     <div class="users-list default-box visible " ng-controller="chatController">
         <ul class="user-online" ng-hide="searchingUsers">
             <li class="user-item"
