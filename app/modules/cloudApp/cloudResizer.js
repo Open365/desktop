@@ -35,7 +35,7 @@ define(['settings'], function (settings) {
 	};
 
 	CloudResizer.prototype.getContainer = function () {
-		return $('#' + self.vdiContainerName);
+		return $('#' + this.vdiContainerName);
 	};
 
 	CloudResizer.prototype.resize = function () {
