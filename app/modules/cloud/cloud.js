@@ -149,5 +149,7 @@ define([
                         sub.unsubscribe();
                     });
                 });
+
+                seahubWrapper.setEnvironmentLocalStorage();
             }]);
 });
