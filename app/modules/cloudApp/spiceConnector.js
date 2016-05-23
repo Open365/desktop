@@ -79,7 +79,7 @@ define([
 
 	SpiceConnector.prototype.initSpiceClient = function () {
 		this.spiceClient = new window.Application({
-			supportHighDPI: true,
+			supportHighDPI: false,
 			spiceClientPath: settings.SPICE_CLIENT_PATH
 		});
 	};
