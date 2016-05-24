@@ -364,7 +364,7 @@ msgstr "Videconferencia con"
 
 #:
 msgid "Start videoconference?"
-msgstr "Iniciar videoconferencia?"
+msgstr "¿Iniciar videoconferencia?"
 
 #:
 msgid "User accepts!"

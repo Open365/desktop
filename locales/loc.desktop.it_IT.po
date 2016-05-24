@@ -169,7 +169,7 @@ msgstr "L'applicazione è stata sospesa"
 
 #:
 msgid "I'm back, resume!"
-msgstr "Sono tornato, riprendiamo!."
+msgstr "Sono tornato, riprendiamo!"
 
 #:
 msgid "YES"
@@ -197,7 +197,7 @@ msgstr "Per favore verifica la tua connessione"
 
 #:
 msgid "(Unsaved changes may have been lost)"
-msgstr "(Le modifiche non salvate potrebbero essere state perse"
+msgstr "(Le modifiche non salvate potrebbero essere state perse)"
 
 #:
 msgid "You have no contacts yet. Search to find people and start a chat."
