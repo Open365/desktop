@@ -33,8 +33,8 @@ define([
 				ENVIRONMENT: 'release'
 			};
 			desktopAuthService = {
-				checkCard: function () {
-				}
+				checkCard: function () {},
+				forceCheckCard: sinon.stub()
 			};
 
 			desktopBusService = {
@@ -43,8 +43,8 @@ define([
 			};
 
 			suspensionDetector = {
-				start: function () {},
-				addOnAwakeAction: function () {}
+				start: sinon.stub(),
+				addOnAwakeAction: sinon.stub()
 			};
 
 			sut = new DesktopInitializer(desktopAuthService, desktopBusService, suspensionDetector);
@@ -86,7 +86,17 @@ define([
 			});
 		});
 
+		suite("#handleComputerSuspension", function () {
+			function exercice () {
+				sut.handleComputerSuspension();
+			}
 
+			test('forces a checkCard on awake', function () {
+				suspensionDetector.addOnAwakeAction.callsArg(0);
+				exercice();
+				sinon.assert.calledOnce(desktopAuthService.forceCheckCard);
+			});
+		});
 	});
 
 });

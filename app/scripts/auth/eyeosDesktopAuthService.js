@@ -55,6 +55,11 @@ define([
 
 					var promise, deferred;
 					return {
+						forceCheckCard: function (successCb, errorCb) {
+							promise = null;
+							this.checkCard(successCb, errorCb);
+						},
+
 						checkCard: function (successCb, errorCb) {
 							successCb = successCb || function () {};
 							errorCb = errorCb || function () {};

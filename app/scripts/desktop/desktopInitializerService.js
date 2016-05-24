@@ -37,7 +37,7 @@ define([
 	};
 
 	DesktopInitializer.prototype.handleComputerSuspension = function () {
-		this.suspensionDetector.addOnAwakeAction(this.desktopAuthService.checkCard);
+		this.suspensionDetector.addOnAwakeAction(this.desktopAuthService.forceCheckCard);
 		this.suspensionDetector.start();
 	};
 
