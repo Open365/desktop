@@ -45,7 +45,7 @@ msgstr "invia"
 
 #:
 msgid "The current user has gone offline"
-msgstr "L'utente Ë andato offline"
+msgstr "L'utente è andato offline"
 
 #:
 msgid "Chat with"
@@ -97,7 +97,7 @@ msgstr "CAMBIA PASSWORD"
 
 #:
 msgid "Change password"
-msgstr "Cambia pasword"
+msgstr "Cambia password"
 
 #:
 msgid "This action could make you lose unfinished work"
@@ -137,7 +137,7 @@ msgstr "Hey! Ci sei?"
 
 #:
 msgid "Password changed successfully"
-msgstr "La password Ë stata cambiata"
+msgstr "La password è stata cambiata"
 
 #:
 msgid "Old password"
@@ -165,7 +165,7 @@ msgstr "Sei stato inattivo per troppo tempo"
 
 #:
 msgid "Your application has been suspended."
-msgstr "L'applicazione Ë stata sospesa"
+msgstr "L'applicazione è stata sospesa"
 
 #:
 msgid "I'm back, resume!"
@@ -249,7 +249,7 @@ msgstr "...qualcosa suona, e altri guardano"
 
 #:
 msgid "The server is powered by a lemon and two electrodes."
-msgstr "Il server Ë alimentato da un limone e due elettrodi."
+msgstr "Il server è alimentato da un limone e due elettrodi."
 
 #:
 msgid "Please wait, we love you just the way you are."
@@ -356,7 +356,7 @@ msgstr "Invia"
 
 #:
 msgid "The current user has gone offline"
-msgstr "L'utente Ë andato offline"
+msgstr "L'utente è andato offline"
 
 #:
 msgid "Videoconference with"
