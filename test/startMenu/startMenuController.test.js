@@ -51,24 +51,74 @@ define([
 				teardown(function() {
 				});
 
-				function exercise(type) {
+				function exerciseGetUrlSupport(type) {
 					return scope.getUrlSupport(type);
 				}
 
-				function exerciseAndAssert(type, expected) {
+				function exerciseGetUrlAbout() {
+					return scope.getUrlAbout();
+				}
+
+				function exerciseGetUserLanguage() {
+					return scope.getUserLanguage();
+				}
+
+				function exerciseSupportAndAssert(type, expected) {
 					sinon.stub(eyeosTranslation, "getUserLanguage");
-					var actual = exercise(type);
+					var actual = exerciseGetUrlSupport(type);
 					assert.equal(expected, actual)
 				}
 
+				function exerciseAboutAndAssert(userLanguage, expected) {
+					sinon.stub(eyeosTranslation, "getUserLanguage").returns(userLanguage);
+					var actual = exerciseGetUrlAbout();
+					assert.equal(expected, actual)
+				}
+
+				function exerciseUserLanguageAndAssert(userLanguage, expected) {
+					sinon.stub(eyeosTranslation, "getUserLanguage").returns(userLanguage);
+					var actual = exerciseGetUserLanguage();
+					assert.equal(expected, actual)
+				}
+
+				test("when called and user language is english should return en", function() {
+					var expected = "en";
+					exerciseUserLanguageAndAssert("en", expected);
+				});
+
+				test("when called and user language is spanish should return es", function() {
+					var expected = "es";
+					exerciseUserLanguageAndAssert("es", expected);
+				});
+
+				test("when called and user language is germany should return en", function() {
+					var expected = "en";
+					exerciseUserLanguageAndAssert("de", expected);
+				});
+
 				test("when called should return default support url", function () {
 					var expected = settings.URL_SUPPORT + "en";
-					exerciseAndAssert(null, expected);
+					exerciseSupportAndAssert(null, expected);
 				});
 
 				test("when called with forum should return forum support url", function () {
 					var expected = settings.URL_SUPPORT + "en" + settings.URL_FORUM;
-					exerciseAndAssert('forum', expected);
+					exerciseSupportAndAssert('forum', expected);
+				});
+
+				test("when called and userLanguage is english should return default about url", function(){
+					var expected = settings.URL_ABOUT;
+					exerciseAboutAndAssert('en', expected);
+				});
+
+				test("when called and userLanguage is spanish should return about spanish url", function(){
+					var expected = settings.URL_ABOUT + "/es/index.html";
+					exerciseAboutAndAssert('es', expected);
+				});
+
+				test("when called and userLanguage is uz should return default about url", function(){
+					var expected = settings.URL_ABOUT;
+					exerciseAboutAndAssert('uz', expected);
 				});
 			});
 		});
