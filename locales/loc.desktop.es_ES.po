@@ -389,3 +389,11 @@ msgstr "Aceptar"
 #:
 msgid "Decline"
 msgstr "Declinar"
+
+#:
+msgid "Accept"
+msgstr "Aceptar"
+
+#:
+msgid "Decline"
+msgstr "Declinar"

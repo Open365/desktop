@@ -253,7 +253,7 @@ msgstr "Il server è alimentato da un limone e due elettrodi."
 
 #:
 msgid "Please wait, we love you just the way you are."
-msgstr "Attendi prego, ti vogliamo bene cosÏ come sei."
+msgstr "Attendi prego, ti vogliamo bene così come sei."
 
 #:
 msgid "We're testing your patience."
@@ -380,6 +380,14 @@ msgstr ""
 
 #:
 msgid "Videoconference declined."
+msgstr ""
+
+#:
+msgid "Accept"
+msgstr ""
+
+#:
+msgid "Decline"
 msgstr ""
 
 #:
