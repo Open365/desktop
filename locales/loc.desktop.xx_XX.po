@@ -389,3 +389,11 @@ msgstr "Xxxxxx"
 #:
 msgid "Decline"
 msgstr "Xxxxxxx"
+
+#:
+msgid "Accept"
+msgstr "Xxxxxx"
+
+#:
+msgid "Decline"
+msgstr "Xxxxxxx"
