@@ -157,7 +157,7 @@ msgstr "Cloud"
 
 #:
 msgid "Hub"
-msgstr "File e cartelle"
+msgstr "Hub"
 
 #:
 msgid "You have been idle for too long."
@@ -308,23 +308,23 @@ msgstr "Gruppi"
 
 #:
 msgid "Writer"
-msgstr "Editor di testo"
+msgstr "Writer"
 
 #:
 msgid "Spreadsheet"
-msgstr "Foglio elettronico"
+msgstr "Calc"
 
 #:
 msgid "Presentation"
-msgstr "Presentazione"
+msgstr "Impress"
 
 #:
 msgid "Mail"
-msgstr "Mail"
+msgstr "Posta"
 
 #:
 msgid "File sync"
-msgstr "File sync"
+msgstr "Sinc. dei file"
 
 #:
 msgid "Password"
