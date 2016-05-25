@@ -662,9 +662,9 @@ msgid "Decline"
 msgstr "Decline"
 
 #:
-msgid "Accept "
+msgid "Accept_2"
 msgstr "Accept"
 
 #:
-msgid "Decline "
+msgid "Decline_2"
 msgstr "Decline"

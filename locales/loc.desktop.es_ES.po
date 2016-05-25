@@ -391,9 +391,9 @@ msgid "Decline"
 msgstr "Declinar"
 
 #:
-msgid "Accept "
+msgid "Accept_2"
 msgstr "Aceptar"
 
 #:
-msgid "Decline "
+msgid "Decline_2"
 msgstr "Declinar"
