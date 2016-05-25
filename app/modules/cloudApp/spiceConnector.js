@@ -167,6 +167,7 @@ define([
 			'useWorkers': true,
 			'seamlessDesktopIntegration': false,
 			'vdiBusToken': false,
+			'disableMessageBuffering': true,
 			'checkActivityInterval': settings.CHECK_ACTIVITY_INTERVAL
 		};
 
