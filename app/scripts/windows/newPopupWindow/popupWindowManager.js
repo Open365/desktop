@@ -43,7 +43,6 @@ define([
         this.screenChangeDetector = screenChangeDetector || new ScreenChangeDetector(this.popupWindowOffsets);
         this.name = 'popup';
         this.setOnUnload();
-        this._osIsMacWithExtension = OperatingSystem.getName() === OperatingSystem.MACOSX && OperatingSystem.getBrowser().isExtensionInstalled();
         this._resizeInterval = null;
     }
 
@@ -101,19 +100,7 @@ define([
     };
 
     PopupWindowManager.prototype.init = function() {
-        var self = this;
 	    window.needToSetResolution = true;
-        if(this._osIsMacWithExtension) {
-            self._sendMessageToExtension("identifymetochromeextension");
-            window.addEventListener("message", function(msg) {
-                if (msg.data.event === "eyeosidentifiedbychromeextension") {
-                    console.info("Indentification from extension finished: ", msg.data);
-                    self._resizeInterval = setInterval(function() {
-                        self._sendMessageToExtension("setWindowMaximizedIfFullscreen", {tabId : msg.data.tabId, chromeWindowId: msg.data.chromeWindowId});
-                    }, 1000);
-                }
-             });
-        }
     };
 
     PopupWindowManager.prototype._resetOpenedPopupsOnDesktopScreenChange = function(currentDesktopSize, currentDesktopCoordinates) {
