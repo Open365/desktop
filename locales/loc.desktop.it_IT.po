@@ -391,7 +391,7 @@ msgid "Decline"
 msgstr "Rifiutare"
 
 #:
-msgid "Accept_2
+msgid "Accept_2"
 msgstr "Accettare"
 
 #:
