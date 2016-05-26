@@ -19,7 +19,7 @@
 
 'use strict';
 
-define([], function () {
+define(['settings'], function (settings) {
 	function SeahubWrapper (desktopBus) {
 		this.DesktopBus = desktopBus || DesktopBus;
 		this.subscriptions = [];
@@ -131,6 +131,11 @@ define([], function () {
 		this.subscriptions.forEach(function (sub) {
 			sub.unsubscribe();
 		});
+	};
+
+	SeahubWrapper.prototype.setEnvironmentLocalStorage = function () {
+		localStorage.setItem('localization_download_client_active', settings.LOCALIZATION_DOWNLOAD_CLIENT_ACTIVE);
+		localStorage.setItem('url_download_client', settings.URL_DOWNLOAD_CLIENT);
 	};
 
 	return SeahubWrapper;

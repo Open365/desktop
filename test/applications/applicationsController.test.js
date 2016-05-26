@@ -22,12 +22,11 @@ define(['appModule', 'settings'], function(AppModule, settings) {
 	suite('Controller: ApplicationsController', function(){
 		var MainCtrl,
 			scope, FAKE_MAX_APPS_DISPLAYED,
-			originalLocalStorage,
 			expectation, fakeApplicationList,
-		 	eyeosTranslationService;
+		 	eyeosTranslationService,
+			setItemStub;
 		setup(function() {
-			originalLocalStorage = window.localStorage;
-			window.localStorage = {};
+			setItemStub = sinon.stub(window.localStorage, 'setItem');
 
 			// load the controller's module
 			module('eyeApplications');
@@ -92,7 +91,7 @@ define(['appModule', 'settings'], function(AppModule, settings) {
 		});
 
 		teardown(function () {
-			window.localStorage = originalLocalStorage;
+			setItemStub.restore();
 		});
 
 		test('calls ApplicationService.get once', function () {
@@ -132,7 +131,7 @@ define(['appModule', 'settings'], function(AppModule, settings) {
 		});
 
 		test('should add the file extensions to the localStorage', function () {
-			assert.equal('["custom","extension"]', window.localStorage.vdiFileExtensions);
+			sinon.assert.calledWithExactly(setItemStub, 'vdiFileExtensions', '["custom","extension"]')
 		});
 
 		test('when called should return default download client url', function () {

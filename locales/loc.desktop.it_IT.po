@@ -45,7 +45,7 @@ msgstr "invia"
 
 #:
 msgid "The current user has gone offline"
-msgstr "L'utente Ë andato offline"
+msgstr "L'utente è andato offline"
 
 #:
 msgid "Chat with"
@@ -97,7 +97,7 @@ msgstr "CAMBIA PASSWORD"
 
 #:
 msgid "Change password"
-msgstr "Cambia pasword"
+msgstr "Cambia password"
 
 #:
 msgid "This action could make you lose unfinished work"
@@ -137,7 +137,7 @@ msgstr "Hey! Ci sei?"
 
 #:
 msgid "Password changed successfully"
-msgstr "La password Ë stata cambiata"
+msgstr "La password è stata cambiata"
 
 #:
 msgid "Old password"
@@ -157,7 +157,7 @@ msgstr "Cloud"
 
 #:
 msgid "Hub"
-msgstr "File e cartelle"
+msgstr "Hub"
 
 #:
 msgid "You have been idle for too long."
@@ -165,11 +165,11 @@ msgstr "Sei stato inattivo per troppo tempo"
 
 #:
 msgid "Your application has been suspended."
-msgstr "L'applicazione Ë stata sospesa"
+msgstr "L'applicazione è stata sospesa"
 
 #:
 msgid "I'm back, resume!"
-msgstr "Sono tornato, riprendiamo!."
+msgstr "Sono tornato, riprendiamo!"
 
 #:
 msgid "YES"
@@ -197,7 +197,7 @@ msgstr "Per favore verifica la tua connessione"
 
 #:
 msgid "(Unsaved changes may have been lost)"
-msgstr "(Le modifiche non salvate potrebbero essere state perse"
+msgstr "(Le modifiche non salvate potrebbero essere state perse)"
 
 #:
 msgid "You have no contacts yet. Search to find people and start a chat."
@@ -249,11 +249,11 @@ msgstr "...qualcosa suona, e altri guardano"
 
 #:
 msgid "The server is powered by a lemon and two electrodes."
-msgstr "Il server Ë alimentato da un limone e due elettrodi."
+msgstr "Il server è alimentato da un limone e due elettrodi."
 
 #:
 msgid "Please wait, we love you just the way you are."
-msgstr "Attendi prego, ti vogliamo bene cosÏ come sei."
+msgstr "Attendi prego, ti vogliamo bene così come sei."
 
 #:
 msgid "We're testing your patience."
@@ -308,23 +308,23 @@ msgstr "Gruppi"
 
 #:
 msgid "Writer"
-msgstr "Editor di testo"
+msgstr "Writer"
 
 #:
 msgid "Spreadsheet"
-msgstr "Foglio elettronico"
+msgstr "Calc"
 
 #:
 msgid "Presentation"
-msgstr "Presentazione"
+msgstr "Impress"
 
 #:
 msgid "Mail"
-msgstr "Mail"
+msgstr "Posta"
 
 #:
 msgid "File sync"
-msgstr "File sync"
+msgstr "Sinc. dei file"
 
 #:
 msgid "Password"
@@ -356,7 +356,7 @@ msgstr "Invia"
 
 #:
 msgid "The current user has gone offline"
-msgstr "L'utente Ë andato offline"
+msgstr "L'utente è andato offline"
 
 #:
 msgid "Videoconference with"
@@ -364,28 +364,36 @@ msgstr "Videoconferenza con"
 
 #:
 msgid "Start videoconference?"
-msgstr ""
+msgstr "Iniziare Videoconference"
 
 #:
 msgid "User accepts!"
-msgstr ""
+msgstr "L’utente ha accettato!"
 
 #:
 msgid "User declines!"
-msgstr ""
+msgstr "L’utnente ha rifiutato!"
 
 #:
 msgid "Videoconference accepted."
-msgstr ""
+msgstr "Videoconference accettata"
 
 #:
 msgid "Videoconference declined."
-msgstr ""
+msgstr "Videoconference rifiutata"
 
 #:
 msgid "Accept"
-msgstr ""
+msgstr "Accettare"
 
 #:
 msgid "Decline"
-msgstr ""
+msgstr "Rifiutare"
+
+#:
+msgid "Accept_2"
+msgstr "Accettare"
+
+#:
+msgid "Decline_2"
+msgstr "Rifiutare"

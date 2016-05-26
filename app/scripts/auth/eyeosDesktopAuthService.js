@@ -57,6 +57,7 @@ define([
 						checkCard: function (successCb, errorCb) {
 							successCb = successCb || function () {};
 							errorCb = errorCb || function () {};
+
 							var deferred = $q.defer();
 							if (typeof(eyeosAuthClient) !== "undefined") {
 								eyeosAuthClient.checkCard(function () {

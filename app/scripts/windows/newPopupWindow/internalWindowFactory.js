@@ -19,19 +19,14 @@
 
 'use strict';
 define([
-	'windows/newPopupWindow/nativeWindow',
-	'windows/newPopupWindow/chromeExtensionWindow',
-	'system/operatingSystem'
-], function(NativeWindow, ChromeExtensionWindow, OperatingSystem) {
+	'windows/newPopupWindow/nativeWindow'
+], function(NativeWindow) {
 
     var internalWindowFactory =  function internalWindowFactory() {
 
     };
     internalWindowFactory.getWindow = function (id, title, minWidth, minHeight, workspaceScreen, offsets, singleScreen, emitter, url) {
-	    if(OperatingSystem.getBrowser().isExtensionInstalled()){
-		    return new ChromeExtensionWindow(id, title, minWidth, minHeight, workspaceScreen, offsets, singleScreen, emitter, url);
-	    }
-        return new NativeWindow(id, title, minWidth, minHeight, workspaceScreen, offsets, singleScreen, emitter, url);
+	    return new NativeWindow(id, title, minWidth, minHeight, workspaceScreen, offsets, singleScreen, emitter, url);
     };
     return internalWindowFactory;
 });

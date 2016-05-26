@@ -112,7 +112,7 @@ define([
 	};
 
 	SpiceConnector.prototype.launchRemoteApp = function (callback) {
-		var container = $('#' + this.vdiContainerName);
+		var container = this.resizer.getContainer();
 		var resolution = this.spiceClient.toSpiceResolution({
 			width: container.width(),
 			height: container.height()
@@ -167,6 +167,7 @@ define([
 			'useWorkers': true,
 			'seamlessDesktopIntegration': false,
 			'vdiBusToken': false,
+			'disableMessageBuffering': true,
 			'checkActivityInterval': settings.CHECK_ACTIVITY_INTERVAL
 		};
 

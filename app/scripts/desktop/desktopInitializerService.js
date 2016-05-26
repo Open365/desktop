@@ -28,7 +28,7 @@ define([
 
 	DesktopInitializer.prototype.setAuthClientLoaded = function ()  {
 		var self = this;
-		this.desktopAuthService.checkCard(function () {
+		return this.desktopAuthService.checkCard(function () {
 			if (settings.CONNECT_TO_BUS) {
 				self.desktopBusService.connectToBus();
 			}

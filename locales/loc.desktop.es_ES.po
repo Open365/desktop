@@ -165,7 +165,7 @@ msgstr "Has estado ausente demasiado tiempo"
 
 #:
 msgid "Your application has been suspended."
-msgstr "Tu aplicación ha sido suspendida"
+msgstr "Tu aplicación ha sido suspendida."
 
 #:
 msgid "I'm back, resume!"
@@ -181,7 +181,7 @@ msgstr "Hmmm... ¿Todavía despierto?"
 
 #:
 msgid "Maybe we should close this to protect your privacy."
-msgstr "Quizás deberíamos cerrar esto para proteger tu privacidad"
+msgstr "Quizás deberíamos cerrar esto para proteger tu privacidad."
 
 #:
 msgid "I'm here"
@@ -189,11 +189,11 @@ msgstr "Estoy aquí"
 
 #:
 msgid "You are experiencing unsteady internet connectivity."
-msgstr "Ooooops! Estamos experimentando problemas de comunicación"
+msgstr "Ooooops! Estamos experimentando problemas de comunicación."
 
 #:
 msgid "Please check your network access."
-msgstr "Por favor, comprueba tu conexión de red"
+msgstr "Por favor, comprueba tu conexión de red."
 
 #:
 msgid "(Unsaved changes may have been lost)"
@@ -201,7 +201,7 @@ msgstr "Los cambios que no guardaste se pueden haber perdido"
 
 #:
 msgid "You have no contacts yet. Search to find people and start a chat."
-msgstr "Todavía no tienes contactos. Utiliza la búsqueda para encontrar personas y empezar a hablar"
+msgstr "Todavía no tienes contactos. Utiliza la búsqueda para encontrar personas y empezar a hablar."
 
 #:
 msgid "Find people..."
@@ -213,15 +213,15 @@ msgstr "Agrupando los gigapíxeles requeridos para renderizar..."
 
 #:
 msgid "The bits are breeding."
-msgstr "Los bits se están reproduciendo"
+msgstr "Los bits se están reproduciendo."
 
 #:
 msgid "We're building the buildings as fast as we can."
-msgstr "Estamos construyendo las construcciones tan rápido como podemos"
+msgstr "Estamos construyendo las construcciones tan rápido como podemos."
 
 #:
 msgid "Pay no attention to the man behind the curtain."
-msgstr "No le prestes atención al hombre tras la cortina"
+msgstr "No le prestes atención al hombre tras la cortina."
 
 #:
 msgid "Enjoy the elevator music."
@@ -229,7 +229,7 @@ msgstr "Disfruta del hilo musical."
 
 #:
 msgid "The little elves are drawing your map."
-msgstr "Los pequeños duendes están dibujando tu mapa"
+msgstr "Los pequeños duendes están dibujando tu mapa."
 
 #:
 msgid "A few bits tried to escape, but we caught them."
@@ -245,7 +245,7 @@ msgstr "Calculando la constante gravitacional en tu ciudad."
 
 #:
 msgid "Hum something loud while others stare."
-msgstr "Tararea algo en voz alta, mientras los demás miran"
+msgstr "Tararea algo en voz alta, mientras los demás miran."
 
 #:
 msgid "The server is powered by a lemon and two electrodes."
@@ -257,7 +257,7 @@ msgstr "Por favor espera, te queremos tal como eres."
 
 #:
 msgid "We're testing your patience."
-msgstr "Estamos poniendo a prueba tu paciencia"
+msgstr "Estamos poniendo a prueba tu paciencia."
 
 #:
 msgid "Wait, as if you had any other choice."
@@ -269,7 +269,7 @@ msgstr "Tómate un momento y regístrate para ganar increíbles premios."
 
 #:
 msgid "Don't think of purple hippos."
-msgstr "No pienses en hipopótamos "
+msgstr "No pienses en hipopótamos."
 
 #:
 msgid "Following the white rabbit."
@@ -364,28 +364,36 @@ msgstr "Videconferencia con"
 
 #:
 msgid "Start videoconference?"
-msgstr ""
+msgstr "¿Iniciar videoconferencia?"
 
 #:
 msgid "User accepts!"
-msgstr ""
+msgstr "¡El usuario ha aceptado!"
 
 #:
 msgid "User declines!"
-msgstr ""
+msgstr "¡El usuario ha declinado!"
 
 #:
 msgid "Videoconference accepted."
-msgstr ""
+msgstr "Videconferencia aceptada."
 
 #:
 msgid "Videoconference declined."
-msgstr ""
+msgstr "Videconferencia declinada."
 
 #:
 msgid "Accept"
-msgstr ""
+msgstr "Aceptar"
 
 #:
 msgid "Decline"
-msgstr ""
+msgstr "Declinar"
+
+#:
+msgid "Accept_2"
+msgstr "Aceptar"
+
+#:
+msgid "Decline_2"
+msgstr "Declinar"

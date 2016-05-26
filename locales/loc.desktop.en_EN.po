@@ -661,3 +661,10 @@ msgstr "Accept"
 msgid "Decline"
 msgstr "Decline"
 
+#:
+msgid "Accept_2"
+msgstr "Accept"
+
+#:
+msgid "Decline_2"
+msgstr "Decline"

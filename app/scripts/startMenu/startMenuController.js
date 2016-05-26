@@ -59,18 +59,32 @@ define([
 		};
 
 		$scope.about = function() {
-			$window.open(settings.URL_ABOUT, '_blank');
+			$window.open($scope.getUrlAbout(), '_blank');
 		};
 
 		$scope.blog = function() {
 			$window.open(settings.URL_BLOG, '_blank');
 		};
 
-		$scope.getUrlSupport = function(type) {
+		$scope.getUserLanguage = function() {
 			var userLanguage = eyeosTranslation.getUserLanguage();
-			if (userLanguage !== 'es' && userLanguage !== 'en') {
+			if (userLanguage !== 'es') {
 				userLanguage = 'en';
 			}
+			return userLanguage;
+		};
+
+		$scope.getUrlAbout = function() {
+			var userLanguage = $scope.getUserLanguage();
+			var url = settings.URL_ABOUT;
+			if (userLanguage !== 'en') {
+				url += "/" + userLanguage + "/index.html";
+			}
+			return url;
+		}
+
+		$scope.getUrlSupport = function(type) {
+			var userLanguage = $scope.getUserLanguage();
 			var url = settings.URL_SUPPORT + userLanguage;
 			var map = {
 				"forum": url + settings.URL_FORUM,

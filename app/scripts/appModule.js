@@ -88,8 +88,8 @@ define([
 					templateUrl: mainTpl,
 					controller: 'DesktopController',
 					resolve: {
-						authResultHandlerService: ['authResultHandlerService', function (authResultHandlerService) {
-							return authResultHandlerService.setNewHeaders();
+						desktopInitializer: ['desktopInitializer', 'SETTINGS', function (desktopInitializer, settings) {
+							return desktopInitializer.setAuthClientLoaded(settings);
 						}]
 					}
 				})
@@ -109,7 +109,6 @@ define([
 		}])
 
 		.run(['desktopInitializer', 'SETTINGS', function(desktopInitializer, settings) {
-			desktopInitializer.setAuthClientLoaded(settings);
 			desktopInitializer.handleComputerSuspension();
 		}])
 	;
