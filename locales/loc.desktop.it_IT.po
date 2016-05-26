@@ -364,36 +364,36 @@ msgstr "Videoconferenza con"
 
 #:
 msgid "Start videoconference?"
-msgstr ""
+msgstr "Iniziare Videoconference"
 
 #:
 msgid "User accepts!"
-msgstr ""
+msgstr "L’utente ha accettato!"
 
 #:
 msgid "User declines!"
-msgstr ""
+msgstr "L’utnente ha rifiutato!"
 
 #:
 msgid "Videoconference accepted."
-msgstr ""
+msgstr "Videoconference accettata"
 
 #:
 msgid "Videoconference declined."
-msgstr ""
+msgstr "Videoconference rifiutata"
 
 #:
 msgid "Accept"
-msgstr ""
+msgstr "Accettare"
 
 #:
 msgid "Decline"
-msgstr ""
+msgstr "Rifiutare"
 
 #:
 msgid "Accept_2
-msgstr ""
+msgstr "Accettare"
 
 #:
 msgid "Decline_2"
-msgstr ""
+msgstr "Rifiutare"
