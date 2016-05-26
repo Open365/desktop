@@ -93,8 +93,9 @@ define([
 
 			test('forces a checkCard on awake', function () {
 				suspensionDetector.addOnAwakeAction.callsArg(0);
+				var stub = sinon.stub(desktopAuthService, "checkCard");
 				exercice();
-				sinon.assert.calledOnce(desktopAuthService.forceCheckCard);
+				sinon.assert.calledOnce(stub);
 			});
 		});
 	});
