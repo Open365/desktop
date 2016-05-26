@@ -88,8 +88,8 @@ define([
 					templateUrl: mainTpl,
 					controller: 'DesktopController',
 					resolve: {
-						eyeosDesktopAuthService: ['eyeosDesktopAuthService', function (eyeosDesktopAuthService) {
-							return eyeosDesktopAuthService.checkCard();
+						desktopInitializer: ['desktopInitializer', 'SETTINGS', function (desktopInitializer, settings) {
+							return desktopInitializer.setAuthClientLoaded(settings);
 						}]
 					}
 				})
@@ -109,7 +109,6 @@ define([
 		}])
 
 		.run(['desktopInitializer', 'SETTINGS', function(desktopInitializer, settings) {
-			desktopInitializer.setAuthClientLoaded(settings);
 			desktopInitializer.handleComputerSuspension();
 		}])
 	;
