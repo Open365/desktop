@@ -34,7 +34,7 @@ define(['settings'], function(settings) {
 					return prev.concat(curr.settings.fileExtensions || []);
 			}, []);
 
-			localStorage.vdiFileExtensions = JSON.stringify(acceptedExtensions);
+			localStorage.setItem('vdiFileExtensions', JSON.stringify(acceptedExtensions));
 
 			$scope.appsList = result;
 			$scope.apps = result.slice($scope.fistDisplayedApp, $scope.lastDisplayedApp);
