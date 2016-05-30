@@ -65,6 +65,8 @@ define([], function () {
         } else if (action == 'error') {
 			// This message is handled by reconnection service
 			this.desktopBus.dispatch('wm.connect.error', params);
+		} else if (action == 'filePathChange') {
+			this.desktopBus.dispatch('eyeosCloud.filePathChange', params.value);
 		}
 	};
 

@@ -33,29 +33,7 @@ define([], function () {
 	CloudFileOpenService.prototype.start = function () {
 		var self = this;
 		window.DesktopBus.subscribe('eyeosCloud.fileOpened', function (data) {
-			var ext = data.path.split('.').pop().toLowerCase();
-
-			var appPerExtension = {
-				'xls': 'calc',
-				'xlsx': 'calc',
-				'ods': 'calc',
-				'csv' : 'calc',
-				'txt': 'writer',
-				'doc': 'writer',
-				'docx': 'writer',
-				'odt': 'writer',
-				'ppt': 'presentation',
-				'pptx': 'presentation',
-				'pps': 'presentation',
-				'ppsx': 'presentation',
-				'odp': 'presentation',
-				'jpg': 'newTab',
-				'jpeg': 'newTab',
-				'png': 'newTab',
-				'gif': 'newTab',
-				'bmp': 'newTab',
-				'pdf': 'newTab'
-			};
+			var app = self._getAppByFilename(data);
 
 			if (data.path.indexOf('https://') === 0 || data.path.indexOf('http://') === 0) {
 				BootstrapDialog.show({
@@ -79,7 +57,6 @@ define([], function () {
 				});
 
 			} else {
-				var app = appPerExtension[ext];
 				if (app) {
 					if (app === 'newTab') {
 						window.DesktopBus.dispatch('fileDownloadNewTab', data);
@@ -92,6 +69,46 @@ define([], function () {
 				}
 			}
 		});
+
+		window.DesktopBus.subscribe("eyeosCloud.filePathChange", function (data) {
+			var app;
+
+			if(data.path && data.path.length > 0) {
+				app = self._getAppByFilename(data);
+				if(app && app.length > 0) {
+					app = encodeURIComponent(JSON.stringify([app, data.path]));
+					window.history.pushState(null, null, '/?EYETHEME_NAME=eyeos-cloud-app&app=' + app)
+				}
+			}
+		});
+	};
+
+	CloudFileOpenService.prototype._getAppByFilename = function(data) {
+		var ext = data.path.split('.').pop().toLowerCase();
+
+		var appPerExtension = {
+			'xls': 'calc',
+			'xlsx': 'calc',
+			'ods': 'calc',
+			'csv' : 'calc',
+			'txt': 'writer',
+			'doc': 'writer',
+			'docx': 'writer',
+			'odt': 'writer',
+			'ppt': 'presentation',
+			'pptx': 'presentation',
+			'pps': 'presentation',
+			'ppsx': 'presentation',
+			'odp': 'presentation',
+			'jpg': 'newTab',
+			'jpeg': 'newTab',
+			'png': 'newTab',
+			'gif': 'newTab',
+			'bmp': 'newTab',
+			'pdf': 'newTab'
+		};
+
+		return appPerExtension[ext];
 	};
 
 	return CloudFileOpenService;
