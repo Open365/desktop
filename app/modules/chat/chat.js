@@ -231,7 +231,6 @@ define([
 						}
 
 						windowScope.videochat.room = "https://meet.eyeos.com/" + chatroom;
-						debugger;
 						if(settings.VIDEOCHAT_SERVER_DOCKERIZED) {
 							windowScope.videochat.room = "/video/" + chatroom;
 						}
