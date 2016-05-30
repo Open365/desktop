@@ -2,8 +2,7 @@
 	<div ng-include="hooks.topbar" class="topbar topbar-desktop"></div>
 	<div ng-include="hooks.changePassword"></div>
 	<div class="content-wrapper">
-		<div id="desktop-content" on-resize="onDesktopResize" on-unload="unloadDesktop"  on-before-unload="unloadConfirmMsg"
-			 class="workspace-content">
+		<div id="desktop-content" on-resize="onDesktopResize" on-unload="unloadDesktop" class="workspace-content">
 			<div ng-include="hooks.peopleGroups"></div>
 			<div ng-include="hooks.usersList"></div>
 			<div ng-repeat="appWindow in windows">

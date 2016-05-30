@@ -170,13 +170,6 @@ define([
 					DesktopBus.dispatch('unloadDesktop');
 				};
 
-
-				$scope.unloadConfirmMsg = function() {
-					if (!window.eyeosIgnoreConfirmation) {
-					    return "This action could make you lose unfinished work";
-					}
-				};
-
 				$scope.closeApp = function (app) {
 					openAppsService.closeApp(app);
 					$scope.$apply();
