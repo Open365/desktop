@@ -11,14 +11,12 @@
 }
 
 	.users-list{
-		margin-top: 1.2em;
 		color: #515668;
 		position: relative;
 
 		&::before{
 			content: '';
-			width: calc(100% + 4em);
-			left: -2em;
+			width: 100%;
 			top: 0;
 			height: 1px;
 			background:#D5D7E4;
@@ -31,8 +29,6 @@
 		@include fz(18);
 		position: relative;
 		border-bottom: 1px solid #EAEBF1;
-		width: calc(100% + 3.8em);
-		margin-left: -2em;
 		padding: 1em 4em 1em 4em;
 		transition: all .3s ease-out;
 
