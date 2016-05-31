@@ -68,10 +68,12 @@
 	max-width: 22rem;
 	padding: 0;
 	box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2) !important;
+	border: 0;
 
 	.user-list-title-wrapper{
 		padding: 2em 2em 1.2em 2em;
 		background-color: #eaebf1;
+		border-bottom: solid 1px #D5D7E4;
 	}
 
 	input {

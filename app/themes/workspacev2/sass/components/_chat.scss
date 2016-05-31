@@ -13,16 +13,8 @@
 	.users-list{
 		color: #515668;
 		position: relative;
-
-		&::before{
-			content: '';
-			width: 100%;
-			top: 0;
-			height: 1px;
-			background:#D5D7E4;
-			position: absolute;
-			z-index: 2;
-		}
+		overflow: auto;
+		height: calc(100% - 7.1em - 1px);
 	}
 
 	.user-item{
