@@ -77,6 +77,13 @@ module.exports = function (config) {
 			'Chrome'
 		],
 
+		customLaunchers: {
+			Chrome_ci: {
+				base: 'Chrome',
+				flags: ['--no-sandbox']
+			}
+		},
+
 		// Which plugins to enable
 		plugins: [
 			'karma-requirejs',
@@ -117,4 +124,5 @@ module.exports = function (config) {
 		// URL root prevent conflicts with the site root
 		// urlRoot: '_karma_'
 	});
+	config.browsers = ['Chrome_ci'];
 };
