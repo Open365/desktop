@@ -7,8 +7,8 @@
         <div class="chat-videochat-container">
             <div class="chat-container">
                 <div class="chat-messages {{message.cssClass}}" ng-repeat="message in messages">
-                    <div class="chat-from"><strong>{{message.from | translate}}</strong></div>
                     <div ng-show="!message.videoChatRequest" class="chat-text">{{message.text | translate}}</div>
+                    <div class="chat-from"><strong>{{message.from}}</strong></div>
                     <div ng-show="message.videoChatRequest" class="chat-text">
                         {{message.text | translate}}
                         <div ng-show="message.showButtons">
