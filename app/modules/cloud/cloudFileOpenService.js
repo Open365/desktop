@@ -70,17 +70,7 @@ define([], function () {
 			}
 		});
 
-		window.DesktopBus.subscribe("eyeosCloud.filePathChange", function (data) {
-			var app;
-
-			if(data.path && data.path.length > 0) {
-				app = self._getAppByFilename(data);
-				if(app && app.length > 0) {
-					app = encodeURIComponent(JSON.stringify([app, data.path]));
-					window.history.pushState(null, null, '/?EYETHEME_NAME=eyeos-cloud-app&app=' + app)
-				}
-			}
-		});
+		window.DesktopBus.subscribe("eyeosCloud.filePathChange", function (data) {});
 	};
 
 	CloudFileOpenService.prototype._getAppByFilename = function(data) {
