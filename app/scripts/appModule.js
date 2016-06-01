@@ -91,7 +91,8 @@ define([
 						desktopInitializer: ['desktopInitializer', 'SETTINGS', function (desktopInitializer, settings) {
 							return desktopInitializer.setAuthClientLoaded(settings);
 						}]
-					}
+					},
+					reloadOnSearch : false
 				})
 				.otherwise({
 					redirectTo: '/'

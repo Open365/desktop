@@ -21,8 +21,9 @@
 
 define([], function () {
 
-	function CloudFileOpenService ($translate) {
+	function CloudFileOpenService ($translate, eyeosLocationService) {
 		this.$translate = $translate;
+		this.eyeosLocationService = eyeosLocationService;
 	}
 
 	CloudFileOpenService.prototype.launchApp = function (app) {
@@ -70,7 +71,22 @@ define([], function () {
 			}
 		});
 
-		window.DesktopBus.subscribe("eyeosCloud.filePathChange", function (data) {});
+		window.DesktopBus.subscribe("eyeosCloud.filePathChange", function (data) {
+			data.url = "/";
+
+			if(data.path && data.path.length > 0) {
+				data.app = self._getAppByFilename(data);
+				if(data.app && data.app.length > 0) {
+					self.eyeosLocationService.searchWithoutReloading(
+						'app',
+						JSON.stringify([data.app, data.path]),
+						data
+					);
+				} else {
+					console.info('We cannot get the app name');
+				}
+			}
+		});
 	};
 
 	CloudFileOpenService.prototype._getAppByFilename = function(data) {
