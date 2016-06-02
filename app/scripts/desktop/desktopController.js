@@ -170,6 +170,12 @@ define([
 					DesktopBus.dispatch('unloadDesktop');
 				};
 
+				$scope.unloadConfirmMsg = function() {
+					if (!window.eyeosIgnoreConfirmation && document.title.indexOf('Mail') !== -1) {
+						return "This action could make you lose unfinished work";
+					}
+				};
+
 				$scope.closeApp = function (app) {
 					openAppsService.closeApp(app);
 					$scope.$apply();
