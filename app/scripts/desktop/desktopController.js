@@ -171,7 +171,7 @@ define([
 				};
 
 				$scope.unloadConfirmMsg = function() {
-					if (!window.eyeosIgnoreConfirmation && document.title.indexOf('Mail') !== -1) {
+					if (!window.eyeosIgnoreConfirmation) {
 						return "This action could make you lose unfinished work";
 					}
 				};
