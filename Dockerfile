@@ -14,24 +14,61 @@ COPY . ${InstallationDir}
 
 RUN apk update && \
     apk del nodejs && \
-    apk add nodejs=4.3.0-r0 nasm bash libpng-dev libpng ruby-dev python libffi-dev \
-            make autoconf automake gcc g++ bzip2 git ruby && \
-    apk add gifsicle --update-cache \
-    --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
-    --allow-untrusted && \
-    npm install -g nan && \
-    npm -g install node-gyp && \
-    npm -g install iconv \
-    && npm install -g coffee-script grunt grunt-cli i18next-conv bower\
-    && gem update --no-document --system \
-    && gem install --no-document json_pure compass \
-    && gem cleanup \
-    && gem sources -c && \
+    apk add \
+        autoconf \
+        automake \
+        bash \
+        bzip2 \
+        g++ \
+        gcc \
+        git \
+        libffi-dev \
+        libpng \
+        libpng-dev \
+        make \
+        nasm \
+        nodejs=4.3.0-r0 \
+        python \
+        ruby \
+        ruby-dev \
+    && \
+    npm install -g \
+        bower \
+        coffee-script \
+        gifsicle \
+        grunt-cli \
+        i18next-conv \
+        iconv \
+        nan \
+        node-gyp \
+    && \
+    gem update --no-document --system && \
+    gem install --no-document \
+        compass \
+        json_pure \
+    && \
+    gem cleanup && \
+    gem sources -c && \
     ./build.sh && \
     npm -g cache clean && \
     npm cache clean && \
-    apk del make autoconf automake gcc g++ ruby ruby-dev python libpng-dev \
-    libpng ruby-dev python libffi-dev && \
-    rm -r /etc/ssl /var/cache/apk/* node_modules bower_components
+    apk del \
+        autoconf \
+        automake \
+        g++ \
+        gcc \
+        libffi-dev \
+        libpng \
+        libpng-dev \
+        make \
+        python \
+        ruby \
+        ruby-dev \
+    && \
+    rm -r \
+        /etc/ssl \
+        /var/cache/apk/* \
+        bower_components \
+        node_modules
 
 VOLUME ${InstallationDir}
