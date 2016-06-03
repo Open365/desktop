@@ -265,7 +265,7 @@ define([
 						}
 						windowScope.videochat.pendingRequest = false;
 
-						message.text = "Videoconference accepted.";
+						message.text = $translate.instant("Videoconference accepted.");
 						message.showButtons = false;
 
 						windowScope.sendMessage(videoChatMessages.ACCEPT);
@@ -278,7 +278,7 @@ define([
 						}
 						windowScope.videochat.pendingRequest = false;
 
-						message.text = "Videoconference declined.";
+						message.text = $translate.instant("Videoconference declined.");
 						message.showButtons = false;
 
 						windowScope.sendMessage(videoChatMessages.DECLINE);
