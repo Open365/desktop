@@ -16,17 +16,15 @@ RUN apk update && \
     apk del nodejs && \
     apk add nodejs=4.3.0-r0 nasm bash libpng-dev libpng ruby-dev python libffi-dev \
             make autoconf automake gcc g++ bzip2 git ruby && \
-    apk add gifsicle --update-cache \
-    --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
-    --allow-untrusted && \
     npm install -g nan && \
     npm -g install node-gyp && \
     npm -g install iconv \
-    && npm install -g coffee-script grunt grunt-cli i18next-conv bower\
+    && npm install -g coffee-script grunt-cli i18next-conv bower gifsicle\
     && gem update --no-document --system \
     && gem install --no-document json_pure compass \
     && gem cleanup \
     && gem sources -c && \
+    npm uninstall grunt-contrib-imagemin && \
     ./build.sh && \
     npm -g cache clean && \
     npm cache clean && \
