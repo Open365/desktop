@@ -1,4 +1,4 @@
-FROM docker-registry.eyeosbcn.com/eyeos-fedora21-frontend-base
+FROM docker-registry.eyeosbcn.com/alpine6-node-base
 
 ENV InstallationDir /usr/share/nginx/html/desktop
 
@@ -12,6 +12,26 @@ WORKDIR ${InstallationDir}
 
 COPY . ${InstallationDir}
 
-RUN ./build.sh
+RUN apk update && \
+    apk del nodejs && \
+    apk add nodejs=4.3.0-r0 nasm bash libpng-dev libpng ruby-dev python libffi-dev \
+            make autoconf automake gcc g++ bzip2 git ruby && \
+    apk add gifsicle --update-cache \
+    --repository http://dl-3.alpinelinux.org/alpine/edge/testing/ \
+    --allow-untrusted && \
+    npm install -g nan && \
+    npm -g install node-gyp && \
+    npm -g install iconv \
+    && npm install -g coffee-script grunt grunt-cli i18next-conv bower\
+    && gem update --no-document --system \
+    && gem install --no-document json_pure compass \
+    && gem cleanup \
+    && gem sources -c && \
+    ./build.sh && \
+    npm -g cache clean && \
+    npm cache clean && \
+    apk del make autoconf automake gcc g++ ruby ruby-dev python libpng-dev \
+    libpng ruby-dev python libffi-dev && \
+    rm -r /etc/ssl /var/cache/apk/* node_modules bower_components
 
 VOLUME ${InstallationDir}

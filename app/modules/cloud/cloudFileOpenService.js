@@ -21,8 +21,9 @@
 
 define([], function () {
 
-	function CloudFileOpenService ($translate) {
+	function CloudFileOpenService ($translate, eyeosLocationService) {
 		this.$translate = $translate;
+		this.eyeosLocationService = eyeosLocationService;
 	}
 
 	CloudFileOpenService.prototype.launchApp = function (app) {
@@ -33,29 +34,7 @@ define([], function () {
 	CloudFileOpenService.prototype.start = function () {
 		var self = this;
 		window.DesktopBus.subscribe('eyeosCloud.fileOpened', function (data) {
-			var ext = data.path.split('.').pop().toLowerCase();
-
-			var appPerExtension = {
-				'xls': 'calc',
-				'xlsx': 'calc',
-				'ods': 'calc',
-				'csv' : 'calc',
-				'txt': 'writer',
-				'doc': 'writer',
-				'docx': 'writer',
-				'odt': 'writer',
-				'ppt': 'presentation',
-				'pptx': 'presentation',
-				'pps': 'presentation',
-				'ppsx': 'presentation',
-				'odp': 'presentation',
-				'jpg': 'newTab',
-				'jpeg': 'newTab',
-				'png': 'newTab',
-				'gif': 'newTab',
-				'bmp': 'newTab',
-				'pdf': 'newTab'
-			};
+			var app = self._getAppByFilename(data);
 
 			if (data.path.indexOf('https://') === 0 || data.path.indexOf('http://') === 0) {
 				BootstrapDialog.show({
@@ -79,7 +58,6 @@ define([], function () {
 				});
 
 			} else {
-				var app = appPerExtension[ext];
 				if (app) {
 					if (app === 'newTab') {
 						window.DesktopBus.dispatch('fileDownloadNewTab', data);
@@ -92,6 +70,51 @@ define([], function () {
 				}
 			}
 		});
+
+		window.DesktopBus.subscribe("eyeosCloud.filePathChange", function (data) {
+			data.url = "/";
+
+			if(data.path && data.path.length > 0) {
+				data.app = self._getAppByFilename(data);
+				if(data.app && data.app.length > 0) {
+					self.eyeosLocationService.searchWithoutReloading(
+						'app',
+						JSON.stringify([data.app, data.path]),
+						data
+					);
+				} else {
+					console.info('We cannot get the app name');
+				}
+			}
+		});
+	};
+
+	CloudFileOpenService.prototype._getAppByFilename = function(data) {
+		var ext = data.path.split('.').pop().toLowerCase();
+
+		var appPerExtension = {
+			'xls': 'calc',
+			'xlsx': 'calc',
+			'ods': 'calc',
+			'csv' : 'calc',
+			'txt': 'writer',
+			'doc': 'writer',
+			'docx': 'writer',
+			'odt': 'writer',
+			'ppt': 'presentation',
+			'pptx': 'presentation',
+			'pps': 'presentation',
+			'ppsx': 'presentation',
+			'odp': 'presentation',
+			'jpg': 'newTab',
+			'jpeg': 'newTab',
+			'png': 'newTab',
+			'gif': 'newTab',
+			'bmp': 'newTab',
+			'pdf': 'newTab'
+		};
+
+		return appPerExtension[ext];
 	};
 
 	return CloudFileOpenService;

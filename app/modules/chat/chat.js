@@ -232,7 +232,7 @@ define([
 
 						windowScope.videochat.room = "https://meet.eyeos.com/" + chatroom;
 						if(settings.VIDEOCHAT_SERVER_DOCKERIZED) {
-							windowScope.videochat.room = location.href+"video/" + chatroom;
+							windowScope.videochat.room = "/video/" + chatroom;
 						}
 						windowScope.videochat.opened = true;
 						windowScope.openedInstances = 0;

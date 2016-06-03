@@ -23,18 +23,21 @@ define([
     'urlConfig',
     'modules/cloud/cloudFileOpenService',
     'modules/cloud/seahubWrapper',
-    'translations/eyeosTranslationModule'
+    'translations/eyeosTranslationModule',
+    'utils/locationModule'
 ], function (settings, urlConfig, CloudFileOpenService, SeahubWrapper) {
     var subscriptions = {};
     window.eyeosIgnoreConfirmation = true;
 
     angular.module('cloud', [
-        'eyeosTranslationModule'
+        'eyeosTranslationModule',
+        'eyeosLocation'
     ])
         .service('cloudFileOpenService', [
             '$translate',
-            function ($translate) {
-                var cloudFileOpenService = new CloudFileOpenService($translate);
+            'eyeosLocationService',
+            function ($translate, eyeosLocationService) {
+                var cloudFileOpenService = new CloudFileOpenService($translate, eyeosLocationService);
                 cloudFileOpenService.start();
                 return cloudFileOpenService;
         }])

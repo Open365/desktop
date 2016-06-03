@@ -170,10 +170,9 @@ define([
 					DesktopBus.dispatch('unloadDesktop');
 				};
 
-
 				$scope.unloadConfirmMsg = function() {
 					if (!window.eyeosIgnoreConfirmation) {
-					    return "This action could make you lose unfinished work";
+						return "This action could make you lose unfinished work";
 					}
 				};
 

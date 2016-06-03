@@ -23,9 +23,6 @@ define([
     'urlConfig',
     'modules/cloudApp/spiceConnector'
 ], function (settings, urlConfig, SpiceConnector) {
-
-    window.eyeosIgnoreConfirmation = false;
-
     angular.module('cloudApp', [])
         .controller('cloudAppController', ['$scope', 'eyeosVdiReconnectionService', '$window',
             function ($scope, eyeosVdiReconnectionService, $window) {
@@ -44,11 +41,13 @@ define([
                     .after('<link rel="icon" type="image/png" href="/images/favicon/' + appNameFile +  '-96x96.png" sizes="96x96">')
                     .after('<link rel="icon" type="image/png" href="/images/favicon/' + appNameFile +  '-192x192.png" sizes="192x192">');
 
+                var openedApp = appName[0].charAt(0).toUpperCase() + appName[0].slice(1);
+                window.eyeosIgnoreConfirmation = !(openedApp === 'Mail');
+
                 var spiceConnector = new SpiceConnector(encodeURIComponent(urlConfig.app), eyeosVdiReconnectionService);
                 spiceConnector.connect();
 
                 if($window.settingsStatic.EYEOS_DISABLE_ANALYTICS === false) {
-                    var openedApp = appName[0].charAt(0).toUpperCase() + appName[0].slice(1);
                     ga('send', 'event', 'Application', 'Opened', openedApp);
                     ga('send', 'pageview', document.location.pathname);
                 }

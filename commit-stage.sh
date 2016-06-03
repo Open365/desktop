@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 
 showTimeElapsed() {
     OLD="$NOW"
@@ -11,11 +11,18 @@ set -e
 set -u
 set -x
 
-if [ -f /.dockerinit ]; then
-	Xvfb :0 &
-    sleep 5
-    export DISPLAY=:0
-fi
+apk update
+apk add chromium xvfb bash xorg-server-dev libexif libexif-dev ruby ruby-dev \
+    nasm bash libpng-dev libpng python libffi-dev \
+            make autoconf automake gcc g++ bzip2 git ruby
+npm install -g grunt-cli istanbul
+gem update --no-document --system
+gem install --no-document json_pure compass
+export CHROME_BIN=/usr/bin/chromium-browser
+Xvfb :0 -extension RANDR &
+sleep 5
+export DISPLAY=:0
+
 
 showTimeElapsed
 npm install
