@@ -49,7 +49,6 @@ RUN apk update && \
     && \
     gem cleanup && \
     gem sources -c && \
-    npm uninstall grunt-contrib-imagemin && \
     ./build.sh && \
     npm -g cache clean && \
     npm cache clean && \
