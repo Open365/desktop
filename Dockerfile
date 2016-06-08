@@ -13,25 +13,7 @@ WORKDIR ${InstallationDir}
 COPY . ${InstallationDir}
 
 RUN apk update && \
-    apk del nodejs && \
-    apk add \
-        autoconf \
-        automake \
-        bash \
-        bzip2 \
-        g++ \
-        gcc \
-        git \
-        libffi-dev \
-        libpng \
-        libpng-dev \
-        make \
-        nasm \
-        nodejs=4.3.0-r0 \
-        python \
-        ruby \
-        ruby-dev \
-    && \
+    /scripts-base/buildDependencies.sh --production --install && \
     npm install -g \
         bower \
         coffee-script \
@@ -50,21 +32,8 @@ RUN apk update && \
     gem cleanup && \
     gem sources -c && \
     ./build.sh && \
-    npm -g cache clean && \
     npm cache clean && \
-    apk del \
-        autoconf \
-        automake \
-        g++ \
-        gcc \
-        libffi-dev \
-        libpng \
-        libpng-dev \
-        make \
-        python \
-        ruby \
-        ruby-dev \
-    && \
+    /scripts-base/buildDependencies.sh --production --purgue && \
     rm -r \
         /etc/ssl \
         /var/cache/apk/* \
