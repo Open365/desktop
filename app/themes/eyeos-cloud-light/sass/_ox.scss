@@ -1,0 +1,347 @@
+// Google fonts
+
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGDOFnJNygIkrHciC8BWzbCz3rGVtsTkPsbDajuO5ueQw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Source Sans Pro Light'), local('SourceSansPro-Light'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCP2LEk6lMzYsRqr3dHFImA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlIa1YDtoarzwSXxTHggEXMw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlJbPFduIYtoLzwST68uhz_Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGKyGJhAh-RE0BxGcd_izyev3rGVtsTkPsbDajuO5ueQw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGMzFoXZ-Kj537nB_-9jJhlA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGO4s1Ux4PuImWPk5fSr6HPL3rGVtsTkPsbDajuO5ueQw.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGJkF8H8ye47wsfpWywda8og.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+// Hidding topbar and adjusting content
+
+#io-ox-topbar{
+  display: none !important;
+}
+
+#io-ox-screens{
+  top: 0 !important;
+}
+
+.window-container{
+  color: #2F323A !important;
+  font-family: 'source sans pro', sans-serif !important;
+}
+
+.btn, input[type="text"].form-control{
+  border-radius: 0 !important;
+}
+
+.folder-tree .folder-node .folder-label, .folder-tree .folder-node .folder-counter, .folder-tree .folder-node .folder-options{
+  font-weight: 400% !important;
+}
+
+.window-sidepanel a, .window-body a, .window-body .pagination > li > a, .window-body .pagination > li > span, .o-ox-sidepopup a {
+  color: #18c8c8 !important;
+}
+
+.window-body a:hover, .window-body a:focus, .window-body .pagination > li > a:hover, .window-body .pagination > li > a:focus, .window-body .pagination > li > span:hover, .window-body .pagination > li > span:focus {
+  color: darken(#18c8c8, 5% )!important;
+}
+
+.mail-detail .blockquote-toggle i:hover, .mail-detail .blockquote-toggle i:focus {
+  background-color: #18c8c8 !important;
+}
+
+.mail-item .list-item-content .subject, .mail-item .date, .mail-item .size{
+  font-weight: 400 !important;
+}
+
+.thread-view-list, .window-sidepanel, .folder-tree, .week-view .week-view-container .day.today .timeslot.out, .week-view .footer-container .footer .weekday.today {
+  background-color: #eaebf1 !important;
+}
+
+.list-view.visible-selection .list-item.selected{
+  background-color: darken(#eaebf1, 10%) !important ;
+}
+
+.folder-tree.visible-selection .selected>.folder-node{
+  background-color: darken(#eaebf1, 10%) !important;
+
+}
+
+.generic-toolbar {
+  background-color: #fff !important; 
+  border: none !important;
+}
+
+.generic-toolbar .form-control {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.generic-toolbar .form-control:focus{
+  box-shadow: none !important;
+  border: none !important;
+}
+.generic-toolbar .form-control ::-webkit-input-placeholder {
+  font-style: italic !important;
+}
+
+.generic-toolbar .form-control :-moz-placeholder {
+  /* Firefox 18- */
+  font-style: italic !important;
+}
+
+.generic-toolbar .form-control ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-style: italic !important;
+}
+
+.generic-toolbar .form-control :-ms-input-placeholder {
+  font-style: italic !important;
+}
+
+.input-group-btn:last-child > .btn {
+  border: none !important;
+}
+
+.oxguard_icon_fa {
+  color: #18c8c8 !important;
+}
+
+.list-view.visible-selection.has-focus .list-item.selected {
+  background: #929fbe !important;
+
+  .list-item-checkmark .fa-checkmark, .from span.person,  .list-item-content  .date,  .list-item-content .subject, .list-item-content .account-name{
+    color: #fff !important;
+  }
+}
+
+.mail-item .account-name, .list-view.visible-selection .list-item.selected .fa-checkmark, .list-item.selected .oxguard_icon_fa {
+  color: #32383D !important;
+}
+
+.mail-detail .content a[href], .person-link {
+  color: #597BD2 !important;
+}
+
+.btn-primary {
+  border-radius: none !important;
+  border: none !important;
+  background-color: #597BD2 !important;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+  background-color: #2f53af !important;
+}
+
+.io-ox-sidepopup-close {
+  margin: 10px 30px !important;
+}
+
+.io-ox-sidepopup-close .btn-sidepopup {
+  background: none !important;
+
+  &::before{
+    font-family: FontAwesome;
+    content: '\f00d';
+    padding-right: .35em;
+  }
+}
+
+.io-ox-sidepopup-close .btn-sidepopup:hover, .io-ox-sidepopup-close .btn-sidepopup:focus {
+  color: #597BD2 !important;
+}
+
+.week-view .appointment.free, .month-view .appointment.free {
+  background-color: #c3e8e6 !important;
+  border-color: #319b95 !important;
+}
+
+.week-view .appointment.temporary, .month-view .appointment.temporary{
+  background-color: #f59566 !important;
+  border-color: #dd5817 !important;
+
+}
+
+.week-view .appointment.unconfirmed, .month-view .appointment.unconfirmed{
+
+  background-color: #CBD2DE !important;
+  border-color: #8494B0 !important;
+}
+
+.week-view .appointment.reserved, .month-view .appointment.reserved{
+
+  background-color: #BFCEF6 !important;
+  border-color: #597BD2 !important;
+}
+
+.week-view .appointment.free.hover, .month-view .appointment.free.hover {
+  background-color: #9edad7 !important;
+}
+
+.week-view .appointment.absent, .month-view .appointment.absent{
+  background-color: #f0a7a7 !important;
+  border-color: #d84545 !important;
+}
+
+.dropdown-menu > li > a {
+  color: #32383D !important;
+}
+
+.alert-info {
+  border-radius: 0 !important;
+}
+
+.list-view.visible-selection.has-focus .list-item.selected{
+  background-color: #808dac !important;
+  color: inherit !important;
+}
+
+
+.mail-item.visible-selection.has-focus .selected .account-name .from{
+  color: #fff !important;
+}
+
+.mail-item.visible-selection.has-focus .selected .account-name{
+  color: #333 !important;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus{
+  color: darken(#515668, 3%) !important;
+}
+
+.btn-search{
+  background: none !important;
+}
+
+.window-resizer-tooltip{
+  
+}
+
+.io-ox-sidepopup{
+  .btn{
+    border-radius: 0 !important;
+  }
+
+  a{
+  color: #18c8c8 !important;
+  }
+}
+
+a.btn{
+  color: #fff !important;
+}
+
+.io-ox-sidepopup-close{
+  a{
+    color: #515668 !important;
+  }
+}
+
+.tooltip-inner{
+  background-color: rgba(47,50,58, .9) !important;
+  border-radius: 0 !important;
+}
+
+.tooltip.bottom .tooltip-arrow{
+  border-bottom-color: rgba(47,50,58, .9) !important;
+}
+
+.flag-example{
+  border-radius: 0 !important;
+}
+
+.detail-view-header .unread-toggle{
+  color: #32383D !important;
+}
+
+//Lateral
+
+.folder-icon{
+  color: #585A5D;
+}
+
+.folder-tree .folder-node .folder-label, .folder-tree .folder-node .folder-counter, .folder-tree .folder-node .folder-options{
+  font-weight: 400 !important;
+}
+
+.folder-tree .folder-node .folder-options:focus{
+  background:rgba(0,0,0,.2) !important;
+}
+
+// Popup 
+
+.io-ox-dialog-popup{
+  border-radius: 0 !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.6) !important;
+  padding: 1.5em 2em;
+
+  .btn{
+    border-radius: 0 !important;
+    border: none !important;
+  }
+}
+
+// Person
+
+.mail-item .from span.person{
+ font-weight: 600 !important;
+}
+
+
+// * / 2. $Calendar
+// * -----------------------
+// * /
+
+.calendar-detail{
+  font-weight: 400 !important;
+}

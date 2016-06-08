@@ -12,6 +12,7 @@
     "groupsList": "groupsList.tpl.html",
     "groupItem": "groupItem.tpl.html",
     "groupForm":"groupForm.tpl.html",
-    "peopleButton": "peopleButton.tpl.html"
+    "peopleButton": "peopleButton.tpl.html",
+    "groupsButton": "groupsButton.tpl.html"
   }
 }

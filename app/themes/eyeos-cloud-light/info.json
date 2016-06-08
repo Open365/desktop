@@ -1,0 +1,42 @@
+{
+  "name": "eyeos-cloud-light",
+  "defaultAddons": true,
+  "addons": {
+    "applications-workspace": "full",
+    "calendar": "full",
+    "mail": "full", 
+    "dockbar": "none",
+    "peopleGroups": "full",
+    "latencyMeter": "none",
+    "changePassword": "full",
+    "seahub": "full",
+    "open365Loading":"full"
+  },
+  "modules": ["cloud"],
+  "hooks": {
+    "applications": "applications/appList.tpl.html",
+    "popupStartMenu": "popupTopbar/startMenu.tpl.html",
+    "main": "desktop/desktop.tpl.html",
+    "dockbar": "dockbar/dockbar.tpl.html",
+    "topbar": "topbar/topbar.tpl.html",
+    "welcome": "welcome/welcome.tpl.html",
+    "chat": "chat/chat.tpl.html",
+    "videoconference": "videoconference/videoconference.tpl.html",
+    "startMenu": "topbar/startMenu.tpl.html"
+  },
+  "extends": "workspacev2",
+  "sass": [
+    "_variables.scss",
+    "_chat.scss",
+    "_welcome.scss",
+    "_loading.scss",
+    "_iconBoard.scss",
+    "_appsLauncher.scss",
+    "_eyeVentus.scss",
+    "_panel.scss",
+    "_users-list.scss",
+    "_topbar.scss",
+    "_modal.scss",
+    "_changePassword.scss"
+  ]
+}

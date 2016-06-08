@@ -1,0 +1,16 @@
+.file-share-url-dialog{
+
+
+	//.modal-body{
+	//	padding: 0;
+	//}
+
+	.bootstrap-dialog-message{
+		padding-top: 13px;
+
+	  	&::before{
+			content: none;
+		}
+	}
+
+}

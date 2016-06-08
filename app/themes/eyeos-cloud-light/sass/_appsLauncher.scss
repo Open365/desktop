@@ -1,0 +1,358 @@
+
+// * / 1. $Apps wrapper
+// * -----------------------
+// * /
+
+.applications{
+	@if $apps-bg != ''{
+		background:$apps-bg;
+	}
+
+	@if $apps-border != ''{
+		border: $apps-border;
+	}
+
+	@if $apps-shadow != ''{
+		box-shadow: $apps-shadow;
+	}
+
+	@if $posLeft != ' ' {
+		left: $posLeft;
+	}
+
+	@if $posTop != ' '{
+		top: $posTop;
+	}
+
+	@if $appsRadius != ' '{
+		border-radius: $appsRadius;
+	}
+
+	@if $appsWidth != ' '{
+		width: $appsWidth;
+	}
+
+	@include appsWrapper-extraStyles;
+
+  	text-align: left;
+
+	&::before {
+		content: ' ';
+		position: absolute;
+		width: calc(100% + 2px);
+		background: #4BC8E7;
+		z-index: 2;
+		top: -1px;
+		-webkit-transform: translateX(-100%);
+		transform: none;
+		height: .5em;
+		left: -1px;
+	}
+
+	&::after {
+		content: '';
+		border: 0.7em solid rgba(0, 0, 0, 0);
+		border-bottom-color: #4BC8E7;
+		top: -1.3em;
+		left: 1em;
+		position: absolute;
+	}
+}
+
+	.application-item{
+		@if $title-color != '' {
+			color: $title-color;
+		}
+
+		@if $title-size != ' ' {
+			@include fz($title-size);
+		}
+
+		@if $title-align != ' '{
+			text-align: $title-align;
+		}
+
+		@if $app-width != ' '{
+			width: $app-width;
+		}
+
+		@if $app-height != ' '{
+			height: $app-height;
+		}
+
+		@if $app-bg != ' '{
+			background:$app-bg;
+		}
+
+		@include apps-extraStyles;
+	}
+
+
+		.app{
+		  	top: 70px !important;
+			@include app-icon(
+				$icon-char,
+				$icon-size, 
+				$icon-lh,
+				$icon-color, 
+				$icon-bg,
+				$icon-shadow
+				);
+
+			@include app-extraStyles;
+			position: relative;
+
+			&.word{
+				&::before{
+					@if $icon-word-char != ' '{
+						content: $icon-word-char ;
+					}
+					@if $icon-word-color != ' '{
+						color: $icon-word-color;
+					} 
+				}
+			}
+
+			&.powerpoint{
+				&::before{
+					@if $icon-powerpoint-char != ' '{
+						content: $icon-powerpoint-char ;
+					}
+					@if $icon-powerpoint-color != ' '{
+						color: $icon-powerpoint-color;
+					} 
+				}
+			}
+
+			&.excel{
+				&::before{
+					@if $icon-excel-char != ' '{
+						content: $icon-excel-char ;
+					}
+					@if $icon-excel-color != ' '{
+						color: $icon-excel-color;
+					} 
+				}
+			}
+
+			&.files{
+				&::before{
+					@if $icon-files-char != ' '{
+						content: $icon-files-char ;
+					}
+					@if $icon-files-color != ' '{
+						color: $icon-files-color;
+					} 
+				}
+			}
+
+			&.admin.panel{
+				&::before{
+					@if $icon-adminPanel-char != ' '{
+						content: $icon-adminPanel-char ;
+					}
+					@if $icon-admin-color != ' '{
+						color: $icon-admin-color;
+					} 
+				}
+			}
+
+			&.outlook{
+				&::before{
+					@if $icon-outlook-char != ' '{
+						content: $icon-outlook-char ;
+					}
+					@if $icon-outlook-color != ' '{
+						color: $icon-outlook-color;
+					} 
+				}
+			}
+
+			&.writer{
+				&::before{
+					@if $icon-writer-char != ' '{
+						content: $icon-writer-char;
+						@include fz(70);
+					}
+					@if $icon-writer-color != ' '{
+						color: $icon-writer-color;
+					} 
+				}
+
+				&::after{
+					@include icon($char: $icon-birds-office-char, $size: 64, $color: $icon-birds-office-color, $lh: 1);
+					@include multicon(-.4em, -.05em);
+				}
+
+			}
+
+
+			&.calc{
+				&::before{
+					@if $icon-calc-char != ' '{
+						content: $icon-calc-char ;
+						@include fz(70);
+
+					}
+					@if $icon-calc-color != ' '{
+						color: $icon-calc-color;
+					} 
+				}
+
+				&::after{
+					@include icon($char: $icon-birds-office-char, $size: 64, $color: $icon-birds-office-color, $lh: 1);
+					@include multicon(-.4em, -.05em);
+				}
+			}
+
+			&.draw{
+				&::before{
+					@if $icon-draw-char != ' '{
+						content: $icon-draw-char ;
+						@include fz(70);
+
+					}
+					@if $icon-draw-color != ' '{
+						color: $icon-draw-color;
+					} 
+				}
+
+
+				&::after{
+					@include icon($char: $icon-birds-office-char, $size: 64, $color: $icon-birds-office-color, $lh: 1);
+					@include multicon(-.4em, -.05em);
+				}
+			}
+
+			&.impress{
+				&::before{
+					@if $icon-impress-char != ' '{
+						content: $icon-impress-char ;
+						@include fz(70);
+
+					}
+					@if $icon-impress-color != ' '{
+						color: $icon-impress-color;
+					} 
+				}
+
+
+				&::after{
+					@include icon($char: $icon-birds-office-char, $size: 64, $color: $icon-birds-office-color, $lh: 1);
+					@include multicon(-.4em, -.05em);
+				}
+			}
+
+			&.chrome{
+				&::before{
+					@if $icon-chrome-char != ' '{
+						content: $icon-chrome-char ;
+						@include fz(70);
+
+					}
+					@if $icon-chrome-color != ' '{
+						color: $icon-chrome-color;
+					} 
+				}
+			}
+
+			&.firefox{
+				&::before{
+					@if $icon-firefox-char != ' '{
+						content: $icon-firefox-char ;
+						@include fz(70);
+
+					}
+					@if $icon-firefox-color != ' '{
+						color: $icon-firefox-color;
+					} 
+				}
+			}
+
+			&.internet.explorer{
+				&::before{
+					@if $icon-explorer-char != ' '{
+						content: $icon-explorer-char ;
+						@include fz(70);
+
+					}
+					@if $icon-explorer-color != ' '{
+						color: $icon-explorer-color;
+					} 
+				}
+			}
+
+			&.eyeos-icon
+			{
+				&::before
+				{
+					position: absolute;
+					left: 50%;
+					top: 46%;
+					transform: translate(-50%,-50%);
+					text-shadow: none;
+				}
+			}
+
+			&.extern-icon
+			{
+				&::before
+				{
+					display: none;
+				}
+				img
+				{
+					display: block !important;
+					max-height: 30%;
+					position: absolute;
+					left: 50%;
+					top: 40%;
+					transform: translate(-50%,-50%);
+					width: auto;
+				}
+			}
+}
+
+.app-name{
+	display: inline-block;
+	width: 85%;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 2.1em;
+	text-overflow: ellipsis;
+}
+
+
+.tooltip{
+	display: none !important;
+}
+
+#applications-btn .launcher-btn::before {
+  text-rendering: optimizeLegibility;
+  text-rendering: geometricPrecision;
+  font-smooth: always;
+  font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'eyeos-symbols';
+  font-weight: normal;
+  content: '\0069';
+  font-size: 41px;
+  font-size: 2.5625rem;
+  position: absolute;
+  top: 11px;
+  transform: translateY(-50%);
+  left: 0;
+  text-align: center;
+  width: 20px;
+  height: 85px;
+  padding-top: 22px;
+  font-size: 36px;
+  line-height: 1.3em;
+  box-shadow: none;
+}
+​
+.app.eyeos-icon::before {
+  text-shadow: none;
+}
+

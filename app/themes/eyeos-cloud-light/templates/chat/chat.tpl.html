@@ -1,0 +1,36 @@
+<div class="chat-window">
+
+    <div ng-if="videochat.enabled && !videochat.opened" class="chat-initvideo">
+            <button class="start-videochat" ng-click="sendVideoChatRequest()">{{"Start Videoconference" | translate}}</button>
+    </div>
+
+        <div class="chat-videochat-container">
+            <div class="chat-container">
+                <div class="chat-messages {{message.cssClass}}" ng-repeat="message in messages">
+                    <div class="chat-from"><strong>{{message.from}}</strong></div>
+                    <div ng-show="!message.videoChatRequest" class="chat-text">{{message.text}}</div>
+                    <div ng-show="message.videoChatRequest" class="chat-text">
+                        {{message.text}}
+                        <div ng-show="message.showButtons">
+                            <button title="{{'Accept_2' | translate}}" ng-click="acceptVideoChatRequest(message);">"{{'Accept' | translate}}"</button> |
+                            <button title="{{'Decline_2' | translate}}" ng-click="declineVideoChatRequest(message);">"{{'Decline' | translate}}"</button>
+                        </div>
+                    </div>
+                </div>
+                <div ng-hide="peerOnline" class="chat-offline-message">
+                    {{"The current user has gone offline" | translate }}
+                </div>
+            </div>
+
+        </div>
+    <div>
+        <div class="chat-inputarea">
+            <input type="submit" name="chat-send" value="{{'Send' | translate}}" ng-click="sendToChat()" class="chat-send"/>
+            <div class="chat-input-container">
+                <textarea maxlength="500" ng-keyup="!$event.shiftKey && $event.keyCode == 13 && sendToChat()" name="chat-text" ng-model="chatInformation.text" class="chat-input" placeholder="{{'Send a message' | translate}}">
+
+                </textarea>
+            </div>
+        </div>
+    </div>
+</div>

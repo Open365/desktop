@@ -41,6 +41,21 @@ define([
                 cloudFileOpenService.start();
                 return cloudFileOpenService;
         }])
+        .controller('topbarController', ['$scope', function ($scope) {
+            var subscriptions =[];
+
+            subscriptions['app.opened'] = window.DesktopBus.subscribe('app.opened', function (data) {
+                $scope.topbarColorClass = 'topbar-' + data.name;
+                $scope.appColorClass = 'background-' + data.name;
+                $scope.iconSvg = 'open365-logo-' + data.name;
+            });
+
+            $scope.$on('$destroy', function() {
+                subscriptions.forEach(function (sub) {
+                    sub.unsubscribe();
+                });
+            });
+        }])
         .controller('cloudController', ['$scope', '$sce', 'cloudFileOpenService', '$window',
             function ($scope, $sce, cloudFileOpenService, $window) {
                 var seahubWrapper = new SeahubWrapper();
@@ -61,6 +76,7 @@ define([
                 $scope.showLoading = true;
                 $scope.showErrorMessage = false;
                 $scope.showLostActivity = false;
+                $scope.iconSvg = 'open365-logo-home';
 
 
                 document.title = "Open365";

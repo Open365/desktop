@@ -1,0 +1,336 @@
+.user-info {
+	background: #fff;
+}
+
+.user-info li a {
+	color: $color-top-bar-light;
+}
+
+.latency-meter {
+	background: rgba(0, 0, 0, 0);
+}
+
+.main-brand {
+	@include main-brand(); // Width and height for logo
+}
+
+.topbar-desktop {
+	@include topbar-mixin;
+	.brand-container{
+		@include brand-size;
+	}
+	border-top: 3px solid $c-background;
+	background: #fff;
+	height: 46px;
+	box-shadow: 0 0 0 2px white, 0 6px 2px #A4A4A4;
+}
+
+.topbar-writer {
+	border-top: 3px solid $c-writer-bg;
+}
+
+.topbar-calc {
+	border-top: 3px solid $c-calc-bg;
+}
+
+.topbar-mail {
+	border-top: 3px solid $c-mail-bg;
+}
+
+.topbar-presentation {
+	border-top: 3px solid $c-presentation-bg;
+}
+
+
+	.toolbar-container{
+		flex: 1 1 8%;
+	}
+
+		.toolbar-group{ 
+			flex: 1 1 auto;
+			display: flex;
+			@include toolbar-flex;
+			flex-wrap: wrap;
+			align-items: stretch;
+
+		}
+
+
+	// Change when addons have their own classes
+	
+	.bar-item{
+
+		&.bar-item-applications
+		{
+			order: 1;
+			flex-grow: 1;
+		}
+		
+		&.bar-item-userinfo
+		{
+			order: 3;
+		}
+
+		&.bar-item-latencymeter
+		{
+			order: 2;
+		}
+
+		&.bar-item-attach
+		{
+			order: 5;
+		}
+	}
+
+
+
+.tooltip-inner{
+	max-width: 300px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+
+
+.inner-circle{
+	fill: $inner-circle;
+}
+.outer-circle{
+	fill: $outer-circle;
+}
+.text-logo{
+	fill: $text-logo;
+}
+
+.modal-logout
+{
+	bottom: auto !important;
+	left: auto !important;
+	position: absolute !important;
+	right: 40px !important;
+	top: 43px !important;
+	transform: none !important;
+	&::before
+	{
+		display: none;
+	}
+	&::after
+	{
+		content: '';
+		border: 0.5em solid transparent;
+		border-bottom-color: #fff;
+		top: -1em;
+		right: 24px;
+		position: absolute;
+	}
+}
+
+
+@media screen and (max-width:29em)
+{
+	.topbar-desktop .bar-item-userinfo .user-name
+	{
+		width: 0px;
+		text-indent: -9999px;
+		padding-right: 0;
+	}
+
+	.topbar-desktop .user-info
+	{
+		padding: 0 .5em 0 .5em;
+	}
+
+	.topbar-desktop .logout-wrapper
+	{
+		right: -1.3em;
+	}
+
+	.topbar-desktop .user-avatar
+	{
+		margin: 0;
+	}
+
+	.dockbar .applications
+	{
+		width: 10rem;
+	}
+
+	.dockbar .application-item
+	{
+		font-size: 1.0625rem;
+		width: 100%;
+		display: block;
+		height: 2rem;
+		margin-left: 0;
+		.app
+		{
+			padding-top: 0;
+			padding-left: 40px;
+			text-align: left;
+			&::before
+			{
+				@include fz(29);
+				position: absolute;
+				top: 3px;
+				left: 0;
+				width: 2.3rem;
+				text-align: center;
+			}
+		}
+	}
+
+	.dockbar .excel::before {
+		left: 3px !important;
+	}
+	.dockbar .word::before {
+		left: 3px !important;
+	}
+	.dockbar .powerpoint::before {
+		left: 5px !important;
+	}
+}
+
+@media screen and (max-width:13em)
+{
+	.topbar-desktop .bar-item-userinfo
+	{
+		display: none;
+	}
+}
+
+.app-item, .launcher-btn, .show-groups, .show-users {
+	box-shadow: none;
+	border: 0;
+}
+
+.app-item.application-menu {
+	border: 0;
+	box-shadow: none;
+	width: 45px;
+	height: 45px;
+	background: #f2f2f2;
+	padding-left: 12px;
+	padding-top: 3px;
+
+
+	.tooltip-flag {
+		color: #fff;
+		margin-left: 25px;
+		border: none;
+	}
+}
+
+#applications-btn .launcher-btn::before {
+	font-size: 38px;
+	padding-top: 21px;
+}
+
+.home-menu{
+	color: $color-top-bar-light;
+	line-height: 2rem;
+	padding: 0 1em 0.4em 1em;
+	cursor: pointer;
+	transition: all  .3s ease-out;
+	@include fz(16);
+
+	&::before{
+		color: $color-top-bar-light;
+		content: '\0043';
+		font-family: $t-icon;
+		font-weight: normal;
+		@include fz(32);
+		transition: all  .3s ease-out;
+		position: relative;
+		top: 2px;
+	}
+}
+
+.show-group-button{
+	@include addon-btn(
+		$icon-group-button,
+		$c-btn-bg,
+		$c-dockicon,
+		$c-user-hover,
+		$c-user-active,
+		$c-user-tooltip,
+		$itemPadding,
+		$dockWidth,
+		$btn-height: $dockWidth,
+		$icon-size: 40,
+		$icon-lh: 1.32em
+	);
+	cursor:pointer;
+
+	&:hover{
+		&::before{
+			padding-left: 0;
+		}
+	}
+}
+
+.app-item:not(.home) {
+	border-right: 0;
+}
+
+.show-group-button::before {
+	top: 30%
+}
+
+.show-group-button.active::after, .show-group-button.activate::after {
+	display: none;
+}
+
+.show-group-button.active::before, .show-group-button.activate::before {
+	color: $c-background;
+}
+
+.show-group-button .tooltip-flag {
+	display:none;
+}
+
+.launcher-btn::before {
+	color: $color-icon-app-light;
+	box-shadow: none;
+}
+
+.background-writer {
+	fill: $c-writer-bg;
+
+	&::before {
+		color: $c-writer-bg;
+	}
+}
+
+.background-calc {
+	fill: $c-calc-bg;
+
+	&::before {
+		color: $c-calc-bg;
+	}
+}
+
+.background-presentation {
+	fill: $c-presentation-bg;
+
+	&::before {
+		color: $c-presentation-bg;
+	}
+}
+
+.background-mail {
+	fill: $c-mail-bg;
+
+	&::before {
+		color: $c-mail-bg;
+	}
+}
+
+.main-brand {
+	margin-top: 5px;
+}
+
+
+.home-menu::before {
+	font-size: 38px;
+}

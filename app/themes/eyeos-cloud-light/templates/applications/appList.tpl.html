@@ -1,0 +1,36 @@
+<ul id="applications-btn-and-menu" class="topbar-dropdown"  ng-controller="ApplicationsController"  >
+    <li class="dropdown" on-toggle="toggled(open)">
+        <a id="applications-btn" href="javascript:void(0)" class="launcher-btn dropdown-toggle item"
+           ng-class="appColorClass" ng-click="onClicked($event)">
+        </a>
+        <ul class="applications dropdown-menu">
+            <li ng-repeat="app in apps"
+                ng-controller="ApplicationController"  class="application-item">
+                <div ng-controller="ApplicationInTabController"
+                     ng-show="app.showInTab"
+                     class="app {{app.appID | lowercase}}"
+                     ng-click="openApp(app, $event);"
+                     tooltip="{{app.tooltip}}" tooltip-placement="right" ng-class="app.smallIcon=='false' ? 'eyeos-icon' : 'extern-icon'">
+
+                    <img ng-if="app.smallIcon!= 'false'" ng-src="{{app.smallIcon}}" class="icon-app_list app-icon"/>
+                    <span class="app-name">{{app.name | translate}}</span>
+                </div>
+                <div id="application_{{app.appID | lowercase}}" ng-hide="app.showInTab" class="app {{app.appID | lowercase}}"
+                     ng-click="openApp(null, $event);"
+                     tooltip="{{app.tooltip}}" tooltip-placement="right" ng-class="app.smallIcon=='false' ? 'eyeos-icon' : 'extern-icon'">
+
+                    <img ng-if="app.smallIcon!= 'false'" ng-src="{{app.smallIcon}}" class="icon-app_list app-icon" />
+                    <span class="app-name">{{app.name | translate}}</span>
+                </div>
+            </li>
+            <li>
+                <button class="scroll-down" ng-mouseover="scrollDown()" ng-mouseleave="stopScroll()"
+                        ng-hide="lastDisplayedApp >= appsList.length">Down
+                </button>
+                <button class="scroll-up" ng-mouseover="scrollUp()" ng-mouseleave="stopScroll()"
+                        ng-hide="fistDisplayedApp === 0">Up
+                </button>
+            </li>
+        </ul>
+    </li>
+</ul>
