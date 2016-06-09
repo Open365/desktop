@@ -64,7 +64,7 @@ msgstr "最後一件事了！"
 msgid ""
 "For security reasons you need to change your password before you start using"
 " eyeOS. Use it in your next login!"
-msgstr "因為安全因素，您必須在您開始使用 eyeOS 前變更您的密碼。在您下次登入時使用它！"
+msgstr "因為安全因素，您必須在您開始使用 Open365 前變更您的密碼。在您下次登入時使用它！"
 
 #:
 msgid "Old password"
@@ -319,11 +319,11 @@ msgstr "Writer"
 
 #:
 msgid "Spreadsheet"
-msgstr "試算表"
+msgstr "Calc"
 
 #:
 msgid "Presentation"
-msgstr "簡報"
+msgstr "Impress"
 
 #:
 msgid "Mail"
@@ -399,9 +399,9 @@ msgstr "拒絕"
 
 #:
 msgid "Accept_2"
-msgstr "接受_2"
+msgstr "接受"
 
 #:
 msgid "Decline_2"
-msgstr "拒絕_2"
+msgstr "拒絕"
 
