@@ -10,7 +10,8 @@
     "latencyMeter": "none",
     "changePassword": "full",
     "seahub": "full",
-    "open365Loading":"full"
+    "open365Loading":"full",
+    "logoutNotifier": "full"
   },
   "modules": ["cloud"],
   "hooks": {
