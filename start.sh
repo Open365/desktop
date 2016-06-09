@@ -43,4 +43,7 @@ do
 	config_settings "$i"
 done
 
-sleep infinity
+while true
+do
+	sleep 9999d
+done
