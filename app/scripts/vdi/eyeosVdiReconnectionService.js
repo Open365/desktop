@@ -116,6 +116,7 @@ define([
 	};
 
 	EyeosVdiReconnectionService.prototype.resetVdiClient = function () {
+		this.clearTimers();
 		this.vdiClient.dispose();
 		this.vdiClient.init();
 	};
