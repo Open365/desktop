@@ -22,7 +22,7 @@
 	border-top: 3px solid $c-background;
 	background: #fff;
 	height: 46px;
-	box-shadow: 0 0 0 2px white, 0 6px 2px #A4A4A4;
+	box-shadow: 0 0 0 2px white, 0 3px 2px $c-box-shadow-topbar;
 }
 
 .topbar-writer {
@@ -209,7 +209,7 @@
 	box-shadow: none;
 	width: 45px;
 	height: 45px;
-	background: #f2f2f2;
+	background: #F5F6F7;
 	padding-left: 12px;
 	padding-top: 3px;
 
