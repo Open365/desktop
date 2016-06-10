@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 set -u
+set -x
 
 SETTINGS=dist/scripts/settingsStatic.*
 SETTINGS_TO_IMPORT=(
