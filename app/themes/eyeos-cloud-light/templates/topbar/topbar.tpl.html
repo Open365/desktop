@@ -16,7 +16,11 @@
 					</div>
 				</div>
 			</div>
-			<div ng-include="hooks.groupsButton"></div>
+			<div class="bar-item show-group-button" ng-class='{"active":toggle==1}' ng-click="toggle=1;openGroups()">
+				<div id="group-icon" style="height:100%;width:100%">
+					<span class="tooltip-group-flag"></span>
+				</div>
+			</div>
 			<div ng-include="hooks.peopleButton"></div>
 			<div data-block="addonButtons" ng-repeat="contentData in addons.button | filter: '!applications' | filter: '!support' | filter: '!eyeschool' | filter: '!mail' | filter: '!calendar' " ng-include="contentData" class="bar-item bar-item-{{contentData | extractNameFromLink}}"></div>
 	    </div>
