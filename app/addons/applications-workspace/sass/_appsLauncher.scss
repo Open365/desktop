@@ -117,7 +117,8 @@
 					}
 					@if $icon-files-color != ' '{
 						color: $icon-files-color;
-					} 
+					}
+					font-size: 3.7em;
 				}
 			}
 
@@ -165,7 +166,7 @@
 				&::before{
 					@if $icon-mail-char != ' '{
 						content: $icon-mail-char;
-						@include fz(70);
+						font-size: 3.3em;
 					}
 				}
 			}
