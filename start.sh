@@ -20,11 +20,11 @@ SETTINGS_TO_IMPORT="
 
 config_settings() {
 	local variable="$1"
-	local value="${!variable:-}"
+	local value
+	eval value=\${$variable:-}
 
 	if [ -n "$value" ]; then
-		re='^[0-9]+$'
-		if ! [[ "$value" =~ $re ]] ; then
+		if ! echo $value | grep -q '^[0-9]\+$' ; then
 			if [ "$value" != 'true' ] && [ "$value" != 'false' ];then
 				value="'$value'"
 			fi
