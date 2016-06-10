@@ -410,6 +410,10 @@ msgid "Presentation"
 msgstr "Impress"
 
 #:
+msgid "Gymp"
+msgstr "Gymp"
+
+#:
 msgid "Loading eyeOS Cloud, Please wait..."
 msgstr "Loading eyeOS Cloud, Please wait..."
 

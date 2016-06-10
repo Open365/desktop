@@ -282,6 +282,19 @@
 				}
 			}
 
+			&.gymp{
+				&::before{
+					@if $icon-gymp-char != ' '{
+						content: $icon-gymp-char ;
+						@include fz(70);
+
+					}
+					@if $icon-gymp-color != ' '{
+						color: $icon-gymp-color;
+					}
+				}
+			}
+
 			&.eyeos-icon
 			{
 				&::before

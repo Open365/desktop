@@ -315,6 +315,10 @@ msgid "Spreadsheet"
 msgstr "Calc"
 
 #:
+msgid "Gymp"
+msgstr "Gymp"
+
+#:
 msgid "Presentation"
 msgstr "Impress"
 

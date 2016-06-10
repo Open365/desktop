@@ -41,6 +41,9 @@
 	border-top: 3px solid $c-presentation-bg;
 }
 
+.border-top-gymp {
+	border-top: 3px solid $c-gymp-bg;
+}
 
 .background-top-writer {
 	&::before {
@@ -78,9 +81,14 @@
 	}
 }
 
-	// Change when addons have their own classes
-	
-	.bar-item{
+.background-top-gymp {
+	&::before {
+		background: $c-gymp-bg;
+	}
+	&::after {
+		border-bottom-color: $c-gymp-bg;
+	}
+}
 
 
 .toolbar-container{
@@ -360,6 +368,14 @@
 
 	&::before {
 		color: $c-mail-bg;
+	}
+}
+
+.color-gymp {
+	fill: $c-gymp-bg;
+
+	&::before {
+		color: $c-gymp-bg;
 	}
 }
 

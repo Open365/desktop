@@ -326,6 +326,10 @@ msgid "Presentation"
 msgstr "Impress"
 
 #:
+msgid "Gymp"
+msgstr "Gymp"
+
+#:
 msgid "Mail"
 msgstr "郵件"
 
