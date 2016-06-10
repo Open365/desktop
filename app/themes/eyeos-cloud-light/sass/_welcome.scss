@@ -24,6 +24,26 @@ h1, h2 {
   margin: 0;
 }
 
+.background-writer {
+  background: $c-writer-bg;
+}
+
+.background-calc {
+  background: $c-calc-bg;
+}
+
+.background-mail {
+  background: $c-mail-bg;
+}
+
+.background-presentation {
+  background: $c-presentation-bg;
+}
+
+.background-gymp {
+  background: $c-gymp-bg;
+}
+
 .welcome-wrapper {
   height: 100%;
   background: #F5F6F9;

@@ -25,73 +25,110 @@
 	box-shadow: 0 0 0 2px white, 0 3px 2px $c-box-shadow-topbar;
 }
 
-.topbar-writer {
+.border-top-writer {
 	border-top: 3px solid $c-writer-bg;
 }
 
-.topbar-calc {
+.border-top-calc {
 	border-top: 3px solid $c-calc-bg;
 }
 
-.topbar-mail {
+.border-top-mail {
 	border-top: 3px solid $c-mail-bg;
 }
 
-.topbar-presentation {
+.border-top-presentation {
 	border-top: 3px solid $c-presentation-bg;
 }
 
 
-	.toolbar-container{
-		flex: 1 1 8%;
+.background-top-writer {
+	&::before {
+		background: $c-writer-bg;
 	}
+	&::after {
+		border-bottom-color: $c-writer-bg;
+	}
+}
 
-		.toolbar-group{ 
-			flex: 1 1 auto;
-			display: flex;
-			@include toolbar-flex;
-			flex-wrap: wrap;
-			align-items: stretch;
+.background-top-calc {
+	&::before {
+		background: $c-calc-bg;
+	}
+	&::after {
+		border-bottom-color: $c-calc-bg;
+	}
+}
 
-		}
+.background-top-mail {
+	&::before {
+		background: $c-mail-bg;
+	}
+	&::after {
+		border-bottom-color: $c-mail-bg;
+	}
+}
 
+.background-top-presentation {
+	&::before {
+		background: $c-presentation-bg;
+	}
+	&::after {
+		border-bottom-color: $c-presentation-bg;
+	}
+}
 
 	// Change when addons have their own classes
 	
 	.bar-item{
 
-		&.bar-item-applications
-		{
-			order: 1;
-			flex-grow: 1;
-		}
-		
-		&.bar-item-userinfo
-		{
-			order: 3;
-		}
 
-		&.bar-item-latencymeter
-		{
-			order: 2;
-		}
+.toolbar-container{
+	flex: 1 1 8%;
+}
 
-		&.bar-item-attach
-		{
-			order: 5;
-		}
+	.toolbar-group{
+		flex: 1 1 auto;
+		display: flex;
+		@include toolbar-flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+
 	}
 
 
+// Change when addons have their own classes
 
-.tooltip-inner{
+.bar-item{
+
+	&.bar-item-applications
+	{
+		order: 1;
+		flex-grow: 1;
+	}
+
+	&.bar-item-userinfo
+	{
+		order: 3;
+	}
+
+	&.bar-item-latencymeter
+	{
+		order: 2;
+	}
+
+	&.bar-item-attach
+	{
+		order: 5;
+	}
+}
+
+.tooltip-inner {
 	max-width: 300px;
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
 }
-
-
 
 .inner-circle{
 	fill: $inner-circle;
@@ -294,7 +331,7 @@
 	box-shadow: none;
 }
 
-.background-writer {
+.color-writer {
 	fill: $c-writer-bg;
 
 	&::before {
@@ -302,7 +339,7 @@
 	}
 }
 
-.background-calc {
+.color-calc {
 	fill: $c-calc-bg;
 
 	&::before {
@@ -310,7 +347,7 @@
 	}
 }
 
-.background-presentation {
+.color-presentation {
 	fill: $c-presentation-bg;
 
 	&::before {
@@ -318,7 +355,7 @@
 	}
 }
 
-.background-mail {
+.color-mail {
 	fill: $c-mail-bg;
 
 	&::before {
