@@ -323,7 +323,7 @@ msgid "Mail"
 msgstr "Xxxx"
 
 #:
-msgid "Gymp"
+msgid "Gimp"
 msgstr "Xxxx"
 
 #:

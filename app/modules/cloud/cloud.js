@@ -97,7 +97,7 @@ define([
                         calc: "Spreadsheet",
                         presentation: "Presentation",
                         writer: "Writer",
-                        gymp: "Gymp"
+                        gimp: "Gimp"
                     };
                     document.title = appTitle[appNameWithoutFilePath] + " - Open365";
                 }

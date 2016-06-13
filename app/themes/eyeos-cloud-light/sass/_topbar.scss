@@ -41,8 +41,8 @@
 	border-top: 3px solid $c-presentation-bg;
 }
 
-.border-top-gymp {
-	border-top: 3px solid $c-gymp-bg;
+.border-top-gimp {
+	border-top: 3px solid $c-gimp-bg;
 }
 
 .background-top-writer {
@@ -81,12 +81,12 @@
 	}
 }
 
-.background-top-gymp {
+.background-top-gimp {
 	&::before {
-		background: $c-gymp-bg;
+		background: $c-gimp-bg;
 	}
 	&::after {
-		border-bottom-color: $c-gymp-bg;
+		border-bottom-color: $c-gimp-bg;
 	}
 }
 
@@ -371,11 +371,11 @@
 	}
 }
 
-.color-gymp {
-	fill: $c-gymp-bg;
+.color-gimp {
+	fill: $c-gimp-bg;
 
 	&::before {
-		color: $c-gymp-bg;
+		color: $c-gimp-bg;
 	}
 }
 

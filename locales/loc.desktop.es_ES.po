@@ -323,8 +323,8 @@ msgid "Mail"
 msgstr "Correo"
 
 #:
-msgid "Gymp"
-msgstr "Gymp"
+msgid "Gimp"
+msgstr "Gimp"
 
 #:
 msgid "File sync"

@@ -326,8 +326,8 @@ msgid "Presentation"
 msgstr "Impress"
 
 #:
-msgid "Gymp"
-msgstr "Gymp"
+msgid "Gimp"
+msgstr "Gimp"
 
 #:
 msgid "Mail"

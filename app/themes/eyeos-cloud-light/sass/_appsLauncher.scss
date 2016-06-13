@@ -282,15 +282,15 @@
 				}
 			}
 
-			&.gymp{
+			&.gimp{
 				&::before{
-					@if $icon-gymp-char != ' '{
-						content: $icon-gymp-char ;
+					@if $icon-gimp-char != ' '{
+						content: $icon-gimp-char ;
 						@include fz(70);
 
 					}
-					@if $icon-gymp-color != ' '{
-						color: $icon-gymp-color;
+					@if $icon-gimp-color != ' '{
+						color: $icon-gimp-color;
 					}
 				}
 			}
