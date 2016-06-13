@@ -672,3 +672,11 @@ msgstr "Accept"
 #:
 msgid "Decline_2"
 msgstr "Decline"
+
+#:
+msgid "Log in"
+msgstr "Log in"
+
+#:
+msgid "You have closed your session"
+msgstr "You have closed your session"
