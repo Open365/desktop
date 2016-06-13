@@ -4,7 +4,7 @@
     "button": [],
     "content": []
   },
-  "modules": ["logoutNotifier"],
+  "modules": ["logoutNotifier", "dialogs"],
   "sass": [],
   "hooks": {}
 }

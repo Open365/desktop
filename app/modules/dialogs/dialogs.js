@@ -20,20 +20,12 @@
 'use strict';
 
 define([
-	'modules/logoutNotifier/logoutNotifierController',
-	'modules/logoutNotifier/logoutNotifierService'
-], function (LogoutNotifierController, LogoutNotifierService) {
-	window.eyeThemeInfo.addInitController('logoutNotifierController');
+	'modules/dialogs/dialogsService'
+], function (DialogsService) {
 
-	angular.module('logoutNotifier', [])
-		.controller('logoutNotifierController', ['logoutNotifierService', '$translate', 'dialogsService', function (logoutNotifierService, $translate, dialogsService) {
-			var controller = new LogoutNotifierController(logoutNotifierService, $translate, dialogsService);
-			controller.init();
-			return controller;
-		}])
-		.service('logoutNotifierService', function () {
-			var service = new LogoutNotifierService();
-			service.init();
+	angular.module('dialogs', [])
+		.service('dialogsService', function () {
+			var service = new DialogsService();
 			return service;
 		});
 });

@@ -20,10 +20,10 @@
 "use strict";
 
 define([], function () {
-	function LogoutNotifierController(logoutNotifierService, $translate, bootstrapDialog) {
+	function LogoutNotifierController(logoutNotifierService, $translate, dialogsService) {
 		this.logoutNotifierService = logoutNotifierService;
 		this.$translate = $translate;
-		this.bootstrapDialog = bootstrapDialog || window.BootstrapDialog;
+		this.dialogsService = dialogsService;
 	}
 
 	LogoutNotifierController.prototype.init = function () {
@@ -31,8 +31,7 @@ define([], function () {
 	};
 
 	LogoutNotifierController.prototype.notifyLogout = function () {
-		$('body').addClass('modal_mode_on');
-		this.bootstrapDialog.show({
+		this.dialogsService.openModal({
 			message: this.$translate.instant('You have closed your session'),
 			cssClass: 'session-lost-dialog',
 			buttons: [{

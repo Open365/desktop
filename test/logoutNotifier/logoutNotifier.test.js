@@ -20,7 +20,7 @@
 define([
 	'modules/logoutNotifier/logoutNotifierController'
 ], function (LogoutNotifierController) {
-	suite("LogoutNotifier", function () {
+	suite("LogoutNotifierController", function () {
 		var sut;
 		var logoutNotifierService, translate, bootstrapDialog;
 
@@ -36,7 +36,7 @@ define([
 			};
 
 			bootstrapDialog = {
-				show: sinon.stub()
+				openModal: sinon.stub()
 			};
 
 			sut = new LogoutNotifierController(logoutNotifierService, translate, bootstrapDialog);
@@ -49,7 +49,7 @@ define([
 		test("shows notification when logout detected", function () {
 			logoutNotifierService.addLogoutCallback.yields();
 			sut.init();
-			sinon.assert.calledWithExactly(bootstrapDialog.show, {
+			sinon.assert.calledWithExactly(bootstrapDialog.openModal, {
 				message: 'You have closed your session',
 				cssClass: 'session-lost-dialog',
 				buttons: [{
