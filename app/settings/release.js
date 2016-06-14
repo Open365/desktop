@@ -98,7 +98,6 @@ define(['./urlConfig'], function (urlConfig) {
 		'URL_FORUM': "/forum",
 		'URL_ABOUT': "http://open365.io",
 		'URL_BLOG': "http://blog.open365.io",
-		'LOCALIZATION_DOWNLOAD_CLIENT_ACTIVE': false,
 		'URL_DOWNLOAD_CLIENT': "https://open365.io/download.html"
 	});
 

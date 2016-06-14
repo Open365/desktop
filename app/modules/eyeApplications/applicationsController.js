@@ -60,10 +60,8 @@ define(['settings'], function(settings) {
 					}
 				}
 
-				if (settings.LOCALIZATION_DOWNLOAD_CLIENT_ACTIVE) {
-					if (result[i].url === settings.URL_DOWNLOAD_CLIENT) {
-						result[i].url = $scope.getUrlDownloadClient();
-					}
+				if (result[i].url === settings.URL_DOWNLOAD_CLIENT) {
+					result[i].url = $scope.getUrlDownloadClient();
 				}
 			}
 		});
