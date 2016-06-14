@@ -134,7 +134,6 @@ define(['settings'], function (settings) {
 	};
 
 	SeahubWrapper.prototype.setEnvironmentLocalStorage = function () {
-		localStorage.setItem('localization_download_client_active', settings.LOCALIZATION_DOWNLOAD_CLIENT_ACTIVE);
 		localStorage.setItem('url_download_client', settings.URL_DOWNLOAD_CLIENT);
 	};
 
