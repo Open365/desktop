@@ -136,6 +136,7 @@ define([
 		console.log('VDI connection data', data);
 
 		var wsHost = data.wsHost || document.domain;
+		var wsPort = data.wsPort || 443;
 		window.DesktopBus.dispatch('netMesure.newPingTarget', wsHost);
 
 		var spiceCallback = new SpiceCallback(this.spiceClient, this.resizer);
@@ -146,7 +147,7 @@ define([
 			'callback': spiceCallback.callback,
 			'context': spiceCallback,
 			'host': wsHost,
-			'port': 443,
+			'port': wsPort,
 			'protocol': data.protocol,
 			'token': data.token,
 			'vmHost': data.host,
