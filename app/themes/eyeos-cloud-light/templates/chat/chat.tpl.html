@@ -25,9 +25,9 @@
         </div>
     <div>
         <div class="chat-inputarea">
-            <input type="submit" name="chat-send" value="{{'Send' | translate}}" ng-click="sendToChat()" class="chat-send"/>
+            <input type="submit" name="chat-send" value="{{'Send' | translate}}" ng-click="sendToChat()" class="chat-send" qa-id="send-message-button"/>
             <div class="chat-input-container">
-                <textarea maxlength="500" ng-keyup="!$event.shiftKey && $event.keyCode == 13 && sendToChat()" name="chat-text" ng-model="chatInformation.text" class="chat-input" placeholder="{{'Send a message' | translate}}">
+                <textarea maxlength="500" ng-keyup="!$event.shiftKey && $event.keyCode == 13 && sendToChat()" name="chat-text" ng-model="chatInformation.text" class="chat-input" placeholder="{{'Send a message' | translate}}" qa-id="chat-input">
 
                 </textarea>
             </div>

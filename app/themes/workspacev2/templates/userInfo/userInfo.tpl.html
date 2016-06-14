@@ -1,6 +1,6 @@
 <ul class="topbar-dropdown user-info" ng-controller="peopleGroupsController">
 	<li class="dropdown dropdown-toggle" on-toggle="toggled(open)" ng-click="onClicked($event)">
-		<a href class="item" data-block="link" id="userInfo">
+		<a href class="item" data-block="link" id="userInfo" qa-id="user-name-link">
 			<span class="user-name">{{getDisplayName(currentUser)}}</span>
 		</a>
 		<ul class="dropdown-menu menu-wrapper principal-wrapper" ng-controller="StartMenuController">
@@ -35,7 +35,7 @@
 					</ul>
 				</li>
 				<li ng-if="changePasswordActive">
-					<div id="change-password-button" class="component-list changepassword" ng-click="openChangePasswordDialog()">
+					<div id="change-password-button" qa-id="change-password-button" class="component-list changepassword" ng-click="openChangePasswordDialog()">
 						<span>{{'Password' | translate}}</span>
 					</div>
 				</li>
@@ -47,7 +47,7 @@
 				</li>
 
 				<li>
-					<div class="component-list logout" id="logout_button" ng-click="logout()">
+					<div class="component-list logout" id="logout_button" qa-id="logout-button" ng-click="logout()">
 						<span>{{'Log out' | translate}}</span>
 					</div>
 				</li>

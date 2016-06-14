@@ -5,7 +5,7 @@
         </a>
         <ul id="applications-list-menu" class="applications dropdown-menu" ng-class="topBackgroundColorBeforeClass">
             <li ng-repeat="app in apps"
-                ng-controller="ApplicationController"  class="application-item">
+                ng-controller="ApplicationController"  class="application-item" qa-id="application-{{app.appID | lowercase}}">
                 <div ng-controller="ApplicationInTabController"
                      ng-show="app.showInTab"
                      class="app {{app.appID | lowercase}}"
