@@ -86,7 +86,7 @@ define(['./urlConfig'], function (urlConfig) {
 		'FORUM_ACTIVE': true,
 		'BLOG_ACTIVE': true,
 		'VDI_FOCUS_INTEGRATION': false,
-		'VIDEOCHAT_SERVER_DOCKERIZED': true,
+		'VIDEOCHAT_SERVER_DOCKERIZED': false,
 		'CHANGE_PASSWORD_ACTIVE': true,
 		'SHOW_VIDEOCONFERENCE': true,
 		'ENABLE_USER_SEARCH': true,
