@@ -23,9 +23,10 @@ define([
     'urlConfig',
     'modules/cloud/cloudFileOpenService',
     'modules/cloud/seahubWrapper',
+    'modules/cloud/cloudTopbarController',
     'translations/eyeosTranslationModule',
     'utils/locationModule'
-], function (settings, urlConfig, CloudFileOpenService, SeahubWrapper) {
+], function (settings, urlConfig, CloudFileOpenService, SeahubWrapper, CloudTopbarController) {
     var subscriptions = {};
     window.eyeosIgnoreConfirmation = true;
 
@@ -41,23 +42,7 @@ define([
                 cloudFileOpenService.start();
                 return cloudFileOpenService;
         }])
-        .controller('topbarController', ['$scope', function ($scope) {
-            var subscriptions =[];
-
-            subscriptions['app.opened'] = window.DesktopBus.subscribe('app.opened', function (data) {
-                $scope.topborderColorClass = 'border-top-' + data.name;
-                $scope.appColorClass = 'color-' + data.name;
-                $scope.iconSvg = 'open365-logo-' + data.name;
-                $scope.topBackgroundColorBeforeClass = 'background-top-' + data.name;
-                $scope.backgroundButtonColor = 'background-button-' + data.name;
-            });
-
-            $scope.$on('$destroy', function() {
-                subscriptions.forEach(function (sub) {
-                    sub.unsubscribe();
-                });
-            });
-        }])
+        .controller('topbarController', ['$scope', CloudTopbarController])
         .controller('cloudController', ['$scope', '$sce', 'cloudFileOpenService', '$window',
             function ($scope, $sce, cloudFileOpenService, $window) {
                 var seahubWrapper = new SeahubWrapper();

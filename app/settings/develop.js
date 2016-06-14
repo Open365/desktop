@@ -86,7 +86,7 @@ define(['./urlConfig'], function (urlConfig) {
 		'FORUM_ACTIVE': true,
 		'BLOG_ACTIVE': true,
 		'VDI_FOCUS_INTEGRATION': false,
-		'VIDEOCHAT_SERVER_DOCKERIZED': true,
+		'VIDEOCHAT_SERVER_DOCKERIZED': false,
 		'CHANGE_PASSWORD_ACTIVE': true,
 		'SHOW_VIDEOCONFERENCE': true,
 		'ENABLE_USER_SEARCH': true,
@@ -98,7 +98,6 @@ define(['./urlConfig'], function (urlConfig) {
 		'URL_FORUM': "/forum",
 		'URL_ABOUT': "http://open365.io",
 		'URL_BLOG': "http://blog.open365.io",
-		'LOCALIZATION_DOWNLOAD_CLIENT_ACTIVE': false,
 		'URL_DOWNLOAD_CLIENT': "https://open365.io/download.html"
 	});
 
