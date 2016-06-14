@@ -323,6 +323,10 @@ msgid "Mail"
 msgstr "Correo"
 
 #:
+msgid "Gimp"
+msgstr "Gimp"
+
+#:
 msgid "File sync"
 msgstr "Sinc. de ficheros"
 

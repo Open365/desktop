@@ -1,28 +1,30 @@
 #!/bin/sh
 set -e
 set -u
+set -x
 
 SETTINGS=dist/scripts/settingsStatic.*
-SETTINGS_TO_IMPORT=(
-    "VDI_RECONNECTION_RETRY_TIME"
-    "VDI_RECONNECTION_FREEZE_TIME"
-    "VDI_RECONNECTION_CANCEL_TIME"
-    "VDI_RECONNECTION_FREEZE"
-    "EYETHEME_NAME"
-    "SHOW_VIDEOCONFERENCE"
-    "CHECK_ACTIVITY_INTERVAL"
-    "EYEOS_DISABLE_ANALYTICS"
-    "SUPPORT_HIGH_DPI"
-    "LOCALIZATION_DOWNLOAD_CLIENT_ACTIVE"
-)
+SETTINGS_TO_IMPORT="
+    VDI_RECONNECTION_RETRY_TIME
+    VDI_RECONNECTION_FREEZE_TIME
+    VDI_RECONNECTION_CANCEL_TIME
+    VDI_RECONNECTION_FREEZE
+    EYETHEME_NAME
+    SHOW_VIDEOCONFERENCE
+    CHECK_ACTIVITY_INTERVAL
+    EYEOS_DISABLE_ANALYTICS
+    SUPPORT_HIGH_DPI
+    LOCALIZATION_DOWNLOAD_CLIENT_ACTIVE
+"
+
 
 config_settings() {
 	local variable="$1"
-	local value="${!variable:-}"
+	local value
+	eval value=\${$variable:-}
 
 	if [ -n "$value" ]; then
-		re='^[0-9]+$'
-		if ! [[ "$value" =~ $re ]] ; then
+		if ! echo $value | grep -q '^[0-9]\+$' ; then
 			if [ "$value" != 'true' ] && [ "$value" != 'false' ];then
 				value="'$value'"
 			fi
@@ -38,9 +40,12 @@ config_settings() {
 	fi
 }
 
-for i in "${SETTINGS_TO_IMPORT[@]}"
+for i in ${SETTINGS_TO_IMPORT}
 do
 	config_settings "$i"
 done
 
-sleep infinity
+while true
+do
+	sleep 9999d
+done

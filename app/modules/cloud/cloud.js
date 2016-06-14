@@ -23,9 +23,10 @@ define([
     'urlConfig',
     'modules/cloud/cloudFileOpenService',
     'modules/cloud/seahubWrapper',
+    'modules/cloud/cloudTopbarController',
     'translations/eyeosTranslationModule',
     'utils/locationModule'
-], function (settings, urlConfig, CloudFileOpenService, SeahubWrapper) {
+], function (settings, urlConfig, CloudFileOpenService, SeahubWrapper, CloudTopbarController) {
     var subscriptions = {};
     window.eyeosIgnoreConfirmation = true;
 
@@ -41,6 +42,7 @@ define([
                 cloudFileOpenService.start();
                 return cloudFileOpenService;
         }])
+        .controller('topbarController', ['$scope', CloudTopbarController])
         .controller('cloudController', ['$scope', '$sce', 'cloudFileOpenService', '$window',
             function ($scope, $sce, cloudFileOpenService, $window) {
                 var seahubWrapper = new SeahubWrapper();
@@ -61,6 +63,7 @@ define([
                 $scope.showLoading = true;
                 $scope.showErrorMessage = false;
                 $scope.showLostActivity = false;
+                $scope.iconSvg = 'open365-logo-home';
 
 
                 document.title = "Open365";
@@ -78,7 +81,8 @@ define([
                         mail: "Mail",
                         calc: "Spreadsheet",
                         presentation: "Presentation",
-                        writer: "Writer"
+                        writer: "Writer",
+                        gimp: "Gimp"
                     };
                     document.title = appTitle[appNameWithoutFilePath] + " - Open365";
                 }

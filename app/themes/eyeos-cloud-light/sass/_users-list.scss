@@ -1,0 +1,90 @@
+
+// * / 1. $Button show users
+// * -----------------------
+// * /
+
+.show-users{
+	@include addon-btn(
+		$icon-users-char,
+		$c-btn-bg,
+		$c-dockicon,
+		$c-user-hover,
+		$c-user-active,
+		$c-user-tooltip,
+		$itemPadding,
+		$dockWidth,
+		$btn-height: $dockWidth,
+		$icon-size: 40,
+		$icon-lh: 1.32em
+	);
+	color: #fff;
+	cursor:pointer;
+
+	&::before{
+		transition: all .3s ease-out;
+		line-height: 0.9em;
+	}
+
+	&:hover{
+		&::before{
+			padding-left: 0em;
+		}
+	}
+}
+
+
+.show-users.active::after, .show-users.activate::after {
+	display: none;
+}
+
+.show-users.active::before, .show-users.activate::before {
+	color: $c-background;
+}
+
+.show-users .tooltip-flag {
+	display:none;
+}
+
+.title__users{
+	margin: 0;
+	@include fz(24);
+	font-weight: 600;
+
+	&::before{
+		@include pg-icon;
+		box-shadow: .8em 0 0 #4BC8E7, 1.2em 0 0 #7FDFF7, 1.6em 0 0 #A5E6F6;
+	}
+}
+
+
+// * / 2. $Container
+// * -----------------------
+// * /
+
+
+.users-list-container{
+	min-width: 18em !important;
+	width: 25% !important;
+	max-width: 22rem;
+	padding: 0;
+	box-shadow: -2px 0 4px rgba(0, 0, 0, 0.2) !important;
+	border: 0;
+
+	.user-list-title-wrapper{
+		padding: 2em 2em 1.2em 2em;
+		background-color: #eaebf1;
+		border-bottom: solid 1px #D5D7E4;
+	}
+
+	input {
+		width: 100%;
+		margin-top: 0.5em;
+	}
+}
+
+	.people-list{
+	}
+
+	.people-item__online{
+		cursor: pointer;
+	}

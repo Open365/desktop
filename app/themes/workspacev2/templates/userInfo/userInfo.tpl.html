@@ -1,7 +1,6 @@
 <ul class="topbar-dropdown user-info" ng-controller="peopleGroupsController">
 	<li class="dropdown dropdown-toggle" on-toggle="toggled(open)" ng-click="onClicked($event)">
 		<a href class="item" data-block="link" id="userInfo">
-			<span class="user-avatar"><img src="/images/avatar2.png" alt=""></span>
 			<span class="user-name">{{getDisplayName(currentUser)}}</span>
 		</a>
 		<ul class="dropdown-menu menu-wrapper principal-wrapper" ng-controller="StartMenuController">
@@ -13,22 +12,22 @@
 
 					<ul class="menu-wrapper submenu-wrapper">
 						<li ng-if="feedbackActive">
-							<div class="component-list feedback" ng-click="feedback()">
+							<div id="feedback-button" class="component-list feedback" ng-click="feedback()">
 								<span>{{'Feedback' | translate}}</span>
 							</div>
 						</li>
 						<li ng-if="faqActive">
-							<div class="component-list faq" ng-click="faq()">
+							<div id="faq-button" class="component-list faq" ng-click="faq()">
 								<span>{{'FAQ' | translate}}</span>
 							</div>
 						</li>
 						<li ng-if="forumActive">
-							<div class="component-list forum" ng-click="forum()">
+							<div id="forum-button" class="component-list forum" ng-click="forum()">
 								<span>{{'Forum' | translate}}</span>
 							</div>
 						</li>
 						<li ng-if="blogActive">
-							<div class="component-list blog" ng-click="blog()">
+							<div id="blog-button" class="component-list blog" ng-click="blog()">
 								<span>{{'Blog' | translate}}</span>
 							</div>
 						</li>
@@ -36,13 +35,13 @@
 					</ul>
 				</li>
 				<li ng-if="changePasswordActive">
-					<div class="component-list changepassword" ng-click="openChangePasswordDialog()">
+					<div id="change-password-button" class="component-list changepassword" ng-click="openChangePasswordDialog()">
 						<span>{{'Password' | translate}}</span>
 					</div>
 				</li>
 
 				<li>
-					<div class="component-list about" ng-click="about()">
+					<div id="about-button" class="component-list about" ng-click="about()">
 						<span>{{'About' | translate}}</span>
 					</div>
 				</li>

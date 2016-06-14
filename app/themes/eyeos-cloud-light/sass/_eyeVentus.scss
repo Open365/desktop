@@ -1,0 +1,143 @@
+.wm-space {
+	z-index: 1;
+	cursor: default;
+
+	.wm-window {
+		opacity: 1;
+		box-shadow: 0 1px 7px -1px rgba(0, 0, 0, 0.4);
+		border: 0px none;
+		border-top: 4px solid $c-background;
+
+
+		.wm-window-box {
+			header.wm-window-title {
+				@extend %window-title !optional;
+				text-align: left;
+				height: 46px;
+				padding: 0 7px 0 15px;
+				border-bottom: 1px solid #e1e1e7;
+				background-color: #fff;
+				h1{
+					color: #404455;
+					font-family: $t-text;
+					@include fz(18px);
+					font-weight: 600;
+					padding: 0;
+					width: calc(100% - 84px);
+					max-width: calc(100% - 84px);
+				}
+				.wm-button-group{
+					padding: 0;
+					align-items: right;
+				}
+
+				button.wm-close {
+					opacity: 1 !important;
+					@include ventus-icon($bg: none, $width: 1.7em, $height: 2em, $margin: 0, $aligment: center, $char: \0062, $icon-size: 30, $color: #7F8491, $lh: .7);
+			
+					&:hover::before {
+						opacity: .7;
+					}
+				}
+
+				.wm-detach{
+					opacity: 1 !important;
+					@include ventus-icon($bg: none, $width: 1.7em, $height: 2em, $margin: 0, $aligment: center, $char: \00ca, $icon-size: 30, $color: #7F8491, $lh: .7);
+
+					&:hover::before {
+						opacity: .7;
+					}
+				}
+
+				button.wm-maximize {
+					opacity: 1 !important;
+					@include ventus-icon($bg: none, $width: 1.8em, $height: 2em, $margin: 0, $aligment: center, $char: \0061, $icon-size: 30, $color:  #7F8491, $lh: .7);
+
+					&:hover::before {
+						opacity: .7;
+					}
+					
+				}
+				button.wm-minimize {
+					background: url(../images/window/minimizeInactive.png) no-repeat 1px 1px;
+					&.hover {
+						background: url(../images/window/minimizeActive.png) no-repeat 1px 1px;
+					}
+				}
+
+		
+
+				img{
+					display: none;
+				}
+			}
+
+			.wm-window-title-text{
+				display: block;
+				width: 100%;
+				margin-top: 0;
+				text-align: left;
+			}
+			section.wm-content {
+				overflow: hidden;
+				display: flex;
+				
+				.msg-area {
+					position: absolute;
+					top: 36px;
+
+					background: rgba(0, 0, 0, .8);
+					width: 100%;
+					height: calc(100% - 36px);
+
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+
+					z-index: 1;
+
+					.msg-text {
+						color: #C7C7C7;
+						font-size: 18px;
+						line-height: 1.4;
+						word-wrap: break-word;
+					}
+
+					.loading-spinner {
+						background: url(../images/icons/loader.gif) no-repeat;
+						height: 150px;
+						width: 150px;
+					}
+
+				}
+			}
+		}
+	}
+	
+	.wm-window.inactive {
+
+		header.wm-window-title {
+			h1 {
+				color: #6f6f6f;
+				font-weight: normal;
+			}
+		}
+	}
+
+	// Deleting border by div's
+
+	.wm-window-border.top,  .wm-window-border.bottom, .wm-window-border.right, .wm-window-border.left {
+		display: none;
+	}
+
+	// Changing style for view when moving ventus window
+
+	.mover-container{
+		border: none;
+		background:rgba(255,255,255,.5);
+		border-radius: 4px;
+		box-shadow: 0 1px 7px -1px rgba(0, 0, 0, 0.4);
+
+	}
+}
+

@@ -56,7 +56,7 @@ define(['./urlConfig'], function (urlConfig) {
 		'CONNECT_TO_BUS': true,
 		'CONNECT_TO_CHAT': true,
 		'CHAT_HOST': 'localhost',
-		'EYETHEME_NAME': 'eyeos-cloud',
+		'EYETHEME_NAME': 'eyeos-cloud-light',
 		'FALLBACK_PLATFORM_LANG': 'en',
 		'SHOULD_GROUP_DESKTOP_ICONS': false,
 		'EYETHEME_SASS_MODE': 'server', // client or server

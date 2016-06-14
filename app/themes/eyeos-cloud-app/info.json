@@ -15,10 +15,11 @@
   },
   "modules": ["cloud", "cloudApp"],
   "hooks": {
+    "startMenu": "topbar/startMenu.tpl.html",
     "welcome": "welcome/welcome.tpl.html",
     "topbar": "topbar/topbar.tpl.html"
   },
-  "extends": "eyeos-cloud",
+  "extends": "eyeos-cloud-light",
   "sass": [
     "app_main.scss",
     "_loading.scss"

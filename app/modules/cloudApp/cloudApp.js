@@ -44,6 +44,8 @@ define([
                 var openedApp = appName[0].charAt(0).toUpperCase() + appName[0].slice(1);
                 window.eyeosIgnoreConfirmation = !(openedApp === 'Mail');
 
+                window.DesktopBus.dispatch('app.opened', {name: appNameFile});
+
                 var spiceConnector = new SpiceConnector(encodeURIComponent(urlConfig.app), eyeosVdiReconnectionService);
                 spiceConnector.connect();
 

@@ -1,0 +1,10 @@
+{
+  "name": "mail",
+  "templates": {
+    "button": [],
+    "content": []
+  },
+  "modules": ["logoutNotifier", "dialogs"],
+  "sass": [],
+  "hooks": {}
+}

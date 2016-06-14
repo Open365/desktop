@@ -323,6 +323,10 @@ msgid "Mail"
 msgstr "Xxxx"
 
 #:
+msgid "Gimp"
+msgstr "Xxxx"
+
+#:
 msgid "File sync"
 msgstr "Xxxx Xxxx"
 

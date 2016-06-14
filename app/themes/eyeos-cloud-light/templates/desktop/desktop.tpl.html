@@ -1,0 +1,52 @@
+<div id="desktop" class="workspace-container" ng-controller="cloudController">
+	<div id="topbar-light" ng-include="hooks.topbar" class="topbar topbar-desktop" ng-class="topborderColorClass" ng-controller="topbarController"></div>
+	<div ng-include="hooks.changePassword"></div>
+	<div class="content-wrapper">
+		<div id="desktop-content" on-resize="onDesktopResize" on-unload="unloadDesktop"  on-before-unload="unloadConfirmMsg"
+			 class="workspace-content">
+			<div ng-include="hooks.peopleGroups"></div>
+			<div ng-include="hooks.usersList"></div>
+			<div ng-repeat="appWindow in windows">
+				<eye-window
+						on-remove="closeApp(appWindow)"
+						url="{{appWindow.url}}"
+						title="{{appWindow.name}}"
+						img-url="{{appWindow.smallIcon}}"
+						settings="appWindow.settings"
+						app-data="appWindow"
+						type="{{appWindow.type}}">
+				</eye-window>
+			</div>
+
+
+			<div ng-controller="LoadingListController">
+				<div ng-repeat="loadingWindow in loadingWindows track by $index">
+					<eye-window
+							on-remove="removeLoading(loadingWindow)"
+							url="{{loadingWindow.url}}"
+							title="{{loadingWindow.name}}"
+							img-url="{{loadingWindow.smallIcon}}"
+							settings="loadingWindow.settings"
+							app-data="loadingWindow"
+							type="{{loadingWindow.type}}">
+					</eye-window>
+				</div>
+			</div>
+
+			<div ng-include="hooks.welcome" class="welcome-wrapper" style="overflow:hidden"></div>
+
+		</div>
+	</div>
+
+	<div ng-repeat="alert in alerts track by $index">
+		<eye-alert
+				title="{{alert.title}}"
+				msg="{{alert.msg}}"
+				icon="images/icons/alert.png"
+				yes="alert.ok()">
+		</eye-alert>
+	</div>
+</div>
+</div>
+<div id="invisibleItems" style="display: none;"></div>
+<div data-block="addonContent" ng-repeat="contentData in addons.content | filter : 'feedback'"  ng-include="contentData"></div>

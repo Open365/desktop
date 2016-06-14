@@ -1,0 +1,438 @@
+//  $VARIABLES FOR EYEOS PYMES 3
+
+// * Expand parent styles.
+
+$full-styles: true;
+
+// * 1. $Colors 
+// * 2. $Background settings
+// * 3. $Topbar settings
+// * 4. $Desktop content settings
+// * 5. $Logo settings
+// * 6. $Topbar button colors
+// * 7. $Fonts settings
+// * 8. $Applications menu
+
+
+
+// */ 1. $Colors 
+// * ---------------------------
+// */
+
+$c-light: #EFEFF4; // Light grey
+$c-dark: #363643;  // Dark grey
+$c-blue-grey: #858fa9; // Blue grey
+$c-light-grey: #cbd2de; // Light grey
+$c-medium-grey: #515668; // Medium grey
+$c-turquoise: #53D1ED; // Turquoise
+$c-background: $c-turquoise; // blue
+
+$c-right-1: #525266; // First color button from the right of the toolbar -> Grey
+$c-right-2: #494958; // Second color button from the right of the toolbar -> Grey
+$c-right-3: #515162; // Third color button from the right of the toolbar -> Grey
+
+$c-white:           #fff;
+$c-grey:           #36373C;
+
+$blue: #639aea;
+$medium-blue: #597bd2;
+$dark-blue: #3863E3;
+
+$c-maincolor: $c-turquoise;
+$c-writer-bg: #4A90E2;
+$c-calc-bg: #8AE17C;
+$c-presentation-bg: #F6510B;
+$c-mail-bg: #FF9F00;
+$c-gimp-bg: #AA6C39;
+
+$c-warning-msg: #F5A623;
+$c-warning-dark: #dc9500;
+$c-warning-light: #dfab6e;
+
+$c-tooltip-bg: rgba(35,35,45, .86);
+$c-tooltip: #ACB1BF;
+$c-box-shadow-topbar: #C5CAD5;
+
+
+
+
+$c-topbar-items: $c-light;
+
+$c-user-color: $c-white;
+
+$c-text: $c-grey;
+
+$apps-bg: $c-dark;
+
+$c-welc-title: $c-blue-grey;
+$c-welc-text: $c-medium-grey;
+$c-welc-btns: $medium-blue;
+
+
+
+// */ 2. $Background settings
+// * -----------------------------
+// * Custom background variables for desktop-mixin
+// * $bg-color:  Background-color
+// * $bg-image:  Background-image
+// */
+
+$desktop-bgc: #F5F6F9;
+
+// HD desktops wallpaper
+$desktop-bgi-grandpa: '';
+// Desktops wallpaper
+$desktop-bgi-papa: '';
+// Tablets wallpaper
+$desktop-bgi-mama: '';
+//Mobiles wallpaper
+$desktop-bgi-baby: '';
+
+$desktop-bgpos: 'bottom right';
+
+$home-img: '/themes/eyeos-cloud-light/images/welcome-impress.jpg';
+
+
+// */ 3. $Topbar settings
+//* -----------------------------
+// * Custom topbar variables for topbar-mixin
+// * $topbarHeight: Height for the topbar
+// * $topbar-bg:  Color for topbar
+// * $shadow:  Values for shadows
+// */
+
+$is-dock: false;
+
+$topbarHeight: 50px;
+$topbarWidth: 100%;
+$topbar-bg: #282934;
+$shadow: '';
+$background-top-bar-light: #fff;
+$color-top-bar-light: #505667;
+$c-symbol: $color-top-bar-light;
+
+$gap: .5; //apply to the children elements
+
+$img-width: 22px;
+$img-height: 22px;
+
+
+// If is flex-direction row will be the width, and for flex-direction column will be the height
+$logo-max: 90px;
+
+	//* Toolbar settings
+
+	$align-content: flex-end;
+	$buttonHeight: $topbarHeight;
+	$addonsHeight: $topbarHeight - 5px;
+
+$app-height: 100%;
+
+
+// */ 4. $popupTopbar settings
+//* -----------------------------
+// */
+
+$popupTopbarColor: $c-topbar-items;
+$popupTopbarColorDark: #acb1be;
+$popupTopbarHeight: 30px;
+$popupTopbarBackground: #373c49;
+$popupToarbarShadow: '';
+
+// logo
+$popup-logo-background: rgba(0,0,0,.17);
+$popup-logo-max: 45px;
+$popup-logo-height: 21px;
+$popup-logo-width: 21px;
+
+//icon apps
+$color-icon-app-light: #53D1ED;
+
+//user
+$userAvatarSize: 22px;
+// Line height calc
+$height: $topbarHeight - 5px;
+$userInfo-height: $height;
+$userPadding: 0 .6em 0 1em;
+$userMargin: '';
+
+//latency meter
+$popupTopbarLatencyMeterSize: 22px;
+
+//group button
+$icon-group-button: '\00EB';
+
+
+// * / 5. $Dock
+// * -----------------------
+// * /
+
+$dockWidth: 45px;
+
+$topbar-bg: #363643;
+$c-dockicon: #acb1be;
+
+$dockShadow:  inset -2px 0 3px rgba(0, 0, 0, .3), 1px 0 0 rgba(255, 255, 255, 0.2);
+
+$itemPadding: 0;
+$tooltipPadding: 12px 18px 0 $dockWidth + 10px;
+
+$iconboard-tTransform: '';
+
+
+// */ 6. $Desktop content settings
+//* -----------------------------
+// * Custom desktop content variables for desktop-size mixin
+// * $contentHeight: Height for desktop content
+// * $contentWidth-bg:  Width for desktop content
+// */
+
+$contentHeight: calc(100% - #{$topbarHeight});
+$contentWidth: 100%;
+
+
+
+// */ 7. $Logo settings
+//* -----------------------------
+// * Custom topbar variables for topbar-mixin
+// * $topbarHeight: Height for the topbar
+// * $topbar-bg:  Color for topbar
+// * $shadow:  Values for shadows
+// */
+
+$logo-width: 150px;
+$logo-height: $topbarHeight - 9px;
+$logo-margin: 2px 0 0;
+
+$outer-circle:  $c-maincolor;
+$inner-circle:  $c-white;
+$text-logo: $c-white;
+
+
+
+
+// */ 8. $Topbar button colors
+//* -----------------------------
+// * Colors for buttons in topbar
+// */
+
+$c-conectivity: $c-right-2;
+$c-user-profile: $c-right-3;
+
+
+// */ 7. $Fonts settings
+//* -----------------------------
+// */
+
+$t-text: 'source-sans', sans-serif;
+$t-size: 16;
+
+$t-icon: 'eyeos-symbols';
+
+// */ 9. $Media queries 
+//* -----------------------------
+// */
+$grandpa-bear: 1440px;
+$papa-bear: 1024px;
+$mama-bear: 768px;
+$baby-bear: 480px;
+
+
+
+// * / 10. $Transitions
+// * -----------------------
+// * /
+
+$linkTransitions: all .3s ease-out;
+
+
+//=====================================================================
+
+// $MIXINS
+
+// * 1. $Desktop background. 
+// * 2. $Desktop size. 
+// * 3. $Topbar settings
+
+
+// */ 1. $Desktop background
+//* -----------------------------
+// * Element affected: #desktop
+// * Modify values at 2. $Background settings
+// */
+
+@mixin desktop-mixin($bg-color: $desktop-bgc) {
+	background-color: $bg-color;
+	background-position:  #{$desktop-bgpos};
+
+	@include mobile{
+		background-image: url($desktop-bgi-baby) ;
+	}
+	@include tablet{
+		background-image: url($desktop-bgi-mama);
+	}
+	@include desktop{
+		background-image: url($desktop-bgi-papa) ;
+	}
+	@include hd-desktop{
+		background-image: url($desktop-bgi-grandpa);
+	}	
+
+	@if $is-dock == true{
+		display: flex;
+	}
+
+}
+
+// */ 2. $Desktop size  
+//* -----------------------------
+// * Element affected:  #desktop-content 
+// * Modify values at  4. $Desktop content settings
+// */
+
+@mixin desktop-size($width:$contentWidth, $height: $contentHeight) {
+	width: $width;
+}
+
+
+// */ 3. $Topbar settings
+//* -----------------------------
+// * Element affected:  .topbar
+// * Modify values at  3. $Topbar settings
+// */
+
+@mixin topbar-mixin($bg:  $topbar-bg, $shadow: $shadow, $size:$topbarHeight) {
+	
+	background: $bg;
+	box-shadow:$shadow;
+	height: $size;
+	display: flex;
+	flex-wrap:wrap;
+	position: relative;
+	z-index: 2;
+	border-top: 5px solid $c-maincolor;
+	
+	@if $is-dock == true{
+		width: $topbarWidth;
+		flex-direction: column;
+	}
+}
+
+
+
+// */ 4. $Logo settings
+//* -----------------------------
+// * Element affected:  .brand-container
+// * Modify values at  3. $Topbar settings
+// */
+
+@mixin brand-size($size: $logo-max) {
+	flex: 0 0 $logo-max;
+	margin: 0 20px 0 22px;
+
+}
+
+@mixin popup-brand-size($size: $logo-max) {
+	flex: 0 0 $popup-logo-max;
+
+}
+
+@mixin popup-brand-extra($bg: $popup-logo-background ){
+	background: $bg;
+	border-right: 1px solid rgba(17,18,19,.19);
+	position: relative;
+	text-align: center;
+	&:before{
+		content: " ";
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		left: $popup-logo-max;
+		bottom: 0;
+		border-right: 1px solid rgba(255,255,255,.31);
+		opacity: .19;
+	}
+}
+
+// */ 5. $Toolbar group settings
+//* -----------------------------
+// * Element affected:  .toolbar-group
+// * Modify values at  3. $Topbar settings
+// */
+
+@mixin toolbar-flex($content-dir: $align-content) {
+
+	@if $is-dock == true{
+		flex-direction: column;
+	}@else{
+		flex-direction: row;
+	}
+
+	-webkit-justify-content: $align-content;
+	justify-content:$align-content;
+}
+
+
+
+// * / 7. $Ventus icon
+// * -----------------------
+// * /
+
+
+@mixin ventus-icon($bg, $width, $height, $margin, $aligment, $char, $icon-size, $color, $lh){
+	@include reset-btn($bg);
+	width: $width;
+	height: $height;
+	margin: $margin;
+	text-align: $aligment;
+
+	&::before{
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		@include icon($char, $icon-size, $color, $lh);
+	}
+}
+
+
+// * / X. $Buttons style
+// * -----------------------
+// * /
+@mixin app-view{
+	border-right: 1px solid rgba(23,24,29, .52);
+	box-shadow: 1px 0 0 rgba(255,255,255,.06);
+}
+
+// People and groups (chat)
+@mixin pg-icon{
+	content: '';
+	width: .6em;
+	height: .6em;
+	margin-left: -.7em;
+	display: inline-block;
+	background-color: transparent;
+	border-radius: 50%;
+	box-shadow: .8em 0 0  #4BC8E7, 1.6em 0 0 #A5E6F6, 1.15em 0 0 #7FDFF7 ;
+	margin-right: 1.9em;
+}
+
+// * / 8. $Applications menu
+// * -----------------------
+// * /
+$posTop: 50px;
+$posLeft: -12px;
+$appsWidth: 30rem;
+$app-width: 10rem;
+$title-color: #fff;
+
+// * / User info vars
+$c-icon-hover: #fff;
+
+$icon-users-char: '\00cf';
+$c-btn-bg: transparent;
+$c-user-hover: #ACB1BF;
+$c-user-active: #fff;
+$c-user-tooltip: #ACB1BF;
+$icon-size: 40;
+$icon-lh: 1.32em;

@@ -1,0 +1,82 @@
+
+// * / 1. $Chat tools
+// * -----------------------
+// * /
+
+.chat-window{
+	background:#F5F6F7;
+}
+
+.chat-inputarea{
+	height: 50px;
+}
+
+.chat-input{
+	height: 50px;
+}
+
+.chat-input-container {
+	height: 50px;
+}
+
+.chat-send{
+	background: $c-background;
+	font-size: 16px;
+	&:hover
+	{
+		background: #2EACCB;
+	}
+
+}
+
+.chat-tools{
+	background:darken(#6C7BD2, 5%);
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 2.6em;
+
+		&:hover{
+			background:darken(#6C7BD2, 9%);
+
+		}
+
+}
+
+.chat-messages{
+
+	&__in{
+		&::after{
+			background:#7fDFF7;
+		}
+	}
+}
+
+.chat-videochat-container {
+	height:calc(100% - 50px);
+}
+
+.user-item{
+
+	&::before{
+		background:#7FDFF7;
+		box-shadow: 0 0 0 1px #A5E6F6;
+	}
+
+	&__offline{
+
+
+		&::before{
+			width: 0.8em;
+			height: 0.8em;
+			background:#858FA9;
+			box-shadow: 0 0 0 1px #C8CDD8;
+		}
+
+	}
+
+	&::after{
+		border-right: .6rem solid $c-background;
+	}
+}

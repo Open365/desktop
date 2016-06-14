@@ -36,6 +36,18 @@
 		opacity: 1;
 	}
 }
+
+.modal_mode_on {
+	.modal-backdrop {
+		display: block;
+		transform: translate(0%, 0);
+		transition: none;
+		&.in {
+			opacity: 0.5;
+			transform: translate(0, 0);
+		}
+	}
+}
 .modal-dialog {
 	margin: 0;
 	font-family: $t-text;
@@ -141,7 +153,7 @@
 			.main-action{
 				@include reset-btn(transparent !important, $border: 2px solid #6C6F72 !important, $color: #6C6F72 !important);
 				border-radius: 0 !important;
-				margin: -.3em 0 1em 0 !important;				
+				margin: -.3em 0 1em 0 !important;
 				transition: all .3s ease-out;
 				padding: .3em 1.5em;
 
@@ -179,10 +191,10 @@
 		.bootstrap-dialog-body{
 			width: 100%;
 		}
-	
+
 // Dropdown menu
 
-.dropdown {	
+.dropdown {
 	position: relative;
 }
 
@@ -198,7 +210,7 @@
 	margin: 0;
 	min-width: 12em;
 	padding: 0;
-	right: -1.9em;
+	right: -10px;
 }
 
 .principal-wrapper{
@@ -345,4 +357,32 @@
 .support-menu li ul li ul {
 	left: 0px;
 	top: 0px;
+}
+
+.session-lost-dialog.fade.in {
+	transform: translate(-50%, -100%);
+	top: 50%;
+	transition: none;
+
+	.btn-primary {
+		color: #fff;
+		background-color: #f5a623;
+		border-color: #f5a623;
+		margin-bottom: 20px;
+		border-radius: 0;
+		&:hover {
+			background-color: darken(#f5a623, 7%);
+			border-color: darken(#f5a623, 7%);
+
+		}
+	}
+
+	.bootstrap-dialog-message {
+		transition: none;
+		margin-top: 10px;
+		&::before{
+			transition: none;
+			color: #f5a623;
+		}
+	}
 }
