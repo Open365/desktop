@@ -40,13 +40,13 @@
 		content: ' ';
 		position: absolute;
 		width: calc(100% + 2px);
-		background: #4BC8E7;
 		z-index: 2;
 		top: -1px;
 		-webkit-transform: translateX(-100%);
 		transform: none;
 		height: .5em;
 		left: -1px;
+		@include  top-element-multicolor();
 	}
 
 	&::after {

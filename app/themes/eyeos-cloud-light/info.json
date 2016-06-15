@@ -27,6 +27,7 @@
   },
   "extends": "workspacev2",
   "sass": [
+    "_mixins.scss",
     "_variables.scss",
     "_chat.scss",
     "_welcome.scss",
@@ -38,6 +39,7 @@
     "_users-list.scss",
     "_topbar.scss",
     "_modal.scss",
-    "_changePassword.scss"
+    "_changePassword.scss",
+    "_userActivity.scss"
   ]
 }

@@ -310,7 +310,6 @@ $linkTransitions: all .3s ease-out;
 	flex-wrap:wrap;
 	position: relative;
 	z-index: 2;
-	border-top: 5px solid $c-maincolor;
 	
 	@if $is-dock == true{
 		width: $topbarWidth;
