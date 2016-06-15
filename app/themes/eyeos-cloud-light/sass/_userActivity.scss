@@ -1,0 +1,87 @@
+.userActivity {
+
+}
+
+.userActivity-overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.userActivity-mainForm {
+  width: 840px;
+  position:absolute;
+  top:50%;
+  left:50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding-top: 7px;
+  @include  top-element-multicolor();
+}
+
+.userActivity-mainFormIn {
+  background-color: white;
+  padding: 40px 50px 50px 50px;
+  margin: 0;
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.userActivity-mainFormIn IMG {
+  margin: 15px 0 30px 0;
+}
+
+.userActivity-mainFormIn h1 {
+  font-family: $t-text;
+  font-size: 34px;
+  color: #404455;  
+  font-weight: 300;
+  margin: 0 0 0 0;
+}
+
+.userActivity-mainFormIn h2 {
+  font-family: $t-text;
+  font-size: 19px;
+  color: #858FA9;
+  font-weight: 300;
+  margin: 0;
+}
+
+.btn-change {
+  background: #DBE0E8;
+  border: none;
+  color: $c-white;
+  transition: all .3s ease-out;
+  text-align: center;
+  bottom: 0;
+  padding: 9px 25px 9px 25px;
+  margin: 20px 0 0 0;
+  font-size: 14px;
+  color: #fff;
+
+  &:focus{
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-change-active {
+  background: $c-background;
+  font-size:26px;
+
+  &:hover{
+    background: #85ECD5;
+  }
+}
+
+.userActivity-submit {
+  padding: 15px 0px 0px 0px;
+}

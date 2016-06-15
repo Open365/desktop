@@ -1,0 +1,28 @@
+//  $MIXINS FOR  STYLE COMMONS 
+
+
+// * / 1. $dock-bar hover
+// * -----------------------
+// * /
+// 
+// 
+
+@mixin top-element-multicolor() {
+	/* IE10+ */
+	background-image: -ms-linear-gradient(left, #1FD8DC 0%, #1FD8DC 6.66%, #BFEF91 6.66%, #BFEF91 13.32%, #5FD5C2 13.32%, #5FD5C2 19.98%, #106DC3 19.98%, #106DC3 26.64%, #19D3DB 26.64%, #19D3DB 33.3%, #83DEC4 33.3%, #83DEC4 39.96%, #34BEBE 39.96%, #34BEBE 46.62%, #BFEF91 46.62%, #BFEF91 53.28%, #1FD8DC 53.28%, #1FD8DC 59.94%, #4073D2 59.94%, #4073D2 66.6%, #BFEF91 66.6%, #BFEF91 73.26%, #08A7BB 73.26%, #08A7BB 79.92%, #29D7DD 79.92%, #29D7DD 86.58%, #4179D4 86.58%, #4179D4 93.24%, #AAEBAF 93.24%, #AAEBAF 100%);
+
+	/* Mozilla Firefox */
+	background-image: -moz-linear-gradient(left, #1FD8DC 0%, #1FD8DC 6.66%, #BFEF91 6.66%, #BFEF91 13.32%, #5FD5C2 13.32%, #5FD5C2 19.98%, #106DC3 19.98%, #106DC3 26.64%, #19D3DB 26.64%, #19D3DB 33.3%, #83DEC4 33.3%, #83DEC4 39.96%, #34BEBE 39.96%, #34BEBE 46.62%, #BFEF91 46.62%, #BFEF91 53.28%, #1FD8DC 53.28%, #1FD8DC 59.94%, #4073D2 59.94%, #4073D2 66.6%, #BFEF91 66.6%, #BFEF91 73.26%, #08A7BB 73.26%, #08A7BB 79.92%, #29D7DD 79.92%, #29D7DD 86.58%, #4179D4 86.58%, #4179D4 93.24%, #AAEBAF 93.24%, #AAEBAF 100%);
+
+	/* Opera */
+	background-image: -o-linear-gradient(left, #1FD8DC 0%, #1FD8DC 6.66%, #BFEF91 6.66%, #BFEF91 13.32%, #5FD5C2 13.32%, #5FD5C2 19.98%, #106DC3 19.98%, #106DC3 26.64%, #19D3DB 26.64%, #19D3DB 33.3%, #83DEC4 33.3%, #83DEC4 39.96%, #34BEBE 39.96%, #34BEBE 46.62%, #BFEF91 46.62%, #BFEF91 53.28%, #1FD8DC 53.28%, #1FD8DC 59.94%, #4073D2 59.94%, #4073D2 66.6%, #BFEF91 66.6%, #BFEF91 73.26%, #08A7BB 73.26%, #08A7BB 79.92%, #29D7DD 79.92%, #29D7DD 86.58%, #4179D4 86.58%, #4179D4 93.24%, #AAEBAF 93.24%, #AAEBAF 100%);
+
+	/* Webkit (Safari/Chrome 10) */
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #1FD8DC), color-stop(6.66, #1FD8DC), color-stop(6.66, #BFEF91), color-stop(13.32, #BFEF91), color-stop(13.32, #5FD5C2), color-stop(19.98, #5FD5C2), color-stop(19.98, #106DC3), color-stop(26.64, #106DC3), color-stop(26.64, #19D3DB), color-stop(33.3, #19D3DB), color-stop(33.3, #83DEC4), color-stop(39.96, #83DEC4), color-stop(39.96, #34BEBE), color-stop(46.62, #34BEBE), color-stop(46.62, #BFEF91), color-stop(53.28, #BFEF91), color-stop(53.28, #1FD8DC), color-stop(59.94, #1FD8DC), color-stop(59.94, #4073D2), color-stop(66.6, #4073D2), color-stop(66.6, #BFEF91), color-stop(73.26, #BFEF91), color-stop(73.26, #08A7BB), color-stop(79.92, #08A7BB), color-stop(79.92, #29D7DD), color-stop(86.58, #29D7DD), color-stop(86.58, #4179D4), color-stop(93.24, #4179D4), color-stop(93.24, #AAEBAF), color-stop(100, #AAEBAF));
+
+	/* Webkit (Chrome 11+) */
+	background-image: -webkit-linear-gradient(left, #1FD8DC 0%, #1FD8DC 6.66%, #BFEF91 6.66%, #BFEF91 13.32%, #5FD5C2 13.32%, #5FD5C2 19.98%, #106DC3 19.98%, #106DC3 26.64%, #19D3DB 26.64%, #19D3DB 33.3%, #83DEC4 33.3%, #83DEC4 39.96%, #34BEBE 39.96%, #34BEBE 46.62%, #BFEF91 46.62%, #BFEF91 53.28%, #1FD8DC 53.28%, #1FD8DC 59.94%, #4073D2 59.94%, #4073D2 66.6%, #BFEF91 66.6%, #BFEF91 73.26%, #08A7BB 73.26%, #08A7BB 79.92%, #29D7DD 79.92%, #29D7DD 86.58%, #4179D4 86.58%, #4179D4 93.24%, #AAEBAF 93.24%, #AAEBAF 100%);
+
+	/* W3C Markup */
+	background-image: linear-gradient(to right, #1FD8DC 0%, #1FD8DC 6.66%, #BFEF91 6.66%, #BFEF91 13.32%, #5FD5C2 13.32%, #5FD5C2 19.98%, #106DC3 19.98%, #106DC3 26.64%, #19D3DB 26.64%, #19D3DB 33.3%, #83DEC4 33.3%, #83DEC4 39.96%, #34BEBE 39.96%, #34BEBE 46.62%, #BFEF91 46.62%, #BFEF91 53.28%, #1FD8DC 53.28%, #1FD8DC 59.94%, #4073D2 59.94%, #4073D2 66.6%, #BFEF91 66.6%, #BFEF91 73.26%, #08A7BB 73.26%, #08A7BB 79.92%, #29D7DD 79.92%, #29D7DD 86.58%, #4179D4 86.58%, #4179D4 93.24%, #AAEBAF 93.24%, #AAEBAF 100%);
+}
