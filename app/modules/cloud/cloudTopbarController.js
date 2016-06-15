@@ -24,7 +24,7 @@ define([], function () {
         var subscriptions =[];
 
         subscriptions['app.opened'] = window.DesktopBus.subscribe('app.opened', function (data) {
-            $scope.topborderColorClass = 'border-top-' + data.name;
+            $scope.backgroundColorClass = 'background-' + data.name;
             $scope.appColorClass = 'color-' + data.name;
             $scope.iconSvg = 'open365-logo-' + data.name;
             $scope.topBackgroundColorBeforeClass = 'background-top-' + data.name;

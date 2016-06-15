@@ -1,5 +1,7 @@
 <div id="desktop" class="workspace-container" ng-controller="cloudController">
-	<div id="topbar-light" ng-include="hooks.topbar" class="topbar topbar-desktop" ng-class="topborderColorClass" ng-controller="topbarController"></div>
+	<div class="top-element-multicolor" ng-class="backgroundColorClass" ng-controller="topbarController">
+		<div id="topbar-light" ng-include="hooks.topbar" class="topbar topbar-desktop"></div>
+	</div>
 	<div ng-include="hooks.changePassword"></div>
 	<div class="content-wrapper">
 		<div id="desktop-content" on-resize="onDesktopResize" on-unload="unloadDesktop"  on-before-unload="unloadConfirmMsg"

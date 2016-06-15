@@ -544,8 +544,8 @@ h1, h2 {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  background-color: $c-background;
   padding-top: 7px;
+  @include  top-element-multicolor();
 }
 
 .lostActivity-mainFormIn {

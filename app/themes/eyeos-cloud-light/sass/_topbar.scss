@@ -14,80 +14,19 @@
 	@include main-brand(); // Width and height for logo
 }
 
+.top-element-multicolor {
+    padding-top: 3px;
+    @include top-element-multicolor();
+}
+
 .topbar-desktop {
 	@include topbar-mixin;
 	.brand-container{
 		@include brand-size;
 	}
-	border-top: 3px solid $c-background;
 	background: #fff;
-	height: 46px;
-	box-shadow: 0 0 0 2px white, 0 3px 2px $c-box-shadow-topbar;
-}
-
-.border-top-writer {
-	border-top: 3px solid $c-writer-bg;
-}
-
-.border-top-calc {
-	border-top: 3px solid $c-calc-bg;
-}
-
-.border-top-mail {
-	border-top: 3px solid $c-mail-bg;
-}
-
-.border-top-presentation {
-	border-top: 3px solid $c-presentation-bg;
-}
-
-.border-top-gimp {
-	border-top: 3px solid $c-gimp-bg;
-}
-
-.background-top-writer {
-	&::before {
-		background: $c-writer-bg;
-	}
-	&::after {
-		border-bottom-color: $c-writer-bg;
-	}
-}
-
-.background-top-calc {
-	&::before {
-		background: $c-calc-bg;
-	}
-	&::after {
-		border-bottom-color: $c-calc-bg;
-	}
-}
-
-.background-top-mail {
-	&::before {
-		background: $c-mail-bg;
-	}
-	&::after {
-		border-bottom-color: $c-mail-bg;
-	}
-}
-
-.background-top-presentation {
-	&::before {
-		background: $c-presentation-bg;
-	}
-	&::after {
-		border-bottom-color: $c-presentation-bg;
-	}
-}
-
-.background-top-gimp {
-	&::before {
-		background: $c-gimp-bg;
-	}
-	&::after {
-		border-bottom-color: $c-gimp-bg;
-	}
+	height: 45px;
+	box-shadow: 0 3px 2px $c-box-shadow-topbar;
 }
 
 
@@ -377,6 +316,31 @@
 	&::before {
 		color: $c-gimp-bg;
 	}
+}
+
+.background-writer {
+	background-image: none;
+	background-color: $c-writer-bg;
+}
+
+.background-calc {
+	background-image: none;
+	background-color: $c-calc-bg;
+}
+
+.background-presentation {
+	background-image: none;
+	background-color: $c-presentation-bg;
+}
+
+.background-mail {
+	background-image: none;
+	background-color: $c-mail-bg;
+}
+
+.background-gimp {
+	background-image: none;
+	background-color: $c-gimp-bg;
 }
 
 .main-brand {
