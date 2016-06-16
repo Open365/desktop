@@ -6,10 +6,10 @@
 				<div class="iconboard-apps_wrapper">
 					<!-- Button block -->
 					<div class="app-wrapper">
-						<div id="applications-btn" class="app-item application-menu launcher-btn dropdown-toggle item"
+						<div id="applications-btn" qa-id="applications-button" class="app-item application-menu launcher-btn dropdown-toggle item"
 							 ng-include="hooks.applicationsMenu"></div>
 					</div>
-					<div class="app-wrapper" ng-class='{"active":!toggle}' ng-click="toggle=0;openMyHome()">
+					<div class="app-wrapper" ng-class='{"active":!toggle}' ng-click="toggle=0;openMyHome()" qa-id="home-icon">
 						<div id="home-icon" class="home-menu">
 							<span class="home-menu-link">{{"Home" | translate}}</span>
 						</div>
