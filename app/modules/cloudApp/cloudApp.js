@@ -46,7 +46,8 @@ define([
 
                 window.DesktopBus.dispatch('app.opened', {name: appNameFile});
 
-                var spiceConnector = new SpiceConnector(encodeURIComponent(urlConfig.app), eyeosVdiReconnectionService);
+                var tag = urlConfig.tag || "";
+                var spiceConnector = new SpiceConnector(encodeURIComponent(urlConfig.app), encodeURIComponent(tag), eyeosVdiReconnectionService);
                 spiceConnector.connect();
 
                 if($window.settingsStatic.EYEOS_DISABLE_ANALYTICS === false) {

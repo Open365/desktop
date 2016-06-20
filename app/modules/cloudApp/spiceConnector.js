@@ -24,11 +24,12 @@ define([
 	'modules/cloudApp/spiceCallback',
     'settings'
 ], function (CludResizer, SpiceCallback, settings) {
-	function SpiceConnector (appName, eyeosVdiReconnectionService) {
+	function SpiceConnector (appName, appTag, eyeosVdiReconnectionService) {
 		this.eyeosVdiReconnectionService = eyeosVdiReconnectionService;
 		this.vdiContainerName = 'home-container';
 		this.spiceReady = false;
 		this.appName = appName;
+		this.appTag = appTag;
 	}
 
 	SpiceConnector.prototype.connect = function () {
@@ -119,6 +120,10 @@ define([
 		});
 		var resolutionParam = "?width=" + resolution.width + "&height=" + resolution.height + "&scaleFactor=" + resolution.scaleFactor;
 		var noCacheParam = "&no_cache=" + Date.now();
+		var tagParam = "";
+		if (this.appTag) {
+			tagParam = "&tag=" + this.appTag;
+		}
 
 		$.ajax({
 			headers: {
@@ -127,7 +132,7 @@ define([
 				signature: localStorage.signature,
 				minisignature: localStorage.minisignature
 			},
-			url: "/appservice/v1/" + this.appName + "/token/" + this.token + resolutionParam + noCacheParam
+			url: "/appservice/v1/" + this.appName + "/token/" + this.token + resolutionParam + noCacheParam + tagParam
 
 		}).done(callback);
 	};

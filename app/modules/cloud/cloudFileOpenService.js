@@ -106,12 +106,31 @@ define([], function () {
 			'pps': 'presentation',
 			'ppsx': 'presentation',
 			'odp': 'presentation',
-			'jpg': 'newTab',
-			'jpeg': 'newTab',
-			'png': 'newTab',
-			'gif': 'newTab',
-			'bmp': 'newTab',
-			'pdf': 'newTab'
+			'pdf': 'newTab',
+			'avi': 'gimp',
+			'bmp': 'gimp',
+			'cel': 'gimp',
+			'fits': 'gimp',
+			'fli': 'gimp',
+			'gif': 'gimp',
+			'hrz': 'gimp',
+			'jpeg': 'gimp',
+			'jpg': 'gimp',
+			'miff': 'gimp',
+			'pcx': 'gimp',
+			'pix': 'gimp',
+			'png': 'gimp',
+			'pnm': 'gimp',
+			'ps' : 'gimp',
+			'sgi': 'gimp',
+			'sunras': 'gimp',
+			'tga': 'gimp',
+			'tiff': 'gimp',
+			'xbm': 'gimp',
+			'xcf': 'gimp',
+			'xpm': 'gimp',
+			'xwd': 'gimp'
+
 		};
 
 		return appPerExtension[ext];
