@@ -24,7 +24,7 @@ require([
 	'domReady', 'modules/eyeTheme/eyeThemeSettings', 'modules/eyeTheme/eyeThemeInfo'
 ], function (domReady, themeSettings, eyeThemeInfo) {
 	domReady(function () {
-		var themeName = themeSettings.theme;
+		var productName = themeSettings.product;
 		var themeRequire = require.config(themeSettings.requireConfig);
 
 		if (themeSettings.sassMode === "server") {
@@ -32,20 +32,20 @@ require([
 			var cssElement = document.createElement("link");
 			cssElement.setAttribute("rel", "stylesheet");
 			cssElement.setAttribute("type", "text/css");
-			cssElement.setAttribute("href", "/styles/" + themeName + ".css");
+			cssElement.setAttribute("href", "/styles/" + productName + ".css");
 			head.appendChild(cssElement);
 		}
 
 		themeRequire([
-			'ThemeFactory',
+			'ProductFactory',
 			'BrowserSassCompiler',
 			'SassFetcher',
 			'sass'
-		], function (ThemeFactory, BrowserSassCompiler, SassFetcher) {
+		], function (ProductFactory, BrowserSassCompiler, SassFetcher) {
 			var settings = themeSettings.paths;
 
-			var themeFactory = new ThemeFactory(settings);
-			themeFactory.getTheme(themeName, function (err, theme) {
+			var productFactory = new ProductFactory(settings);
+			productFactory.getProduct(productName, null, function (err, product) {
 				var a = document.createElement('a');
 				a.href = "";
 				a.protocol = location.protocol;
@@ -66,20 +66,20 @@ require([
 
 					return hooks;
 				}
-				//console.log('sass: ', theme.getSass());
-				//console.log('hooks: ', theme.getHooks());
-				//console.log('modules: ', theme.getModules());
+				//console.log('sass: ', product.getSass());
+				//console.log('hooks: ', product.getHooks());
+				//console.log('modules: ', product.getModules());
 				eyeThemeInfo.setThemeInfo({
-					modules: theme.getModules(),
-					hooks: convertHooksToAbsolutePath(theme.getHooks()),
-					addonTemplates: theme.getAddonTemplates()
+					modules: product.getModules(),
+					hooks: convertHooksToAbsolutePath(product.getHooks()),
+					addonTemplates: product.getAddonTemplates()
 				});
 
 				if (themeSettings.sassMode === "server") {
 					return;
 				}
 
-				var sasss = theme.getSass();
+				var sasss = product.getSass();
 
 				var sassFetcher = new SassFetcher(settings);
 				sassFetcher.fetchSass(sasss, function (err, scssData) {

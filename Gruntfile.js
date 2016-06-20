@@ -97,7 +97,7 @@ module.exports = function (grunt) {
 				tasks: ['newer:jshint:test', 'karma']
 			},
 			compass: {
-				files: ['<%= yeoman.app %>/themes/desktop/sass/{,*/}*.{scss,sass}'],
+				files: ['<%= yeoman.app %>/products/desktop/sass/{,*/}*.{scss,sass}'],
 				tasks: ['compass:server', 'autoprefixer']
 			},
 			gruntfile: {
@@ -243,7 +243,7 @@ module.exports = function (grunt) {
 				]
 			},
 			sass: {
-				src: ['<%= yeoman.app %>/themes/desktop/sass/{,*/}*.{scss,sass}']
+				src: ['<%= yeoman.app %>/products/desktop/sass/{,*/}*.{scss,sass}']
 				//ignorePath: /(\.\.\/){1,2}bower_components\//
 			}
 		},
@@ -251,16 +251,16 @@ module.exports = function (grunt) {
 		// Compiles Sass to CSS and generates necessary requireFiles if requested
 		compass: {
 			options: {
-				sassDir: '<%= yeoman.app %>/themes/desktop/sass',
+				sassDir: '<%= yeoman.app %>/products/desktop/sass',
 				cssDir: '.tmp/styles',
 				generatedImagesDir: '.tmp/images/generated',
 				imagesDir: '<%= yeoman.app %>/images',
 				javascriptsDir: '<%= yeoman.app %>/scripts',
-				fontsDir: '<%= yeoman.app %>/themes/desktop/sass/fonts',
+				fontsDir: '<%= yeoman.app %>/products/desktop/sass/fonts',
 				importPath: './bower_components',
 				httpImagesPath: '/images',
 				httpGeneratedImagesPath: '/images/generated',
-				httpFontsPath: '/themes/desktop/sass/fonts',
+				httpFontsPath: '/prodicts/desktop/sass/fonts',
 				relativeAssets: false,
 				assetCacheBuster: false,
 				raw: 'Sass::Script::Number.precision = 10\n'
@@ -288,7 +288,7 @@ module.exports = function (grunt) {
 					'!<%= yeoman.dist %>/images/icons/alert.png',
 					'!<%= yeoman.dist %>/images/ping.png',
 					'!<%= yeoman.dist %>/images/favicon/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-					'<%= yeoman.dist %>/themes/desktop/sass/fonts/*'
+					'<%= yeoman.dist %>/products/desktop/sass/fonts/*'
 				]
 			},
 			modules: {
@@ -341,7 +341,7 @@ module.exports = function (grunt) {
 			html: ['<%= yeoman.dist %>/**/*.html'],
 			css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
 			json: [
-				'<%= yeoman.dist %>/themes/**/compiled-info*.json',
+				'<%= yeoman.dist %>/products/**/compiled-info*.json',
 				'<%= yeoman.dist %>/modules/**/moduleFiles.json'
 			],
 			options: {
@@ -386,9 +386,9 @@ module.exports = function (grunt) {
 					},
 					{
 						expand: true,
-						cwd: '<%= yeoman.app %>/themes',
+						cwd: '<%= yeoman.app %>/products',
 						src: '**/*.{png,jpg,jpeg,gif}',
-						dest: '<%= yeoman.dist %>/themes'
+						dest: '<%= yeoman.dist %>/products'
 					}
 				]
 			}
@@ -405,9 +405,9 @@ module.exports = function (grunt) {
 					},
 					{
 						expand: true,
-						cwd: '<%= yeoman.app %>/themes',
+						cwd: '<%= yeoman.app %>/products',
 						src: '**/*.svg',
-						dest: '<%= yeoman.dist %>/themes'
+						dest: '<%= yeoman.dist %>/products'
 					}
 				]
 			}
@@ -428,7 +428,7 @@ module.exports = function (grunt) {
 						cwd: '<%= yeoman.dist %>',
 						src: [
 							'*.html',
-							'themes/**/*.html',
+							'products/**/*.html',
 							'addons/**/*.html'
 						],
 						dest: '<%= yeoman.dist %>'
@@ -473,7 +473,7 @@ module.exports = function (grunt) {
 							'*.{ico,png,txt}',
 							'.htaccess',
 							'*.html',
-							'themes/**/*.html',
+							'products/**/*.html',
 							'addons/**/*.html',
 							'addons/**/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
 							'images/{,*/}*.{webp}',
@@ -502,7 +502,7 @@ module.exports = function (grunt) {
 						expand: true,
 						cwd: '.tmp',
 						dest: '<%= yeoman.dist %>',
-						src: ['themes/**/compiled-info.json']
+						src: ['products/**/compiled-info.json']
 					},
 					{
 						expand: true,
@@ -519,7 +519,7 @@ module.exports = function (grunt) {
 			},
 			styles: {
 				expand: true,
-				cwd: '<%= yeoman.app %>/themes/desktop/sass',
+				cwd: '<%= yeoman.app %>/products/desktop/sass',
 				dest: '.tmp/styles/',
 				src: '{,*/}*.css'
 			}
@@ -538,7 +538,7 @@ module.exports = function (grunt) {
 			},
 			compiledInfo: {
 				options: {
-					files: ["<%= yeoman.dist %>/themes/**/compiled-info.json"]
+					files: ["<%= yeoman.dist %>/products/**/compiled-info.json"]
 				}
 			}
 		},
@@ -783,46 +783,60 @@ module.exports = function (grunt) {
 		var fs = require('fs');
 		var dirs = fs.readdirSync(themeDir);
 		dirs.forEach(function(themeName) {
-			if (themeName !== 'base' && themeName !== '.DS_Store') {
+			if (themeName !== '.DS_Store') {
 				themes.push(themeName);
 			}
 		});
 		return themes;
 	}
 
-	function saveCompiledInfo(themeName, themeInfo) {
-		var compiledInfo = {};
-		compiledInfo.cssFile = "styles/" + themeName + ".css";
-		compiledInfo.hooks = themeInfo.getHooks();
-		compiledInfo.addonTemplates = themeInfo.getAddonTemplates();
-		compiledInfo.modules = themeInfo.getModules();
+	function listProducts() {
+		var products = [];
+		var productDir = __dirname + '/app/products';
+		var fs = require('fs');
+		var dirs = fs.readdirSync(productDir);
+		dirs.forEach(function (productName) {
+			if (productName !== 'base' && productName !== 'common' && productName !== '.DS_Store') {
+				products.push(productName);
+			}
+		});
+		return products;
+	}
 
-		grunt.file.write(grunt.config('yeoman').dist + '/themes/' + themeName + '/compiled-info.json', JSON.stringify(compiledInfo, null, '\t'));
+	function saveCompiledInfo(productName, productInfo) {
+		var compiledInfo = {};
+		compiledInfo.cssFile = "styles/" + productName + ".css";
+		compiledInfo.hooks = productInfo.getHooks();
+		compiledInfo.addonTemplates = productInfo.getAddonTemplates();
+		compiledInfo.modules = productInfo.getModules();
+
+		grunt.file.write(grunt.config('yeoman').dist + '/products/' + productName + '/compiled-info.json', JSON.stringify(compiledInfo, null, '\t'));
 	}
 
 	grunt.registerTask('build-themes', function buildThemes() {
-		var themes = listThemes();
-		themes.forEach(function (theme) {
-			grunt.task.run('build-theme:' + theme);
+		var products = listProducts();
+		products.forEach(function (product) {
+			grunt.task.run('build-product:' + product);
 		});
 	});
 
-	grunt.registerTask('build-theme', function buildTheme(themeName) {
+	grunt.registerTask('build-product', function buildTheme(productName) {
 		var done = this.async();
 		var settings = {
 			themesPath: __dirname + '/app/themes/',
+			productsPath: __dirname + '/app/products/',
 			addonsPath: __dirname + '/app/addons/',
 			baseSassUrl: __dirname + '/app/'
 		};
 
-		var ThemeFactory = require('eyeos-theme').ThemeFactory;
-		var ThemeSassCompiler = require('eyeos-theme').ThemeSassCompiler;
+		var ProductFactory = require('eyeos-theme').ProductFactory;
+		var ProductSassCompiler = require('eyeos-theme').ProductSassCompiler;
 
-		var themeFactory = new ThemeFactory(settings);
+		var productFactory = new ProductFactory(settings);
 
-		themeFactory.getTheme(themeName, function(err, theme) {
-			var themeSassCompiler = new ThemeSassCompiler(settings);
-			themeSassCompiler.compile(theme.getSass(), function (err, css) {
+		productFactory.getProduct(productName, null, function(err, product) {
+			var productSassCompiler = new ProductSassCompiler(settings);
+			productSassCompiler.compile(product.getSass(), function (err, css) {
 				if (err) {
 					console.log("Error during the sass compilation.");
 					if (err.file) {
@@ -831,8 +845,8 @@ module.exports = function (grunt) {
 					}
 					throw err;
 				}
-				grunt.file.write('.tmp/styles/' + themeName + '.css', css);
-				saveCompiledInfo(themeName, theme);
+				grunt.file.write('.tmp/styles/' + productName + '.css', css);
+				saveCompiledInfo(productName, product);
 				done();
 			});
 		});

@@ -1,4 +1,4 @@
-//  $VARIABLES FOR EYEOS PYMES 3
+//  $VARIABLES FOR WORKSPACEV2
 
 // * Expand parent styles.
 
@@ -11,7 +11,6 @@ $full-styles: true;
 // * 5. $Logo settings
 // * 6. $Topbar button colors
 // * 7. $Fonts settings
-// * 8. $Applications menu
 
 
 
@@ -24,8 +23,8 @@ $c-dark: #363643;  // Dark grey
 $c-blue-grey: #858fa9; // Blue grey
 $c-light-grey: #cbd2de; // Light grey
 $c-medium-grey: #515668; // Medium grey
-$c-turquoise: #53D1ED; // Turquoise
-$c-background: $c-turquoise; // blue
+$c-green:  #63E5CE;
+
 
 $c-right-1: #525266; // First color button from the right of the toolbar -> Grey
 $c-right-2: #494958; // Second color button from the right of the toolbar -> Grey
@@ -38,12 +37,7 @@ $blue: #639aea;
 $medium-blue: #597bd2;
 $dark-blue: #3863E3;
 
-$c-maincolor: $c-turquoise;
-$c-writer-bg: #4A90E2;
-$c-calc-bg: #8AE17C;
-$c-presentation-bg: #F6510B;
-$c-mail-bg: #FF9F00;
-$c-gimp-bg: #9c2d9a;
+$c-maincolor: 	  $blue; // Blue tone
 
 $c-warning-msg: #F5A623;
 $c-warning-dark: #dc9500;
@@ -51,9 +45,16 @@ $c-warning-light: #dfab6e;
 
 $c-tooltip-bg: rgba(35,35,45, .86);
 $c-tooltip: #ACB1BF;
-$c-box-shadow-topbar: #C5CAD5;
 
-
+$c-darkTrans: rgba(40,40,48,.86);
+$app-hover: ' ';
+$apps-decorator:$c-maincolor;
+$icon-color: $c-maincolor;
+$app-decorator: $c-maincolor;
+$c-icon-hover: $c-maincolor;
+$c-user-tooltip: $c-maincolor;
+$c-people-groups-tooltip: $c-maincolor;
+$c-icon-active: $c-maincolor;
 
 
 $c-topbar-items: $c-light;
@@ -77,20 +78,18 @@ $c-welc-btns: $medium-blue;
 // * $bg-image:  Background-image
 // */
 
-$desktop-bgc: #F5F6F9;
+$desktop-bgc: #000;
 
 // HD desktops wallpaper
-$desktop-bgi-grandpa: '';
+$desktop-bgi-grandpa: '/products/workspacev1/images/wp-desktop-desktop-hd.jpg';
 // Desktops wallpaper
-$desktop-bgi-papa: '';
+$desktop-bgi-papa: '/products/workspacev1/images/wp-desktop-desktop.jpg';
 // Tablets wallpaper
-$desktop-bgi-mama: '';
+$desktop-bgi-mama: '/products/workspacev1/images/wp-desktop-tablet.jpg';
 //Mobiles wallpaper
-$desktop-bgi-baby: '';
+$desktop-bgi-baby: '/products/workspacev1/images/wp-desktop-mobile.jpg';
 
-$desktop-bgpos: 'bottom right';
-
-$home-img: '/themes/eyeos-cloud-light/images/welcome-impress.jpg';
+$desktop-bgpos: 'top center';
 
 
 // */ 3. $Topbar settings
@@ -103,30 +102,26 @@ $home-img: '/themes/eyeos-cloud-light/images/welcome-impress.jpg';
 
 $is-dock: false;
 
-$topbarHeight: 50px;
+$topbarHeight: 40px;
 $topbarWidth: 100%;
-$topbar-bg: #282934;
-$shadow: '';
-$background-top-bar-light: #fff;
-$color-top-bar-light: #505667;
-$c-symbol: $color-top-bar-light;
+$topbar-bg: #373c49;
+$shadow:0 1px 0 rgba(255,255,255,.2);
 
 $gap: .5; //apply to the children elements
 
-$img-width: 22px;
-$img-height: 22px;
+$img-width: 25px;
+$img-height: 25px;
 
 
 // If is flex-direction row will be the width, and for flex-direction column will be the height
-$logo-max: 90px;
+$logo-max: 130px;
 
 	//* Toolbar settings
 
 	$align-content: flex-end;
 	$buttonHeight: $topbarHeight;
-	$addonsHeight: $topbarHeight - 5px;
+	$addonsHeight: $topbarHeight;
 
-$app-height: 100%;
 
 
 // */ 4. $popupTopbar settings
@@ -137,7 +132,7 @@ $popupTopbarColor: $c-topbar-items;
 $popupTopbarColorDark: #acb1be;
 $popupTopbarHeight: 30px;
 $popupTopbarBackground: #373c49;
-$popupToarbarShadow: '';
+$popupToarbarShadow: 0 1px 2px rgba(0,0,0,.5);
 
 // logo
 $popup-logo-background: rgba(0,0,0,.17);
@@ -145,29 +140,19 @@ $popup-logo-max: 45px;
 $popup-logo-height: 21px;
 $popup-logo-width: 21px;
 
-//icon apps
-$color-icon-app-light: #53D1ED;
-
 //user
-$userAvatarSize: 22px;
-// Line height calc
-$height: $topbarHeight - 5px;
-$userInfo-height: $height;
-$userPadding: 0 .6em 0 1em;
-$userMargin: '';
+$userAvatarSize: 20px;
 
 //latency meter
 $popupTopbarLatencyMeterSize: 22px;
 
-//group button
-$icon-group-button: '\00EB';
 
 
 // * / 5. $Dock
 // * -----------------------
 // * /
 
-$dockWidth: 45px;
+$dockWidth: 60px;
 
 $topbar-bg: #363643;
 $c-dockicon: #acb1be;
@@ -177,9 +162,11 @@ $dockShadow:  inset -2px 0 3px rgba(0, 0, 0, .3), 1px 0 0 rgba(255, 255, 255, 0.
 $itemPadding: 0;
 $tooltipPadding: 12px 18px 0 $dockWidth + 10px;
 
-$iconboard-tTransform: '';
+$apps-bg: $c-darkTrans;
+$app-hover: rgba(40, 40, 48, 0.5);
+$apps-decorator: $c-green;
 
-
+// */ 6. $Desktop content settings
 // */ 6. $Desktop content settings
 //* -----------------------------
 // * Custom desktop content variables for desktop-size mixin
@@ -200,9 +187,9 @@ $contentWidth: 100%;
 // * $shadow:  Values for shadows
 // */
 
-$logo-width: 150px;
+$logo-width: 115px;
 $logo-height: $topbarHeight - 9px;
-$logo-margin: 2px 0 0;
+$logo-margin: .25em 0 0 0;
 
 $outer-circle:  $c-maincolor;
 $inner-circle:  $c-white;
@@ -308,8 +295,6 @@ $linkTransitions: all .3s ease-out;
 	height: $size;
 	display: flex;
 	flex-wrap:wrap;
-	position: relative;
-	z-index: 2;
 	
 	@if $is-dock == true{
 		width: $topbarWidth;
@@ -327,7 +312,6 @@ $linkTransitions: all .3s ease-out;
 
 @mixin brand-size($size: $logo-max) {
 	flex: 0 0 $logo-max;
-	margin: 0 20px 0 22px;
 
 }
 
@@ -373,6 +357,19 @@ $linkTransitions: all .3s ease-out;
 }
 
 
+// * / 6. $Buttons separator
+// * -----------------------
+// * /
+
+@mixin dock-button-decorator($direction){
+	border-#{$direction}: 1px solid rgba(17,18,19,.69);
+	@if $direction == 'bottom'{
+		box-shadow: 0px 1px 0px 0px rgba(255,255,255,.1);
+	}@else{
+		box-shadow: inset 0 1px 0 0 rgba(255,255,255,.1);
+	}
+}
+
 
 // * / 7. $Ventus icon
 // * -----------------------
@@ -393,45 +390,3 @@ $linkTransitions: all .3s ease-out;
 		@include icon($char, $icon-size, $color, $lh);
 	}
 }
-
-
-// * / X. $Buttons style
-// * -----------------------
-// * /
-@mixin app-view{
-	border-right: 1px solid rgba(23,24,29, .52);
-	box-shadow: 1px 0 0 rgba(255,255,255,.06);
-}
-
-// People and groups (chat)
-@mixin pg-icon{
-	content: '';
-	width: .6em;
-	height: .6em;
-	margin-left: -.7em;
-	display: inline-block;
-	background-color: transparent;
-	border-radius: 50%;
-	box-shadow: .8em 0 0  #4BC8E7, 1.6em 0 0 #A5E6F6, 1.15em 0 0 #7FDFF7 ;
-	margin-right: 1.9em;
-}
-
-// * / 8. $Applications menu
-// * -----------------------
-// * /
-$posTop: 50px;
-$posLeft: -12px;
-$appsWidth: 30rem;
-$app-width: 10rem;
-$title-color: #fff;
-
-// * / User info vars
-$c-icon-hover: #fff;
-
-$icon-users-char: '\00cf';
-$c-btn-bg: transparent;
-$c-user-hover: #ACB1BF;
-$c-user-active: #fff;
-$c-user-tooltip: #ACB1BF;
-$icon-size: 40;
-$icon-lh: 1.32em;

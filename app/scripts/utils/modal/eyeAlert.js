@@ -55,7 +55,7 @@ define(function () {
 
 					$scope.open = function (size) {
 						var modalInstance = $modal.open({
-							templateUrl: 'themes/desktop/templates/utils/modal/eyeosAlert.tpl.html',
+							templateUrl: 'products/desktop/templates/utils/modal/eyeosAlert.tpl.html',
 							controller: ModalInstanceCtrl,
 							backdrop: 'static',
 							size: size,
