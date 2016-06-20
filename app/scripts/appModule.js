@@ -48,7 +48,7 @@ define([
 
 	var eyeThemeInfo = window.eyeThemeInfo;
 	var modules = Object.keys(eyeThemeInfo.getModules() || {});
-	var mainTpl = eyeThemeInfo.getHooks() && eyeThemeInfo.getHooks().main ? eyeThemeInfo.getHooks().main: 'themes/desktop/templates/desktop/desktop.tpl.html';
+	var mainTpl = eyeThemeInfo.getHooks() && eyeThemeInfo.getHooks().main ? eyeThemeInfo.getHooks().main: 'products/desktop/templates/desktop/desktop.tpl.html';
 	angular
 		.module('eyeDesktopApp', [
 			'ngCookies',

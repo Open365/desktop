@@ -64,7 +64,7 @@ define([
 				chat.start(function (from, displayName, text, carbonCopy) {
 					if (!window_focus && Notification.permission === "granted") {
 						var notification = new Notification(displayName, {
-							icon: '/themes/eyeos-cloud/images/open365-158x158.png',
+							icon: '/products/eyeos-cloud/images/open365-158x158.png',
 							body: text
 						});
 

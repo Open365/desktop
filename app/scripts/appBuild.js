@@ -25,8 +25,8 @@ require([
 ], function (domReady, eyeThemeInfo, themeSettings) {
 	domReady(function () {
 		//theme logic here
-		var themeName = themeSettings.theme;
-        $.getJSON("themes/" + themeName + "/compiled-info.json", null, function(data) {
+		var productName = themeSettings.product;
+        $.getJSON("products/" + productName + "/compiled-info.json", null, function(data) {
 			var head = document.head;
 			var cssElement = document.createElement("link");
 			cssElement.setAttribute("rel", "stylesheet");

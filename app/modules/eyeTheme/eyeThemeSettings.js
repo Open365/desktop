@@ -18,13 +18,14 @@
 */
 
 define(['settings', 'urlConfig'], function (settings, urlConfig) {
-	var themeName = urlConfig.EYETHEME_NAME || localStorage.getItem('EYETHEME_NAME') || settings.EYETHEME_NAME;
+	var productName = urlConfig.EYETHEME_NAME || localStorage.getItem('EYETHEME_NAME') || settings.EYETHEME_NAME;
 
 	return {
-		theme: themeName,
+		product: productName,
 		sassMode: settings.EYETHEME_SASS_MODE,
 		paths: {
 			themesPath: '/themes/',
+			productsPath: '/products/',
 			addonsPath: '/addons/',
 			baseSassUrl: '../',
 			requireTextPath: '../bower_components/requirejs-text/text'

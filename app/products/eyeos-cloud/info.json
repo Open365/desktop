@@ -27,6 +27,7 @@
   "extends": "workspacev2",
   "sass": [
     "_variables.scss",
+    "_mixins.scss",
     "_chat.scss",
     "_welcome.scss",
     "_loading.scss",
