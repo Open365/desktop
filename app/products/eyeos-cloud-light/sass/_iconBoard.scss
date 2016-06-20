@@ -47,7 +47,7 @@
 		transition: all .3s ease-out;
 		overflow: hidden;
 		padding: 0 .6em;
-	
+
 
 		@if $iconboard-tTransform != ''{
 			text-transform: $iconboard-tTransform;
@@ -80,15 +80,6 @@
 			top: 0 !important;
 			left: 0 !important;
 			transform: translateY(-100%) !important;
-		}
-
-		
-
-		&:hover{
-
-			&::before{
-				transform: translate(0) !important;
-			} 
 		}
 
 		&.active{
