@@ -42,7 +42,7 @@ define([
                     .after('<link rel="icon" type="image/png" href="/images/favicon/' + appNameFile +  '-192x192.png" sizes="192x192">');
 
                 var openedApp = appName[0].charAt(0).toUpperCase() + appName[0].slice(1);
-                window.eyeosIgnoreConfirmation = !(openedApp === 'Mail');
+                window.eyeosIgnoreConfirmation = ['Mail', 'Gimp'].indexOf(openedApp) === -1;
 
                 window.DesktopBus.dispatch('app.opened', {name: appNameFile});
 
