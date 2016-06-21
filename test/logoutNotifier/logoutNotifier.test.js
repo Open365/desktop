@@ -54,7 +54,7 @@ define([
 				cssClass: 'session-lost-dialog',
 				buttons: [{
 					label: 'Log in',
-					cssClass: 'btn-primary',
+					cssClass: 'btn-primary qa-logout-notification-btn',
 					action: sinon.match.func
 				}]
 			});

@@ -36,7 +36,7 @@ define([], function () {
 			cssClass: 'session-lost-dialog',
 			buttons: [{
 				label: this.$translate.instant('Log in'),
-				cssClass: 'btn-primary',
+				cssClass: 'btn-primary qa-logout-notification-btn',
 				action: function () {
 					location.href = "/applogin";
 				}
