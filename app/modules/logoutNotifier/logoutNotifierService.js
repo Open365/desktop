@@ -29,7 +29,7 @@ define([], function () {
 
 		$(document).on('show', function () {
 			var credentials = window.eyeosAuthClient.getRawCredentials();
-			if (!credentials.card || !credentials.signature) {
+			if (!credentials || !credentials.card || !credentials.signature) {
 				self.notifyLogout();
 			}
 		});
