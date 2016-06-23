@@ -21,9 +21,10 @@
 
 define([], function () {
 
-	function CloudFileOpenService ($translate, eyeosLocationService) {
+	function CloudFileOpenService ($translate, eyeosLocationService, cloudTitleService) {
 		this.$translate = $translate;
 		this.eyeosLocationService = eyeosLocationService;
+		this.cloudTitleService = cloudTitleService;
 	}
 
 	CloudFileOpenService.prototype.launchApp = function (app) {
@@ -82,6 +83,7 @@ define([], function () {
 						JSON.stringify([data.app, data.path]),
 						data
 					);
+					self.cloudTitleService.changeFileName(data.path);
 				} else {
 					console.info('We cannot get the app name');
 				}

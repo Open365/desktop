@@ -22,11 +22,12 @@ define([
     'settings',
     'urlConfig',
     'modules/cloud/cloudFileOpenService',
+    'modules/cloud/cloudTitleService',
     'modules/cloud/seahubWrapper',
     'modules/cloud/cloudTopbarController',
     'translations/eyeosTranslationModule',
     'utils/locationModule'
-], function (settings, urlConfig, CloudFileOpenService, SeahubWrapper, CloudTopbarController) {
+], function (settings, urlConfig, CloudFileOpenService, CloudTitleService, SeahubWrapper, CloudTopbarController) {
     var subscriptions = {};
     window.eyeosIgnoreConfirmation = true;
 
@@ -34,17 +35,19 @@ define([
         'eyeosTranslationModule',
         'eyeosLocation'
     ])
+        .service('cloudTitleService', [CloudTitleService])
         .service('cloudFileOpenService', [
             '$translate',
             'eyeosLocationService',
-            function ($translate, eyeosLocationService) {
-                var cloudFileOpenService = new CloudFileOpenService($translate, eyeosLocationService);
+            'cloudTitleService',
+            function ($translate, eyeosLocationService, cloudTitleService) {
+                var cloudFileOpenService = new CloudFileOpenService($translate, eyeosLocationService, cloudTitleService);
                 cloudFileOpenService.start();
                 return cloudFileOpenService;
         }])
         .controller('topbarController', ['$scope', CloudTopbarController])
-        .controller('cloudController', ['$scope', '$sce', 'cloudFileOpenService', '$window',
-            function ($scope, $sce, cloudFileOpenService, $window) {
+        .controller('cloudController', ['$scope', '$sce', 'cloudFileOpenService', 'cloudTitleService', '$window',
+            function ($scope, $sce, cloudFileOpenService, cloudTitleService, $window) {
                 var seahubWrapper = new SeahubWrapper();
                 seahubWrapper.start();
 
@@ -65,27 +68,7 @@ define([
                 $scope.showLostActivity = false;
                 $scope.iconSvg = 'open365-logo-home';
 
-
-                document.title = "Open365";
-
-                if (urlConfig.app) {
-                    var appNameWithoutFilePath = 'nonexistent';
-                    try {
-                        appNameWithoutFilePath = JSON.parse(urlConfig.app)[0];
-                    } catch (err) {
-                        // param 'app' is invalid. doesn't matter, user must have modified it.
-                        // window title won't be correct.
-                    }
-                    var appTitle = {
-                        files: "Files",
-                        mail: "Mail",
-                        calc: "Spreadsheet",
-                        presentation: "Presentation",
-                        writer: "Writer",
-                        gimp: "Gimp"
-                    };
-                    document.title = appTitle[appNameWithoutFilePath] + " - Open365";
-                }
+                cloudTitleService.setTitle();
 
                 $scope.appName = $sce.trustAsResourceUrl("appviewer/?app=" + urlConfig.app);
 
