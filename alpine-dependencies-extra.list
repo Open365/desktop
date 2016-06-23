@@ -1,5 +1,5 @@
 # Install packages to images docker, "common" is declared into dependencies.list of alpine6-node-base.
-add="$common autoconf automake bash bzip2 libffi-dev libpng libpng-dev nasm nodejs=4.3.0-r0 ruby ruby-dev"
+add="$common autoconf automake bzip2 libffi-dev libpng libpng-dev nasm nodejs=4.3.0-r0 ruby ruby-dev"
 
 # Delete packages to images docker, "common" is declared into dependencies.list of alpine6-node-base.
 del="$common autoconf automake bzip2 libffi-dev libpng libpng-dev ruby ruby-dev"
