@@ -9,7 +9,6 @@
     "almond": "~0.3.0",
     "chai": "1.9.1",
     "eyeos-theme": "*",
-    "grunt": "0.4.2",
     "grunt-autoprefixer": "0.7.3",
     "grunt-concurrent": "0.5.0",
     "grunt-contrib-clean": "0.5.0",
@@ -44,7 +43,6 @@
     "karma-requirejs": "0.2.2",
     "karma-sinon": "1.0.3",
     "load-grunt-tasks": "0.4.0",
-    "npm": "2.0.2",
     "sinon": "1.10.2",
     "time-grunt": "0.3.1"
   },

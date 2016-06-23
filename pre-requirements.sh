@@ -4,6 +4,7 @@ set -e
 set -u
 sudo yum install npm
 sudo npm install -g bower
+sudo npm install -g grunt@0.4.2
 sudo npm install -g grunt-cli
 sudo npm install i18next-conv -g
 sudo yum install gem
