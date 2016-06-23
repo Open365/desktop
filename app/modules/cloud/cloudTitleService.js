@@ -31,7 +31,12 @@ define(['urlConfig'], function (urlConfig) {
 		if (urlConfig.app) {
 			fileName = fileName || this.getFileName();
 			appName = appName || this.getAppName();
-			title = fileName + " - " + appName + " - Open365";
+
+			if (fileName) {
+				fileName += " - ";
+			}
+
+			title = fileName + appName + " - Open365";
 		}
 
 		document.title = title;
